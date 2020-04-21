@@ -14,6 +14,7 @@ source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
 
 # plugins (installed via homebrew)
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Plugins
 plugins=(
