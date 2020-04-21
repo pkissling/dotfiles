@@ -14,12 +14,13 @@ brew install git
 brew install htop
 brew install httpie
 brew install jq
+brew install romkatv/powerlevel10k/powerlevel10k
 brew install ssh-copy-id
 brew install watch
 brew install yamllint
 brew install z
 brew install zsh
-brew install romkatv/powerlevel10k/powerlevel10k
+brew install zsh-autosuggestions
 brew install zsh-syntax-highlighting
 
 # cask

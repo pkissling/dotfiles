@@ -9,8 +9,11 @@ fi
 export ZSH=~/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
-# theme
+# theme (installed via homebrew)
 source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
+
+# plugins (installed via homebrew)
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # Plugins
 plugins=(
@@ -26,6 +29,9 @@ alias l="ls -lHa"
 # zsh configuration
 HYPHEN_INSENSITIVE=true
 DISABLE_MAGIC_FUNCTIONS=true
+
+# zsh autosuggestions configuration
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=7"
 
 # init brew
 . $(brew --prefix)/etc/profile.d/z.sh
