@@ -18,12 +18,16 @@ brew install ssh-copy-id
 brew install watch
 brew install yamllint
 brew install z
+brew install zsh
+brew install romkatv/powerlevel10k/powerlevel10k
+brew install zsh-syntax-highlighting
 
 # cask
 brew cask install 1password
 brew cask install boostnote
 brew cask install docker
-brew cask install flour
+brew cask install fluor
+brew cask install google-chrome
 brew cask install hand-mirror
 brew cask install iterm2
 brew cask install nightowl
