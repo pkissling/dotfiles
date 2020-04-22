@@ -15,6 +15,7 @@ brew install htop
 brew install httpie
 brew install jq
 brew install romkatv/powerlevel10k/powerlevel10k
+brew install rustup
 brew install ssh-copy-id
 brew install watch
 brew install yamllint
