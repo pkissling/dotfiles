@@ -6,14 +6,12 @@
 if [ -z "${ZSH}" ] || ! [ -d "${ZSH}" ]; then
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended --keep-zshrc
 
-  # load zsh
-  zsh
-
   # set zsh as default shell
   chsh -s /bin/zsh
 fi
 
-
-
 # update zsh
-cd $ZSH && git pull origin master
+git -C $ZSH pull origin master
+
+# load zsh
+zsh

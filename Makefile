@@ -1,14 +1,20 @@
 DIR := ${CURDIR}
 DOTFILES = .gitconfig .zshrc .ssh .p10k.zsh
 
-default:
-	# will overwrite existing symlinks
+
+default: symlinks brew cask zsh
+
+symlinks:
 	$(foreach var,$(DOTFILES),ln -sf ${DIR}/$(var) ${HOME};)
 
-	# install brew
+brew:
 	chmod +x brew.sh
 	./brew.sh
 
-	# install zsh
+cask:
+	chmod +x cask.sh
+	./cask.sh
+
+zsh:
 	chmod +x zsh.sh
 	./zsh.sh
