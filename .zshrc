@@ -17,6 +17,7 @@ plugins=(
   brew
   git
   git-flow
+  z
 )
 
 # Aliases
@@ -25,6 +26,18 @@ alias l="ls -lHa"
 # zsh configuration
 HYPHEN_INSENSITIVE=true
 DISABLE_MAGIC_FUNCTIONS=true
+
+# custom functions
+function mv() {
+  if [ "$#" -ne 1 ] || [ ! -f "$1" ]; then
+    command mv "$@"
+    return
+  fi
+
+  newfilename="$1"
+  vared newfilename
+  command mv -v -- "$1" "$newfilename"
+}
 
 # zsh autosuggestions configuration
 ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=10"
