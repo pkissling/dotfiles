@@ -17,6 +17,7 @@ brew install jq
 brew install romkatv/powerlevel10k/powerlevel10k
 brew install rustup
 brew install ssh-copy-id
+brew install vim
 brew install watch
 brew install yamllint
 brew install z

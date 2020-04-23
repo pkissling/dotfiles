@@ -1,8 +1,8 @@
 DIR := ${CURDIR}
-DOTFILES = .gitconfig .zshrc .ssh .p10k.zsh
+DOTFILES = .gitconfig .zshrc .ssh .p10k.zsh .vimrc
 
 
-default: symlinks brew cask zsh
+default: symlinks brew cask zsh vim
 
 symlinks:
 	$(foreach var,$(DOTFILES),ln -sf ${DIR}/$(var) ${HOME};)
@@ -18,3 +18,7 @@ cask:
 zsh:
 	chmod +x zsh.sh
 	./zsh.sh
+
+vim:
+	chmod +x vim.sh
+	./vim.sh
