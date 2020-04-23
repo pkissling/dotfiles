@@ -10,8 +10,8 @@ if [ -z "${ZSH}" ] || ! [ -d "${ZSH}" ]; then
   chsh -s /bin/zsh
 fi
 
-# update zsh
-git -C $ZSH pull origin master
+# upgrade zsh
+sh "$ZSH/tools/upgrade.sh"
 
 # load zsh
 zsh
