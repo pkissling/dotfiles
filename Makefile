@@ -22,3 +22,8 @@ zsh:
 vim:
 	chmod +x vim.sh
 	./vim.sh
+
+sdkman:
+	chmod +x sdkman.sh
+	./sdkman.sh
+
