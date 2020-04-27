@@ -28,6 +28,7 @@ Plugin 'vim-airline/vim-airline-themes'
 Plugin 'micha/vim-colors-solarized' " Solarized Theme
 Plugin 'tpope/vim-fugitive' " Git integration
 Plugin 'ctrlpvim/ctrlp.vim' " CTRLP
+Plugin 'terryma/vim-expand-region' " Expand selection
 call vundle#end()
 
 " NERDtree
