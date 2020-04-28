@@ -2,7 +2,7 @@ DIR := ${CURDIR}
 DOTFILES = .gitconfig .zshrc .ssh .p10k.zsh .vimrc
 
 
-default: symlinks brew cask zsh vim
+default: symlinks brew cask zsh vim sdkman
 
 symlinks:
 	$(foreach var,$(DOTFILES),ln -sf ${DIR}/$(var) ${HOME};)
