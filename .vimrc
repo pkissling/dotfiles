@@ -29,6 +29,8 @@ Plugin 'micha/vim-colors-solarized' " Solarized Theme
 Plugin 'tpope/vim-fugitive' " Git integration
 Plugin 'ctrlpvim/ctrlp.vim' " CTRLP
 Plugin 'terryma/vim-expand-region' " Expand selection
+Plugin 'udalov/kotlin-vim' " Kotlin
+Plugin 'Yggdroot/indentLine' " Display indentation
 call vundle#end()
 
 " NERDtree
