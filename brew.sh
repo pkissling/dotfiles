@@ -12,6 +12,7 @@ brew install authy
 brew install bat
 brew install kubectl
 brew install git
+brew install git-delta
 brew install htop
 brew install httpie
 brew install jq
