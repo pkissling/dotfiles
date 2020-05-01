@@ -17,6 +17,7 @@ brew cask install hand-mirror
 brew cask install iterm2
 brew cask install nightowl
 brew cask install slack
+brew cask install spotmenu
 brew cask install spotify
 
 # cleanup
