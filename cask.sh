@@ -8,6 +8,7 @@ brew tap homebrew/cask-fonts
 
 # cask
 brew cask install 1password
+brew cask install authy
 brew cask install boostnote
 brew cask install docker
 brew cask install font-hack-nerd-font

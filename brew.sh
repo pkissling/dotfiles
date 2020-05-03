@@ -8,7 +8,6 @@ brew update
 brew upgrade
 
 # brew
-brew install authy
 brew install bat
 brew install kubectl
 brew install git
