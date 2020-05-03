@@ -14,6 +14,7 @@ brew install git
 brew install git-delta
 brew install htop
 brew install httpie
+brew install jupyter
 brew install jq
 brew install romkatv/powerlevel10k/powerlevel10k
 brew install rustup
