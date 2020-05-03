@@ -11,6 +11,7 @@ set hidden " Allow switching between files
 set wildmode=list:longest " Show all options when navigating and pressing tab
 set scrolloff=3 " Leave 3 rows room when scrolling to top/bottom of page
 set directory=/var/tmp " Set swp directory to tmp to avoid lag when working via smb
+set autoindent " Correct indentation for next line
 
 " Highlight trailing spaces
 highlight ExtraWhitespace ctermbg=red guibg=red
