@@ -13,10 +13,6 @@ set scrolloff=3 " Leave 3 rows room when scrolling to top/bottom of page
 set directory=/var/tmp " Set swp directory to tmp to avoid lag when working via smb
 set autoindent " Correct indentation for next line
 
-" Highlight trailing spaces
-highlight ExtraWhitespace ctermbg=red guibg=red
-match ExtraWhitespace /\s\+$/
-
 " Vundle
 set rtp+=~/.vim/bundle/Vundle.vim " set the runtime path to include Vundle and initialize
 call vundle#begin()
@@ -32,6 +28,7 @@ Plugin 'ctrlpvim/ctrlp.vim' " CTRLP
 Plugin 'terryma/vim-expand-region' " Expand selection
 Plugin 'udalov/kotlin-vim' " Kotlin
 Plugin 'Yggdroot/indentLine' " Display indentation
+Plugin 'ntpeters/vim-better-whitespace' " Show whitespaces
 call vundle#end()
 
 " NERDtree
