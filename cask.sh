@@ -20,6 +20,7 @@ brew cask install nightowl
 brew cask install slack
 brew cask install spotmenu
 brew cask install spotify
+brew cask install vlc
 
 # cleanup
 brew cleanup
