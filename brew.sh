@@ -8,6 +8,7 @@ brew update
 brew upgrade
 
 # brew
+brew install awscli
 brew install bat
 brew install kubectl
 brew install git

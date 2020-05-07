@@ -14,6 +14,7 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # Plugins
 plugins=(
+  aws
   brew
   git
   git-flow
