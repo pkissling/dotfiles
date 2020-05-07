@@ -29,6 +29,7 @@ Plugin 'terryma/vim-expand-region' " Expand selection
 Plugin 'udalov/kotlin-vim' " Kotlin
 Plugin 'Yggdroot/indentLine' " Display indentation
 Plugin 'ntpeters/vim-better-whitespace' " Show whitespaces
+Plugin 'hashivim/vim-terraform' " Terraform
 call vundle#end()
 
 " NERDtree
@@ -62,3 +63,7 @@ nmap <Leader>gp <Plug>(GitGutterPrevHunk) " git previous
 " add yaml stuffs
 au! BufNewFile,BufReadPost *.{yaml,yml} set filetype=yaml foldmethod=marker
 autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
+
+" Terraform
+let g:terraform_fmt_on_save=1
+let g:terraform_align=1
