@@ -17,6 +17,7 @@ brew install htop
 brew install httpie
 brew install jupyter
 brew install jq
+brew install neovim
 brew install romkatv/powerlevel10k/powerlevel10k
 brew install rustup
 brew install ssh-copy-id

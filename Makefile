@@ -1,12 +1,13 @@
 DIR := ${CURDIR}
-DOTFILES = .gitconfig .zshrc .ssh .p10k.zsh .vimrc
-
 
 default: symlinks brew cask zsh vim sdkman
 
 symlinks:
-	$(foreach var,$(DOTFILES),ln -sf ${DIR}/$(var) ${HOME};)
-
+	ln -sf ${DIR}/.gitconfig ${HOME}
+	ln -sf ${DIR}/.zshrc ${HOME}
+	ln -sf ${DIR}/.ssh ${HOME}
+	ln -sf ${DIR}/.p10k.zsh ${HOME}
+	ln -sf ${DIR}/init.vim ${HOME}/.config/nvim/
 brew:
 	chmod +x brew.sh
 	./brew.sh

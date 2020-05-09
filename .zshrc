@@ -24,6 +24,8 @@ plugins=(
 
 # Aliases
 alias l="ls -lHa"
+# use neovim
+alias vim="nvim"
 
 # zsh configuration
 HYPHEN_INSENSITIVE=true
@@ -57,3 +59,4 @@ source $ZSH/oh-my-zsh.sh
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="/Users/patrick/.sdkman"
 [[ -s "/Users/patrick/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/patrick/.sdkman/bin/sdkman-init.sh"
+
