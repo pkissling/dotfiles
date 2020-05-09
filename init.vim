@@ -67,3 +67,9 @@ autocmd FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 " Terraform
 let g:terraform_fmt_on_save=1
 let g:terraform_align=1
+
+" don't use arrowkeys
+noremap <Up> <NOP>
+noremap <Down> <NOP>
+noremap <Left> <NOP>
+noremap <Right> <NOP>
