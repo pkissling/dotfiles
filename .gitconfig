@@ -6,7 +6,7 @@
 	hist = log --pretty=format:'%C(yellow)[%ad]%C(reset) %C(green)[%h]%C(reset) | %C(red)%s %C(bold red){{%an}}%C(reset) %C(blue)%d%C(reset)' --graph --date=short
 
 [core]
-	pager = delta --dark 
+	pager = delta --dark
 
 [interactive]
 	diffFilter = delta --color-only --dark
