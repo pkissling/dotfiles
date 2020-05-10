@@ -25,7 +25,7 @@ plugins=(
 # Aliases
 alias l="ls -lHa"
 # use neovim
-alias vim="nvim"
+alias v="nvim"
 
 # zsh configuration
 HYPHEN_INSENSITIVE=true
