@@ -23,7 +23,6 @@ brew install rustup
 brew install ssh-copy-id
 brew install terraform
 brew install tree
-brew install vim
 brew install watch
 brew install yamllint
 brew install z
