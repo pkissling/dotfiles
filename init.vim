@@ -30,6 +30,7 @@ Plugin 'udalov/kotlin-vim' " Kotlin
 Plugin 'Yggdroot/indentLine' " Display indentation
 Plugin 'ntpeters/vim-better-whitespace' " Show whitespaces
 Plugin 'hashivim/vim-terraform' " Terraform
+Plugin 'rking/ag.vim' " ag
 call vundle#end()
 
 " NERDtree

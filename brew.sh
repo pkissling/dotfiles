@@ -8,8 +8,10 @@ brew update
 brew upgrade
 
 # brew
+brew install ag
 brew install awscli
 brew install bat
+brew install direnv
 brew install kubectl
 brew install git
 brew install git-delta
