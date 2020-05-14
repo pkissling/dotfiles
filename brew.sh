@@ -26,6 +26,7 @@ brew install ssh-copy-id
 brew install terraform
 brew install tree
 brew install watch
+brew install wget
 brew install yamllint
 brew install z
 brew install zsh
