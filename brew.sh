@@ -13,6 +13,7 @@ brew install awscli
 brew install bat
 brew install direnv
 brew install kubectl
+brew install gradle
 brew install git
 brew install git-delta
 brew install htop
