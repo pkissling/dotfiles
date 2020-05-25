@@ -61,3 +61,5 @@ source $ZSH/oh-my-zsh.sh
 export SDKMAN_DIR="/Users/patrick/.sdkman"
 [[ -s "/Users/patrick/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/patrick/.sdkman/bin/sdkman-init.sh"
 
+# set default editor
+export EDITOR="nvim"
