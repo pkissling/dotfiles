@@ -8,6 +8,7 @@ brew update
 brew upgrade
 
 # brew
+brew install autoenv
 brew install ag
 brew install awscli
 brew install bat
