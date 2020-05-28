@@ -1,15 +1,13 @@
-DIR := ${CURDIR}
-
 defaults: symlinks brew cask zsh vim sdkman
 
 symlinks:
-	ln -sf ${DIR}/git/.gitconfig ${HOME}
-	ln -sf ${DIR}/ssh/.ssh ${HOME}
-	ln -sf ${DIR}/vim/init.vim ${HOME}/.config/nvim/
-	ln -sf ${DIR}/vsc/keybindings.json ${HOME}/Library/Application\ Support/Code/User/keybindings.json
-	ln -sf ${DIR}/vsc/settings.json ${HOME}/Library/Application\ Support/Code/User/settings.json
-	ln -sf ${DIR}/zsh/.zshrc ${HOME}
-	ln -sf ${DIR}/zsh/.p10k.zsh ${HOME}
+	ln -sf ${CURDIR}/git/.gitconfig ${HOME}
+	ln -sf ${CURDIR}/ssh/.ssh ${HOME}/.ssh
+	ln -sf ${CURDIR}/vim/init.vim ${HOME}/.config/nvim/
+	ln -sf ${CURDIR}/vsc/keybindings.json ${HOME}/Library/Application\ Support/Code/User/keybindings.json
+	ln -sf ${CURDIR}/vsc/settings.json ${HOME}/Library/Application\ Support/Code/User/settings.json
+	ln -sf ${CURDIR}/zsh/.zshrc ${HOME}
+	ln -sf ${CURDIR}/zsh/.p10k.zsh ${HOME}
 
 brew:
 	chmod +x scripts/brew.sh
