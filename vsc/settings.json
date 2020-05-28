@@ -1,0 +1,38 @@
+{
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
+
+    "diffEditor.ignoreTrimWhitespace": false,
+
+    "editor.accessibilitySupport": "off",
+    "editor.renderWhitespace": "boundary",
+    "editor.suggestSelection": "first",
+
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+
+    "files.autoSave": "afterDelay",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "files.trimTrailingWhitespace": true,
+
+
+    "terraform.indexing": {
+        "enabled": false
+    },
+    "terraform.languageServer": {
+        "enabled": true,
+        "args": []
+    },
+
+    "window.autoDetectColorScheme": true,
+
+    "workbench.editor.showTabs": false,
+    "workbench.colorTheme": "Default Dark+",
+    "workbench.startupEditor": "none"
+}
