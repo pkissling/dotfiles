@@ -3,7 +3,7 @@ defaults: symlinks brew cask zsh vim sdkman
 symlinks:
 	@ln -sfv ${CURDIR}/git/.gitconfig ${HOME}
 	@ln -sfv ${CURDIR}/git/.gitignore ${HOME}
-	@ln -sfv ${CURDIR}/ssh/.ssh ${HOME}/.ssh
+	@ln -sfv ${CURDIR}/ssh/.ssh ${HOME}
 	@ln -sfv ${CURDIR}/nvim/init.vim ${HOME}/.config/nvim/
 	@ln -sfv ${CURDIR}/vsc/keybindings.json ${HOME}/Library/Application\ Support/Code/User/keybindings.json
 	@ln -sfv ${CURDIR}/vsc/settings.json ${HOME}/Library/Application\ Support/Code/User/settings.json
