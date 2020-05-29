@@ -13,6 +13,7 @@ brew install ag
 brew install awscli
 brew install bat
 brew install direnv
+brew install exa
 brew install kubectl
 brew install gradle
 brew install git

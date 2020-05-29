@@ -64,3 +64,5 @@ export SDKMAN_DIR="/Users/patrick/.sdkman"
 
 # set default editor
 export EDITOR="nvim"
+
+alias l="exa -la"
