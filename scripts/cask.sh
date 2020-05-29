@@ -14,7 +14,7 @@ brew cask install font-hack-nerd-font
 brew cask install fluor
 brew cask install google-chrome
 brew cask install hand-mirror
-brew cask install iterm2
+brew cask install hyper
 brew cask install nightowl
 brew cask install slack
 brew cask install spotmenu
