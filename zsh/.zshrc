@@ -22,13 +22,6 @@ plugins=(
   z
 )
 
-# Aliases
-alias l="ls -lHa"
-# use neovim
-alias v="nvim"
-alias vim="nvim"
-alias cat="bat"
-
 # zsh configuration
 HYPHEN_INSENSITIVE=true
 DISABLE_MAGIC_FUNCTIONS=true
@@ -65,4 +58,8 @@ export SDKMAN_DIR="/Users/patrick/.sdkman"
 # set default editor
 export EDITOR="nvim"
 
+# Aliases (must be one of the last commands to overwrite zsh aliases)
+alias cat="bat"
 alias l="exa -la"
+alias v="nvim"
+alias vim="nvim"
