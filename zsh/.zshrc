@@ -27,6 +27,7 @@ alias l="ls -lHa"
 # use neovim
 alias v="nvim"
 alias vim="nvim"
+alias cat="bat"
 
 # zsh configuration
 HYPHEN_INSENSITIVE=true
