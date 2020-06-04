@@ -10,3 +10,12 @@
 
 [interactive]
 	diffFilter = delta --color-only --dark
+
+[merge]
+	tool = nvim
+
+[mergetool]
+	keepBackup = false
+
+[mergetool "nvim"]
+	cmd = nvim -f -c \"Gdiffsplit!\" \"$MERGED\"
