@@ -24,7 +24,6 @@
     },
     "files.trimTrailingWhitespace": true,
 
-
     "terraform.indexing": {
         "enabled": false
     },
@@ -39,14 +38,14 @@
     "workbench.colorTheme": "Default Dark+",
     "workbench.startupEditor": "none",
 
-	"[yaml]":  {
-		"editor.insertSpaces": true,
-		"editor.tabSize": 2,
-		"editor.autoIndent": "none"
+    "[yaml]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.autoIndent": "none"
     },
     "yaml.customTags": [
         "!include_dir_merge_list",
         "!include_dir_merge_named",
-        "!secret",
+        "!secret"
     ]
 }
