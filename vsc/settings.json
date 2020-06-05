@@ -13,6 +13,9 @@
     "explorer.confirmDragAndDrop": false,
 
     "files.autoSave": "afterDelay",
+    "files.associations": {
+        "*.yaml": "yaml"
+    },
     "files.exclude": {
         "**/.classpath": true,
         "**/.project": true,
@@ -34,5 +37,11 @@
 
     "workbench.editor.showTabs": false,
     "workbench.colorTheme": "Default Dark+",
-    "workbench.startupEditor": "none"
+    "workbench.startupEditor": "none",
+
+	"[yaml]":  {
+		"editor.insertSpaces": true,
+		"editor.tabSize": 2,
+		"editor.autoIndent": "none"
+    }
 }
