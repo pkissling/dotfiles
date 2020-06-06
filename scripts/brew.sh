@@ -1,5 +1,35 @@
 #!/usr/bin/env bash
 
+packages=(
+    autoenv
+    ag
+    awscli
+    bat
+    direnv
+    exa
+    kubectl
+    gradle
+    git
+    git-delta
+    htop
+    httpie
+    jupyter
+    jq
+    neovim
+    romkatv/powerlevel10k/powerlevel10k
+    rustup
+    ssh-copy-id
+    terraform
+    tree
+    watch
+    wget
+    yamllint
+    z
+    zsh
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+)
+
 # install brew
 which brew || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
@@ -7,34 +37,11 @@ which brew || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homeb
 brew update
 brew upgrade
 
-# brew
-brew install autoenv
-brew install ag
-brew install awscli
-brew install bat
-brew install direnv
-brew install exa
-brew install kubectl
-brew install gradle
-brew install git
-brew install git-delta
-brew install htop
-brew install httpie
-brew install jupyter
-brew install jq
-brew install neovim
-brew install romkatv/powerlevel10k/powerlevel10k
-brew install rustup
-brew install ssh-copy-id
-brew install terraform
-brew install tree
-brew install watch
-brew install wget
-brew install yamllint
-brew install z
-brew install zsh
-brew install zsh-autosuggestions
-brew install zsh-syntax-highlighting
+# install packages
+for package in ${packages[@]}
+do
+    brew list "$package" || brew install "$package"
+done
 
 # cleanup
 brew cleanup
