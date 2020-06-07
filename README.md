@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/pkissling/dotfiles.svg?branch=master)](https://travis-ci.org/pkissling/dotfiles)
+
 # dotfiles
 This repository houses my personal Dotfiles contaning configuration for
 - [brew](https://brew.sh/)
