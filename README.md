@@ -1,5 +1,5 @@
-# My Dotsfiles
-A collection of my private Dotfiles contaning configurations for
+# dotfiles
+This repository houses my personal Dotfiles contaning configuration for
 - [brew](https://brew.sh/)
 - [cask](https://github.com/Homebrew/homebrew-cask)
 - [git](https://git-scm.com/)
@@ -10,12 +10,14 @@ A collection of my private Dotfiles contaning configurations for
 - [vscode](https://code.visualstudio.com/)
 - [zsh](https://ohmyz.sh/)
 
+Each of the folders present contains a dedicated `install.sh` script which can be used to install the application and its corresponding configration manually.
+
 ## Install
-### All
+### All dotfiles
 ```
 $ make
 ```
-### Individual components
+### Individual targets
 ```
 $ make brew     # install brew, install & update packages
 $ make cask     # install & update cask
