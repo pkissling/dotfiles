@@ -6,8 +6,8 @@ symlinks:
 	@ln -sfv ${CURDIR}/hyper/.hyper.js ${HOME}
 	@ln -sfv ${CURDIR}/ssh/.ssh ${HOME}
 	@ln -sfv ${CURDIR}/nvim/init.vim ${HOME}/.config/nvim/
-	@ln -sfv ${CURDIR}/vsc/keybindings.json ${HOME}/Library/Application\ Support/Code/User/keybindings.json
-	@ln -sfv ${CURDIR}/vsc/settings.json ${HOME}/Library/Application\ Support/Code/User/settings.json
+	@ln -sfv ${CURDIR}/vscode/keybindings.json ${HOME}/Library/Application\ Support/Code/User/keybindings.json
+	@ln -sfv ${CURDIR}/vscode/settings.json ${HOME}/Library/Application\ Support/Code/User/settings.json
 	@ln -sfv ${CURDIR}/zsh/.zshrc ${HOME}
 	@ln -sfv ${CURDIR}/zsh/.p10k.zsh ${HOME}
 
