@@ -26,7 +26,7 @@ sdkman:
 	@./sdkman/install.sh
 
 ssh:
-	@ln -sfv ${CURDIR}/ssh/.ssh ${HOME}
+	@ln -sfv ${CURDIR}/ssh/ ${HOME}/.ssh
 
 vscode:
 	@ln -sfv ${CURDIR}/vscode/keybindings.json ${HOME}/Library/Application\ Support/Code/User/keybindings.json
