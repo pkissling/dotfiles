@@ -35,7 +35,7 @@
     "window.autoDetectColorScheme": true,
 
     "workbench.editor.showTabs": false,
-    "workbench.colorTheme": "Default Light+",
+    "workbench.colorTheme": "Default Dark+",
     "workbench.startupEditor": "none",
 
     "[yaml]": {
