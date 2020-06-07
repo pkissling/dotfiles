@@ -2,6 +2,7 @@
 A collection of my private Dotfiles contaning configurations for
 - [brew](https://brew.sh/)
 - [cask](https://github.com/Homebrew/homebrew-cask)
+- [git](https://git-scm.com/)
 - [hyper](https://hyper.is/)
 - [nvim](https://neovim.io/)
 - [sdkman](https://sdkman.io/)
