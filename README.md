@@ -6,6 +6,7 @@ A collection of my private Dotfiles contaning configurations for
 - [hyper](https://hyper.is/)
 - [nvim](https://neovim.io/)
 - [sdkman](https://sdkman.io/)
+- [ssh](https://www.ssh.com/)
 - [vscode](https://code.visualstudio.com/)
 - [zsh](https://ohmyz.sh/)
 
