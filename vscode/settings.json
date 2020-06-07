@@ -24,6 +24,8 @@
     },
     "files.trimTrailingWhitespace": true,
 
+    "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
+
     "terraform.indexing": {
         "enabled": false
     },
