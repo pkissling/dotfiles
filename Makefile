@@ -1,32 +1,41 @@
-defaults: symlinks brew cask zsh vim sdkman
-
-symlinks:
-	@ln -sfv ${CURDIR}/git/.gitconfig ${HOME}
-	@ln -sfv ${CURDIR}/git/.gitignore ${HOME}
-	@ln -sfv ${CURDIR}/hyper/.hyper.js ${HOME}
-	@ln -sfv ${CURDIR}/ssh/.ssh ${HOME}
-	@ln -sfv ${CURDIR}/nvim/init.vim ${HOME}/.config/nvim/
-	@ln -sfv ${CURDIR}/vscode/keybindings.json ${HOME}/Library/Application\ Support/Code/User/keybindings.json
-	@ln -sfv ${CURDIR}/vscode/settings.json ${HOME}/Library/Application\ Support/Code/User/settings.json
-	@ln -sfv ${CURDIR}/zsh/.zshrc ${HOME}
-	@ln -sfv ${CURDIR}/zsh/.p10k.zsh ${HOME}
+.PHONY: brew cask git hyper nvim sdkman ssh vscode zsh
+default: .PHONY
 
 brew:
-	@chmod +x scripts/brew.sh
-	@./scripts/brew.sh
+	@chmod +x brew/install.sh
+	@./brew/install.sh
 
 cask:
-	@chmod +x scripts/cask.sh
-	@./scripts/cask.sh
+	@chmod +x cask/install.sh
+	@./cask/install.sh
+
+git:
+	@ln -sfv ${CURDIR}/git/.gitconfig ${HOME}
+	@ln -sfv ${CURDIR}/git/.gitignore ${HOME}
+
+hyper:
+	@ln -sfv ${CURDIR}/hyper/.hyper.js ${HOME}
+
+neovim:
+	@ln -sfv ${CURDIR}/nvim/init.vim ${HOME}/.config/nvim/
+	@chmod +x nvim/install.sh
+	@./nvim/install.sh
 
 sdkman:
-	@chmod +x scripts/sdkman.sh
-	@./scripts/sdkman.sh
+	@chmod +x sdkman/install.sh
+	@./sdkman/install.sh
 
-vim:
-	@chmod +x scripts/nvim.sh
-	@./scripts/nvim.sh
+ssh:
+	@ln -sfv ${CURDIR}/ssh/.ssh ${HOME}
+
+vscode:
+	@ln -sfv ${CURDIR}/vscode/keybindings.json ${HOME}/Library/Application\ Support/Code/User/keybindings.json
+	@ln -sfv ${CURDIR}/vscode/settings.json ${HOME}/Library/Application\ Support/Code/User/settings.json
+	@chmod +x vscode/install.sh
+	@./vscode/install.sh
 
 zsh:
-	@chmod +x scripts/zsh.sh
-	@./scripts/zsh.sh
+	@ln -sfv ${CURDIR}/zsh/.zshrc ${HOME}
+	@ln -sfv ${CURDIR}/zsh/.p10k.zsh ${HOME}
+	@chmod +x zsh/install.sh
+	@./zsh/install.sh

@@ -1,0 +1,13 @@
+1password
+boostnote
+docker
+font-hack-nerd-font
+fluor
+google-chrome
+hand-mirror
+hyper
+nightowl
+slack
+spotmenu
+spotify
+vlc
