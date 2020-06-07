@@ -10,14 +10,14 @@ cask:
 	@./cask/install.sh
 
 git:
-	@ln -sfv ${CURDIR}/git/.gitconfig ${HOME}
-	@ln -sfv ${CURDIR}/git/.gitignore ${HOME}
+	@chmod +x git/install.sh
+	@./git/install.sh
 
 hyper:
-	@ln -sfv ${CURDIR}/hyper/.hyper.js ${HOME}
+	@chmod +x hyper/install.sh
+	@./hyper/install.sh
 
 neovim:
-	@ln -sfv ${CURDIR}/nvim/init.vim ${HOME}/.config/nvim/
 	@chmod +x nvim/install.sh
 	@./nvim/install.sh
 
@@ -26,16 +26,13 @@ sdkman:
 	@./sdkman/install.sh
 
 ssh:
-	@ln -sfv ${CURDIR}/ssh/ ${HOME}/.ssh
+	@chmod +x ssh/install.sh
+	@./ssh/install.sh
 
 vscode:
-	@ln -sfv ${CURDIR}/vscode/keybindings.json ${HOME}/Library/Application\ Support/Code/User/keybindings.json
-	@ln -sfv ${CURDIR}/vscode/settings.json ${HOME}/Library/Application\ Support/Code/User/settings.json
 	@chmod +x vscode/install.sh
 	@./vscode/install.sh
 
 zsh:
-	@ln -sfv ${CURDIR}/zsh/.zshrc ${HOME}
-	@ln -sfv ${CURDIR}/zsh/.p10k.zsh ${HOME}
 	@chmod +x zsh/install.sh
 	@./zsh/install.sh
