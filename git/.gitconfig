@@ -20,3 +20,5 @@
 
 [mergetool "nvim"]
 	cmd = nvim -f -c \"Gdiffsplit!\" \"$MERGED\"
+[commit]
+	gpgsign = true
