@@ -5,6 +5,7 @@ This repository contains my personal Dotfiles with configuration for the followi
 - [brew](https://brew.sh/)
 - [cask](https://github.com/Homebrew/homebrew-cask)
 - [git](https://git-scm.com/)
+- [gnupg](https://gnupg.org/)
 - [hyper](https://hyper.is/)
 - [nvim](https://neovim.io/)
 - [sdkman](https://sdkman.io/)
@@ -24,6 +25,7 @@ $ make
 $ make brew     # install brew, install & update packages
 $ make cask     # install & update cask
 $ make git      # create symlinks for git config
+$ make gpg      # create symlinks for gpg config
 $ make hyper    # create symlink for hyper configuration
 $ make nvim     # create symlinks for nvim, install & update plugins
 $ make sdkman   # install sdkman, install & update packages

@@ -5,7 +5,6 @@ bat
 direnv
 exa
 gpg
-kubectl
 gradle
 git
 git-delta
@@ -13,7 +12,9 @@ htop
 httpie
 jupyter
 jq
+kubectl
 neovim
+pinentry-mac
 romkatv/powerlevel10k/powerlevel10k
 rustup
 ssh-copy-id
