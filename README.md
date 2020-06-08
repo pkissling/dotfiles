@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/pkissling/dotfiles.svg?branch=master)](https://travis-ci.org/pkissling/dotfiles)
 
 # dotfiles
-This repository houses my personal Dotfiles contaning configuration for
+This repository contains my personal Dotfiles with configuration for the following tools:
 - [brew](https://brew.sh/)
 - [cask](https://github.com/Homebrew/homebrew-cask)
 - [git](https://git-scm.com/)
@@ -12,10 +12,10 @@ This repository houses my personal Dotfiles contaning configuration for
 - [vscode](https://code.visualstudio.com/)
 - [zsh](https://ohmyz.sh/)
 
-Each of the folders present contains a dedicated `install.sh` script which can be used to install the application and its corresponding configration manually.
+Each of the folders present contains a dedicated `install.sh` script which can be used to install the tool and its corresponding configration manually.
 
 ## Install
-### All dotfiles
+### All tools
 ```
 $ make
 ```
