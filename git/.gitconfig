@@ -22,3 +22,6 @@
 	cmd = nvim -f -c \"Gdiffsplit!\" \"$MERGED\"
 [commit]
 	gpgsign = true
+
+[pull]
+	rebase = true
