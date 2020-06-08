@@ -1,6 +1,7 @@
 [![Build Status](https://travis-ci.org/pkissling/dotfiles.svg?branch=master)](https://travis-ci.org/pkissling/dotfiles)
 
 # dotfiles
+## Overview
 This repository contains my personal Dotfiles with configuration for the following tools:
 - [brew](https://brew.sh/)
 - [cask](https://github.com/Homebrew/homebrew-cask)
@@ -15,6 +16,12 @@ This repository contains my personal Dotfiles with configuration for the followi
 
 Each of the folders present contains a dedicated `install.sh` script which can be used to install the tool and its corresponding configration manually.
 
+## Screenshots
+### Hyper with zsh
+![Hyper with zsh](/.screenshots/hyper_zsh.png)
+
+### nvim
+![Hyper with zsh](/.screenshots/nvim.png)
 ## Install
 ### All tools
 ```
