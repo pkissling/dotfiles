@@ -4,6 +4,7 @@ awscli
 bat
 direnv
 exa
+gpg
 kubectl
 gradle
 git

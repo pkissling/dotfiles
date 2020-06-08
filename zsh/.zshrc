@@ -61,6 +61,9 @@ export BAT_STYLE="changes,header"
 # set default editor
 export EDITOR="nvim"
 
+# set GPG tty
+export GPG_TTY=$(tty)
+
 # Aliases (must be one of the last commands to overwrite zsh aliases)
 alias cat="bat"
 alias l="exa -la"
