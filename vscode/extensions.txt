@@ -1,3 +1,4 @@
+bungcip.better-toml
 eg2.vscode-npm-script
 hashicorp.terraform
 humao.rest-client
@@ -7,4 +8,6 @@ ms-vsliveshare.vsliveshare
 octref.vetur
 percygrunwald.vscode-intellij-recent-files
 redhat.vscode-yaml
+rust-lang.rust
+serayuzgur.crates
 yzhang.markdown-all-in-one
