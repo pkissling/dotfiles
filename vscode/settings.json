@@ -29,6 +29,7 @@
     "files.trimTrailingWhitespace": true,
 
     "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
+    "terminal.external.osxExec": "Hyper.app",
 
     "terraform.indexing": {
         "enabled": false
