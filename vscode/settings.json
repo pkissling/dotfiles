@@ -42,7 +42,7 @@
     "window.autoDetectColorScheme": true,
 
     "workbench.editor.showTabs": false,
-    "workbench.colorTheme": "Default Dark+",
+    "workbench.colorTheme": "Solarized Dark+",
     "workbench.startupEditor": "none",
 
 

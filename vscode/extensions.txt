@@ -10,5 +10,6 @@ octref.vetur
 percygrunwald.vscode-intellij-recent-files
 redhat.vscode-yaml
 rust-lang.rust
+ryanolsonx.solarized
 serayuzgur.crates
 yzhang.markdown-all-in-one
