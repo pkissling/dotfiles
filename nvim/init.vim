@@ -44,7 +44,6 @@ map <C-n> :NERDTreeToggle<CR> " Bind NERDtree to CTRL + n
 let g:rustfmt_autosave = 1 " format upon save
 
 " Theme
-let g:solarized_termtrans = 1 " https://github.com/altercation/vim-colors-solarized/issues/138
 colorscheme solarized
 set background=dark
 

@@ -5,7 +5,7 @@ font-hack-nerd-font
 fluor
 google-chrome
 hand-mirror
-hyper
+iterm2
 nightowl
 slack
 spotmenu
