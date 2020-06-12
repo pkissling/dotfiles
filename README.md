@@ -7,7 +7,7 @@ This repository contains my personal Dotfiles with configuration for the followi
 - [cask](https://github.com/Homebrew/homebrew-cask)
 - [git](https://git-scm.com/)
 - [gnupg](https://gnupg.org/)
-- [iterm](https://iterm2.is/)
+- [iterm](https://iterm2.com/)
 - [nvim](https://neovim.io/)
 - [sdkman](https://sdkman.io/)
 - [ssh](https://www.ssh.com/)
