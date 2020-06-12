@@ -21,7 +21,7 @@ hyper:
 	@chmod +x hyper/install.sh
 	@./hyper/install.sh
 
-neovim:
+nvim:
 	@chmod +x nvim/install.sh
 	@./nvim/install.sh
 
