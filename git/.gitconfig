@@ -20,9 +20,18 @@
 
 [mergetool "nvim"]
 	cmd = nvim -f -c \"Gdiffsplit!\" \"$MERGED\"
+
 [commit]
 	gpgsign = true
 
 [pull]
 	rebase = false
 	ff = only
+
+[alias]
+	aa = add -A
+	c = commit
+	ca = commit -a
+	cane = commit --amend --no-edit
+	pfwl = push --force-with-lease
+	s = status

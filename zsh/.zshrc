@@ -66,6 +66,7 @@ export GPG_TTY=$(tty)
 
 # Aliases (must be one of the last commands to overwrite zsh aliases)
 alias cat="bat"
+alias g="git"
 alias l="exa -la"
 alias v="nvim"
 alias vim="nvim"
