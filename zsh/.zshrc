@@ -68,5 +68,6 @@ export GPG_TTY=$(tty)
 alias cat="bat"
 alias g="git"
 alias l="exa -la"
+alias ls="exa"
 alias v="nvim"
 alias vim="nvim"
