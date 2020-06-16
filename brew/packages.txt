@@ -17,6 +17,7 @@ neovim
 pinentry-mac
 romkatv/powerlevel10k/powerlevel10k
 rustup
+serverless
 ssh-copy-id
 terraform
 tree
