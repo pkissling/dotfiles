@@ -33,10 +33,13 @@
 	aa = add -A
 	c = commit
 	ca = commit -a
+	cane = commit --amend --no-edit
 	cam = commit -a -m
+	co = checkout
 	cm = commit -m
 	d = diff
 	ds = diff --staged
-	cane = commit --amend --no-edit
+	p = push
 	pfwl = push --force-with-lease
+	r = reset
 	s = status
