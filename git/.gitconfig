@@ -29,9 +29,14 @@
 	ff = only
 
 [alias]
+	a = add
 	aa = add -A
 	c = commit
 	ca = commit -a
+	cam = commit -a -m
+	cm = commit -m
+	d = diff
+	ds = diff --staged
 	cane = commit --amend --no-edit
 	pfwl = push --force-with-lease
 	s = status
