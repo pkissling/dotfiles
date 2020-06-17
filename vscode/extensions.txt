@@ -11,4 +11,5 @@ percygrunwald.vscode-intellij-recent-files
 redhat.vscode-yaml
 rust-lang.rust
 serayuzgur.crates
+tabnine.tabnine-vscode
 yzhang.markdown-all-in-one

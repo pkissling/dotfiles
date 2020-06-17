@@ -28,6 +28,8 @@
     },
     "files.trimTrailingWhitespace": true,
 
+    "tabnine.experimentalAutoImports": true,
+
     "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
     "terminal.external.osxExec": "Hyper.app",
 
@@ -77,5 +79,5 @@
         "!include_dir_merge_list",
         "!include_dir_merge_named",
         "!secret"
-    ],
+    ]
 }
