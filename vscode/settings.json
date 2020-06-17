@@ -35,8 +35,10 @@
         "enabled": false
     },
     "terraform.languageServer": {
-        "enabled": true,
-        "args": []
+        "external": true,
+        "args": [
+            "serve"
+        ]
     },
 
     "window.autoDetectColorScheme": true,
