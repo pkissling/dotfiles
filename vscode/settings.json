@@ -52,6 +52,11 @@
     // Language specific
     //
 
+    // markdown
+    "[markdown]": {
+        "editor.formatOnSave": true
+    },
+
     // terraform
     "[terraform]": {
         "editor.formatOnSave": true
