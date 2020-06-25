@@ -22,6 +22,7 @@ rustup
 serverless
 ssh-copy-id
 terraform
+tldr
 tree
 watch
 wget
