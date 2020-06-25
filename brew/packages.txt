@@ -2,6 +2,7 @@ autoenv
 ag
 awscli
 bat
+ctop
 direnv
 exa
 fd
