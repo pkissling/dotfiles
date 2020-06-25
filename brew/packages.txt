@@ -4,6 +4,7 @@ awscli
 bat
 direnv
 exa
+fd
 gpg
 gradle
 git
