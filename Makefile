@@ -17,9 +17,6 @@ gpg:
 	@chmod +x gpg/install.sh
 	@./gpg/install.sh
 
-hyper:
-	@chmod +x hyper/install.sh
-	@./hyper/install.sh
 
 nvim:
 	@chmod +x nvim/install.sh
