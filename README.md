@@ -68,4 +68,4 @@ Create symlinks for vscode configuration, install extensions.
 ```
 $ make zsh
 ```
-Cnstall zsh with Powerlevel10k, create symlinks.
+Install zsh with Powerlevel10k, create symlinks.
