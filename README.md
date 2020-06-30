@@ -1,71 +1,73 @@
 # dotfiles
-[![Build Status](https://travis-ci.org/pkissling/dotfiles.svg?branch=master)](https://travis-ci.org/pkissling/dotfiles)
+![Lint](https://github.com/pkissling/dotfiles/workflows/Lint/badge.svg) ![Valid links](https://github.com/pkissling/dotfiles/workflows/Valid%20links/badge.svg)
 
-# Overview
+## Overview
 Each of the folders present contains a dedicated `install.sh` script which can be used to install the tool and its corresponding configuration manually.
 
-## Screenshots
-### iTerm2 with zsh
+### Screenshots
+#### iTerm2 with zsh
 ![iTerm2 with zsh](/.screenshots/iterm2_zsh.png)
 
-### nvim
+#### nvim
 ![nvim](/.screenshots/nvim.png)
-## Install
-### All
+### Install
+#### All
+```bash
+make
 ```
-$ make
-```
-### Individual targets
-#### brew
-```
-$ make brew
+#### Individual targets
+##### brew
+```bash
+make brew
 ```
 Install brew, install & update packages.
 
-#### cask
-```
-$ make cask
+##### cask
+```bash
+make cask
 ```
 Install & update casks.
 
-#### git
-```
-$ make git
+##### git
+```bash
+make git
 ```
 Create symlinks for git config.
 
-#### gpg
-```
-$ make gpg
+##### gpg
+```bash
+make gpg
 ```
 Create symlinks for gpg config.
 
-#### nvim
-```
-$ make nvim
+<!-- markdownlint-disable -->
+##### nvim
+<!-- markdownlint-restore -->
+```bash
+make nvim
 ```
 Create symlinks for nvim, install & update plugins.
 
-#### sdkman
-```
-$ make sdkman
+##### sdkman
+```bash
+make sdkman
 ```
 Install sdkman, install & update sdks.
 
-#### ssh
-```
-$ make ssh
+##### ssh
+```bash
+make ssh
 ```
 Create symlinks for ssh config.
 
-#### vscode
-```
-$ make vscode
+##### vscode
+```bash
+make vscode
 ```
 Create symlinks for vscode configuration, install extensions.
 
-#### zsh
-```
-$ make zsh
+##### zsh
+```bash
+make zsh
 ```
 Install zsh with Powerlevel10k, create symlinks.

@@ -1,0 +1,17 @@
+---
+name: Lint
+on: push
+
+jobs:
+  linter:
+    name: Lint
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+      - name: Lint Code Base
+        uses: docker://github/super-linter:v3
+        env:
+          # vscode json settings comments break linting
+          VALIDATE_JSON: false

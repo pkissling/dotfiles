@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-BASEDIR=$(dirname $0)
+BASEDIR=$(dirname "$0")
 
-# install brew
+# install brew, if not installed
 which brew || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
 # update brew
@@ -10,7 +10,7 @@ brew update
 brew upgrade
 
 # install packages
-while read PACKAGE
+while read -r PACKAGE
 do
     brew list "${PACKAGE}" || brew install "${PACKAGE}"
 done < "${BASEDIR}"/packages.txt

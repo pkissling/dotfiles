@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-BASEDIR=$(dirname $0)
+BASEDIR=$(dirname "$0")
 
 # create .ssh folder, if not exist
 mkdir -p "${HOME}"/.ssh

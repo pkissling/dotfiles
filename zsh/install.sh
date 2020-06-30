@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-BASEDIR=$(dirname $0)
+BASEDIR=$(dirname "$0")
 
 # create symlinks
 ln -sfv "${PWD}"/"${BASEDIR}"/.zshrc "${HOME}"
