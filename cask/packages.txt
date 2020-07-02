@@ -1,5 +1,6 @@
 1password
 boostnote
+coconutBattery
 docker
 font-hack-nerd-font
 fluor
