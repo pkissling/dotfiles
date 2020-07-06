@@ -37,6 +37,7 @@
         "enabled": false
     },
     "terraform.languageServer": {
+
         "external": true,
         "args": [
             "serve"
@@ -44,6 +45,7 @@
     },
 
     "window.autoDetectColorScheme": true,
+    "window.zoomLevel": 0
 
     "workbench.editor.showTabs": false,
     "workbench.colorTheme": "Default Dark+",
