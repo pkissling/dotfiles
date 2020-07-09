@@ -16,6 +16,7 @@ jq
 kubectl
 ncdu
 neovim
+maven
 pinentry-mac
 romkatv/powerlevel10k/powerlevel10k
 rustup
