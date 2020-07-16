@@ -13,5 +13,4 @@ slack
 stats
 spotmenu
 spotify
-toggl
 vlc
