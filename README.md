@@ -2,6 +2,18 @@
 ![Lint](https://github.com/pkissling/dotfiles/workflows/Lint/badge.svg) ![Valid links](https://github.com/pkissling/dotfiles/workflows/Valid%20links/badge.svg)
 
 ## Overview
+This repository contains my personal Dotfiles with configuration for the following tools:
+- [brew](https://brew.sh/)
+- [cask](https://github.com/Homebrew/homebrew-cask)
+- [git](https://git-scm.com/)
+- [gnupg](https://gnupg.org/)
+- [iterm](https://iterm2.com/)
+- [nvim](https://neovim.io/)
+- [sdkman](https://sdkman.io/)
+- [ssh](https://www.ssh.com/)
+- [vscode](https://code.visualstudio.com/)
+- [zsh](https://ohmyz.sh/)
+
 Each of the folders present contains a dedicated `install.sh` script which can be used to install the tool and its corresponding configuration manually.
 
 ### Screenshots
