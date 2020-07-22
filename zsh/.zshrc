@@ -5,13 +5,6 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# theme (installed via homebrew)
-source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
-
-# plugins (installed via homebrew)
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
 # Plugins
 plugins=(
   aws
@@ -22,9 +15,27 @@ plugins=(
   z
 )
 
-# zsh configuration
-HYPHEN_INSENSITIVE=true
-DISABLE_MAGIC_FUNCTIONS=true
+# exports
+export ZSH=~/.oh-my-zsh # zsh
+export HYPHEN_INSENSITIVE=true # zsh
+export DISABLE_MAGIC_FUNCTIONS=true # zsh
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=10" # zsh-autosuggestions
+export BAT_STYLE="changes,header" # bat
+export EDITOR="nvim" # vim
+export GPG_TTY=$(tty) # gpg
+export SDKMAN_DIR="~/.sdkman" # sdkman
+export PATH="/usr/local/sbin:$PATH" # brew path
+
+# sources
+source $ZSH/oh-my-zsh.sh # zsh
+source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme # theme (installed via homebrew)
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh # zsh-autosuggestions
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh # zsh-syntax-highlighting
+
+# init
+. $(brew --prefix)/etc/profile.d/z.sh # brew
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh powerlevel10k # powerlevel10k
+[[ -s "~/.sdkman/bin/sdkman-init.sh" ]] && source "~/.sdkman/bin/sdkman-init.sh" # sdkman
 
 # custom functions
 function mv() {
@@ -37,34 +48,6 @@ function mv() {
   vared newfilename
   command mv -v -- "$1" "$newfilename"
 }
-
-# zsh autosuggestions configuration
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=10"
-
-# init brew
-. $(brew --prefix)/etc/profile.d/z.sh
-# add brew's sbin dir to PATH
-export PATH="/usr/local/sbin:$PATH"
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# oh-my-zsh
-export ZSH=~/.oh-my-zsh
-source $ZSH/oh-my-zsh.sh
-
-#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
-export SDKMAN_DIR="/Users/patrick/.sdkman"
-[[ -s "/Users/patrick/.sdkman/bin/sdkman-init.sh" ]] && source "/Users/patrick/.sdkman/bin/sdkman-init.sh"
-
-# bat
-export BAT_STYLE="changes,header"
-
-# set default editor
-export EDITOR="nvim"
-
-# set GPG tty
-export GPG_TTY=$(tty)
 
 # Aliases (must be one of the last commands to overwrite zsh aliases)
 alias cat="bat"
