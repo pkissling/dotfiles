@@ -15,4 +15,5 @@ redhat.vscode-yaml
 rust-lang.rust
 serayuzgur.crates
 tabnine.tabnine-vscode
+wallabyjs.quokka-vscode
 yzhang.markdown-all-in-one
