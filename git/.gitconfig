@@ -45,7 +45,7 @@
 	r = reset
 	s = status
 [credential]
-	helper = ""
 	helper = manager-core
+
 [credential "https://dev.azure.com"]
 	useHttpPath = true
