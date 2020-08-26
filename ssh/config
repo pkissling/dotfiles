@@ -15,6 +15,6 @@ Host pihole
   HostName pihole
   User pi
 
-Host libreelec
-  HostName libreelec
-  User root
+Host home-assistant
+  HostName home-assistant
+  User pi
