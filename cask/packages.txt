@@ -11,6 +11,7 @@ mattermost
 microsoft/git/git-credential-manager-core
 nightowl
 slack
+spectacle
 stats
 spotmenu
 spotify
