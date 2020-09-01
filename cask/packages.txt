@@ -9,6 +9,7 @@ fluor
 google-chrome
 hand-mirror
 iterm2
+jetbrains-toolbox
 mattermost
 microsoft/git/git-credential-manager-core
 nightowl
