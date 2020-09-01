@@ -5,7 +5,6 @@ boostnote
 coconutBattery
 docker
 font-hack-nerd-font
-fluor
 google-chrome
 hand-mirror
 iterm2
