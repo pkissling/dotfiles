@@ -14,3 +14,4 @@ stats
 spotmenu
 spotify
 vlc
+visual-studio-code
