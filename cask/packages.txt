@@ -1,5 +1,6 @@
 1password
 alfred3
+bartender
 boostnote
 coconutBattery
 docker
