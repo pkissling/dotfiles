@@ -1,4 +1,4 @@
-.PHONY: brew cask git gpg hyper nvim sdkman ssh vscode zsh
+.PHONY: brew cask git gpg hyper mas nvim sdkman ssh vscode zsh
 default: .PHONY
 
 brew:
@@ -16,6 +16,10 @@ git:
 gpg:
 	@chmod +x gpg/install.sh
 	@./gpg/install.sh
+
+mas:
+	@chmod +x mas/install.sh
+	@./mas/install.sh
 
 nvim:
 	@chmod +x nvim/install.sh

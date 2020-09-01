@@ -9,6 +9,7 @@ This repository contains my personal Dotfiles with configuration for the followi
 - [gnupg](https://gnupg.org/)
 - [iterm](https://iterm2.com/)
 - [nvim](https://neovim.io/)
+- [mas](https://github.com/mas-cli/mas)
 - [sdkman](https://sdkman.io/)
 - [ssh](https://www.ssh.com/)
 - [vscode](https://code.visualstudio.com/)
@@ -59,6 +60,12 @@ Create symlinks for gpg config.
 make nvim
 ```
 Create symlinks for nvim, install & update plugins.
+
+##### mas
+```bash
+make mas
+```
+Install Mac App Store apps.
 
 ##### sdkman
 ```bash
