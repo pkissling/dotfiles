@@ -2,6 +2,9 @@
 
 BASEDIR=$(dirname "$0")
 
+# create nvim folder, if not exist
+mkdir -p "${HOME}"/.config/nvim
+
 # create symlink
 ln -sfv "${PWD}"/"${BASEDIR}"/init.vim "${HOME}"/.config/nvim/
 
