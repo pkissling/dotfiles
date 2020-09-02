@@ -34,7 +34,7 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh # zs
 # init
 . $(brew --prefix)/etc/profile.d/z.sh # brew
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh powerlevel10k # powerlevel10k
-[[ -s "~/.sdkman/bin/sdkman-init.sh" ]] && source "~/.sdkman/bin/sdkman-init.sh" # sdkman
+[[ -s "${HOME}/.sdkman/bin/sdkman-init.sh" ]] && source "${HOME}/.sdkman/bin/sdkman-init.sh" # sdkman
 
 # custom functions
 function mv() {
