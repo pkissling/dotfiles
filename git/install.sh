@@ -8,6 +8,6 @@ ln -sfv "${PWD}"/"${BASEDIR}"/.gitignore "${HOME}"
 
 # create symlink to .gitconfig_user, if not exists
 if [ ! -L "${HOME}"/.gitconfig_user ] ; then
-    read -p 'Usage (work/private): ' USAGE
+    read -r -p 'Usage (work/private): ' USAGE
     ln -sfv "${PWD}"/"${BASEDIR}"/.gitconfig_"${USAGE}" "${HOME}"/.gitconfig_user
 fi
