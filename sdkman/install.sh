@@ -15,3 +15,5 @@ do
     sdk list "${SDK}" | grep 'installed' || sdk install "${SDK}"
 done < "${BASEDIR}"/sdks.txt
 
+# update sdks
+sdk update
