@@ -16,5 +16,6 @@ spectacle
 stats
 spotmenu
 spotify
+toggl
 vlc
 visual-studio-code
