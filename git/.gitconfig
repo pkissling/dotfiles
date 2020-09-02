@@ -1,8 +1,3 @@
-[user]
-	name = Patrick Kissling
-	email = patrick.kissling@gmx.de
-	signingkey = 6E59199EA7382897
-
 [alias]
 	hist = log --pretty=format:'%C(yellow)[%ad]%C(reset) %C(green)[%h]%C(reset) | %C(red)%s %C(bold red){{%an}}%C(reset) %C(blue)%d%C(reset)' --graph --date=short
 
@@ -49,3 +44,7 @@
 
 [credential "https://dev.azure.com"]
 	useHttpPath = true
+
+[include]
+	# user details
+	path = ~/.gitconfig_user
