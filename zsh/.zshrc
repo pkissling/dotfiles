@@ -23,7 +23,6 @@ export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=10" # zsh-autosuggestions
 export BAT_STYLE="changes,header" # bat
 export EDITOR="nvim" # vim
 export GPG_TTY=$(tty) # gpg
-export SDKMAN_DIR="~/.sdkman" # sdkman
 export PATH="/usr/local/sbin:$PATH" # brew path
 
 # sources

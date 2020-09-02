@@ -4,7 +4,7 @@ BASEDIR=$(dirname "$0")
 
 # install sdkman
 # shellcheck source=/dev/null
-source "${HOME}/.sdkman/bin/sdkman-init.sh" || /bin/bash -c "$(curl -s https://get.sdkman.io)"
+source "${HOME}/.sdkman/bin/sdkman-init.sh" || /bin/bash -c "$(curl -s https://get.sdkman.io)" && source "${HOME}/.sdkman/bin/sdkman-init.sh"
 
 # update sdkman
 sdk selfupdate
