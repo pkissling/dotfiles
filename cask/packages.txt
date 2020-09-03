@@ -17,5 +17,6 @@ stats
 spotmenu
 spotify
 toggl
+tunnelblick
 vlc
 visual-studio-code
