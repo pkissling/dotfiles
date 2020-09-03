@@ -3,6 +3,7 @@ awscli
 bat
 choose-rust
 ctop
+credstash
 exa
 fd
 gpg
