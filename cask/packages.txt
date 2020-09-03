@@ -1,4 +1,5 @@
 1password
+aws-vault
 alfred3
 bartender
 boostnote
