@@ -20,4 +20,5 @@ spotify
 toggl
 tunnelblick
 vlc
+viscosity
 visual-studio-code
