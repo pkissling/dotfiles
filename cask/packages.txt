@@ -7,7 +7,6 @@ coconutBattery
 docker
 font-hack-nerd-font
 google-chrome
-hand-mirror
 iterm2
 jetbrains-toolbox
 mattermost
