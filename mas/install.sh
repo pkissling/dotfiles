@@ -5,5 +5,8 @@ BASEDIR=$(dirname "$0")
 sed -e 's/[[:space:]]*#.*// ; /^[[:space:]]*$/d' "${BASEDIR}/apps.txt" |
     while read -r APP
     do
-        mas install "$APP"
+        mas lucky "$APP"
     done
+
+# update existing apps
+mas upgrade
