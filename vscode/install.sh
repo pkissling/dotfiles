@@ -7,7 +7,8 @@ ln -sfv "${PWD}"/"${BASEDIR}"/keybindings.json "${HOME}"/Library/Application\ Su
 ln -sfv "${PWD}"/"${BASEDIR}"/settings.json "${HOME}"/Library/Application\ Support/Code/User
 
 # install extensions
-while read -r EXTENSION
-do
-    code --install-extension "$EXTENSION"
-done < "${BASEDIR}"/extensions.txt
+sed -e 's/[[:space:]]*#.*// ; /^[[:space:]]*$/d' "${BASEDIR}/extensions.txt" |
+    while read -r EXTENSION
+    do
+        code --install-extension "$EXTENSION"
+    done

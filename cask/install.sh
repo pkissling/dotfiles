@@ -9,10 +9,11 @@ brew cask upgrade
 brew tap homebrew/cask-fonts
 
 # install packages
-while read -r PACKAGE
-do
-    brew cask list "${PACKAGE}" || brew cask install "${PACKAGE}"
-done < "${BASEDIR}"/packages.txt
+sed -e 's/[[:space:]]*#.*// ; /^[[:space:]]*$/d' "${BASEDIR}/packages.txt" |
+    while read -r PACKAGE
+    do
+        brew cask list "${PACKAGE}" || brew cask install "${PACKAGE}"
+    done
 
 # cleanup
 brew cleanup

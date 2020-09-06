@@ -2,7 +2,8 @@
 BASEDIR=$(dirname "$0")
 
 # install apps
-while read -r APP
-do
-    mas install "$APP"
-done < "${BASEDIR}"/apps.txt
+sed -e 's/[[:space:]]*#.*// ; /^[[:space:]]*$/d' "${BASEDIR}/apps.txt" |
+    while read -r APP
+    do
+        mas install "$APP"
+    done

@@ -10,10 +10,11 @@ brew update
 brew upgrade
 
 # install packages
-while read -r PACKAGE
-do
-    brew list "${PACKAGE}" || brew install "${PACKAGE}"
-done < "${BASEDIR}"/packages.txt
+sed -e 's/[[:space:]]*#.*// ; /^[[:space:]]*$/d' "${BASEDIR}/packages.txt" |
+    while read -r PACKAGE
+    do
+        brew list "${PACKAGE}" || brew install "${PACKAGE}"
+    done
 
 # cleanup
 brew cleanup
