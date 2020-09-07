@@ -6,6 +6,7 @@ ctop
 credstash
 exa
 fd
+fzf
 gpg
 gradle
 git
