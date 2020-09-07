@@ -9,6 +9,7 @@ font-hack-nerd-font
 google-chrome
 iterm2
 jetbrains-toolbox
+lens
 mattermost
 microsoft/git/git-credential-manager-core
 nightowl
