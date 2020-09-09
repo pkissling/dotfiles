@@ -5,7 +5,7 @@ bartender
 boostnote
 coconutBattery
 docker
-font-hack-nerd-font
+homebrew/cask-fonts/font-hack-nerd-font
 google-chrome
 iterm2
 jetbrains-toolbox
