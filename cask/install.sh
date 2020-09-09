@@ -3,7 +3,7 @@
 BASEDIR=$(dirname "$0")
 
 # update
-brew cask upgrade
+brew upgrade --cask
 
 # taps
 brew tap homebrew/cask-fonts
@@ -12,7 +12,7 @@ brew tap homebrew/cask-fonts
 sed -e 's/[[:space:]]*#.*// ; /^[[:space:]]*$/d' "${BASEDIR}/packages.txt" |
     while read -r PACKAGE
     do
-        brew cask list "${PACKAGE}" || brew cask install "${PACKAGE}"
+        brew list --cask "${PACKAGE}" || brew install cask "${PACKAGE}"
     done
 
 # cleanup
