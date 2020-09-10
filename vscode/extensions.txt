@@ -1,5 +1,6 @@
 amazonwebservices.aws-toolkit-vscode
 bungcip.better-toml
+dotjoshjohnson.xml # XML parsing
 eamodio.gitlens
 eg2.vscode-npm-script
 hashicorp.terraform
