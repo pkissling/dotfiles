@@ -21,3 +21,4 @@ toggl
 vlc
 viscosity
 visual-studio-code
+whatsapp
