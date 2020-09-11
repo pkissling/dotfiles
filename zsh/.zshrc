@@ -9,6 +9,8 @@ fi
 plugins=(
   aws
   brew
+  docker
+  docker-compose
   terraform
   git
   git-flow
