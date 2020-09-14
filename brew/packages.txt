@@ -17,7 +17,6 @@ httpie
 jupyter
 jq
 kubectl
-klokki
 k9s
 ncdu
 neovim

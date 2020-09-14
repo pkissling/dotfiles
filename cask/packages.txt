@@ -9,6 +9,7 @@ homebrew/cask-fonts/font-hack-nerd-font
 google-chrome
 iterm2
 jetbrains-toolbox
+klokki
 lens
 mattermost
 muzzle
