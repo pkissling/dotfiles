@@ -11,6 +11,7 @@ iterm2
 jetbrains-toolbox
 lens
 mattermost
+muzzle
 microsoft/git/git-credential-manager-core
 nightowl
 spectacle
