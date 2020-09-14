@@ -10,6 +10,7 @@ homebrew/cask-fonts/font-hack-nerd-font
 google-chrome
 iterm2
 jetbrains-toolbox
+jitsi-meet
 klokki
 lens
 mattermost
