@@ -1,4 +1,5 @@
 1password
+android-platform-tools
 aws-vault
 alfred3
 bartender
