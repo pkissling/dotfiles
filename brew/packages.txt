@@ -11,6 +11,7 @@ gpg
 gradle
 git
 git-delta
+gitlab-runner
 htop
 httpie
 jupyter
