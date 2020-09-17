@@ -11,6 +11,7 @@
 
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
+    "explorer.openEditors.visible": 0,
 
     "files.autoSave": "afterDelay",
     "files.associations": {
