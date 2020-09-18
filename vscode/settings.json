@@ -6,6 +6,7 @@
     "diffEditor.ignoreTrimWhitespace": false,
 
     "editor.accessibilitySupport": "off",
+    "editor.formatOnSaveMode": "modifications",
     "editor.renderWhitespace": "boundary",
     "editor.suggestSelection": "first",
 
