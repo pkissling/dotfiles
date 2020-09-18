@@ -27,7 +27,7 @@ romkatv/powerlevel10k/powerlevel10k
 rustup
 serverless
 ssh-copy-id
-terraform
+tfenv
 tldr
 tree
 watch
