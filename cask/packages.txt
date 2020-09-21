@@ -17,6 +17,7 @@ mattermost
 muzzle
 microsoft/git/git-credential-manager-core
 nightowl
+notion
 spectacle
 stats
 spotmenu
