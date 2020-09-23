@@ -1,5 +1,6 @@
-# source operations venv
-source ~/Documents/git/operations/python/venv/bin/activate
-
-# check MFA auth
+# prompt MFA on startup
 aws sts get-caller-identity --profile sast-pilcrow-dev_Developer >> /dev/null || ~/Documents/git/operations/miscellaneous/sast_temporary_mfa_credentials.sh
+
+# aliases
+alias venv="source ~/Documents/git/operations/python/venv/bin/activate"
+alias mfa="~/Documents/git/operations/miscellaneous/sast_temporary_mfa_credentials.sh"
