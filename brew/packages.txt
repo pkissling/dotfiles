@@ -18,6 +18,7 @@ httpie
 jupyter
 jq
 kubectl
+kustomize
 k9s
 ncdu
 neovim
