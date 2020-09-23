@@ -14,6 +14,10 @@ ln -sfv "${PWD}"/"${BASEDIR}"/config "${HOME}"/.ssh
 
 # create symlink to default id_rsa file, if not exists
 if [ ! -L "${HOME}"/.ssh/id_rsa.pub ] ; then
-    read -r -p 'Usage (work/private): ' USAGE
-    ln -sfv "${PWD}"/"${BASEDIR}"/"${USAGE}".pub "${HOME}"/.ssh/id_rsa.pub
+  while [[ ! $USAGE =~ (private|work) ]]; do
+    read -r -p "Usage (work/private): " USAGE
+    export USAGE=$USAGE
+  done
+
+  ln -sfv "${PWD}"/"${BASEDIR}"/"${USAGE}".pub "${HOME}"/.ssh/id_rsa.pub
 fi

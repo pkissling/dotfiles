@@ -58,3 +58,6 @@ alias l="exa -la"
 alias ls="exa"
 alias v="nvim"
 alias vim="nvim"
+
+# source usage specific configuration
+source ~/.zshrc_user

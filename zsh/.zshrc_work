@@ -1,0 +1,5 @@
+# source operations venv
+source ~/Documents/git/operations/python/venv/bin/activate
+
+# check MFA auth
+aws sts get-caller-identity --profile sast-pilcrow-dev_Developer >> /dev/null || ~/Documents/git/operations/miscellaneous/sast_temporary_mfa_credentials.sh
