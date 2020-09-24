@@ -53,6 +53,7 @@ function mv() {
 # Aliases (must be one of the last commands to overwrite zsh aliases)
 alias cat="bat"
 alias g="git"
+alias hist="history | fzf | choose 1: | zsh -"
 alias k="kubectl"
 alias l="exa -la"
 alias ls="exa"
