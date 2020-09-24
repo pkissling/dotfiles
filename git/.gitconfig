@@ -1,50 +1,51 @@
 [alias]
-	hist = log --pretty=format:'%C(yellow)[%ad]%C(reset) %C(green)[%h]%C(reset) | %C(red)%s %C(bold red){{%an}}%C(reset) %C(blue)%d%C(reset)' --graph --date=short
+  hist = log --pretty=format:'%C(yellow)[%ad]%C(reset) %C(green)[%h]%C(reset) | %C(red)%s %C(bold red){{%an}}%C(reset) %C(blue)%d%C(reset)' --graph --date=short
 
 [core]
-	pager = delta --dark
-	excludesfile = ~/.gitignore
+  pager = delta --dark
+  excludesfile = ~/.gitignore
 
 [interactive]
-	diffFilter = delta --color-only --dark
+  diffFilter = delta --color-only --dark
 
 [merge]
-	tool = nvim
+  tool = nvim
 
 [mergetool]
-	keepBackup = false
+  keepBackup = false
 
 [mergetool "nvim"]
-	cmd = nvim -f -c \"Gdiffsplit!\" \"$MERGED\"
+  cmd = nvim -f -c \"Gdiffsplit!\" \"$MERGED\"
 
 [commit]
-	gpgsign = true
+  gpgsign = true
 
 [pull]
-	rebase = false
-	ff = only
+  rebase = false
+  ff = only
 
 [alias]
-	a = add
-	aa = add -A
-	c = commit
-	ca = commit -a
-	cane = commit --amend --no-edit
-	cam = commit -a -m
-	co = checkout
-	cm = commit -m
-	d = diff
-	ds = diff --staged
-	p = push
-	pfwl = push --force-with-lease
-	r = reset
-	s = status
+  a = add
+  aa = add -A
+  c = commit
+  ca = commit -a
+  cane = commit --amend --no-edit
+  cam = commit -a -m
+  co = checkout
+  cm = commit -m
+  d = diff
+  ds = diff --staged
+  p = push
+  pfwl = push --force-with-lease
+  r = reset
+  s = status
+
 [credential]
-	helper = manager-core
+  helper = manager-core
 
 [credential "https://dev.azure.com"]
-	useHttpPath = true
+  useHttpPath = true
 
 [include]
-	# user details
-	path = ~/.gitconfig_user
+  # user details
+  path = ~/.gitconfig_user
