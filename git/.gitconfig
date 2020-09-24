@@ -25,6 +25,7 @@
   ff = only
 
 [alias]
+  # abbreviations
   a = add
   aa = add -A
   c = commit
@@ -39,6 +40,15 @@
   pfwl = push --force-with-lease
   r = reset
   s = status
+
+  # scripts
+  cleanup =  "!cleanup() { \
+               git fetch -p; \
+               for BRANCH in `git branch -vv | grep ': gone' | awk '{print $1}'`; do \
+                 git branch -D "${BRANCH}"; \
+               done; \
+             }; \
+             cleanup"
 
 [credential]
   helper = manager-core
