@@ -31,3 +31,5 @@ fi
 # upgrade zsh
 sh "$ZSH/tools/upgrade.sh"
 
+# restart zsh to apply latest configuration
+exec /bin/zsh
