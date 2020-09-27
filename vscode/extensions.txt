@@ -20,6 +20,7 @@ percygrunwald.vscode-intellij-recent-files
 redhat.vscode-yaml
 rust-lang.rust
 serayuzgur.crates
+softwaredotcom.music-time
 tabnine.tabnine-vscode
 vscodevim.vim
 wallabyjs.quokka-vscode
