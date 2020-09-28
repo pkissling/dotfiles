@@ -3,7 +3,6 @@ android-platform-tools
 aws-vault
 alfred3
 bartender
-boostnote
 coconutBattery
 docker
 homebrew/cask-fonts/font-hack-nerd-font
