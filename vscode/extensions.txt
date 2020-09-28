@@ -22,6 +22,5 @@ rust-lang.rust
 serayuzgur.crates
 softwaredotcom.music-time
 tabnine.tabnine-vscode
-vscodevim.vim
 wallabyjs.quokka-vscode
 yzhang.markdown-all-in-one
