@@ -26,6 +26,9 @@
     },
     "files.trimTrailingWhitespace": true,
 
+    "git.allowForcePush": true,
+    "git.confirmForcePush": false,
+
     "tabnine.experimentalAutoImports": true,
 
     "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
