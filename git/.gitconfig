@@ -43,7 +43,7 @@
 
   # scripts
   cleanup =  "!cleanup() { \
-               git fetch -p; \
+               git fetch -p > /dev/null; \
                for BRANCH in `git branch -vv | grep ': gone' | awk '{print $1}'`; do \
                  git branch -D "${BRANCH}"; \
                done; \
