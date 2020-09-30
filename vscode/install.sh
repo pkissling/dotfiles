@@ -18,5 +18,7 @@ ls -l "${HOME}"/.vscode/extensions |\
   # discard first line, only keep folder name
   awk '{ if(NR>1) print $9 }' |\
   # remove version from folder name
-  sed 's/-[0-9].*//' \
+  sed 's/-[0-9].*//' |\
+  # sometimes multipe version of the plugin are installed in parallel
+  uniq \
   > "${BASEDIR}"/extensions.txt
