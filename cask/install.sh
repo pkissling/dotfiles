@@ -1,16 +1,15 @@
 #!/usr/bin/env bash
-set -e
+set -ex
 BASEDIR=$(dirname "$0")
 
 # update
 brew upgrade --cask
 
-# install packages
-sed -e 's/[[:space:]]*#.*// ; /^[[:space:]]*$/d' "${BASEDIR}/packages.txt" |
-    while read -r PACKAGE
-    do
-        brew list --cask "${PACKAGE}" || brew cask install "${PACKAGE}"
-    done
+# compare list of installed packages with packages.txt and identify delta
+MISSING_PACKAGES=$(brew list --cask | grep --ignore-case --invert-match --file /dev/stdin cask/packages.txt) || true
+for MISSING_PACKAGE in ${MISSING_PACKAGES}; do
+    brew cask install "${MISSING_PACKAGE}"
+done
 
 # cleanup
 brew cleanup

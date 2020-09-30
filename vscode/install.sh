@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
-set -e
+set -ex
 BASEDIR=$(dirname "$0")
 
 # create symlinks
 ln -sfv "${PWD}"/"${BASEDIR}"/keybindings.json "${HOME}"/Library/Application\ Support/Code/User
 ln -sfv "${PWD}"/"${BASEDIR}"/settings.json "${HOME}"/Library/Application\ Support/Code/User
 
-# compare list of installed extensions with extensions.txt and find missing extensions
-MISSING_EXTENSIONS=$(code --list-extensions | grep --ignore-case --invert-match --file /dev/stdin vscode/extensions.txt)
+# compare list of installed extensions with extensions.txt and identify delta
+MISSING_EXTENSIONS=$(code --list-extensions | grep --ignore-case --invert-match --file /dev/stdin vscode/extensions.txt) || true
 for MISSING_EXTENSION in ${MISSING_EXTENSIONS}; do
     code --install-extension "${MISSING_EXTENSION}"
 done

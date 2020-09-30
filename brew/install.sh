@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-set -e
+set -ex
 BASEDIR=$(dirname "$0")
 
 # install brew, if not installed
@@ -9,12 +9,11 @@ which brew || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homeb
 brew update
 brew upgrade
 
-# install packages
-sed -e 's/[[:space:]]*#.*// ; /^[[:space:]]*$/d' "${BASEDIR}/packages.txt" |
-    while read -r PACKAGE
-    do
-        brew list "${PACKAGE}" || brew install "${PACKAGE}"
-    done
+# compare list of installed packages with packages.txt and identify delta
+MISSING_PACKAGES=$(brew list | grep --ignore-case --invert-match --file /dev/stdin brew/packages.txt) || true
+for MISSING_PACKAGE in ${MISSING_PACKAGES}; do
+    brew install "${MISSING_PACKAGE}"
+done
 
 # cleanup
 brew cleanup
