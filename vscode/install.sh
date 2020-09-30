@@ -6,14 +6,12 @@ BASEDIR=$(dirname "$0")
 ln -sfv "${PWD}"/"${BASEDIR}"/keybindings.json "${HOME}"/Library/Application\ Support/Code/User
 ln -sfv "${PWD}"/"${BASEDIR}"/settings.json "${HOME}"/Library/Application\ Support/Code/User
 
-# install extensions
-sed -e 's/[[:space:]]*#.*// ; /^[[:space:]]*$/d' "${BASEDIR}/extensions.txt" |
-    while read -r EXTENSION
-    do
-        code --install-extension "$EXTENSION"
-    done
+# compare list of installed extensions with extensions.txt and find missing extensions
+MISSING_EXTENSIONS=$(code --list-extensions | grep --ignore-case --invert-match --file /dev/stdin vscode/extensions.txt)
+for MISSING_EXTENSION in ${MISSING_EXTENSIONS}; do
+    code --install-extension "${MISSING_EXTENSION}"
+done
 
-# dump all installed extensions in extensions.txt
 ls -l "${HOME}"/.vscode/extensions |\
   # discard first line, only keep folder name
   awk '{ if(NR>1) print $9 }' |\
