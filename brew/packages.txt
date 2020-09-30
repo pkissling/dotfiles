@@ -1,4 +1,3 @@
-ag
 argocd
 awscli
 bat
@@ -11,14 +10,14 @@ fzf
 git
 git-delta
 gitlab-runner
-gpg
+gnupg
 gradle
 htop
 httpie
 jq
-jupyter
+jupyterlab
 k9s
-kubectl
+kubernetes-cli
 kustomize
 mas
 maven
@@ -26,10 +25,11 @@ ncdu
 neovim
 pinentry-mac
 romkatv/powerlevel10k/powerlevel10k
-rustup
+rustup-init
 serverless
 ssh-copy-id
 tfenv
+the_silver_searcher
 tldr
 tree
 watch
