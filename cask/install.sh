@@ -14,3 +14,8 @@ sed -e 's/[[:space:]]*#.*// ; /^[[:space:]]*$/d' "${BASEDIR}/packages.txt" |
 
 # cleanup
 brew cleanup
+
+# sort packages.txt file
+UUID=$(uuidgen)
+sort "${BASEDIR}"/packages.txt > /tmp/"${UUID}"
+mv /tmp/"${UUID}" "${BASEDIR}"/packages.txt

@@ -18,3 +18,8 @@ sed -e 's/[[:space:]]*#.*// ; /^[[:space:]]*$/d' "${BASEDIR}/sdks.txt" |
 
 # update sdks
 sdk update
+
+# sort sdks.txt file
+UUID=$(uuidgen)
+sort "${BASEDIR}"/sdks.txt > /tmp/"${UUID}"
+mv /tmp/"${UUID}" "${BASEDIR}"/sdks.txt

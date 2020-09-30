@@ -10,3 +10,8 @@ sed -e 's/[[:space:]]*#.*// ; /^[[:space:]]*$/d' "${BASEDIR}/apps.txt" |
 
 # update existing apps
 mas upgrade
+
+# sort apps.txt file
+UUID=$(uuidgen)
+sort "${BASEDIR}"/apps.txt > /tmp/"${UUID}"
+mv /tmp/"${UUID}" "${BASEDIR}"/apps.txt
