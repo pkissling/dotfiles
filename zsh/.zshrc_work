@@ -4,3 +4,5 @@ aws sts get-caller-identity --profile sast-pilcrow-dev_Developer > /dev/null || 
 # aliases
 alias venv="source ~/Documents/git/operations/python/venv/bin/activate"
 alias mfa="~/Documents/git/operations/miscellaneous/sast_temporary_mfa_credentials.sh"
+alias live="(aws sts get-caller-identity --profile sast-pilcrow-dev_Developer > /dev/null || ~/Documents/git/operations/miscellaneous/sast_temporary_mfa_credentials.sh) && venv && ~/Documents/git/operations/miscellaneous/sast_live_acquire_access.sh && deactivate"
+alias unlive="(aws sts get-caller-identity --profile sast-pilcrow-dev_Developer > /dev/null || ~/Documents/git/operations/miscellaneous/sast_temporary_mfa_credentials.sh) && venv && ~/Documents/git/operations/miscellaneous/sast_live_release_access.sh && deactivate"
