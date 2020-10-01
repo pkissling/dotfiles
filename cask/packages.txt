@@ -1,5 +1,4 @@
 1password
-alfred3
 android-platform-tools
 aws-vault
 bartender
@@ -7,6 +6,7 @@ coconutBattery
 docker
 google-chrome
 homebrew/cask-fonts/font-hack-nerd-font
+homebrew/cask-versions/alfred3
 iterm2
 jetbrains-toolbox
 lens
