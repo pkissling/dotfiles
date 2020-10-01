@@ -5,7 +5,7 @@ BASEDIR=$(dirname "$0")
 # compare list of installed apps with apps.txt and identify delta
 MISSING_APPS=$(mas list | awk '{ print $2 }'| grep --ignore-case --invert-match --file /dev/stdin mas/apps.txt) || true
 for MISSING_APP in ${MISSING_APPS[@]}; do
-    mas lucky "${MISSING_APPS}"
+    mas lucky "${MISSING_APP}"
 done
 
 # update existing apps
