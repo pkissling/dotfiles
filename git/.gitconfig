@@ -40,6 +40,7 @@
   pfwl = push --force-with-lease
   r = reset
   s = status
+  ss = status -s
 
   # scripts
   cleanup =  "!cleanup() { \
