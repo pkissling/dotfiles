@@ -57,7 +57,7 @@ alias hist="history | fzf | choose 1: | zsh -"
 alias k="kubectl"
 alias l="exa -la"
 alias ls="exa"
-alias v="nvim"
+alias vi="nvim"
 alias vim="nvim"
 
 # source usage specific configuration
