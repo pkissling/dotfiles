@@ -32,7 +32,7 @@
     "tabnine.experimentalAutoImports": true,
 
     "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
-    "terminal.external.osxExec": "iTerm.app",
+    "terminal.external.osxExec": "Hyper.app",
 
     "terraform.indexing": {
         "enabled": false

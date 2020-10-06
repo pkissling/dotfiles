@@ -15,6 +15,7 @@ ms-vscode-remote.remote-ssh-edit
 ms-vscode-remote.remote-wsl
 ms-vscode-remote.vscode-remote-extensionpack
 ms-vsliveshare.vsliveshare
+msjsdiag.debugger-for-chrome
 octref.vetur
 percygrunwald.vscode-intellij-recent-files
 redhat.vscode-yaml

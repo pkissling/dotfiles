@@ -7,7 +7,7 @@ This repository contains my personal Dotfiles with configuration for the followi
 - [cask](https://github.com/Homebrew/homebrew-cask)
 - [git](https://git-scm.com/)
 - [gnupg](https://gnupg.org/)
-- [iterm](https://iterm2.com/)
+- [hyper.js](https://hyper.is/)
 - [nvim](https://neovim.io/)
 - [mas](https://github.com/mas-cli/mas)
 - [sdkman](https://sdkman.io/)
@@ -18,8 +18,8 @@ This repository contains my personal Dotfiles with configuration for the followi
 Each of the folders present contains a dedicated `install.sh` script which can be used to install the tool and its corresponding configuration manually.
 
 ### Screenshots
-#### iTerm2 with zsh
-![iTerm2 with zsh](/.screenshots/iterm2_zsh.png)
+#### hyper.js with zsh
+![hyper.js with zsh](/.screenshots/hyper_zsh.png)
 
 #### nvim
 ![nvim](/.screenshots/nvim.png)
@@ -50,6 +50,12 @@ Create symlinks for git config.
 ##### gpg
 ```bash
 make gpg
+```
+Create symlinks for gpg config.
+
+##### hyper
+```bash
+make hyper
 ```
 Create symlinks for gpg config.
 

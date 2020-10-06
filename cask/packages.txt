@@ -7,7 +7,7 @@ docker
 google-chrome
 homebrew/cask-fonts/font-hack-nerd-font
 homebrew/cask-versions/alfred3
-iterm2
+hyper
 jetbrains-toolbox
 lens
 mattermost
