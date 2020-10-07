@@ -29,6 +29,8 @@
     "git.allowForcePush": true,
     "git.confirmForcePush": false,
 
+    "python.showStartPage": false,
+
     "tabnine.experimentalAutoImports": true,
 
     "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
