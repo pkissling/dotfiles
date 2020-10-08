@@ -39,6 +39,7 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh # zs
 [[ -s "${HOME}/.sdkman/bin/sdkman-init.sh" ]] && source "${HOME}/.sdkman/bin/sdkman-init.sh" # sdkman
 
 # custom functions
+# rename
 function mv() {
   if [ "$#" -ne 1 ] || [ ! -f "$1" ]; then
     command mv "$@"
@@ -50,10 +51,14 @@ function mv() {
   command mv -v -- "$1" "$newfilename"
 }
 
+# fzf history (https://github.com/junegunn/fzf/wiki/examples#command-history)
+hist() {
+  print -z $( history | fzf +s --tac | choose 1: )
+}
+
 # Aliases (must be one of the last commands to overwrite zsh aliases)
 alias cat="bat"
 alias g="git"
-alias hist="history | fzf | choose 1: | zsh -"
 alias k="kubectl"
 alias l="exa -la"
 alias ls="exa"
