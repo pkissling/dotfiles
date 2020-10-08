@@ -150,14 +150,12 @@ module.exports = {
     'hyper-active-tab',
     'hyper-font-ligatures',
     'hyper-highlight-active-pane',
-    'hyperline',
     'hyper-quit',
     'hyper-search',
-    'hyperminimal',
     'hyper-solarized-patched',
     'hypercwd',
-    'hyperterm-cursor'
-
+    'hyperterm-cursor',
+    'hyperlinks'
   ],
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
