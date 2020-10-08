@@ -150,6 +150,7 @@ module.exports = {
     'hyper-active-tab',
     'hyper-font-ligatures',
     'hyper-highlight-active-pane',
+    "hyper-hide-title",
     'hyper-quit',
     'hyper-search',
     'hyper-solarized-patched',
