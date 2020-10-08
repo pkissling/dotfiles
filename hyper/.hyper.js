@@ -148,14 +148,13 @@ module.exports = {
   //   `project#1.0.1`
   plugins: [
     'hyper-active-tab',
-    'hyper-font-ligatures',
     'hyper-highlight-active-pane',
     'hyper-quit',
     'hyper-search',
     'hyper-solarized-patched',
     'hypercwd',
-    'hyperterm-cursor',
-    'hyperlinks'
+    'hyperlinks',
+    'hyper-hide-title'
   ],
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
