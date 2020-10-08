@@ -33,7 +33,7 @@ module.exports = {
     cursorAccentColor: '#000',
 
     // `'BEAM'` for |, `'UNDERLINE'` for _, `'BLOCK'` for █
-    cursorShape: 'BEAM',
+    cursorShape: 'BLOCK',
 
     // set to `true` (without backticks and without quotes) for blinking cursor
     cursorBlink: true,
@@ -155,7 +155,9 @@ module.exports = {
     'hyper-search',
     'hyperminimal',
     'hyper-solarized-patched',
-    'hypercwd'
+    'hypercwd',
+    'hyperterm-cursor'
+
   ],
   // in development, you can create a directory under
   // `~/.hyper_plugins/local/` and include it here
