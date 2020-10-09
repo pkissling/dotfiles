@@ -45,7 +45,7 @@
 
   # scripts
   cleanup =  "!cleanup() { git fetch -p > /dev/null && for BRANCH in `git branch -vv | grep --invert-match '^*' | grep ': gone' | awk '{print $1}'`; do git branch -D ${BRANCH}; done; }; cleanup"
-  rebase-master = "!rb() { BRANCH=$(git branch --show-current); git stash --include-untracked && git checkout master && git pull && git checkout $BRANCH && git rebase master && git stash pop; }; rb"
+  rebase-master = "!rebasemaster() { git stash --include-untracked && git fetch -p && git rebase origin/master && git stash pop; }; rebasemaster"
 
 [credential]
   helper = manager-core
