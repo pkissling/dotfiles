@@ -2,7 +2,8 @@
 ![Lint](https://github.com/pkissling/dotfiles/workflows/Lint/badge.svg) ![Valid links](https://github.com/pkissling/dotfiles/workflows/Valid%20links/badge.svg)
 
 ## Overview
-This repository contains my personal Dotfiles with configuration for the following tools:
+This repository contains my personal Dotfiles with configuration
+for the following tools:
 - [brew](https://brew.sh/)
 - [cask](https://github.com/Homebrew/homebrew-cask)
 - [git](https://git-scm.com/)
@@ -15,7 +16,8 @@ This repository contains my personal Dotfiles with configuration for the followi
 - [vscode](https://code.visualstudio.com/)
 - [zsh](https://ohmyz.sh/)
 
-Each of the folders present contains a dedicated `install.sh` script which can be used to install the tool and its corresponding configuration manually.
+Each of the folders present contains a dedicated `install.sh` script which
+can be used to install the tool and its corresponding configuration manually.
 
 ### Screenshots
 #### hyper.js with zsh
