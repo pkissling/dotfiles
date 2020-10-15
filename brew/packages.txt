@@ -17,6 +17,7 @@ httpie
 jq
 jupyterlab
 k9s
+kubectx
 kubernetes-cli
 kustomize
 mas
