@@ -19,7 +19,6 @@ spectacle
 spotify
 spotmenu
 stats
-toggl
 viscosity
 visual-studio-code
 vlc
