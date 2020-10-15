@@ -21,10 +21,10 @@ can be used to install the tool and its corresponding configuration manually.
 
 ### Screenshots
 #### hyper.js with zsh
-![hyper.js with zsh](/.screenshots/hyper_zsh.png)
+![hyper.js with zsh](/.github/screenshots/hyper_zsh.png)
 
 #### nvim
-![nvim](/.screenshots/nvim.png)
+![nvim](/.github/screenshots/nvim.png)
 ### Install
 #### All
 ```bash
