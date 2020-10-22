@@ -6,6 +6,7 @@ credstash
 ctop
 exa
 fd
+fx
 fzf
 git
 git-delta
