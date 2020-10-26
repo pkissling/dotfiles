@@ -85,5 +85,31 @@
         "!include_dir_merge_list",
         "!include_dir_merge_named",
         "!secret"
-    ]
+    ],
+
+    //
+    // Launch settings
+    //
+    "launch": {
+
+        // testcafe
+        "version": "0.2.0",
+        "configurations": [
+            {
+                "type": "node",
+                "protocol": "inspector",
+                "request": "launch",
+                "name": "Launch test files with TestCafe",
+                "program": "${workspaceRoot}/node_modules/testcafe/bin/testcafe.js",
+                "args": [
+                    "chrome",
+                    "*.js",
+                    "--skip-js-errors",
+                    "--selector-timeout 30000"
+                ],
+                "console": "integratedTerminal",
+                "cwd": "${workspaceRoot}"
+            }
+        ]
+    }
 }
