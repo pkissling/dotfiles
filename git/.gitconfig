@@ -53,6 +53,9 @@
 [credential "https://dev.azure.com"]
   useHttpPath = true
 
+[diff]
+	colorMoved = default
+
 [include]
   # user details
   path = ~/.gitconfig_user
