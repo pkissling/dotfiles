@@ -11,6 +11,7 @@ fzf
 git
 git-delta
 gitlab-runner
+glow
 gnupg
 gradle
 htop
