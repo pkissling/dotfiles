@@ -22,7 +22,6 @@
   cleanup =  "!cleanup() { git fetch -p > /dev/null && for BRANCH in `git branch -vv | grep --invert-match '^*' | grep ': gone' | awk '{print $1}'`; do git branch -D ${BRANCH}; done; }; cleanup"
   rebase-master = "!rebasemaster() { git stash --include-untracked && git fetch -p && git rebase origin/master && git stash pop; }; rebasemaster"
 
-
 [commit]
   gpgsign = true
 
@@ -31,7 +30,7 @@
   excludesfile = ~/.gitignore
 
 [credential]
-  helper = manager-core
+  helper = /usr/local/share/gcm-core/git-credential-manager-core
 
 [credential "https://dev.azure.com"]
   useHttpPath = true
