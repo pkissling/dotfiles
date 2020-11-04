@@ -37,6 +37,10 @@
 
 [diff]
   colorMoved = default
+  tool = idea
+
+[difftool "idea"]
+  cmd = idea diff \"$LOCAL\" \"$REMOTE\"
 
 [include]
   # user details
@@ -46,13 +50,14 @@
   diffFilter = delta --color-only --dark
 
 [merge]
-  tool = nvim
+  tool = idea
 
 [mergetool]
   keepBackup = false
 
-[mergetool "nvim"]
-  cmd = nvim -f -c \"Gdiffsplit!\" \"$MERGED\"
+[mergetool "idea"]
+  cmd = idea merge \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
+  trustExitCode = true
 
 [pull]
   rebase = false
