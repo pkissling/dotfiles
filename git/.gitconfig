@@ -6,6 +6,7 @@
   ca = commit -a
   cane = commit --amend --no-edit
   cam = commit -a -m
+  cl = clean --force -d
   co = checkout
   cm = commit -m
   d = diff
