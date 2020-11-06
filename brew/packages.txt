@@ -1,7 +1,6 @@
 argocd
 awscli
 bat
-bit-git
 choose-rust
 credstash
 ctop
