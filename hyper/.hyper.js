@@ -151,7 +151,7 @@ module.exports = {
     'hyper-highlight-active-pane',
     'hyper-quit',
     'hyper-search',
-    'hyper-solarized-patched',
+    'hyper-solarized',
     'hypercwd',
     'hyperlinks',
     'hyper-hide-title'
