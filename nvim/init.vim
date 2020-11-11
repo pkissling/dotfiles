@@ -44,8 +44,8 @@ map <C-n> :NERDTreeToggle<CR> " Bind NERDtree to CTRL + n
 let g:rustfmt_autosave = 1 " format upon save
 
 " Theme
+let g:solarized_termtrans = 1 " This gets rid of the grey background
 colorscheme solarized
-set background=dark
 
 " Airline
 let g:airline_solarized_bg='dark'
