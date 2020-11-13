@@ -36,6 +36,9 @@
 [credential "https://dev.azure.com"]
   useHttpPath = true
 
+[delta]
+  features = side-by-side line-numbers
+
 [diff]
   colorMoved = default
   tool = idea
