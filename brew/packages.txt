@@ -27,6 +27,7 @@ mas
 maven
 ncdu
 neovim
+orf/brew/gping
 pinentry-mac
 romkatv/powerlevel10k/powerlevel10k
 rustup-init
