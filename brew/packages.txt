@@ -4,6 +4,7 @@ bat
 choose-rust
 credstash
 ctop
+dog
 exa
 fd
 fx
