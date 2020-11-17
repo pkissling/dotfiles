@@ -22,7 +22,7 @@
 
   # scripts
   cleanup =  "!cleanup() { git fetch -p > /dev/null && for BRANCH in `git branch -vv | grep --invert-match '^*' | grep ': gone' | awk '{print $1}'`; do git branch -D ${BRANCH}; done; }; cleanup"
-  rebase-master = "!rebasemaster() { git fetch -p && git rebase origin/master --autostash; }; rebasemaster"
+  rbm = "!rebasemaster() { git fetch -p && git rebase origin/master --autostash; }; rebasemaster"
 
 [commit]
   gpgsign = true
