@@ -2,6 +2,7 @@
   # abbreviations
   a = add
   aa = add -A
+  ap = add -p
   c = commit
   ca = commit -a
   cane = commit --amend --no-edit
