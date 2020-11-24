@@ -16,6 +16,7 @@
   hist = log --pretty=format:'%C(yellow)[%ad]%C(reset) %C(green)[%h]%C(reset) | %C(red)%s %C(bold red){{%an}}%C(reset) %C(blue)%d%C(reset)' --graph --date=short
   m = master
   p = push
+  psu = push-set-upstream
   pfwl = push --force-with-lease
   r = reset
   rb = rebase
@@ -29,6 +30,7 @@
   rebase-master = "!git fetch -p && git rebase --autostash origin/master"
   rebase-interactive = "!git rebase --autostash -i $(git log -n 1 master --pretty=format:'%h')"
   master = "!git checkout master && git pull && git cleanup"
+  push-set-upstream = "!git push --set-upstream origin $(git symbolic-ref --short HEAD)"
 
 [commit]
   gpgsign = true
