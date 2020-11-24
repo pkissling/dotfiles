@@ -19,14 +19,16 @@
   pfwl = push --force-with-lease
   r = reset
   rb = rebase
+  rbm = rebase-master
+  rbi = rebase-interactive
   s = status
   ss = status -s
 
   # scripts
-  cleanup =  "!cleanup() { git fetch -p > /dev/null && for BRANCH in `git branch -vv | grep --invert-match '^*' | grep ': gone' | awk '{print $1}'`; do git branch -D ${BRANCH}; done; }; cleanup"
-  rbm = "!rebasemaster() { git fetch -p && git rebase origin/master --autostash; }; rebasemaster"
-  rbi = "!rebaseinteractive() { git rebase -i $(git log -n 1 master --pretty=format:'%h'); }; rebaseinteractive"
-  master = "!master() { git checkout master && git pull && git cleanup; }; master"
+  cleanup =  "!git fetch -p > /dev/null && for BRANCH in `git branch -vv | grep --invert-match '^*' | grep ': gone' | awk '{print $1}'`; do git branch -D ${BRANCH}; done"
+  rebase-master = "!git fetch -p && git rebase --autostash origin/master"
+  rebase-interactive = "!git rebase --autostash -i $(git log -n 1 master --pretty=format:'%h')"
+  master = "!git checkout master && git pull && git cleanup"
 
 [commit]
   gpgsign = true
