@@ -9,6 +9,7 @@
   cam = commit -a -m
   cl = clean --force -d
   co = checkout
+  cob = checkout -b
   cm = commit -m
   d = diff
   ds = diff --staged
