@@ -13,6 +13,7 @@ plugins=(
   docker-compose
   terraform
   git
+  git-auto-fetch
   git-flow
   z
 )
