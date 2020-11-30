@@ -24,6 +24,7 @@ rust-lang.rust
 serayuzgur.crates
 softwaredotcom.music-time
 tabnine.tabnine-vscode
+trabpukcip.vscode-npm-scripts
 visualstudioexptteam.vscodeintellicode
 wallabyjs.quokka-vscode
 yzhang.markdown-all-in-one
