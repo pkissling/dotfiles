@@ -17,8 +17,9 @@
   last = log -1 HEAD --stat
   m = master
   p = push
-  psu = push-set-upstream
   pfwl = push --force-with-lease
+  pl = pull
+  psu = push-set-upstream
   r = reset
   rb = rebase
   rbm = rebase-master
