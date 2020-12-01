@@ -23,7 +23,7 @@
   rbm = rebase-master
   rbi = rebase-interactive
   s = status
-  ss = status -s
+  ss = status -sb
 
   # scripts
   cleanup =  "!git fetch -p > /dev/null && for BRANCH in `git branch -vv | grep --invert-match '^*' | grep ': gone' | awk '{print $1}'`; do git branch -D ${BRANCH}; done"
