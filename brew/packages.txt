@@ -29,7 +29,6 @@ orf/brew/gping
 pinentry-mac
 romkatv/powerlevel10k/powerlevel10k
 rustup-init
-serverless
 ssh-copy-id
 tfenv
 the_silver_searcher
