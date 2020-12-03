@@ -75,5 +75,5 @@
   trustExitCode = true
 
 [pull]
-  rebase = false
-  ff = only
+  rebase = true
+  autoStash = true
