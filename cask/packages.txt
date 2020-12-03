@@ -12,7 +12,6 @@ jetbrains-toolbox
 mattermost
 microsoft/git/git-credential-manager-core
 muzzle
-nightowl
 notion
 spectacle
 spotify
