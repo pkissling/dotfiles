@@ -37,7 +37,6 @@ tldr
 tree
 watch
 wget
-yamllint
 z
 zsh
 zsh-autosuggestions
