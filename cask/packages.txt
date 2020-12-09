@@ -5,7 +5,6 @@ bartender
 coconutBattery
 docker
 google-chrome
-homebrew/cask-fonts/font-hack-nerd-font
 homebrew/cask-versions/alfred3
 hyper
 jetbrains-toolbox
