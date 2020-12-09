@@ -13,6 +13,7 @@ for the following tools:
 - [mas](https://github.com/mas-cli/mas)
 - [sdkman](https://sdkman.io/)
 - [ssh](https://www.ssh.com/)
+- [starship](https://starship.rs/)
 - [vscode](https://code.visualstudio.com/)
 - [zsh](https://ohmyz.sh/)
 
@@ -87,6 +88,12 @@ make ssh
 ```
 Create symlinks for ssh config.
 
+##### starship
+```bash
+make starship
+```
+Install starship shell prompot , create symlinks.
+
 ##### vscode
 ```bash
 make vscode
@@ -97,4 +104,4 @@ Create symlinks for vscode configuration, install extensions.
 ```bash
 make zsh
 ```
-Install zsh with Powerlevel10k, create symlinks.
+Install zsh, create symlinks.

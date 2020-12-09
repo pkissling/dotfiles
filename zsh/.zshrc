@@ -1,10 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # Plugins
 plugins=(
   aws
@@ -27,17 +20,17 @@ export BAT_STYLE="changes,header" # bat
 export EDITOR="nvim" # vim
 export GPG_TTY=$(tty) # gpg
 export PATH="/usr/local/sbin:$PATH" # brew path
+export STARSHIP_CONFIG="${HOME}/.starship/starship.toml" # starship
 
 # sources
 source $ZSH/oh-my-zsh.sh # zsh
-source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme # theme (installed via homebrew)
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh # zsh-autosuggestions
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh # zsh-syntax-highlighting
 
 # init
 . $(brew --prefix)/etc/profile.d/z.sh # brew
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh powerlevel10k # powerlevel10k
 [[ -s "${HOME}/.sdkman/bin/sdkman-init.sh" ]] && source "${HOME}/.sdkman/bin/sdkman-init.sh" # sdkman
+eval "$(starship init zsh)"
 
 # custom functions
 # rename

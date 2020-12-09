@@ -10,7 +10,7 @@ brew update
 brew upgrade
 
 # compare list of installed packages with packages.txt and identify delta
-MISSING_PACKAGES=$(brew list --formula| grep --ignore-case --invert-match --file /dev/stdin brew/packages.txt) || true
+MISSING_PACKAGES=$(brew list --full-name | grep --ignore-case --invert-match --file /dev/stdin brew/packages.txt) || true
 for MISSING_PACKAGE in ${MISSING_PACKAGES}; do
     brew install "${MISSING_PACKAGE}"
 done

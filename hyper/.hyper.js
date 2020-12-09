@@ -9,10 +9,10 @@ module.exports = {
     updateChannel: 'stable',
 
     // default font size in pixels for all tabs
-    fontSize: 12,
+    fontSize: 13,
 
     // font family with optional fallbacks
-    fontFamily: 'Hack Nerd Font Mono, Consolas, Monospace',
+    fontFamily: 'Fira Code, Retina',
 
     // default font weight: 'normal' or 'bold'
     fontWeight: 'normal',

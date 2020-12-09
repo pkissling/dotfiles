@@ -1,11 +1,13 @@
 awscli
 bat
 choose-rust
+coreutils
 credstash
 ctop
 dog
 exa
 fd
+font-fira-code
 fx
 fzf
 git
@@ -27,9 +29,9 @@ ncdu
 neovim
 orf/brew/gping
 pinentry-mac
-romkatv/powerlevel10k/powerlevel10k
 rustup-init
 ssh-copy-id
+starship
 tfenv
 the_silver_searcher
 tldr
