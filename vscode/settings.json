@@ -6,6 +6,8 @@
     "diffEditor.ignoreTrimWhitespace": false,
 
     "editor.accessibilitySupport": "off",
+    "editor.fontFamily": "Fira Code",
+    "editor.fontLigatures": true,
     "editor.formatOnSaveMode": "modifications",
     "editor.renderWhitespace": "boundary",
     "editor.suggestSelection": "first",
