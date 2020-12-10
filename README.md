@@ -21,8 +21,8 @@ Each of the folders present contains a dedicated `install.sh` script which
 can be used to install the tool and its corresponding configuration manually.
 
 ### Screenshots
-#### hyper.js with zsh
-![hyper.js with zsh](/.github/screenshots/hyper_zsh.png)
+#### Hyper.js with zsh and Starship
+![Hyper.js with zsh and Starship](/.github/screenshots/hyper_zsh_starship.png)
 
 #### nvim
 ![nvim](/.github/screenshots/nvim.png)
