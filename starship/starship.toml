@@ -22,6 +22,7 @@
   behind = "⇣${count}"
   conflicted = "✗"
   diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+  style = "white"
 
 [git_commit]
   commit_hash_length = 8
