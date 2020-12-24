@@ -1,5 +1,4 @@
 bungcip.better-toml
-coenraads.bracket-pair-colorizer
 dotjoshjohnson.xml
 eamodio.gitlens
 eg2.vscode-npm-script
@@ -22,9 +21,7 @@ percygrunwald.vscode-intellij-recent-files
 redhat.vscode-yaml
 rust-lang.rust
 serayuzgur.crates
-softwaredotcom.music-time
 tabnine.tabnine-vscode
 trabpukcip.vscode-npm-scripts
 visualstudioexptteam.vscodeintellicode
-wallabyjs.quokka-vscode
 yzhang.markdown-all-in-one
