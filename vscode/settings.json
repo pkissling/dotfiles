@@ -33,6 +33,8 @@
 
     "python.showStartPage": false,
 
+    "rust-client.engine": "rust-analyzer",
+
     "tabnine.experimentalAutoImports": true,
 
     "terminal.integrated.fontFamily": "Fira Code",
