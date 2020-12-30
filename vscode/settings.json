@@ -33,6 +33,7 @@
 
     "python.showStartPage": false,
 
+    "rust-client.updateOnStartup": true,
     "rust-client.engine": "rust-analyzer",
 
     "tabnine.experimentalAutoImports": true,
