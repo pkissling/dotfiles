@@ -5,12 +5,12 @@
 This repository contains my personal Dotfiles with configuration
 for the following tools:
 - [brew](https://brew.sh/)
-- [cask](https://github.com/Homebrew/homebrew-cask)
+  - [cask](https://github.com/Homebrew/homebrew-cask)
+  - [mas](https://github.com/mas-cli/mas)
 - [git](https://git-scm.com/)
 - [gnupg](https://gnupg.org/)
 - [hyper.js](https://hyper.is/)
 - [nvim](https://neovim.io/)
-- [mas](https://github.com/mas-cli/mas)
 - [sdkman](https://sdkman.io/)
 - [ssh](https://www.ssh.com/)
 - [starship](https://starship.rs/)
@@ -36,13 +36,7 @@ make
 ```bash
 make brew
 ```
-Install brew, install & update packages.
-
-##### cask
-```bash
-make cask
-```
-Install & update casks.
+Install brew, install & update packages (for brew, cask & mas) via Brewfile.
 
 ##### git
 ```bash
@@ -69,12 +63,6 @@ Create symlinks for gpg config.
 make nvim
 ```
 Create symlinks for nvim, install & update plugins.
-
-##### mas
-```bash
-make mas
-```
-Install Mac App Store apps.
 
 ##### sdkman
 ```bash
