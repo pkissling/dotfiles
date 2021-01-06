@@ -41,8 +41,6 @@
     "rust-client.updateOnStartup": true,
     "rust-client.engine": "rust-analyzer",
 
-    "tabnine.experimentalAutoImports": true,
-
     "terminal.integrated.fontFamily": "Fira Code",
     "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
     "terminal.external.osxExec": "Hyper.app",

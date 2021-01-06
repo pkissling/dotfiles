@@ -21,7 +21,6 @@ percygrunwald.vscode-intellij-recent-files
 redhat.vscode-yaml
 rust-lang.rust
 serayuzgur.crates
-tabnine.tabnine-vscode
 trabpukcip.vscode-npm-scripts
 visualstudioexptteam.vscodeintellicode
 yzhang.markdown-all-in-one
