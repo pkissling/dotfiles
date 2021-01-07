@@ -1,6 +1,3 @@
-# exports
-export PROFILE="work"
-
 # aliases
 alias venv="source ~/Documents/git/operations/python/venv/bin/activate"
 alias mfa="~/Documents/git/operations/miscellaneous/sast_temporary_mfa_credentials.sh"

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if [ "$PROFILE" != "work" ]; then
+if [ "$(cat ${HOME}/dotfiles/.profile)" != "work" ]; then
     # show icon only for work profile
     exit 1;
 fi

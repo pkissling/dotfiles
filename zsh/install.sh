@@ -1,21 +1,10 @@
 #!/usr/bin/env bash
-
-BASEDIR=$(dirname "$0")
+set -ex
+USAGE=$(cat "${HOME}"/dotfiles/.profile)
 
 # create symlinks
-ln -sfv "${PWD}"/"${BASEDIR}"/.zshrc "${HOME}"
-ln -sfv "${PWD}"/"${BASEDIR}"/.p10k.zsh "${HOME}"
-
-# create symlink to .zshrc_user, if not exists
-if [ ! -L "${HOME}"/.zshrc_user ] ; then
-  while [[ ! $USAGE =~ (private|work) ]]; do
-    read -r -p "Usage (work/private): " USAGE
-    export USAGE=$USAGE
-  done
-
-  ln -sfv "${PWD}"/"${BASEDIR}"/.zshrc_"${USAGE}" "${HOME}"/.zshrc_user
-fi
-
+ln -sfv "${HOME}"/dotfiles/zsh/.zshrc "${HOME}"
+ln -sfv "${HOME}"/dotfiles/zsh/.zshrc_"${USAGE}" "${HOME}"/.zshrc_user
 
 # install zsh, if not installed already
 if [ -z "${ZSH}" ] || ! [ -d "${ZSH}" ]; then
@@ -25,11 +14,11 @@ if [ -z "${ZSH}" ] || ! [ -d "${ZSH}" ]; then
   chsh -s /bin/zsh
 
   # load zsh
-  zsh
+  exec /bin/zsh
 fi
 
-# upgrade zsh
-sh "$ZSH/tools/upgrade.sh"
+# upgrade zsh, command will fail if no update is available
+sh "$ZSH/tools/upgrade.sh" || true
 
 # restart zsh to apply latest configuration
 exec /bin/zsh

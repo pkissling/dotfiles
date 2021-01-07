@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 set -ex
-BASEDIR=$(dirname "$0")
 
 # create symlinks
-ln -sfv "${PWD}"/"${BASEDIR}"/keybindings.json "${HOME}"/Library/Application\ Support/Code/User
-ln -sfv "${PWD}"/"${BASEDIR}"/settings.json "${HOME}"/Library/Application\ Support/Code/User
+ln -sfv "${HOME}"/dotfiles/vscode/keybindings.json "${HOME}"/Library/Application\ Support/Code/User
+ln -sfv "${HOME}"/dotfiles/vscode/settings.json "${HOME}"/Library/Application\ Support/Code/User
 
 # compare list of installed extensions with extensions.txt and identify delta
 MISSING_EXTENSIONS=$(code --list-extensions | grep --ignore-case --invert-match --file /dev/stdin vscode/extensions.txt) || true
@@ -20,4 +19,4 @@ ls -l "${HOME}"/.vscode/extensions |\
   sed 's/-[0-9].*//' |\
   # sometimes multipe version of the plugin are installed in parallel
   uniq \
-  > "${BASEDIR}"/extensions.txt
+  > "${HOME}"/dotfiles/vscode/extensions.txt

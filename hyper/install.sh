@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 set -ex
-BASEDIR=$(dirname "$0")
 
 # create symlink
-ln -sfv "${PWD}"/"${BASEDIR}"/.hyper.js "${HOME}"/.hyper.js
+ln -sfv "${HOME}"/dotfiles/hyper/.hyper.js "${HOME}"/.hyper.js

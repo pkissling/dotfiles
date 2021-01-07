@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 set -e
-BASEDIR=$(dirname "$0")
 
 # install sdkman
 # shellcheck source=/dev/null
@@ -10,7 +9,7 @@ source "${HOME}/.sdkman/bin/sdkman-init.sh" || /bin/bash -c "$(curl -s https://g
 sdk selfupdate
 
 # install skds
-sed -e 's/[[:space:]]*#.*// ; /^[[:space:]]*$/d' "${BASEDIR}/sdks.txt" |
+sed -e 's/[[:space:]]*#.*// ; /^[[:space:]]*$/d' "${HOME}"/dotfiles/sdkman/sdks.txt |
     while read -r SDK
     do
         sdk list "${SDK}" | grep 'installed' || sdk install "${SDK}"
@@ -21,5 +20,5 @@ sdk update
 
 # sort sdks.txt file
 UUID=$(uuidgen)
-sort "${BASEDIR}"/sdks.txt > /tmp/"${UUID}"
-mv /tmp/"${UUID}" "${BASEDIR}"/sdks.txt
+sort "${HOME}"/dotfiles/sdkman/sdks.txt > /tmp/"${UUID}"
+mv /tmp/"${UUID}" "${HOME}"/dotfiles/sdkman/sdks.txt
