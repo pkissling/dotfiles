@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 
-if [ "$(cat ${HOME}/dotfiles/.profile)" != "work" ]; then
+if [ "$(cat "${HOME}"/dotfiles/.profile)" != "work" ]; then
     # show icon only for work profile
     exit 1;
 fi
-
 
 CURRENT_EXPIRATION=$(cat "$HOME"/.aws/credentials.*-mfa-expiration)
 CURRENT_EXPIRATION_IN_SECONDS=$(gdate -d "$CURRENT_EXPIRATION" +%s)
