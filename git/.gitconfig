@@ -75,3 +75,5 @@
   cmd = idea merge \"$LOCAL\" \"$REMOTE\" \"$BASE\" \"$MERGED\"
   trustExitCode = true
 
+[pull]
+  rebase = true
