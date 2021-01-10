@@ -64,6 +64,12 @@ make nvim
 ```
 Create symlinks for nvim, install & update plugins.
 
+##### rust
+```bash
+make rust
+```
+Update rust
+
 ##### sdkman
 ```bash
 make sdkman
