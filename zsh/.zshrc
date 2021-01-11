@@ -53,6 +53,7 @@ hist() {
 # Aliases (must be one of the last commands to overwrite zsh aliases)
 alias cat="bat"
 alias g="git"
+alias json="pbpaste | jq '.'"
 alias k="kubectl"
 alias l="exa -la"
 alias ls="exa"
