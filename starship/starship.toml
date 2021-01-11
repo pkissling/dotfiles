@@ -1,9 +1,15 @@
 [aws]
   disabled = true
 
+[battery]
+  discharging_symbol = "🔋"
+  format = "[$symbol $percentage]($style) "
 [[battery.display]]
   threshold = 20
-  style = "bold red"
+  style = "bold yellow"
+[[battery.display]]
+  threshold = 10
+  style = "red yellow"
 
 [character]
   success_symbol = "[❯](bold green)"
