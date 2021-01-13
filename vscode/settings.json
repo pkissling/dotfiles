@@ -1,14 +1,11 @@
 {
-    "files.watcherExclude": {
-        "**/.git/**": true,
-        "**/node_modules/*/**": true
-    },
-
-    "git.autofetch": true,
-    "git.confirmSync": false,
-    "git.enableSmartCommit": true,
-
     "diffEditor.ignoreTrimWhitespace": false,
+
+    "files.watcherExclude": {
+        "**/.git": true,
+        "**/node_modules": true,
+        "**/target": true
+    },
 
     "editor.accessibilitySupport": "off",
     "editor.fontFamily": "Fira Code",
@@ -33,13 +30,22 @@
     },
     "files.trimTrailingWhitespace": true,
 
+    "git.autofetch": true,
     "git.allowForcePush": true,
     "git.confirmForcePush": false,
+    "git.confirmSync": false,
+    "git.enableSmartCommit": true,
 
     "python.showStartPage": false,
 
     "rust-client.updateOnStartup": true,
     "rust-client.engine": "rust-analyzer",
+
+    "search.exclude": {
+        "**/.git": true,
+        "**/node_modules": true,
+        "**/target": true
+    },
 
     "terminal.integrated.fontFamily": "Fira Code",
     "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
