@@ -1,3 +1,18 @@
+format = """\
+  $kubernetes\
+  $directory\
+  $git_branch\
+  $git_commit\
+  $git_status\
+  $custom\
+  $jobs\
+  $cmd_duration\
+  $line_break\
+  $battery\
+  $time\
+  $character\
+  """
+
 [aws]
   disabled = true
 
