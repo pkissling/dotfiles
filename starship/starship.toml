@@ -39,6 +39,15 @@
   commit_hash_length = 8
   tag_disabled = false
 
+[kubernetes]
+  format = '[$context]($style) » '
+  disabled = false
+  style = "bold black"
+[kubernetes.context_aliases]
+  "sast-pilcrow-dev_default" = "dev"
+  "sast-pilcrow-demo_default" = "demo"
+  "sast-pilcrow-live_default" = "live"
+
 [python]
   format = '» [(\($virtualenv\))]($style) '
   style = "bold black"
