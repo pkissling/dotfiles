@@ -23,6 +23,8 @@
 [directory]
   truncation_length = 8
   truncation_symbol = "…/"
+  style = "bold white"
+  format = "[$path]($style)[$read_only]($read_only_style) "
 
 [git_branch]
   format = "» [$symbol$branch]($style) "
