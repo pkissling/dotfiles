@@ -55,6 +55,7 @@
 [time]
   disabled = false
   format = "[$time]($style) "
+  style = "bold grey"
 
 # custom
 [custom.aws_mfa_renewal]
