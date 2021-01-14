@@ -15,6 +15,11 @@
   success_symbol = "[❯](bold green)"
   error_symbol = "[✗](bold red)"
 
+[cmd_duration]
+  min_time = 1000
+  format = " » took [$duration]($style) "
+  style = "bold black"
+
 [directory]
   truncation_length = 8
   truncation_symbol = "…/"
