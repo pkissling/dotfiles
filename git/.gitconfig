@@ -24,6 +24,7 @@
   rb = rebase
   rbm = rebase-master
   rbi = rebase-interactive
+  rh = reset --hard
   s = status
   ss = status -sb
 
