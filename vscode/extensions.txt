@@ -22,5 +22,6 @@ redhat.vscode-yaml
 rust-lang.rust
 serayuzgur.crates
 trabpukcip.vscode-npm-scripts
+vadimcn.vscode-lldb
 visualstudioexptteam.vscodeintellicode
 yzhang.markdown-all-in-one
