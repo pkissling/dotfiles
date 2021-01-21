@@ -58,6 +58,8 @@
         ]
     },
 
+    "tws.highlightTrailingWhiteSpace": true,
+
     "window.autoDetectColorScheme": true,
     "window.zoomLevel": 0,
 
