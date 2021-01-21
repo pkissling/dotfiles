@@ -28,7 +28,6 @@
         "**/.settings": true,
         "**/.factorypath": true
     },
-    "files.trimTrailingWhitespace": true,
 
     "git.autofetch": true,
     "git.allowForcePush": true,
