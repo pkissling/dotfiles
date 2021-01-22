@@ -14,6 +14,8 @@
     "editor.renderWhitespace": "boundary",
     "editor.suggestSelection": "first",
 
+    "eslint.format.enable": true,
+
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "explorer.openEditors.visible": 0,
@@ -72,22 +74,22 @@
     // Language specific
     //
 
-    // markdown
     "[markdown]": {
         "editor.formatOnSave": true
     },
 
-    // terraform
     "[terraform]": {
         "editor.formatOnSave": true
     },
 
-    // rust
+    "[typescript]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    },
+
     "[rust]": {
         "editor.formatOnSave": true
     },
 
-    // yaml
     "[yaml]": {
         "editor.insertSpaces": true,
         "editor.tabSize": 2,
