@@ -7,7 +7,6 @@ hashicorp.terraform
 humao.rest-client
 jcbuisson.vue
 jkiviluoto.tws
-matklad.rust-analyzer
 ms-azuretools.vscode-docker
 ms-python.python
 ms-toolsai.jupyter
@@ -21,6 +20,7 @@ msjsdiag.debugger-for-chrome
 octref.vetur
 percygrunwald.vscode-intellij-recent-files
 redhat.vscode-yaml
+rust-lang.rust
 serayuzgur.crates
 trabpukcip.vscode-npm-scripts
 vadimcn.vscode-lldb
