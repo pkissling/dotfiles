@@ -40,7 +40,6 @@
     "python.showStartPage": false,
 
     "rust-client.updateOnStartup": true,
-    "rust-client.engine": "rust-analyzer",
 
     "search.exclude": {
         "**/.git": true,
@@ -59,8 +58,9 @@
             "serve"
         ]
     },
-
     "tws.highlightTrailingWhiteSpace": true,
+
+    "typescript.updateImportsOnFileMove.enabled": "always",
 
     "window.autoDetectColorScheme": true,
     "window.zoomLevel": 0,
@@ -88,6 +88,10 @@
 
     "[rust]": {
         "editor.formatOnSave": true
+    },
+
+    "[vue]": {
+        "editor.defaultFormatter": "dbaeumer.vscode-eslint"
     },
 
     "[yaml]": {
