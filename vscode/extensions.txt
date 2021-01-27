@@ -25,4 +25,5 @@ serayuzgur.crates
 traBpUkciP.vscode-npm-scripts
 vadimcn.vscode-lldb
 VisualStudioExptTeam.vscodeintellicode
+wix.vscode-import-cost
 yzhang.markdown-all-in-one
