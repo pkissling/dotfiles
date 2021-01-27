@@ -1,6 +1,6 @@
 bungcip.better-toml
 dbaeumer.vscode-eslint
-dotjoshjohnson.xml
+DotJoshJohnson.xml
 eamodio.gitlens
 eg2.vscode-npm-script
 hashicorp.terraform
@@ -22,7 +22,7 @@ percygrunwald.vscode-intellij-recent-files
 redhat.vscode-yaml
 rust-lang.rust
 serayuzgur.crates
-trabpukcip.vscode-npm-scripts
+traBpUkciP.vscode-npm-scripts
 vadimcn.vscode-lldb
-visualstudioexptteam.vscodeintellicode
+VisualStudioExptTeam.vscodeintellicode
 yzhang.markdown-all-in-one

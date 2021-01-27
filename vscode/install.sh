@@ -11,12 +11,4 @@ for MISSING_EXTENSION in ${MISSING_EXTENSIONS}; do
     code --install-extension "${MISSING_EXTENSION}"
 done
 
-# shellcheck disable=SC2012
-ls -l "${HOME}"/.vscode/extensions |\
-  # discard first line, only keep folder name
-  awk '{ if(NR>1) print $9 }' |\
-  # remove version from folder name
-  sed 's/-[0-9].*//' |\
-  # sometimes multipe version of the plugin are installed in parallel
-  uniq \
-  > "${HOME}"/dotfiles/vscode/extensions.txt
+code --list-extensions > "${HOME}"/dotfiles/vscode/extensions.txt
