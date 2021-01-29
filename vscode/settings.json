@@ -59,6 +59,7 @@
         ]
     },
     "tws.highlightTrailingWhiteSpace": true,
+    "tws.trimOnSave": false,
 
     "typescript.updateImportsOnFileMove.enabled": "always",
 
