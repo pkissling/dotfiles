@@ -1,6 +1,9 @@
 {
     "diffEditor.ignoreTrimWhitespace": false,
 
+    "dotfiles.installCommand": "make -C ~/dotfiles",
+    "dotfiles.repository": "https://github.com/pkissling/dotfiles.git",
+
     "files.watcherExclude": {
         "**/.git": true,
         "**/node_modules": true,
