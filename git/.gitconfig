@@ -22,9 +22,11 @@
   psu = push-set-upstream
   r = reset
   rb = rebase
+  rbc = rebase --continue
   rbm = rebase-master
   rbi = rebase-interactive
   rh = reset --hard
+  rs = reset --soft
   s = status
   ss = status -sb
 
