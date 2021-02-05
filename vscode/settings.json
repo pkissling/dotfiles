@@ -69,10 +69,13 @@
     "window.autoDetectColorScheme": true,
     "window.zoomLevel": 0,
 
-    "workbench.editor.showTabs": true,
     "workbench.colorTheme": "Default Dark+",
+    "workbench.editor.decorations.badges": true,
+    "workbench.editor.decorations.colors": true,
+    "workbench.editor.showTabs": true,
+    "workbench.editor.tabSizing": "shrink",
+    "workbench.editor.wrapTabs": true,
     "workbench.startupEditor": "none",
-
 
     //
     // Language specific
