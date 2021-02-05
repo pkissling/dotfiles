@@ -13,6 +13,7 @@
   cm = commit -m
   d = diff
   ds = diff --staged
+  fd = fuzzy-diff
   hist = log --pretty=format:'%C(dim blue)[%ad]%C(reset) %C(bold normal)[%h]%C(reset) | %C(blue)%s %C(bold normal)[%an]%C(reset)%C(bold white)%d%C(reset)' --graph --date=short
   last = log -1 HEAD --stat
   m = master
@@ -32,6 +33,9 @@
 
   # scripts
   cleanup = "!git fetch -p > /dev/null && for BRANCH in `git branch -vv | grep --invert-match '^*' | grep ': gone' | awk '{print $1}'`; do git branch -D ${BRANCH}; done"
+  fuzzy-diff = "!fuzzydiff() { \
+                  git diff $@ --name-only | fzf -m --ansi --preview \"git diff $@ --color=always -- {-1}\"; \
+                }; fuzzydiff"
   pull-rebase = "!git pull --autostash --rebase origin $(git symbolic-ref --short HEAD)"
   rebase-master = "!git fetch -p && git rebase --autostash origin/master"
   rebase-interactive = "!git rebase --autostash -i $(git log -n 1 origin/master --pretty=format:'%h')"
