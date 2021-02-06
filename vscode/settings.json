@@ -44,6 +44,7 @@
 
     "rust-client.updateOnStartup": true,
 
+    "search.mode": "reuseEditor",
     "search.exclude": {
         "**/.git": true,
         "**/node_modules": true,
@@ -61,6 +62,7 @@
             "serve"
         ]
     },
+
     "tws.highlightTrailingWhiteSpace": true,
     "tws.trimOnSave": false,
 
@@ -71,7 +73,6 @@
 
     "workbench.colorTheme": "Default Dark+",
     "workbench.editor.decorations.badges": true,
-    "workbench.editor.decorations.colors": true,
     "workbench.editor.showTabs": true,
     "workbench.editor.tabSizing": "shrink",
     "workbench.editor.wrapTabs": true,
