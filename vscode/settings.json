@@ -43,8 +43,6 @@
     "python.showStartPage": false,
 
     "rust-client.updateOnStartup": true,
-
-    "search.mode": "reuseEditor",
     "search.exclude": {
         "**/.git": true,
         "**/node_modules": true,
