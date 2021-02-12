@@ -7,6 +7,7 @@
   ca = commit -a
   cane = commit --amend --no-edit
   cam = commit -a -m
+  fc = fuzzy-checkout
   cl = clean --force -d
   co = checkout
   cob = checkout -b
@@ -36,6 +37,7 @@
   fuzzy-diff = "!fuzzydiff() { \
                   git diff $@ --name-only | fzf -m --ansi --preview \"git diff $@ --color=always -- {-1}\"; \
                 }; fuzzydiff"
+  fuzzy-checkout = "!git checkout $(git branch | fzf)"
   pull-rebase = "!git pull --autostash --rebase origin $(git symbolic-ref --short HEAD)"
   rebase-master = "!git fetch -p && git rebase --autostash origin/master"
   rebase-interactive = "!git rebase --autostash -i $(git log -n 1 origin/master --pretty=format:'%h')"
