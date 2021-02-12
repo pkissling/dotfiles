@@ -47,7 +47,7 @@ function mv() {
 
 # fzf history (https://github.com/junegunn/fzf/wiki/examples#command-history)
 hist() {
-  print -z $( history | fzf +s --tac | choose 1: )
+  print -z $( history | fzf +s --tac -e| choose 1: )
 }
 
 # Aliases (must be one of the last commands to overwrite zsh aliases)
