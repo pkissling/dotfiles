@@ -17,7 +17,8 @@ format = """\
   disabled = true
 
 [battery]
-  discharging_symbol = "🔋"
+  charging_symbol = "⚡️"
+  discharging_symbol = "💀"
   format = "[$symbol $percentage]($style) "
 [[battery.display]]
   threshold = 20
