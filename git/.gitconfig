@@ -44,9 +44,6 @@
   master = "!git checkout master && git pull && git cleanup"
   push-set-upstream = "!git push --set-upstream origin $(git symbolic-ref --short HEAD)"
 
-[commit]
-  gpgsign = true
-
 [core]
   pager = delta --dark
   excludesfile = ~/.gitignore_global

@@ -1,3 +1,6 @@
+[commit]
+  gpgsign = true
+
 [user]
 	name = Patrick Kissling
 	email = patrick.kissling@de.bosch.com
