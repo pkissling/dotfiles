@@ -2,8 +2,9 @@
 default: .PHONY
 
 bootstrap:
-	@ln -sfv $(shell pwd -P) ${HOME}
-ifeq (,$(wildcard ${PWD}/.profile))
+	# ln will fail if repo was already checked out in ~/dotfiles 
+	@ln -sfv $(shell pwd -P) ${HOME} || true
+ifeq (,$(wildcard ${HOME}/dotfiles/.profile))
 	@echo "Usage (private/work)?"
 	@read line; echo $$line > ${HOME}/dotfiles/.profile
 endif

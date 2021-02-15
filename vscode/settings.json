@@ -1,7 +1,7 @@
 {
     "diffEditor.ignoreTrimWhitespace": false,
 
-    "dotfiles.installCommand": "make -C ~/dotfiles",
+    "dotfiles.installCommand": "echo private > ~/dotfiles/.profile && make -C ~/dotfiles git",
     "dotfiles.repository": "https://github.com/pkissling/dotfiles.git",
 
     "files.watcherExclude": {
