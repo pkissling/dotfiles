@@ -33,7 +33,7 @@ format = """\
 
 [cmd_duration]
   min_time = 1000
-  format = " » took [$duration]($style) "
+  format = "» took [$duration]($style) "
   style = "bold black"
 
 [directory]
@@ -44,18 +44,22 @@ format = """\
 
 [git_branch]
   format = "» [$symbol$branch]($style) "
-  style = "bold black"
+  style = "bold white"
 
 [git_status]
   ahead = "⇡${count}"
   behind = "⇣${count}"
   conflicted = "✗"
   diverged = "⇕⇡${ahead_count}⇣${behind_count}"
+  format = '([\[$all_status$ahead_behind\]]($style) )'
   style = "white"
 
 [git_commit]
   commit_hash_length = 8
   tag_disabled = false
+  only_detached = false
+  format = "on [$hash]($style) "
+  style = "bold black"
 
 [kubernetes]
   format = '[$context]($style) » '
