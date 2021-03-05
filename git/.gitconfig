@@ -4,14 +4,14 @@
   aa = add -A
   ap = add -p
   c = commit
-  ca = commit -a
+  ca = commit --all
   cane = commit --amend --no-edit
-  cam = commit -a -m
+  cam = commit --all --message
   fc = fuzzy-checkout
   cl = clean --force -d
   co = checkout
   cob = checkout -b
-  cm = commit -m
+  cm = commit --message
   d = diff
   ds = diff --staged
   fd = fuzzy-diff
@@ -30,7 +30,7 @@
   rh = reset --hard
   rs = reset --soft
   s = status
-  ss = status -sb
+  ss = status --short --branch
 
   # scripts
   cleanup = "!git fetch -p > /dev/null && for BRANCH in `git branch -vv | grep --invert-match '^*' | grep ': gone' | awk '{print $1}'`; do git branch -D ${BRANCH}; done"
