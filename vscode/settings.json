@@ -40,6 +40,8 @@
     "git.confirmSync": false,
     "git.enableSmartCommit": true,
 
+    "liveshare.authenticationProvider": "Microsoft",
+
     "python.showStartPage": false,
 
     "rust-client.updateOnStartup": true,
