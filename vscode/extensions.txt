@@ -4,7 +4,6 @@ dbaeumer.vscode-eslint
 DotJoshJohnson.xml
 eamodio.gitlens
 eg2.vscode-npm-script
-esbenp.prettier-vscode
 hashicorp.terraform
 humao.rest-client
 jcbuisson.vue
@@ -26,7 +25,6 @@ percygrunwald.vscode-intellij-recent-files
 redhat.vscode-yaml
 rust-lang.rust
 serayuzgur.crates
-traBpUkciP.vscode-npm-scripts
 vadimcn.vscode-lldb
 VisualStudioExptTeam.vscodeintellicode
 wix.vscode-import-cost
