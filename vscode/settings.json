@@ -16,6 +16,7 @@
     "editor.formatOnSaveMode": "modifications",
     "editor.renderWhitespace": "boundary",
     "editor.suggestSelection": "first",
+    "editor.tabSize": 2,
 
     "eslint.format.enable": true,
 
