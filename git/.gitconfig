@@ -94,3 +94,9 @@
 
 [rebase]
   autoStash = true
+
+[user]
+  # default user config, unless overwritten
+  # via [include]
+  name = Patrick Kissling
+  email = patrick.kissling@gmx.de
