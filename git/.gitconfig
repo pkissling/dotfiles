@@ -67,10 +67,6 @@
     \"$(cd \"$(dirname \"$LOCAL\")\" && pwd)/$(basename \"$LOCAL\")\" \
     \"$(cd \"$(dirname \"$REMOTE\")\" && pwd)/$(basename \"$REMOTE\")\" \
 
-[include]
-  # user details
-  path = ~/.gitconfig_user
-
 [interactive]
   diffFilter = delta --color-only --dark
 
@@ -96,7 +92,11 @@
   autoStash = true
 
 [user]
-  # default user config, unless overwritten
-  # via [include]
+  # default user config, unless overwritten via [include]
+  # workaround to have basic gitconfig avialable in .devcontainer.json
   name = Patrick Kissling
   email = patrick.kissling@gmx.de
+
+[include]
+  # user details
+  path = ~/.gitconfig_user
