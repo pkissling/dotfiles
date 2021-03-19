@@ -38,7 +38,7 @@
                   git diff $@ --name-only | fzf -m --ansi --preview \"git diff $@ --color=always -- {-1}\"; \
                 }; fuzzydiff"
   fuzzy-checkout = "!git checkout $(git branch | fzf)"
-  pull-rebase = "!git pull --autostash --rebase origin $(git symbolic-ref --short HEAD)"
+  pull-rebase = "!git pull origin $(git symbolic-ref --short HEAD) --rebase --autostash"
   rebase-master = "!git fetch -p && git rebase --autostash origin/master"
   rebase-interactive = "!git rebase --autostash -i $(git log -n 1 origin/master --pretty=format:'%h')"
   master = "!git checkout master && git pull && git cleanup"
