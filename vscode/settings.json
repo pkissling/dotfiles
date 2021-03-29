@@ -70,7 +70,6 @@
     "typescript.updateImportsOnFileMove.enabled": "always",
 
     "window.autoDetectColorScheme": true,
-    "window.zoomLevel": 0,
 
     "workbench.colorTheme": "Dracula Soft",
     "workbench.editor.decorations.badges": true,
