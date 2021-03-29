@@ -22,7 +22,7 @@ Plugin 'airblade/vim-gitgutter' " Git annotations in editor
 Plugin 'preservim/nerdtree' " File tree
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'micha/vim-colors-solarized' " Solarized Theme
+Plugin 'dracula/vim', { 'name': 'dracula' } " Dracula Theme
 Plugin 'tpope/vim-fugitive' " Git integration
 Plugin 'ctrlpvim/ctrlp.vim' " CTRLP
 Plugin 'terryma/vim-expand-region' " Expand selection
@@ -44,8 +44,7 @@ map <C-n> :NERDTreeToggle<CR> " Bind NERDtree to CTRL + n
 let g:rustfmt_autosave = 1 " format upon save
 
 " Theme
-let g:solarized_termtrans = 1 " This gets rid of the grey background
-colorscheme solarized
+colorscheme dracula
 
 " Airline
 let g:airline_solarized_bg='dark'

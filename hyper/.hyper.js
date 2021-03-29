@@ -148,12 +148,12 @@ module.exports = {
   //   `project#1.0.1`
   plugins: [
     'hyper-active-tab',
+    'hyper-dracula',
     'hyper-font-ligatures',
     'hyper-hide-title',
     'hyper-highlight-active-pane',
     'hyper-quit',
     'hyper-search',
-    'hyper-solarized',
     'hypercwd',
     'hyperlinks'
   ],

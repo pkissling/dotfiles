@@ -21,11 +21,14 @@ export EDITOR="nvim" # vim
 export GPG_TTY=$(tty) # gpg
 export PATH="/usr/local/sbin:$PATH" # brew path
 export STARSHIP_CONFIG="${HOME}/.starship/starship.toml" # starship
+export ZPLUG_HOME=/usr/local/opt/zplug # zplug
+export ZSH_THEME="dracula" # theme
 
 # sources
 source $ZSH/oh-my-zsh.sh # zsh
 source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh # zsh-autosuggestions
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh # zsh-syntax-highlighting
+source $ZPLUG_HOME/init.zsh # zplug
 
 # init
 . $(brew --prefix)/etc/profile.d/z.sh # brew
@@ -49,6 +52,9 @@ function mv() {
 hist() {
   print -z $( history | fzf +s --tac -e| choose 1: )
 }
+
+# zplug
+zplug "dracula/zsh", as:theme
 
 # Aliases (must be one of the last commands to overwrite zsh aliases)
 alias cat="bat"

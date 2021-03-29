@@ -2,6 +2,7 @@ bungcip.better-toml
 DavidAnson.vscode-markdownlint
 dbaeumer.vscode-eslint
 DotJoshJohnson.xml
+dracula-theme.theme-dracula
 eamodio.gitlens
 eg2.vscode-npm-script
 hashicorp.terraform

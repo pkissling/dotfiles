@@ -25,7 +25,7 @@ format = """\
   style = "bold yellow"
 [[battery.display]]
   threshold = 10
-  style = "red yellow"
+  style = "bold red"
 
 [character]
   success_symbol = "[❯](bold green)"
@@ -34,17 +34,17 @@ format = """\
 [cmd_duration]
   min_time = 1000
   format = "» took [$duration]($style) "
-  style = "bold black"
+  style = "bold"
 
 [directory]
   truncation_length = 8
   truncation_symbol = "…/"
-  style = "bold white"
+  style = "bold"
   format = "[$path]($style)[$read_only]($read_only_style) "
 
 [git_branch]
   format = "» [$symbol$branch]($style) "
-  style = "bold white"
+  style = "bold"
 
 [git_status]
   ahead = "⇡${count}"
@@ -52,19 +52,18 @@ format = """\
   conflicted = "✗"
   diverged = "⇕⇡${ahead_count}⇣${behind_count}"
   format = '([\[$all_status$ahead_behind\]]($style) )'
-  style = "white"
 
 [git_commit]
   commit_hash_length = 8
   tag_disabled = false
   only_detached = false
   format = "on [$hash]($style) "
-  style = "bold black"
+  style = "bold"
 
 [kubernetes]
   format = '[$context]($style) » '
   disabled = false
-  style = "bold black"
+  style = "bold"
 [kubernetes.context_aliases]
   "sast-pilcrow-dev_default" = "dev"
   "sast-pilcrow-demo_default" = "demo"
@@ -72,12 +71,12 @@ format = """\
 
 [python]
   format = '» [(\($virtualenv\))]($style) '
-  style = "bold black"
+  style = "bold"
 
 [time]
   disabled = false
   format = "[$time]($style) "
-  style = "bold grey"
+  style = "bold"
 
 # custom
 [custom.aws_mfa_renewal]
