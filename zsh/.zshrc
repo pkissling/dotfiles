@@ -11,29 +11,47 @@ plugins=(
   z
 )
 
-# exports
-export ZSH=~/.oh-my-zsh # zsh
-export HYPHEN_INSENSITIVE=true # zsh
-export DISABLE_MAGIC_FUNCTIONS=true # zsh
-export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=10" # zsh-autosuggestions
+# zsh
+export ZSH=~/.oh-my-zsh
+export HYPHEN_INSENSITIVE=true
+export DISABLE_MAGIC_FUNCTIONS=true
+source $ZSH/oh-my-zsh.sh
+
+# zplug
+export ZPLUG_HOME=/usr/local/opt/zplug
+source $ZPLUG_HOME/init.zsh
+zplug "dracula/zsh", as:theme
+if ! zplug check; then
+  zplug install
+fi
+zplug load
+
+# theme
+ln -sf $ZPLUG_HOME/repos/dracula/zsh/dracula.zsh-theme $ZSH/themes/dracula.zsh-theme
+export ZSH_THEME="dracula" # theme
+
+# zsh-autosuggestions
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=10"
+
+# zsh-syntax-highlighting
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 
+
+# brew
+export PATH="/usr/local/sbin:$PATH"
+. $(brew --prefix)/etc/profile.d/z.sh
+
+# starship
+export STARSHIP_CONFIG="${HOME}/.starship/starship.toml"
+eval "$(starship init zsh)"
+
+# sdkman
+[[ -s "${HOME}/.sdkman/bin/sdkman-init.sh" ]] && source "${HOME}/.sdkman/bin/sdkman-init.sh"
+
+# tools
 export BAT_STYLE="changes,header" # bat
 export EDITOR="nvim" # vim
 export GPG_TTY=$(tty) # gpg
-export PATH="/usr/local/sbin:$PATH" # brew path
-export STARSHIP_CONFIG="${HOME}/.starship/starship.toml" # starship
-export ZPLUG_HOME=/usr/local/opt/zplug # zplug
-export ZSH_THEME="dracula" # theme
-
-# sources
-source $ZSH/oh-my-zsh.sh # zsh
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh # zsh-autosuggestions
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh # zsh-syntax-highlighting
-source $ZPLUG_HOME/init.zsh # zplug
-
-# init
-. $(brew --prefix)/etc/profile.d/z.sh # brew
-[[ -s "${HOME}/.sdkman/bin/sdkman-init.sh" ]] && source "${HOME}/.sdkman/bin/sdkman-init.sh" # sdkman
-eval "$(starship init zsh)"
 
 # custom functions
 # rename
@@ -52,9 +70,6 @@ function mv() {
 hist() {
   print -z $( history | fzf +s --tac -e| choose 1: )
 }
-
-# zplug
-zplug "dracula/zsh", as:theme
 
 # Aliases (must be one of the last commands to overwrite zsh aliases)
 alias cat="bat"
