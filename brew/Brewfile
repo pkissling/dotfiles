@@ -1,3 +1,4 @@
+tap "hmarr/tap"
 tap "homebrew/bundle"
 tap "homebrew/cask"
 tap "homebrew/cask-drivers"
@@ -78,6 +79,7 @@ cask "spotify"
 cask "stats"
 cask "viscosity"
 cask "visual-studio-code"
+cask "vitals"
 cask "vlc"
 cask "whatsapp"
 mas "Amphetamine", id: 937984704
