@@ -10,12 +10,6 @@ plugins=(
   z
 )
 
-# zsh
-export ZSH=~/.oh-my-zsh
-export HYPHEN_INSENSITIVE=true
-export DISABLE_MAGIC_FUNCTIONS=true
-source $ZSH/oh-my-zsh.sh
-
 # zplug
 export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
@@ -25,13 +19,19 @@ if ! zplug check; then
 fi
 zplug load
 
+# zsh
+export ZSH=~/.oh-my-zsh
+export HYPHEN_INSENSITIVE=true
+export DISABLE_MAGIC_FUNCTIONS=true
+source $ZSH/oh-my-zsh.sh
+
 # theme
 ln -sf $ZPLUG_HOME/repos/dracula/zsh/dracula.zsh-theme $ZSH/themes/dracula.zsh-theme
 export ZSH_THEME="dracula" # theme
 
 # zsh-autosuggestions
-source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=10"
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # zsh-syntax-highlighting
 source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
