@@ -7,7 +7,6 @@ plugins=(
   terraform
   git
   git-auto-fetch
-  git-flow
   z
 )
 
@@ -35,7 +34,7 @@ source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=10"
 
 # zsh-syntax-highlighting
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh 
+source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # brew
 export PATH="/usr/local/sbin:$PATH"
