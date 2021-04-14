@@ -1,6 +1,7 @@
 # aliases
 alias argo="kubectl port-forward service/argocd-server 8910:443 -n argocd"
 alias db="kubectl port-forward deployment/db-forwarder 3320:23306"
+alias goodmorning="mfa && up"
 alias live="(aws sts get-caller-identity --profile sast-pilcrow-dev_Developer > /dev/null || ~/Documents/git/operations/miscellaneous/sast_temporary_mfa_credentials.sh) && venv && ~/Documents/git/operations/miscellaneous/sast_live_acquire_access.sh && deactivate"
 alias mfa="~/Documents/git/operations/miscellaneous/sast_temporary_mfa_credentials.sh"
 alias venv="source ~/Documents/git/operations/python/venv/bin/activate"
