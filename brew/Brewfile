@@ -84,7 +84,6 @@ cask "vlc"
 cask "whatsapp"
 mas "Amphetamine", id: 937984704
 mas "EasyRes", id: 688211836
-mas "Flow", id: 1423210932
 mas "Hand Mirror", id: 1502839586
 mas "Keynote", id: 409183694
 mas "Monosnap", id: 540348655
