@@ -33,15 +33,15 @@
   ss = status --short --branch
 
   # scripts
-  cleanup = "!git fetch -p > /dev/null && for BRANCH in `git branch -vv | grep --invert-match '^*' | grep ': gone' | awk '{print $1}'`; do git branch -D ${BRANCH}; done"
+  cleanup = "!git fetch --prune --tags > /dev/null && for BRANCH in `git branch -vv | grep --invert-match '^*' | grep ': gone' | awk '{print $1}'`; do git branch -D ${BRANCH}; done"
   fuzzy-diff = "!fuzzydiff() { \
                   git diff $@ --name-only | fzf -m --ansi --preview \"git diff $@ --color=always -- {-1}\"; \
                 }; fuzzydiff"
   fuzzy-checkout = "!git checkout $(git branch | fzf)"
-  pull-rebase = "!git pull origin $(git symbolic-ref --short HEAD) --rebase --autostash"
-  rebase-master = "!git fetch -p && git rebase --autostash origin/master"
-  rebase-interactive = "!git rebase --autostash -i $(git log -n 1 origin/master --pretty=format:'%h')"
-  master = "!git checkout master && git pull && git cleanup"
+  pull-rebase = "!git fetch --prune --tags && git pull origin $(git symbolic-ref --short HEAD) --rebase --autostash"
+  rebase-master = "!git fetch --prune --tags && git rebase --autostash origin/master"
+  rebase-interactive = "!git rebase --autostash --interactive $(git log -n 1 origin/master --pretty=format:'%h')"
+  master = "!git checkout master && git pl && git cleanup"
   push-set-upstream = "!git push --set-upstream origin $(git symbolic-ref --short HEAD)"
 
 [core]
