@@ -47,6 +47,9 @@ eval "$(starship init zsh)"
 # sdkman
 [[ -s "${HOME}/.sdkman/bin/sdkman-init.sh" ]] && source "${HOME}/.sdkman/bin/sdkman-init.sh"
 
+# rust
+source $HOME/.cargo/env
+
 # tools
 export BAT_STYLE="changes,header" # bat
 export EDITOR="nvim" # vim

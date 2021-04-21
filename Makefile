@@ -1,4 +1,4 @@
-.PHONY: brew git gpg hyper nvim sdkman ssh starship vscode zsh
+.PHONY: brew git gpg hyper nvim rust sdkman ssh starship vscode zsh
 default: .PHONY
 
 bootstrap:
