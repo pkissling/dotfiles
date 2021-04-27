@@ -51,4 +51,3 @@ vscode: bootstrap brew
 zsh: bootstrap brew
 	@chmod +x zsh/install.sh
 	@./zsh/install.sh
-
