@@ -37,7 +37,7 @@
   fuzzy-diff = "!fuzzydiff() { \
                   git diff $@ --name-only | fzf -m --ansi --preview \"git diff $@ --color=always -- {-1}\"; \
                 }; fuzzydiff"
-  fuzzy-checkout = "!git checkout $(git branch | fzf)"
+  fuzzy-checkout = "!git checkout $(git branch --sort=-committerdate | grep --invert-match '*' | fzf)"
   pull-rebase = "!git fetch --prune --tags --force && git pull origin $(git symbolic-ref --short HEAD) --rebase --autostash"
   rebase-master = "!git fetch --prune --tags -- force && git rebase --autostash origin/master"
   rebase-interactive = "!git rebase --autostash --interactive $(git log -n 1 origin/master --pretty=format:'%h')"
