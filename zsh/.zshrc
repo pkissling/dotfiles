@@ -20,9 +20,10 @@ fi
 zplug load
 
 # zsh
-export ZSH=~/.oh-my-zsh
-export HYPHEN_INSENSITIVE=true
+export DISABLE_AUTO_UPDATE=true
 export DISABLE_MAGIC_FUNCTIONS=true
+export HYPHEN_INSENSITIVE=true
+export ZSH=~/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
 # theme
