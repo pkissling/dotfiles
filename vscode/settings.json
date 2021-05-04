@@ -71,7 +71,7 @@
 
     "window.autoDetectColorScheme": true,
 
-    "workbench.colorTheme": "Dracula Soft",
+    "workbench.colorTheme": "Dracula",
     "workbench.editor.decorations.badges": true,
     "workbench.editor.showTabs": true,
     "workbench.editor.tabSizing": "shrink",
