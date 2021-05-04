@@ -9,6 +9,7 @@ hashicorp.terraform
 humao.rest-client
 jcbuisson.vue
 jkiviluoto.tws
+keesschollaart.vscode-home-assistant
 miguelsolorio.fluent-icons
 ms-azuretools.vscode-docker
 ms-python.python
