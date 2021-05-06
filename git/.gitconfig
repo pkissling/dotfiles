@@ -32,21 +32,21 @@
   s = status
   ss = status --short --branch
 
-  # scripts
+  # aliases
   cleanup = "!git fetch --prune --tags --force > /dev/null && for BRANCH in `git branch -vv | grep --invert-match '^*' | grep ': gone' | awk '{print $1}'`; do git branch -D ${BRANCH}; done"
-  fuzzy-diff = "!fuzzydiff() { \
-                  git diff $@ --name-only | fzf -m --ansi --preview \"git diff $@ --color=always -- {-1}\"; \
-                }; fuzzydiff"
-  fuzzy-checkout = "!git checkout $(git branch --sort=-committerdate | grep --invert-match '*' | fzf)"
   pull-rebase = "!git fetch --prune --tags --force && git pull origin $(git symbolic-ref --short HEAD) --rebase --autostash"
   rebase-master = "!git fetch --prune --tags -- force && git rebase --autostash origin/master"
   rebase-interactive = "!git rebase --autostash --interactive $(git log -n 1 origin/master --pretty=format:'%h')"
   master = "!git checkout master && git pl && git cleanup"
   push-set-upstream = "!git push --set-upstream origin $(git symbolic-ref --short HEAD)"
 
+  # functions
+  fuzzy-checkout = !bash -c 'source $HOME/.git/bin && git-fuzzy-checkout'
+  fuzzy-diff = !bash -c 'source $HOME/.git/bin && git-fuzzy-diff'
+
 [core]
   pager = delta --dark
-  excludesfile = ~/.gitignore_global
+  excludesfile = ~/.git/.gitignore_global
 
 [credential]
   helper = /usr/local/share/gcm-core/git-credential-manager-core
@@ -99,4 +99,4 @@
 
 [include]
   # user details
-  path = ~/.gitconfig_user
+  path = ~/.git/.gitconfig_user

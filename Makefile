@@ -2,7 +2,7 @@
 default: .PHONY
 
 bootstrap:
-	# ln will fail if repo was already checked out in ~/dotfiles 
+	# ln will fail if repo was already checked out in ~/dotfiles
 	@ln -sfv $(shell pwd -P) ${HOME} || true
 ifeq (,$(wildcard ${HOME}/dotfiles/.profile))
 	@echo "Usage (private/work)?"
