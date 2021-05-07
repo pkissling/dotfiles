@@ -5,6 +5,7 @@ DotJoshJohnson.xml
 dracula-theme.theme-dracula
 eamodio.gitlens
 eg2.vscode-npm-script
+foxundermoon.shell-format
 hashicorp.terraform
 humao.rest-client
 jcbuisson.vue
