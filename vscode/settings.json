@@ -69,6 +69,9 @@
 
     "typescript.updateImportsOnFileMove.enabled": "always",
 
+    "vetur.validation.templateProps": true,
+    "vetur.experimental.templateInterpolationService": true,
+
     "window.autoDetectColorScheme": true,
 
     "workbench.colorTheme": "Dracula",
