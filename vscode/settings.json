@@ -75,6 +75,7 @@
     "workbench.editor.decorations.badges": true,
     "workbench.editor.showTabs": true,
     "workbench.editor.tabSizing": "shrink",
+    "workbench.editor.untitled.hint": "hidden",
     "workbench.editor.wrapTabs": true,
     "workbench.productIconTheme": "fluent-icons",
     "workbench.startupEditor": "none",
