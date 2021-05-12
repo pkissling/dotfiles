@@ -41,6 +41,8 @@
     "git.confirmSync": false,
     "git.enableSmartCommit": true,
 
+    "javascript.updateImportsOnFileMove.enabled": "always",
+
     "liveshare.authenticationProvider": "Microsoft",
 
     "python.showStartPage": false,
@@ -69,7 +71,6 @@
 
     "typescript.updateImportsOnFileMove.enabled": "always",
 
-    "vetur.validation.templateProps": true,
     "vetur.experimental.templateInterpolationService": true,
 
     "window.autoDetectColorScheme": true,
