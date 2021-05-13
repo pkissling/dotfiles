@@ -1,8 +1,8 @@
 {
     "diffEditor.ignoreTrimWhitespace": false,
 
-    "dotfiles.installCommand": "echo private > ~/dotfiles/.profile && make -C ~/dotfiles git",
-    "dotfiles.repository": "https://github.com/pkissling/dotfiles.git",
+    "dotfiles.installCommand": "~/dotfiles/install.sh",
+    "dotfiles.repository": "https://github.com/pkissling/dotfiles-vscode.git",
 
     "files.watcherExclude": {
         "**/.git": true,
@@ -117,5 +117,6 @@
         "!include_dir_merge_list",
         "!include_dir_merge_named",
         "!secret"
-    ]
+    ],
+    "terminal.integrated.defaultProfile.linux": "zsh (login)"
 }
