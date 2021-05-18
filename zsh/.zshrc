@@ -56,6 +56,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
+# fzf
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh || $(brew --prefix)/opt/fzf/install
+
 # tools
 export BAT_STYLE="changes,header" # bat
 export EDITOR="nvim" # vim
@@ -72,11 +75,6 @@ function mv() {
   newfilename="$1"
   vared newfilename
   command mv -v -- "$1" "$newfilename"
-}
-
-# fzf history (https://github.com/junegunn/fzf/wiki/examples#command-history)
-hist() {
-  print -z $( history | fzf +s --tac -e| choose 1: )
 }
 
 # Aliases (must be one of the last commands to overwrite zsh aliases)
