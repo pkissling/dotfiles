@@ -7,8 +7,5 @@ which brew || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homeb
 # install packages from Brewfile
 brew bundle --file "${HOME}"/dotfiles/brew/Brewfile
 
-# cleanup
-brew cleanup
-
 # update Brewfile
 brew bundle dump --file "${HOME}"/dotfiles/brew/Brewfile --force
