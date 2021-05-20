@@ -25,6 +25,7 @@ msjsdiag.debugger-for-chrome
 mutantdino.resourcemonitor
 octref.vetur
 percygrunwald.vscode-intellij-recent-files
+redhat.vscode-commons
 redhat.vscode-yaml
 rust-lang.rust
 serayuzgur.crates
