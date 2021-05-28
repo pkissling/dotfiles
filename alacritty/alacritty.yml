@@ -26,3 +26,5 @@ cursor:
 key_bindings:
   - { key: Right, mods: Alt, chars: "\x1BF" }
   - { key: Left,  mods: Alt, chars: "\x1BB" }
+  - { key: Left,  mods: Command, chars: "\x1bOH",   mode: AppCursor   } # Home
+  - { key: Right, mods: Command, chars: "\x1bOF",   mode: AppCursor   } # End
