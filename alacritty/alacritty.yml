@@ -16,9 +16,11 @@ font:
 window:
   padding:
    x: 10
-   y: 10
-  title: Alacritty
-  decorations: buttonless
+   y: 25
+  decorations: transparent
+
+scrolling:
+  history: 10000
 
 cursor:
   style: Beam
