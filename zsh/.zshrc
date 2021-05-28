@@ -4,9 +4,10 @@ plugins=(
   brew
   docker
   docker-compose
-  terraform
   git
   git-auto-fetch
+  terraform
+  tmux
   z
 )
 
@@ -23,6 +24,7 @@ zplug load
 export DISABLE_AUTO_UPDATE=true
 export DISABLE_MAGIC_FUNCTIONS=true
 export HYPHEN_INSENSITIVE=true
+export ZSH_TMUX_AUTOSTART=true
 export ZSH=~/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 

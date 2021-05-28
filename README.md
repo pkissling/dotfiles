@@ -18,6 +18,7 @@ for the following tools:
 - [sdkman](https://sdkman.io/)
 - [ssh](https://www.ssh.com/)
 - [starship](https://starship.rs/)
+- [tmux](https://github.com/tmux/tmux)
 - [vscode](https://code.visualstudio.com/)
 - [zsh](https://ohmyz.sh/)
 
@@ -123,7 +124,15 @@ Create symlinks for ssh config.
 make starship
 ```
 
-Install starship shell prompot , create symlinks.
+Install starship shell prompt, create symlinks.
+
+##### tmux
+
+```bash
+make tmux
+```
+
+Install tpm (tmux plugin manager), create symlinks.
 
 ##### vscode
 

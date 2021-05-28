@@ -1,4 +1,4 @@
-.PHONY: alacritty brew git gpg hyper nvim rust sdkman ssh starship vscode zsh
+.PHONY: alacritty brew git gpg hyper nvim rust sdkman ssh starship tmux vscode zsh
 default: .PHONY
 
 bootstrap:
@@ -47,6 +47,10 @@ ssh: bootstrap
 starship: bootstrap brew
 	@chmod +x starship/install.sh
 	@./starship/install.sh
+
+tmux: bootstrap brew
+	@chmod +x tmux/install.sh
+	@./tmux/install.sh
 
 vscode: bootstrap brew
 	@chmod +x vscode/install.sh
