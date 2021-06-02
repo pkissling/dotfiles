@@ -13,7 +13,6 @@ for the following tools:
   - [mas](https://github.com/mas-cli/mas)
 - [git](https://git-scm.com/)
 - [gnupg](https://gnupg.org/)
-- [hyper.js](https://hyper.is/)
 - [nvim](https://neovim.io/)
 - [sdkman](https://sdkman.io/)
 - [ssh](https://www.ssh.com/)
@@ -73,14 +72,6 @@ Create symlinks for git config.
 
 ```bash
 make gpg
-```
-
-Create symlinks for gpg config.
-
-##### hyper
-
-```bash
-make hyper
 ```
 
 Create symlinks for gpg config.

@@ -56,7 +56,7 @@
 
     "terminal.integrated.fontFamily": "Fira Code",
     "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
-    "terminal.external.osxExec": "Hyper.app",
+    "terminal.external.osxExec": "Alacritty.app",
 
     "terraform.languageServer": {
 
