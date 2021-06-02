@@ -18,6 +18,7 @@ window:
    x: 10
    y: 25
   decorations: transparent
+  startup_mode: Fullscreen
 
 scrolling:
   history: 10000
