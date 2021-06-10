@@ -55,7 +55,8 @@
     },
 
     "terminal.integrated.fontFamily": "Fira Code",
-    "terminal.integrated.shell.osx": "/usr/local/bin/zsh",
+    "terminal.integrated.shell.osx": "/bin/bash",
+    "terminal.integrated.shellArgs.osx": ["${env:HOME}/dotfiles/vscode/vscode-tmux-shell"],
     "terminal.external.osxExec": "Alacritty.app",
 
     "terraform.languageServer": {
@@ -117,6 +118,5 @@
         "!include_dir_merge_list",
         "!include_dir_merge_named",
         "!secret"
-    ],
-    "terminal.integrated.defaultProfile.linux": "zsh (login)"
+    ]
 }
