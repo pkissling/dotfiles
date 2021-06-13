@@ -2,4 +2,4 @@
 
 # from https://medium.com/@joaomoreno/persistent-terminal-sessions-in-vs-code-8fc469ed6b41
 SESSION="vscode-$(pwd)"
-"$(brew --prefix)"/opt/tmux/bin/tmux attach-session -d -t "$SESSION" || "$(brew --prefix)"/opt/tmux/bin/tmux new-session -s "$SESSION"
+/usr/local/opt/tmux/bin/tmux attach-session -d -t "$SESSION" || /usr/local/opt/tmux/bin/tmux new-session -s "$SESSION"
