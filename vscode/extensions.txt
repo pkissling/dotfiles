@@ -6,6 +6,7 @@ dracula-theme.theme-dracula
 eamodio.gitlens
 eg2.vscode-npm-script
 foxundermoon.shell-format
+GitHub.remotehub
 hashicorp.terraform
 humao.rest-client
 jcbuisson.vue
