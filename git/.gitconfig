@@ -67,6 +67,9 @@
     \"$(cd \"$(dirname \"$LOCAL\")\" && pwd)/$(basename \"$LOCAL\")\" \
     \"$(cd \"$(dirname \"$REMOTE\")\" && pwd)/$(basename \"$REMOTE\")\" \
 
+[gpg]
+  program = /usr/local/bin/gpg
+
 [interactive]
   diffFilter = delta --color-only --dark
 
