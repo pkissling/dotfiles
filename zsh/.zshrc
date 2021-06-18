@@ -8,7 +8,6 @@ plugins=(
   git-auto-fetch
   terraform
   tmux
-  z
 )
 
 # zplug
@@ -41,7 +40,6 @@ source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # brew
 export PATH="/usr/local/sbin:$PATH"
-. $(brew --prefix)/etc/profile.d/z.sh
 
 # starship
 export STARSHIP_CONFIG="${HOME}/.starship/starship.toml"
@@ -60,6 +58,9 @@ export NVM_DIR="$HOME/.nvm"
 
 # fzf
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh || $(brew --prefix)/opt/fzf/install
+
+# zoxide
+eval "$(zoxide init zsh)"
 
 # tools
 export BAT_STYLE="changes,header" # bat
