@@ -14,6 +14,7 @@
     "editor.fontFamily": "Fira Code",
     "editor.fontLigatures": true,
     "editor.formatOnSaveMode": "modifications",
+    "editor.inlineSuggest.enabled": true,
     "editor.renderWhitespace": "boundary",
     "editor.suggestSelection": "first",
     "editor.tabSize": 2,
