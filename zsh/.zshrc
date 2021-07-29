@@ -10,6 +10,11 @@ plugins=(
   tmux
 )
 
+# create new tmux default session
+if [ -z "$TMUX" ]; then
+    tmux attach -t default || tmux new -s default
+fi
+
 # zplug
 export ZPLUG_HOME=/usr/local/opt/zplug
 source $ZPLUG_HOME/init.zsh
@@ -23,7 +28,6 @@ zplug load
 export DISABLE_AUTO_UPDATE=true
 export DISABLE_MAGIC_FUNCTIONS=true
 export HYPHEN_INSENSITIVE=true
-export ZSH_TMUX_AUTOSTART=true
 export ZSH=~/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
