@@ -58,6 +58,7 @@
     },
 
     "terminal.integrated.fontFamily": "Fira Code",
+    "terminal.integrated.macOptionClickForcesSelection": true, // fix copy/paste in integrated terminal
     "terminal.integrated.shell.osx": "/bin/bash",
     "terminal.integrated.shellArgs.osx": ["${env:HOME}/dotfiles/vscode/vscode-tmux-shell"],
     "terminal.external.osxExec": "Alacritty.app",
@@ -78,8 +79,6 @@
     "vetur.experimental.templateInterpolationService": true,
 
     "window.autoDetectColorScheme": true,
-
-    "workbench.colorTheme": "Dracula",
     "workbench.editor.decorations.badges": true,
     "workbench.editor.showTabs": true,
     "workbench.editor.tabSizing": "shrink",
