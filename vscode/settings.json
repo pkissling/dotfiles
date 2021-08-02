@@ -48,6 +48,8 @@
 
     "python.showStartPage": false,
 
+    "redhat.telemetry.enabled": false,
+
     "rust-client.disableRustup": true,
     "rust-client.updateOnStartup": true,
 
