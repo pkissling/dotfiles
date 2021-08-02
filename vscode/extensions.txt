@@ -13,6 +13,7 @@ humao.rest-client
 jcbuisson.vue
 jkiviluoto.tws
 keesschollaart.vscode-home-assistant
+matklad.rust-analyzer
 miguelsolorio.fluent-icons
 ms-azuretools.vscode-docker
 ms-python.python
@@ -30,7 +31,6 @@ octref.vetur
 percygrunwald.vscode-intellij-recent-files
 redhat.vscode-commons
 redhat.vscode-yaml
-rust-lang.rust
 serayuzgur.crates
 vadimcn.vscode-lldb
 VisualStudioExptTeam.vscodeintellicode
