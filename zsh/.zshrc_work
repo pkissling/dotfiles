@@ -1,6 +1,10 @@
 # aliases
 alias argo="kubectl port-forward service/argocd-server 8910:443 -n argocd"
 alias db="kubectl port-forward deployment/db-forwarder 3320:23306"
+alias keycloak_start="~/Documents/scripts/keycloak_start.sh"
+alias keycloak_stop="~/Documents/scripts/keycloak_stop.sh"
+alias iotdevicemockup_start="~/Documents/scripts/iotdevicemockup_start.sh"
+alias iotdevicemockup_stop="~/Documents/scripts/iotdevicemockup_stop.sh"
 alias goodmorning="mfa && up"
 alias live='function _live(){ venv; ~/Documents/git/operations/miscellaneous/sast_live_acquire_access.sh $1; deactivate};_live'
 alias mfa="~/Documents/git/operations/miscellaneous/sast_temporary_mfa_credentials.sh"
