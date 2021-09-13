@@ -60,7 +60,6 @@
     "terminal.external.osxExec": "Alacritty.app",
 
     "terraform.languageServer": {
-
         "external": true,
         "args": [
             "serve"
