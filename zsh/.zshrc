@@ -84,12 +84,20 @@ function mv() {
   command mv -v -- "$1" "$newfilename"
 }
 
+# kubecontext
+function kx() {
+  if [ "$#" -ne 1 ]; then
+    kubectx
+  else
+    kubectx $(kubectx | ag "$@")
+  fi
+}
+
 # Aliases (must be one of the last commands to overwrite zsh aliases)
 alias cat="bat"
 alias g="git"
 alias json="pbpaste | jq '.'"
 alias k="kubectl"
-alias kx="kubectx"
 alias l="exa -la"
 alias ls="exa"
 alias up="cd ${HOME}/dotfiles && git pull && make"
