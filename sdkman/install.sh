@@ -3,7 +3,7 @@ set -e
 
 # install sdkman
 # shellcheck source=/dev/null
-source "${HOME}/.sdkman/bin/sdkman-init.sh" || /bin/bash -c "$(curl -s https://get.sdkman.io)" && source "${HOME}/.sdkman/bin/sdkman-init.sh"
+whick sdk || /bin/bash -c "$(curl -s https://get.sdkman.io)" && source "${HOME}/.sdkman/bin/sdkman-init.sh"
 
 # update sdkman
 sdk selfupdate
