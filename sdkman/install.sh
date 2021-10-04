@@ -3,7 +3,13 @@ set -e
 
 # install sdkman
 # shellcheck source=/dev/null
-which sdk || /bin/bash -c "$(curl -s https://get.sdkman.io)" && source "${HOME}/.sdkman/bin/sdkman-init.sh"
+# fetch sdkman, if not exist
+if [ ! -f "${HOME}"/.sdkman/bin/sdkman-init.sh ]; then
+  /bin/bash -c "$(curl -s https://get.sdkman.io)"
+fi
+
+# shellcheck disable=SC1091
+source "${HOME}/.sdkman/bin/sdkman-init.sh"
 
 # update sdkman
 sdk selfupdate
