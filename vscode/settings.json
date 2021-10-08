@@ -13,6 +13,7 @@
     "editor.accessibilitySupport": "off",
     "editor.bracketPairColorization.enabled": true,
     "editor.fontFamily": "Fira Code",
+    "editor.guides.bracketPairs": true,
     "editor.fontLigatures": true,
     "editor.formatOnSaveMode": "modifications",
     "editor.inlineSuggest.enabled": true,
