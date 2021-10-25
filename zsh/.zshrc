@@ -89,7 +89,7 @@ function kx() {
   if [ "$#" -ne 1 ]; then
     kubectx
   else
-    kubectx $(kubectx | ag "$@")
+    kubectx $(kubectx | grep -i "$@" | head -n1)
   fi
 }
 
