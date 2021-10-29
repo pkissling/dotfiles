@@ -35,9 +35,9 @@
   # aliases
   cleanup = "!git fetch --prune --tags --force > /dev/null && for BRANCH in `git branch -vv | grep --invert-match '^*' | grep ': gone' | awk '{print $1}'`; do git branch -D ${BRANCH}; done"
   pull-rebase = "!git fetch --prune --tags --force && git pull origin $(git symbolic-ref --short HEAD) --rebase --autostash"
-  rebase-master = "!git fetch --prune --tags --force && git rebase --autostash origin/master"
-  rebase-interactive = "!git rebase --autostash --interactive $(git log -n 1 origin/master --pretty=format:'%h')"
-  master = "!git checkout master && git pl && git cleanup"
+  rebase-master = "!git fetch --prune --tags --force && git rebase --autostash origin/$(git remote show origin | grep HEAD | sed 's/.* //')"
+  rebase-interactive = "!git rebase --autostash --interactive $(git log -n 1 origin/$(git remote show origin | grep HEAD | sed 's/.* //') --pretty=format:'%h')"
+  master = "!git checkout $(git remote show origin | grep HEAD | sed 's/.* //') && git pl && git cleanup"
   push-set-upstream = "!git push --set-upstream origin $(git symbolic-ref --short HEAD)"
 
   # functions
