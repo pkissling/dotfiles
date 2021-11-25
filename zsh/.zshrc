@@ -100,7 +100,7 @@ alias json="pbpaste | jq '.'"
 alias k="kubectl"
 alias l="exa -la"
 alias ls="exa"
-alias up="cd ${HOME}/dotfiles && git pull && make"
+alias up="cd ${HOME}/dotfiles && git pull --rebase && make"
 alias vi="nvim"
 alias vim="nvim"
 
