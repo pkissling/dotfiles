@@ -14,3 +14,4 @@ fi
 
 # install plugins
 nvim +PluginInstall +qall
+nvim +PlugUpdate +qall
