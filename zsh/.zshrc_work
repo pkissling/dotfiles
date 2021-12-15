@@ -11,5 +11,5 @@ alias goodmorning="mfa && up"
 alias live='function _live(){ venv; ~/Documents/git/operations/miscellaneous/sast_live_acquire_access.sh $1; deactivate};_live'
 alias mfa="~/Documents/git/operations/miscellaneous/sast_temporary_mfa_credentials.sh"
 alias venv="source ~/Documents/git/operations/python/venv/bin/activate"
-alias verify="mvn checkstyle:checkstyle spotbugs:check verify -DskipTests --file ~/Documents/git/integrator-portal/parent/pom.xml"
+alias verify="cd ~/Documents/git/integrator-portal && mvn checkstyle:checkstyle spotbugs:check verify -DskipTests --file parent/pom.xml"
 alias unlive="(aws sts get-caller-identity --profile sast-pilcrow-dev_Developer > /dev/null || ~/Documents/git/operations/miscellaneous/sast_temporary_mfa_credentials.sh) && venv && ~/Documents/git/operations/miscellaneous/sast_live_release_access.sh && deactivate"
