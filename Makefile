@@ -30,8 +30,8 @@ nvim: bootstrap brew
 	@./nvim/install.sh
 
 rust: bootstrap brew
-	@rustup-init -y
-	@rustup update
+	@chmod +x rust/install.sh
+	@./rust/install.sh
 
 sdkman: bootstrap
 	@chmod +x sdkman/install.sh
