@@ -12,6 +12,7 @@ hashicorp.terraform
 humao.rest-client
 jcbuisson.vue
 jkiviluoto.tws
+JuanBlanco.solidity
 keesschollaart.vscode-home-assistant
 matklad.rust-analyzer
 miguelsolorio.fluent-icons
