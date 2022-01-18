@@ -17,8 +17,8 @@ if [ -z "${ZSH}" ] || ! [ -d "${ZSH}" ]; then
   exec /bin/zsh
 fi
 
-# upgrade zsh, command will fail if no update is available
-sh "$ZSH/tools/upgrade.sh" || true
+# upgrade zsh
+sh "$ZSH/tools/upgrade.sh"
 
 # restart zsh to apply latest configuration
 exec /bin/zsh
