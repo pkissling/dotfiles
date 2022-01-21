@@ -1,5 +1,5 @@
 #!/bin/sh
 
 # from https://medium.com/@joaomoreno/persistent-terminal-sessions-in-vs-code-8fc469ed6b41
-SESSION="idea-$(pwd)"
+SESSION=$(echo idea-$(pwd) | sed 's/\./_/g')
 /usr/local/opt/tmux/bin/tmux attach-session -d -t "$SESSION" || /usr/local/opt/tmux/bin/tmux new-session -s "$SESSION"
