@@ -88,6 +88,11 @@
     // Language specific
     //
 
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+
     "[markdown]": {
         "editor.formatOnSave": true
     },
