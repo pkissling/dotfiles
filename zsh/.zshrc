@@ -69,8 +69,11 @@ eval "$(zoxide init zsh)"
 # XDG
 export XDG_CONFIG_HOME="$HOME/.config"
 
+# bat
+export BAT_STYLE="changes,header"
+export BAT_THEME="Dracula"
+
 # tools
-export BAT_STYLE="changes,header" # bat
 export EDITOR="nvim" # vim
 export GPG_TTY=$(tty) # gpg
 
