@@ -66,6 +66,9 @@ export NVM_DIR="$HOME/.nvm"
 # zoxide
 eval "$(zoxide init zsh)"
 
+# XDG
+export XDG_CONFIG_HOME="$HOME/.config"
+
 # tools
 export BAT_STYLE="changes,header" # bat
 export EDITOR="nvim" # vim

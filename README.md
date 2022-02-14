@@ -12,6 +12,7 @@ for the following tools:
   - [cask](https://github.com/Homebrew/homebrew-cask)
   - [mas](https://github.com/mas-cli/mas)
 - [git](https://git-scm.com/)
+- [k9s](https://k9scli.io/)
 - [gnupg](https://gnupg.org/)
 - [nvim](https://neovim.io/)
 - [sdkman](https://sdkman.io/)
@@ -75,6 +76,14 @@ make gpg
 ```
 
 Create symlinks for gpg config.
+
+##### k9s
+
+```bash
+make k9s
+```
+
+Create symlinks for k9s config.
 
 <!-- markdownlint-disable -->
 ##### nvim
