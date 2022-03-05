@@ -27,9 +27,9 @@ can be used to install the tool and its corresponding configuration manually.
 
 ### Screenshots
 
-#### Hyper.js with zsh and Starship
+#### Alacritty with tmux, zsh and Starship
 
-![Hyper.js with zsh and Starship](/.github/screenshots/hyper_zsh_starship.png)
+![Alacritty with tmux, zsh and Starship](/.github/screenshots/alacritty_tmux_zsh_starship.png)
 
 #### nvim
 
