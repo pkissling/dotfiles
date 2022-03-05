@@ -13,7 +13,6 @@ brew "bat"
 brew "choose-rust"
 brew "coreutils"
 brew "python@3.10"
-brew "credstash"
 brew "ctop"
 brew "docker-compose"
 brew "exa"
@@ -68,38 +67,25 @@ brew "filosottile/musl-cross/musl-cross"
 cask "1password"
 cask "alacritty"
 cask "alfred3"
-cask "android-platform-tools"
-cask "aws-vault"
 cask "boop"
 cask "chromium"
-cask "discord"
 cask "docker"
-cask "firefox"
 cask "font-fira-code"
 cask "git-credential-manager-core"
 cask "google-chrome"
-cask "google-drive"
 cask "gpg-suite"
 cask "jetbrains-toolbox"
 cask "logitech-options"
-cask "mattermost"
 cask "muzzle"
 cask "notion"
-cask "postman"
 cask "protonvpn"
 cask "rectangle"
 cask "spotify"
-cask "stats"
 cask "viscosity"
 cask "visual-studio-code"
 cask "vlc"
 cask "whatsapp"
 mas "Amphetamine", id: 937984704
 mas "Be Focused Pro", id: 961632517
-mas "EasyRes", id: 688211836
-mas "Keynote", id: 409183694
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
 mas "The Unarchiver", id: 425424353
 mas "Todoist", id: 585829637
-mas "Xcode", id: 497799835
