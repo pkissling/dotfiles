@@ -9,7 +9,7 @@ which brew || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homeb
 brew bundle --file "${HOME}"/dotfiles/brew/Brewfile."${USAGE}"
 
 # create two temp files to compare delta
-cat "${HOME}"/dotfiles/brew/Brewfile > /tmp/Brewfile.concat && sed -e '1,2d' < "${HOME}"/dotfiles/brew/Brewfile."${USAGE}" >> /tmp/Brewfile.concat
+cat "${HOME}"/dotfiles/brew/Brewfile > /tmp/Brewfile.concat && sed -e '1,3d' < "${HOME}"/dotfiles/brew/Brewfile."${USAGE}" >> /tmp/Brewfile.concat
 brew bundle dump --file /tmp/Brewfile.dump --force
 
 # identify delta (missing packages) and append to Brewfile

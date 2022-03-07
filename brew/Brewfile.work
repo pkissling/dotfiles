@@ -1,5 +1,6 @@
 # include core Brefile
 instance_eval(File.read(ENV['HOME'] + "/dotfiles/brew/Brewfile"))
+
 tap "rbenv/tap"
 brew "credstash"
 brew "rbenv/tap/openssl@1.0"
