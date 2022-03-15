@@ -8,6 +8,7 @@
   cane = commit --amend --no-edit
   cam = commit --all --message
   fc = fuzzy-checkout
+  frb = fuzzy-rebase
   cl = clean --force -d
   co = checkout
   cob = checkout -b
@@ -42,6 +43,7 @@
 
   # functions
   fuzzy-checkout = !bash -c 'source $HOME/.git/bin && git-fuzzy-checkout'
+  fuzzy-rebase = !bash -c 'source $HOME/.git/bin && git-fuzzy-rebase'
   fuzzy-diff = !bash -c 'source $HOME/.git/bin && git-fuzzy-diff'
 
 [core]

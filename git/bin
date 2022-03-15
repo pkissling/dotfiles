@@ -40,3 +40,7 @@ git-fuzzy-checkout() {
         git checkout "$branch"
     fi
 }
+
+git-fuzzy-rebase() {
+    git rebase "$(git-fuzzy-branch)"
+}
