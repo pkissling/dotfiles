@@ -2,6 +2,4 @@
   gpgsign = true
 
 [user]
-  name = Patrick Kissling
-  email = patrick.kissling@gmx.de
-  signingkey = CEC7FFF35BA1993B 
+  signingkey = CEC7FFF35BA1993B

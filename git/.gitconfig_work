@@ -2,6 +2,5 @@
   gpgsign = true
 
 [user]
-  name = Patrick Kissling
   email = patrick.kissling@de.bosch.com
   signingkey = D16E481A0EA8096C

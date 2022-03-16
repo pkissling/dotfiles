@@ -98,7 +98,6 @@
 
 [user]
   # default user config, unless overwritten via [include]
-  # workaround to have basic gitconfig avialable in .devcontainer.json
   name = Patrick Kissling
   email = patrick.kissling@gmx.de
 
