@@ -13,4 +13,4 @@ cat "${HOME}"/dotfiles/brew/Brewfile > /tmp/Brewfile.concat && sed -e '1,3d' < "
 brew bundle dump --file /tmp/Brewfile.dump --force
 
 # identify delta (missing packages) and append to Brewfile
-grep --invert-match --file /tmp/Brewfile.concat /tmp/Brewfile.dump >> "${HOME}"/dotfiles/brew/Brewfile || true
+grep --invert-match --file /tmp/Brewfile.concat /tmp/Brewfile.dump >> "${HOME}"/dotfiles/brew/Brewfile."${USAGE}" || true
