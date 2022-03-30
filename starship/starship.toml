@@ -4,6 +4,7 @@ format = """\
   $git_branch\
   $git_commit\
   $git_status\
+  $git_state\
   $custom\
   $jobs\
   $cmd_duration\
@@ -11,10 +12,7 @@ format = """\
   $battery\
   $time\
   $character\
-  """
-
-[aws]
-  disabled = true
+"""
 
 [battery]
   charging_symbol = "⚡️"
@@ -22,28 +20,28 @@ format = """\
   format = "[$symbol $percentage]($style) "
 [[battery.display]]
   threshold = 20
-  style = "bold yellow"
+  style = "bold #f1fa8c"
 [[battery.display]]
   threshold = 10
   style = "bold red"
 
 [character]
-  success_symbol = "[❯](bold green)"
-  error_symbol = "[✗](bold red)"
+  success_symbol = "[❯](bold #50fa7b)"
+  error_symbol = "[✗](bold #ff5555)"
 
 [cmd_duration]
   min_time = 1000
-  format = "» took [$duration]($style) "
+  format = " » took [$duration]($style)"
   style = "bold"
 
 [directory]
   truncation_length = 8
   truncation_symbol = "…/"
   style = "bold"
-  format = "[$path]($style)[$read_only]($read_only_style) "
+  format = " » [$path]($style)[$read_only]($read_only_style)"
 
 [git_branch]
-  format = "» [$symbol$branch]($style) "
+  format = " » [$symbol$branch]($style)"
   style = "bold"
 
 [git_status]
@@ -57,11 +55,15 @@ format = """\
   commit_hash_length = 8
   tag_disabled = false
   only_detached = false
-  format = "on [$hash]($style) "
+  format = " on [$hash]($style) "
+  style = "bold"
+
+[git_state]
+  format = '» [$state( $progress_current/$progress_total)]($style) '
   style = "bold"
 
 [kubernetes]
-  format = '[$context]($style) » '
+  format = '[$context]($style)'
   disabled = false
   style = "bold"
 [kubernetes.context_aliases]
@@ -81,5 +83,5 @@ format = """\
 # custom
 [custom.aws_mfa_renewal]
   command = "echo 🔒"
-  when = """ source $HOME/.starship/helper/aws_mfa_renewal_check.sh  """
+  when = """ source $HOME/.starship/helper/aws_mfa_renewal_check.sh """
   format = "» [$output]($style) "
