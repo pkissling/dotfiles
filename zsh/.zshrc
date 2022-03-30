@@ -12,7 +12,7 @@ plugins=(
 
 # create new tmux default session
 if [ -z "$TMUX" ]; then
-    tmux attach -t default || tmux new -s default
+    tmux attach -t default || tmux new -s default\; split-window -h \; split-window -v \; select-pane -t 0 \;
 fi
 
 # zplug
