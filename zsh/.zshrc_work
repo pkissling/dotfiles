@@ -1,3 +1,6 @@
+# path
+export PATH="${HOME}/Documents/git/operations/kubernetes/bin:${PATH}"
+
 # aliases
 alias argo="kubectl port-forward service/argocd-server 8910:443 -n argocd"
 alias azena="mv ~/.terraform.d/plugins.azena ~/.terraform.d/plugins && mv ~/.aws/credentials ~/.aws/credentials.carvis && mv ~/.aws/credentials.azena ~/.aws/credentials"
