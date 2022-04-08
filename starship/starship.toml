@@ -31,17 +31,17 @@ format = """\
 
 [cmd_duration]
   min_time = 1000
-  format = " » took [$duration]($style)"
+  format = "» took [$duration]($style) "
   style = "bold"
 
 [directory]
   truncation_length = 8
   truncation_symbol = "…/"
   style = "bold"
-  format = " » [$path]($style)[$read_only]($read_only_style)"
+  format = "» [$path]($style)[$read_only]($read_only_style) "
 
 [git_branch]
-  format = " » [$symbol$branch]($style)"
+  format = "» [$symbol$branch]($style) "
   style = "bold"
 
 [git_status]
@@ -49,13 +49,13 @@ format = """\
   behind = "⇣${count}"
   conflicted = "✗"
   diverged = "⇕⇡${ahead_count}⇣${behind_count}"
-  format = '([\[$all_status$ahead_behind\]]($style) )'
+  format = '([\[$all_status$ahead_behind\]]($style)) '
 
 [git_commit]
   commit_hash_length = 8
   tag_disabled = false
   only_detached = false
-  format = " on [$hash]($style) "
+  format = "on [$hash]($style) "
   style = "bold"
 
 [git_state]
@@ -63,7 +63,7 @@ format = """\
   style = "bold"
 
 [kubernetes]
-  format = '[$context]($style)'
+  format = '[$context]($style) '
   disabled = false
   style = "bold"
 [kubernetes.context_aliases]
@@ -72,7 +72,7 @@ format = """\
   "sast-pilcrow-live_default" = "live"
 
 [python]
-  format = '» [(\($virtualenv\))]($style) '
+  format = '» [(\($virtualenv\))]($style)'
   style = "bold"
 
 [time]
