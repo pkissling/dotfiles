@@ -1,14 +1,18 @@
 # path
 export PATH="${HOME}/Documents/git/operations/kubernetes/bin:${PATH}"
+export PATH="/usr/local/opt/openssl@1.0/bin:${PATH}"
 
 # aliases
 alias argo="kubectl port-forward service/argocd-server 8910:443 -n argocd"
-alias azena="mv ~/.terraform.d/plugins.azena ~/.terraform.d/plugins && mv ~/.aws/credentials ~/.aws/credentials.carvis && mv ~/.aws/credentials.azena ~/.aws/credentials"
-alias carvis="mv ~/.terraform.d/plugins ~/.terraform.d/plugins.azena && mv ~/.aws/credentials ~/.aws/credentials.azena && mv ~/.aws/credentials.carvis ~/.aws/credentials"
+alias azena="mv ~/.terraform.d/plugins.azena ~/.terraform.d/plugins"
+alias carvis="mv ~/.terraform.d/plugins ~/.terraform.d/plugins.azena"
 alias checkstyle="cd ~/Documents/git/integrator-portal && mvn checkstyle:checkstyle spotbugs:check verify -DskipTests --file parent/pom.xml"
 alias db="kubectl port-forward deployment/db-forwarder 3320:23306"
 alias keycloak_start="~/Documents/scripts/keycloak_start.sh"
 alias keycloak_stop="~/Documents/scripts/keycloak_stop.sh"
+alias integration_start='cd ~/Documents/git/integrator-portal && mvn clean install -DskipTests --file parent/pom.xml && mvn pre-integration-test -Ppip-integrationtest --file test.integration/pom.xml'
+alias integration_run='cd ~/Documents/git/integrator-portal && mvn -Ppip-integrationtest install --file test.integration/pom.xml'
+alias integration_stop='cd ~/Documents/git/integrator-portal && mvn post-integration-test -Ppip-integrationtest --file test.integration/pom.xml -DskipTests'
 alias iotdevicemockup_start="~/Documents/scripts/iotdevicemockup_start.sh"
 alias iotdevicemockup_stop="~/Documents/scripts/iotdevicemockup_stop.sh"
 alias goodmorning="mfa && up"
