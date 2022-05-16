@@ -1,6 +1,7 @@
 # path
 export PATH="${HOME}/Documents/git/operations/kubernetes/bin:${PATH}"
 export PATH="/usr/local/opt/openssl@1.0/bin:${PATH}"
+export ANDROID_SDK_ROOT="${HOME}/.snst"
 
 # aliases
 alias argo="kubectl port-forward service/argocd-server 8910:443 -n argocd"
