@@ -11,7 +11,6 @@ GitHub.copilot
 GitHub.remotehub
 hashicorp.terraform
 humao.rest-client
-jcbuisson.vue
 jkiviluoto.tws
 JuanBlanco.solidity
 keesschollaart.vscode-home-assistant
@@ -34,5 +33,6 @@ redhat.vscode-yaml
 serayuzgur.crates
 vadimcn.vscode-lldb
 VisualStudioExptTeam.vscodeintellicode
+Vue.volar
 wix.vscode-import-cost
 yzhang.markdown-all-in-one
