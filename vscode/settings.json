@@ -25,6 +25,7 @@
 
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
+    "explorer.excludeGitIgnore": true,
     "explorer.openEditors.visible": 0,
 
     "files.autoSave": "afterDelay",
@@ -45,6 +46,8 @@
     "git.enableSmartCommit": true,
 
     "javascript.updateImportsOnFileMove.enabled": "always",
+
+    "problems.defaultViewMode": "table",
 
     "redhat.telemetry.enabled": false,
 
@@ -71,8 +74,6 @@
     "tws.trimOnSave": false,
 
     "typescript.updateImportsOnFileMove.enabled": "always",
-
-    "vetur.experimental.templateInterpolationService": true,
 
     "window.autoDetectColorScheme": true,
     "workbench.colorTheme": "Dracula",
