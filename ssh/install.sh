@@ -9,8 +9,9 @@ mkdir -p "${HOME}"/.ssh
 ln -sfv "${HOME}"/dotfiles/ssh/private.pub "${HOME}"/.ssh
 ln -sfv "${HOME}"/dotfiles/ssh/work.pub "${HOME}"/.ssh
 
-# create symlink for default public certificate
+# create symlink for default private and public certificate
 ln -sfv "${HOME}"/dotfiles/ssh/"${USAGE}".pub "${HOME}"/.ssh/id_rsa.pub
+ln -sfv "${HOME}"/.ssh/"${USAGE}".priv "${HOME}"/.ssh/id_rsa
 
 # create symlinks for config file
 ln -sfv "${HOME}"/dotfiles/ssh/config "${HOME}"/.ssh

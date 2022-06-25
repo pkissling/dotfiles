@@ -18,3 +18,9 @@ Host pihole
 Host home-assistant
   HostName home-assistant
   User pi
+
+Host github.com
+    HostName github.com
+    Port 22
+    User git
+    IdentityFile ~/.ssh/private.priv
