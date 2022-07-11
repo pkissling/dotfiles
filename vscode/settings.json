@@ -44,6 +44,7 @@
     "git.confirmForcePush": false,
     "git.confirmSync": false,
     "git.enableSmartCommit": true,
+    "git.mergeEditor": true,
 
     "javascript.updateImportsOnFileMove.enabled": "always",
 
@@ -76,6 +77,8 @@
     "typescript.updateImportsOnFileMove.enabled": "always",
 
     "window.autoDetectColorScheme": true,
+    "window.commandCenter": true,
+
     "workbench.colorTheme": "Dracula",
     "workbench.editor.decorations.badges": true,
     "workbench.editor.showTabs": false,
