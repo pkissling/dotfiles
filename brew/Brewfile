@@ -27,6 +27,8 @@ brew "gnutls"
 brew "gnupg"
 brew "gradle"
 brew "grep"
+brew "glib"
+brew "harfbuzz"
 brew "htop"
 brew "httpie"
 brew "jq"
@@ -34,6 +36,7 @@ brew "k9s"
 brew "kubernetes-cli"
 brew "kubectx"
 brew "kustomize"
+brew "libass"
 brew "luv"
 brew "mas"
 brew "maven"
@@ -89,3 +92,4 @@ mas "Be Focused Pro", id: 961632517
 mas "The Unarchiver", id: 425424353
 mas "Todoist", id: 585829637
 mas "Monosnap", id: 540348655
+
