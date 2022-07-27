@@ -1,7 +1,10 @@
+# misc
+export ANDROID_SDK_ROOT="${HOME}/.snst"
+export JIRA_AUTH_TYPE="bearer"
+
 # path
 export PATH="${HOME}/Documents/git/operations/kubernetes/bin:${PATH}"
 export PATH="/usr/local/opt/openssl@1.0/bin:${PATH}"
-export ANDROID_SDK_ROOT="${HOME}/.snst"
 
 # aliases
 alias argo="kubectl port-forward service/argocd-server 8910:443 -n argocd"
@@ -23,6 +26,7 @@ alias owasp='cd ~/Documents/git/integrator-portal/parent && mvn org.owasp:depend
 alias prometheus="kubectl -n monitoring port-forward svc/ecosystem-prometheus 9090"
 alias remoteportal="keycloak_start && cd ~/Documents/git/integrator-portal/remoteportal.client/vue-app && yarn serve"
 alias testcafe="iotdevicemockup_start && cd ~/Documents/git/integrator-portal/test.integratorportal/testcafe && yarn test"
+alias ticket='jira issue list -a $(jira me) -s "In Progress"'
 alias venv="source ~/Documents/git/operations/python/venv/bin/activate"
 alias verify="cd ~/Documents/git/integrator-portal && mvn checkstyle:checkstyle spotbugs:check verify -DskipTests --file parent/pom.xml"
 alias unlive="(aws sts get-caller-identity --profile sast-pilcrow-dev_Developer > /dev/null || ~/Documents/git/operations/miscellaneous/sast_temporary_mfa_credentials.sh) && venv && ~/Documents/git/operations/miscellaneous/sast_live_release_access.sh && deactivate"
