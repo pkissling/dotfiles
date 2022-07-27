@@ -44,6 +44,7 @@
     "git.confirmForcePush": false,
     "git.confirmSync": false,
     "git.enableSmartCommit": true,
+    "git.ignoreRebaseWarning": true,
     "git.mergeEditor": true,
 
     "javascript.updateImportsOnFileMove.enabled": "always",
