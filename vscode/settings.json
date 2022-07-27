@@ -98,6 +98,10 @@
         "editor.formatOnSave": true
     },
 
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+
     "[markdown]": {
         "editor.formatOnSave": true
     },
