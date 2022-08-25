@@ -65,12 +65,7 @@
     "terminal.integrated.shellArgs.osx": ["${env:HOME}/dotfiles/tmux/vscode-tmux-shell"],
     "terminal.external.osxExec": "Alacritty.app",
 
-    "terraform.languageServer": {
-        "external": true,
-        "args": [
-            "serve"
-        ]
-    },
+    "terraform.languageServer.enable": true,
 
     "tws.highlightTrailingWhiteSpace": true,
     "tws.trimOnSave": false,
