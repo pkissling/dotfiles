@@ -85,7 +85,6 @@ cask "viscosity"
 cask "visual-studio-code"
 cask "vlc"
 cask "whatsapp"
-mas "Amphetamine", id: 937984704
 mas "Be Focused Pro", id: 961632517
 mas "The Unarchiver", id: 425424353
 mas "Todoist", id: 585829637
