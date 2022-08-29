@@ -104,13 +104,13 @@
     "[terraform]": {
         "editor.formatOnSave": true
     },
+    
+    "[rust]": {
+        "editor.formatOnSave": true
+    },
 
     "[typescript]": {
         "editor.defaultFormatter": "vscode.typescript-language-features"
-    },
-
-    "[rust]": {
-        "editor.formatOnSave": true
     },
 
     "[vue]": {
