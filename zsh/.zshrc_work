@@ -8,8 +8,8 @@ export PATH="/usr/local/opt/openssl@1.0/bin:${PATH}"
 
 # aliases
 alias argo="kubectl port-forward service/argocd-server 8910:443 -n argocd"
-alias azena="mv ~/.terraform.d/plugins.azena ~/.terraform.d/plugins"
-alias carvis="mv ~/.terraform.d/plugins ~/.terraform.d/plugins.azena"
+alias azena="mv ~/.terraform.d/plugins.azena ~/.terraform.d/plugins || true && ln -sf ~/.aws/credentials.azena ~/.aws/credentials"
+alias carvis="mv ~/.terraform.d/plugins ~/.terraform.d/plugins.azena || true && ln -sf ~/.aws/credentials.carvis ~/.aws/credentials"
 alias checkstyle="cd ~/Documents/git/integrator-portal && mvn checkstyle:checkstyle spotbugs:check verify -DskipTests --file parent/pom.xml"
 alias db="kubectl port-forward deployment/db-forwarder 3320:23306"
 alias keycloak_start="~/Documents/scripts/keycloak_start.sh"
