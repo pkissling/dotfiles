@@ -11,6 +11,10 @@ fi
 # shellcheck disable=SC1091
 source "${HOME}/.sdkman/bin/sdkman-init.sh"
 
+# symlink sdkman config file
+mkdir -p "${HOME}"/.sdkman/etc
+ln -sfv "${HOME}"/dotfiles/sdkman/config "${HOME}"/.sdkman/etc/config
+
 # update sdkman
 sdk selfupdate
 
