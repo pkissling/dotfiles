@@ -25,7 +25,7 @@ gpg: bootstrap
 	@chmod +x gpg/install.sh
 	@./gpg/install.sh
 
-k9s: bootstrap zsh
+k9s: bootstrap
 	@chmod +x k9s/install.sh
 	@./k9s/install.sh
 
