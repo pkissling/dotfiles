@@ -10,7 +10,6 @@ for the following tools:
 - [alacritty](https://github.com/alacritty/alacritty)
 - [brew](https://brew.sh/)
   - [cask](https://github.com/Homebrew/homebrew-cask)
-  - [mas](https://github.com/mas-cli/mas)
 - [git](https://git-scm.com/)
 - [k9s](https://k9scli.io/)
 - [gnupg](https://gnupg.org/)
@@ -59,7 +58,7 @@ Create symlinks for alacritty config.
 make brew
 ```
 
-Install brew, install & update packages (for brew, cask & mas) via Brewfile.
+Install brew, install & update packages (for brew & cask) via Brewfile.
 
 ##### git
 

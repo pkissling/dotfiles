@@ -12,4 +12,3 @@ cask "mattermost"
 cask "postman"
 cask "stats"
 cask "wireshark"
-mas "EasyRes", id: 688211836
