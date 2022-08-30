@@ -12,6 +12,7 @@ GitHub.copilot
 GitHub.remotehub
 hashicorp.terraform
 humao.rest-client
+jcbuisson.vue
 jkiviluoto.tws
 JuanBlanco.solidity
 keesschollaart.vscode-home-assistant
