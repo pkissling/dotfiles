@@ -2,6 +2,8 @@
 instance_eval(File.read(ENV['HOME'] + "/dotfiles/brew/Brewfile"))
 
 tap "rbenv/tap"
+tap "ankitpokhrel/jira-cli"
+brew "ankitpokhrel/jira-cli/jira-cli"
 brew "apktool"
 brew "credstash"
 brew "rbenv/tap/openssl@1.0"
