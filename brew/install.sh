@@ -5,6 +5,12 @@ USAGE=$(cat "${HOME}"/dotfiles/.profile)
 # install brew, if not installed
 which brew || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
 
+# update brew
+brew update
+
+# upgrade packages installed via brew
+brew upgrade
+
 # install packages from Brewfile
 brew bundle --file "${HOME}"/dotfiles/brew/Brewfile."${USAGE}"
 
