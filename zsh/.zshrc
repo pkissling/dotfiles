@@ -11,9 +11,9 @@ plugins=(
 )
 
 # create new tmux default session
-# if [ -z "$TMUX" ]; then
-#     tmux attach -t default || tmux new -s default\; split-window -h \; split-window -v \; select-pane -t 0 \;
-# fi
+if [ -z "$TMUX" ]; then
+    tmux attach -t default || tmux new -s default\; split-window -h \; split-window -v \; select-pane -t 0 \;
+fi
 
 # zplug
 export ZPLUG_HOME=/usr/local/opt/zplug
@@ -106,7 +106,7 @@ alias json="pbpaste | jq '.'"
 alias k="kubectl"
 alias l="exa -la"
 alias ls="exa"
-alias up="cd ${HOME}/dotfiles && git pull --rebase origin $(git rev-parse --abbrev-ref HEAD) && make"
+alias up="cd ${HOME}/dotfiles && git pull --rebase && make"
 alias vi="nvim"
 alias vim="nvim"
 
