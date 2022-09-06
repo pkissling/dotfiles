@@ -49,6 +49,8 @@
 
     "javascript.updateImportsOnFileMove.enabled": "always",
 
+    "mergeEditor.diffAlgorithm": "experimental",
+
     "problems.defaultViewMode": "table",
 
     "redhat.telemetry.enabled": false,
@@ -74,8 +76,6 @@
 
     "window.autoDetectColorScheme": true,
     "window.commandCenter": true,
-
-    "workbench.colorTheme": "Dracula",
     "workbench.editor.decorations.badges": true,
     "workbench.editor.showTabs": false,
     "workbench.editor.tabSizing": "shrink",
