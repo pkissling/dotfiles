@@ -2,5 +2,4 @@
 instance_eval(File.read(ENV['HOME'] + "/dotfiles/brew/Brewfile"))
 
 cask "discord"
-cask "google-drive"
 cask "telegram"
