@@ -18,6 +18,7 @@
     "editor.formatOnSaveMode": "modifications",
     "editor.inlineSuggest.enabled": true,
     "editor.renderWhitespace": "boundary",
+    "editor.stickyScroll.enabled": true,
     "editor.suggestSelection": "first",
     "editor.tabSize": 2,
 
