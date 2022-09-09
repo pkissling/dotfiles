@@ -17,8 +17,8 @@ window:
   padding:
    x: 10
    y: 25
-  decorations: transparent
-  startup_mode: Fullscreen
+  decorations: full
+  startup_mode: Maximized
 
 scrolling:
   history: 10000
