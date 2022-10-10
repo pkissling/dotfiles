@@ -26,7 +26,7 @@
 
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
-    "explorer.excludeGitIgnore": true,
+    "explorer.excludeGitIgnore": false,
     "explorer.openEditors.visible": 0,
 
     "files.autoSave": "afterDelay",
