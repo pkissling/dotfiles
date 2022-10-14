@@ -12,6 +12,7 @@
   cl = clean --force -d
   co = checkout
   cob = checkout -b
+  fcot = fuzzy-checkout-ticket
   cm = commit --message
   d = diff
   ds = diff --staged
@@ -43,6 +44,7 @@
 
   # functions
   fuzzy-checkout = !bash -c 'source $HOME/.git/bin && git-fuzzy-checkout'
+  fuzzy-checkout-ticket = !bash -c 'source $HOME/.git/bin && git-fuzzy-checkout-ticket'
   fuzzy-rebase = !bash -c 'source $HOME/.git/bin && git-fuzzy-rebase'
   fuzzy-diff = !bash -c 'source $HOME/.git/bin && git-fuzzy-diff'
 

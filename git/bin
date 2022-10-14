@@ -44,3 +44,13 @@ git-fuzzy-checkout() {
 git-fuzzy-rebase() {
     git rebase "$(git-fuzzy-branch)"
 }
+
+git-fuzzy-checkout-ticket() {
+    ticket=$(jira issue list --no-headers --plain --columns KEY,SUMMARY -a "$(jira me)" -s "In Progress" | fzf)
+    [[ -n $ticket ]] || exit 1
+    ticket_id=$(echo "${ticket}" | choose 0)
+    ticket_description=$(echo "${ticket}" | choose 1:)
+    read -r -p "Define slug for [${ticket_description}]: " slug
+    slug="${slug// /-}"
+    git checkout -b dev/"${ticket_id}"_"${slug}"
+}
