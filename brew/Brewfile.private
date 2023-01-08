@@ -1,6 +1,7 @@
 # include core Brefile
 instance_eval(File.read(ENV['HOME'] + "/dotfiles/brew/Brewfile"))
 
+cask "calibre"
 cask "discord"
-cask "telegram"
 cask "raspberry-pi-imager"
+cask "telegram"
