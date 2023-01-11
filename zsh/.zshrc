@@ -15,6 +15,13 @@ if [ -z "$TMUX" ]; then
     tmux attach -t default || tmux new -s default\; split-window -h \; split-window -v \; select-pane -t 0 \;
 fi
 
+# zsh
+export DISABLE_AUTO_UPDATE=true
+export DISABLE_MAGIC_FUNCTIONS=true
+export HYPHEN_INSENSITIVE=true
+export ZSH=~/.oh-my-zsh
+source $ZSH/oh-my-zsh.sh
+
 # zplug
 export ZPLUG_HOME="${HOMEBREW_PREFIX}"/opt/zplug
 source $ZPLUG_HOME/init.zsh
@@ -23,13 +30,6 @@ if ! zplug check; then
   zplug install
 fi
 zplug load
-
-# zsh
-export DISABLE_AUTO_UPDATE=true
-export DISABLE_MAGIC_FUNCTIONS=true
-export HYPHEN_INSENSITIVE=true
-export ZSH=~/.oh-my-zsh
-source $ZSH/oh-my-zsh.sh
 
 # theme
 ln -sf $ZPLUG_HOME/repos/dracula/zsh/dracula.zsh-theme $ZSH/themes/dracula.zsh-theme
