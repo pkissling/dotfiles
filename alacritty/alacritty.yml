@@ -18,7 +18,7 @@ window:
    x: 10
    y: 25
   decorations: full
-  startup_mode: Maximized
+  startup_mode: Fullscreen
 
 scrolling:
   history: 10000
