@@ -99,6 +99,11 @@ function kx() {
   fi
 }
 
+# llama
+function lla {
+  cd "$(llama "$@")"
+}
+
 # Aliases (must be one of the last commands to overwrite zsh aliases)
 alias cat="bat"
 alias g="git"
