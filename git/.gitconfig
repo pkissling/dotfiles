@@ -67,7 +67,7 @@
     \"$(cd \"$(dirname \"$LOCAL\")\" && pwd)/$(basename \"$LOCAL\")\" \
     \"$(cd \"$(dirname \"$REMOTE\")\" && pwd)/$(basename \"$REMOTE\")\" \
 
-[gpg]
+[gpg] # default path, will be overwritten in .zshrc
   program = /usr/local/bin/gpg
 
 [interactive]
