@@ -20,6 +20,7 @@ export DISABLE_AUTO_UPDATE=true
 export DISABLE_MAGIC_FUNCTIONS=true
 export HYPHEN_INSENSITIVE=true
 export ZSH=~/.oh-my-zsh
+export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 source $ZSH/oh-my-zsh.sh
 
 # zplug
