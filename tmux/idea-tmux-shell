@@ -2,4 +2,4 @@
 
 # from https://medium.com/@joaomoreno/persistent-terminal-sessions-in-vs-code-8fc469ed6b41
 SESSION=$(echo "idea-$(pwd)" | sed 's/\./_/g')
-"${HOMEBREW_PREFIX}"/opt/tmux/bin/tmux attach-session -d -t "$SESSION" || "${HOMEBREW_PREFIX}"/opt/tmux/bin/tmux new-session -s "$SESSION"
+"${HOMEBREW_PREFIX}"/bin/tmux attach-session -d -t "$SESSION" || "${HOMEBREW_PREFIX}"/bin/tmux new-session -s "$SESSION"
