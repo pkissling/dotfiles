@@ -11,13 +11,9 @@ Host diskstation-root
   HostName diskstation
   User root
 
-Host pihole
-  HostName pihole
-  User pi
-
-Host home-assistant
-  HostName home-assistant
-  User pi
+Host home-server
+  HostName home-server
+  User home-server
 
 Host github.com
     HostName github.com
