@@ -1,9 +1,0 @@
-{
-	"folders": [
-		{ "uri": "vscode-remote://ssh-remote+home-assistant/home/pi/docker/home-assistant" },
-		{ "uri": "vscode-remote://ssh-remote+home-assistant/home/pi/clock-weather-card" },
-		{ "uri": "vscode-remote://ssh-remote+home-assistant/home/pi/home-network-utilities" }
-	],
-	"remoteAuthority": "ssh-remote+home-assistant",
-	"settings": {}
-}
