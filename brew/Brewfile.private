@@ -3,5 +3,6 @@ instance_eval(File.read(ENV['HOME'] + "/dotfiles/brew/Brewfile"))
 
 cask "calibre"
 cask "discord"
+cask "ledger-live"
 cask "raspberry-pi-imager"
 cask "telegram"
