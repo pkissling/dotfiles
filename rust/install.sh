@@ -5,8 +5,7 @@ set -ex
 rustup-init -y
 rustup update
 
-# compare list of installed crates with crates.txt and identify delta
-CRATES=$(cat rust/crates.txt)
-for CRATE in ${CRATES}; do
-  cargo install "${CRATE}"
-done
+# install all creates defined in crates.txt
+while read -r CRATE; do
+  cargo install $CRATE
+done < rust/crates.txt

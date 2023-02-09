@@ -1,2 +1,2 @@
 cargo-edit
-diesel_cli
+diesel_cli --no-default-features --features postgres
