@@ -7,5 +7,6 @@ rustup update
 
 # install all creates defined in crates.txt
 while read -r CRATE; do
-  cargo install $CRATE
+  # shellcheck disable=SC2046
+  cargo install $(echo "${CRATE}" | xargs)
 done < rust/crates.txt
