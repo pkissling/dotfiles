@@ -33,6 +33,7 @@ ms-vscode-remote.vscode-remote-extensionpack
 ms-vscode.azure-repos
 ms-vscode.remote-explorer
 ms-vscode.remote-repositories
+ms-vscode.remote-server
 ms-vsliveshare.vsliveshare
 mutantdino.resourcemonitor
 octref.vetur
