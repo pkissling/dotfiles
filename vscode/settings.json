@@ -102,6 +102,10 @@
         "editor.defaultFormatter": "vscode.json-language-features"
     },
 
+    "[python]": {
+        "editor.formatOnType": true
+    },
+
     "[terraform]": {
         "editor.formatOnSave": true
     },
