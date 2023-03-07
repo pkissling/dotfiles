@@ -62,6 +62,7 @@
         "**/target": true
     },
 
+    "terminal.integrated.enableMultiLinePasteWarning": false,
     "terminal.integrated.fontFamily": "Fira Code",
     "terminal.integrated.macOptionClickForcesSelection": true, // fix copy/paste in integrated terminal
     "terminal.integrated.shell.osx": "/bin/bash",
