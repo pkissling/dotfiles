@@ -46,6 +46,7 @@ serayuzgur.crates
 vadimcn.vscode-lldb
 VisualStudioExptTeam.intellicode-api-usage-examples
 VisualStudioExptTeam.vscodeintellicode
+vscodevim.vim
 Vue.volar
 wix.vscode-import-cost
 yzhang.markdown-all-in-one
