@@ -12,7 +12,7 @@
 
     "editor.accessibilitySupport": "off",
     "editor.bracketPairColorization.enabled": true,
-    "editor.cursorStyle": "block",
+    "editor.cursorStyle": "line",
     "editor.fontFamily": "Fira Code",
     "editor.guides.bracketPairs": true,
     "editor.fontLigatures": true,
