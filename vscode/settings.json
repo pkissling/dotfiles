@@ -1,9 +1,6 @@
 {
     "diffEditor.ignoreTrimWhitespace": false,
 
-    "dotfiles.installCommand": "~/dotfiles/install.sh",
-    "dotfiles.repository": "https://github.com/pkissling/dotfiles-vscode.git",
-
     "files.watcherExclude": {
         "**/.git": true,
         "**/node_modules": true,
