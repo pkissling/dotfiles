@@ -10,6 +10,8 @@ esbenp.prettier-vscode
 foxundermoon.shell-format
 GitHub.codespaces
 GitHub.remotehub
+github.vscode-github-actions
+GitHub.vscode-pull-request-github
 hashicorp.terraform
 humao.rest-client
 jcbuisson.vue
