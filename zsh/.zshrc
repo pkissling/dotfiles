@@ -109,6 +109,9 @@ function lla {
 export GIT_CONFIG_COUNT=1
 export GIT_CONFIG_KEY_0="gpg.program" GIT_CONFIG_VALUE_0="${HOMEBREW_PREFIX}/bin/gpg"
 
+# save all tmux sessions in the global history
+export PROMPT_COMMAND='history -a; history -r'
+
 # Aliases (must be one of the last commands to overwrite zsh aliases)
 alias cat="bat"
 alias g="git"
