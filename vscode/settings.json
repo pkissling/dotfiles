@@ -18,6 +18,7 @@
     "editor.renderWhitespace": "boundary",
     "editor.stickyScroll.enabled": true,
     "editor.suggestSelection": "first",
+    "editor.acceptSuggestionOnEnter": "smart",
     "editor.tabSize": 2,
 
     "eslint.format.enable": true,
