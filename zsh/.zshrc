@@ -9,6 +9,7 @@ plugins=(
   git-auto-fetch
   terraform
   tmux
+  zoxide
 )
 
 # create new tmux default session
@@ -61,9 +62,6 @@ source $HOME/.cargo/env
 export NVM_DIR="$HOME/.nvm"
 [ -s ""${HOMEBREW_PREFIX}"/opt/nvm/nvm.sh" ] && . ""${HOMEBREW_PREFIX}"/opt/nvm/nvm.sh"  # This loads nvm
 [ -s ""${HOMEBREW_PREFIX}"/opt/nvm/etc/bash_completion.d/nvm" ] && . ""${HOMEBREW_PREFIX}"/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
-
-# zoxide
-eval "$(zoxide init zsh)"
 
 # XDG
 export XDG_CONFIG_HOME="$HOME/.config"
