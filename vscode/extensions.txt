@@ -1,3 +1,4 @@
+amazonwebservices.aws-toolkit-vscode
 bungcip.better-toml
 DavidAnson.vscode-markdownlint
 dbaeumer.vscode-eslint
