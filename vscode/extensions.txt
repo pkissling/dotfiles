@@ -16,6 +16,7 @@ GitHub.vscode-pull-request-github
 hashicorp.terraform
 humao.rest-client
 jcbuisson.vue
+jebbs.plantuml
 jkiviluoto.tws
 JuanBlanco.solidity
 keesschollaart.vscode-home-assistant
