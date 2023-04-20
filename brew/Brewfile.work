@@ -1,18 +1,19 @@
-# include core Brefile
-instance_eval(File.read(ENV['HOME'] + "/dotfiles/brew/Brewfile"))
-
-tap "rbenv/tap"
-tap "ankitpokhrel/jira-cli"
+brew "ankitpokhrel/jira-cli/jira-cli"
+brew "ankitpokhrel/jira-cli/jira-cli"
 brew "ankitpokhrel/jira-cli/jira-cli"
 brew "apktool"
+brew "apktool"
 brew "credstash"
-brew "gobject-introspection"
 brew "glab"
+brew "gobject-introspection"
 brew "libpq"
-cask "aws-vault"
 cask "android-platform-tools"
+cask "aws-vault"
 cask "chromium"
 cask "google-chrome"
 cask "mattermost"
 cask "postman"
 cask "stats"
+instance_eval(File.read(ENV['HOME'] + "/dotfiles/brew/Brewfile")) # include core Brefile
+tap "ankitpokhrel/jira-cli"
+tap "rbenv/tap"
