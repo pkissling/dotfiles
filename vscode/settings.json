@@ -1,12 +1,10 @@
 {
     "diffEditor.ignoreTrimWhitespace": false,
-
     "files.watcherExclude": {
         "**/.git": true,
         "**/node_modules": true,
         "**/target": true
     },
-
     "editor.accessibilitySupport": "off",
     "editor.bracketPairColorization.enabled": true,
     "editor.cursorStyle": "line",
@@ -20,14 +18,11 @@
     "editor.suggestSelection": "first",
     "editor.acceptSuggestionOnEnter": "smart",
     "editor.tabSize": 2,
-
     "eslint.format.enable": true,
-
     "explorer.confirmDelete": false,
     "explorer.confirmDragAndDrop": false,
     "explorer.excludeGitIgnore": false,
     "explorer.openEditors.visible": 0,
-
     "files.autoSave": "afterDelay",
     "files.associations": {
         "*.yaml": "yaml"
@@ -38,7 +33,6 @@
         "**/.settings": true,
         "**/.factorypath": true
     },
-
     "git.autofetch": true,
     "git.allowForcePush": true,
     "git.confirmForcePush": false,
@@ -46,26 +40,20 @@
     "git.enableSmartCommit": true,
     "git.ignoreRebaseWarning": true,
     "git.mergeEditor": true,
-
     "javascript.updateImportsOnFileMove.enabled": "always",
-
     "mergeEditor.diffAlgorithm": "experimental",
-
     "problems.defaultViewMode": "table",
-
     "redhat.telemetry.enabled": false,
-
     "search.exclude": {
         "**/.git": true,
         "**/node_modules": true,
         "**/target": true
     },
-
     "terminal.integrated.defaultProfile.osx": "zsh",
     "terminal.integrated.enableMultiLinePasteWarning": false,
     "terminal.integrated.fontFamily": "Fira Code",
     "terminal.integrated.macOptionClickForcesSelection": true, // fix copy/paste in integrated terminal
-    "terminal.integrated.profiles.osx":{
+    "terminal.integrated.profiles.osx": {
         "zsh": {
             "path": "zsh",
             "args": [
@@ -74,14 +62,10 @@
         }
     },
     "terminal.external.osxExec": "Alacritty.app",
-
     "terraform.languageServer.enable": true,
-
     "tws.highlightTrailingWhiteSpace": true,
     "tws.trimOnSave": false,
-
     "typescript.updateImportsOnFileMove.enabled": "always",
-
     "window.autoDetectColorScheme": true,
     "window.commandCenter": true,
     "workbench.editor.decorations.badges": true,
@@ -91,44 +75,34 @@
     "workbench.editor.wrapTabs": true,
     "workbench.productIconTheme": "fluent-icons",
     "workbench.startupEditor": "none",
-
     //
     // Language specific
     //
-
     "[javascript]": {
         "editor.defaultFormatter": "dbaeumer.vscode-eslint"
     },
-
     "[json]": {
         "editor.defaultFormatter": "vscode.json-language-features",
         "editor.formatOnSave": true
     },
-
     "[jsonc]": {
         "editor.defaultFormatter": "vscode.json-language-features"
     },
-
     "[python]": {
         "editor.formatOnType": true
     },
-
     "[terraform]": {
         "editor.formatOnSave": true
     },
-
     "[rust]": {
         "editor.formatOnSave": true
     },
-
     "[typescript]": {
         "editor.defaultFormatter": "vscode.typescript-language-features"
     },
-
     "[vue]": {
         "editor.defaultFormatter": "dbaeumer.vscode-eslint"
     },
-
     "[yaml]": {
         "editor.insertSpaces": true,
         "editor.tabSize": 2,
