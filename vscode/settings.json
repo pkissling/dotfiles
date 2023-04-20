@@ -95,7 +95,9 @@
         "editor.formatOnSave": true
     },
     "[rust]": {
-        "editor.formatOnSave": true
+        "editor.defaultFormatter": "rust-lang.rust-analyzer",
+        "editor.formatOnSave": true,
+        "editor.formatOnSaveMode": "file"
     },
     "[typescript]": {
         "editor.defaultFormatter": "vscode.typescript-language-features"
