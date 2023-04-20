@@ -11,7 +11,7 @@
     "editor.fontFamily": "Fira Code",
     "editor.guides.bracketPairs": true,
     "editor.fontLigatures": true,
-    "editor.formatOnSaveMode": "modifications",
+    "editor.formatOnSaveMode": "modificationsIfAvailable",
     "editor.inlineSuggest.enabled": true,
     "editor.renderWhitespace": "boundary",
     "editor.stickyScroll.enabled": true,
