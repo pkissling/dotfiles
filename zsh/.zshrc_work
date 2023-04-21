@@ -36,8 +36,13 @@ alias unlive="(aws sts get-caller-identity --profile sast-pilcrow-dev_Developer 
 function credfzf() {
   ENV="$(echo "dev\ndemo\nlive" | fzf)"
   SELECTION=$(credstash -p sast-pilcrow-"${ENV}"_Developer list | fzf | head -n 1)
-  STACK=$(echo "${SELECTION}" | cut -d "/" -f 1 | cut -d "_" -f 2)
+  STACK_PREFIX=$(echo "${SELECTION}" | cut -d "/" -f 1)
+  if [[ "${STACK_PREFIX}" =~ "stack_" ]]; then
+    STACK="stack=${STACK_PREFIX/stack_/}"
+  else
+    STACK=""
+  fi
   KEY=$(echo "${SELECTION}" | cut -d "/" -f 2 | cut -d " " -f 1)
-  PASSWORD=$(credstash -p sast-pilcrow-"${ENV}"_Developer get stack_"${STACK}"/"${KEY}" stack="${STACK}")
+  PASSWORD=$(credstash -p sast-pilcrow-"${ENV}"_Developer get "${STACK_PREFIX}"/"${KEY}" $STACK)
   echo Password for "${KEY}" is: "${PASSWORD}"
 }
