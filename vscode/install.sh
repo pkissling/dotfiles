@@ -10,5 +10,10 @@ MISSING_EXTENSIONS=$(code --list-extensions | grep --ignore-case --invert-match 
 for MISSING_EXTENSION in ${MISSING_EXTENSIONS}; do
     code --install-extension "${MISSING_EXTENSION}"
 done
-
 code --list-extensions > "${HOME}"/dotfiles/vscode/extensions.txt
+
+# sort settings.json
+UUID=$(uuidgen)
+cat "${HOME}"/dotfiles/vscode/settings.json | jq --sort-keys > /tmp/"${UUID}"
+mv /tmp/"${UUID}" "${HOME}"/dotfiles/vscode/settings.json
+
