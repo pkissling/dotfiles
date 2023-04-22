@@ -41,7 +41,6 @@ ms-vscode.remote-server
 ms-vsliveshare.vsliveshare
 mutantdino.resourcemonitor
 octref.vetur
-percygrunwald.vscode-intellij-recent-files
 redhat.vscode-commons
 redhat.vscode-yaml
 rust-lang.rust-analyzer

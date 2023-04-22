@@ -2,7 +2,6 @@
 set -ex
 
 # create symlinks
-ln -sfv "${HOME}"/dotfiles/vscode/keybindings.json "${HOME}"/Library/Application\ Support/Code/User
 ln -sfv "${HOME}"/dotfiles/vscode/settings.json "${HOME}"/Library/Application\ Support/Code/User
 
 # compare list of installed extensions with extensions.txt and identify delta
