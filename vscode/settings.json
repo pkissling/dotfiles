@@ -76,6 +76,7 @@
   "mergeEditor.diffAlgorithm": "experimental",
   "problems.defaultViewMode": "table",
   "redhat.telemetry.enabled": false,
+  "rust-analyzer.check.command": "clippy",
   "search.exclude": {
     "**/.git": true,
     "**/node_modules": true,
