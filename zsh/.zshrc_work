@@ -3,34 +3,33 @@ export ANDROID_SDK_ROOT="${HOME}/.snst"
 export JIRA_AUTH_TYPE="bearer"
 
 # path
-export PATH="${HOME}/Documents/git/operations/kubernetes/bin:${PATH}"
 export PATH="/usr/local/opt/openssl@1.0/bin:${PATH}"
 
 # aliases
 alias argo="kubectl port-forward service/argocd-server 8910:443 -n argocd"
-alias checkstyle="cd ~/Documents/git/integrator-portal && mvn checkstyle:checkstyle spotbugs:check verify -DskipTests --file parent/pom.xml"
+alias checkstyle="cd ~/Coding/work/integrator-portal && mvn checkstyle:checkstyle spotbugs:check verify -DskipTests --file parent/pom.xml"
 alias db="kubectl port-forward deployment/db-forwarder 3320:23306"
 alias deploy='function deploy() { k apply -k kustomize/overlays/$1/dev}; deploy'
-alias keycloak_start="~/Documents/git/scripts/keycloak_start.sh"
-alias keycloak_stop="~/Documents/git/scripts/keycloak_stop.sh"
-alias integration_start='cd ~/Documents/git/integrator-portal && mvn clean install -DskipTests --file parent/pom.xml && mvn pre-integration-test -Ppip-integrationtest --file test.integration/pom.xml'
-alias integration_run='cd ~/Documents/git/integrator-portal && mvn -Ppip-integrationtest install --file test.integration/pom.xml'
-alias integration_stop='cd ~/Documents/git/integrator-portal && mvn post-integration-test -Ppip-integrationtest --file test.integration/pom.xml -DskipTests'
-alias iotdevicemockup_start="~/Documents/git/scripts/iotdevicemockup_start.sh"
-alias iotdevicemockup_stop="~/Documents/git/scripts/iotdevicemockup_stop.sh"
+alias keycloak_start="~/Coding/work/scripts/keycloak_start.sh"
+alias keycloak_stop="~/Coding/work/scripts/keycloak_stop.sh"
+alias integration_start='cd ~/Coding/work/integrator-portal && mvn clean install -DskipTests --file parent/pom.xml && mvn pre-integration-test -Ppip-integrationtest --file test.integration/pom.xml'
+alias integration_run='cd ~/Coding/work/integrator-portal && mvn -Ppip-integrationtest install --file test.integration/pom.xml'
+alias integration_stop='cd ~/Coding/work/integrator-portal && mvn post-integration-test -Ppip-integrationtest --file test.integration/pom.xml -DskipTests'
+alias iotdevicemockup_start="~/Coding/work/scripts/iotdevicemockup_start.sh"
+alias iotdevicemockup_stop="~/Coding/work/scripts/iotdevicemockup_stop.sh"
 alias goodmorning="mfa && up"
 alias k9='k9s --namespace $(kubectl get namespaces | choose 0 | tail -n +2 | fzf)'
-alias live='function _live() { venv; ~/Documents/git/operations/miscellaneous/sast_live_acquire_access.sh $1; deactivate}; _live'
-alias mfa="unlock_vault_keychain && ~/Documents/git/operations/miscellaneous/sast_temporary_mfa_credentials.sh"
-alias owasp='cd ~/Documents/git/integrator-portal/parent && mvn org.owasp:dependency-check-maven:aggregate --projects "!com.sast:tool.root,!com.sast:swagger,!com.sast:test.integration,!com.sast:test.device,!com.sast:test.integratorportal,!com.sast:test.system,!com.sast:tool.awsmockup,!com.sast:tool.provisioningtool,!com.sast:tool.mailclient,!com.sast:tool.commonmockup,!com.sast:tool.embeddedmysql,!com.sast:tool.iotdevicemockup" && cd ..'
+alias live='function _live() { venv; ~/Coding/work/operations/miscellaneous/sast_live_acquire_access.sh $1; deactivate}; _live'
+alias mfa="unlock_vault_keychain && ~/Coding/work/operations/miscellaneous/sast_temporary_mfa_credentials.sh"
+alias owasp='cd ~/Coding/work/integrator-portal/parent && mvn org.owasp:dependency-check-maven:aggregate --projects "!com.sast:tool.root,!com.sast:swagger,!com.sast:test.integration,!com.sast:test.device,!com.sast:test.integratorportal,!com.sast:test.system,!com.sast:tool.awsmockup,!com.sast:tool.provisioningtool,!com.sast:tool.mailclient,!com.sast:tool.commonmockup,!com.sast:tool.embeddedmysql,!com.sast:tool.iotdevicemockup" && cd ..'
 alias prometheus="kubectl -n monitoring port-forward svc/ecosystem-prometheus 9090"
-alias remoteportal="keycloak_start && cd ~/Documents/git/integrator-portal/remoteportal.client/vue-app && yarn serve"
-alias testcafe="iotdevicemockup_start && cd ~/Documents/git/integrator-portal/test.integratorportal/testcafe && yarn test"
+alias remoteportal="keycloak_start && cd ~/Coding/work/integrator-portal/remoteportal.client/vue-app && yarn serve"
+alias testcafe="iotdevicemockup_start && cd ~/Coding/work/integrator-portal/test.integratorportal/testcafe && yarn test"
 alias tickets='jira issue list --assignee $(jira me) --resolution unresolved'
 alias unlock_vault_keychain='security unlock-keychain -p $(op item get "AWS Vault" --vault "Azena" --fields label=password) ~/Library/Keychains/aws-vault.keychain-db'
-alias venv="source ~/Documents/git/operations/python/venv/bin/activate"
-alias verify="cd ~/Documents/git/integrator-portal && mvn checkstyle:checkstyle spotbugs:check verify -DskipTests --file parent/pom.xml"
-alias unlive="(aws sts get-caller-identity --profile sast-pilcrow-dev_Developer > /dev/null || ~/Documents/git/operations/miscellaneous/sast_temporary_mfa_credentials.sh) && venv && ~/Documents/git/operations/miscellaneous/sast_live_release_access.sh && deactivate"
+alias venv="source ~/Coding/work/operations/python/venv/bin/activate"
+alias verify="cd ~/Coding/work/integrator-portal && mvn checkstyle:checkstyle spotbugs:check verify -DskipTests --file parent/pom.xml"
+alias unlive="(aws sts get-caller-identity --profile sast-pilcrow-dev_Developer > /dev/null || ~/Coding/work/operations/miscellaneous/sast_temporary_mfa_credentials.sh) && venv && ~/Coding/work/operations/miscellaneous/sast_live_release_access.sh && deactivate"
 
 # functions
 function credfzf() {
