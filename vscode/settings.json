@@ -86,6 +86,7 @@
   "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.enableMultiLinePasteWarning": false,
   "terminal.integrated.fontFamily": "Fira Code",
+  "terminal.integrated.macOptionClickForcesSelection": "true",
   "terminal.integrated.profiles.osx": {
     "zsh": {
       "args": [
