@@ -50,4 +50,5 @@ VisualStudioExptTeam.intellicode-api-usage-examples
 VisualStudioExptTeam.vscodeintellicode
 Vue.volar
 wix.vscode-import-cost
+yoavbls.pretty-ts-errors
 yzhang.markdown-all-in-one
