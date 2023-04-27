@@ -1,3 +1,4 @@
+brew "python"
 cask "calibre"
 cask "discord"
 cask "google-drive"
