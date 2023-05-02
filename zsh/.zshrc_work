@@ -43,5 +43,5 @@ function credfzf() {
   fi
   KEY=$(echo "${SELECTION}" | cut -d "/" -f 2 | cut -d " " -f 1)
   PASSWORD=$(credstash -p sast-pilcrow-"${ENV}"_Developer get "${STACK_PREFIX}"/"${KEY}" $STACK)
-  echo Password for "${KEY}" is: "${PASSWORD}"
+  echo Password for "[${KEY}"] is: "${PASSWORD}"
 }
