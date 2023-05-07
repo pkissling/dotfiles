@@ -5,7 +5,6 @@ DotJoshJohnson.xml
 dracula-theme.theme-dracula
 dsznajder.es7-react-js-snippets
 eamodio.gitlens
-eg2.vscode-npm-script
 esbenp.prettier-vscode
 foxundermoon.shell-format
 GitHub.codespaces
@@ -14,7 +13,6 @@ github.vscode-github-actions
 GitHub.vscode-pull-request-github
 hashicorp.terraform
 humao.rest-client
-jcbuisson.vue
 jebbs.plantuml
 jkiviluoto.tws
 JuanBlanco.solidity
