@@ -33,6 +33,7 @@
   },
   "diffEditor.diffAlgorithm": "advanced",
   "diffEditor.ignoreTrimWhitespace": false,
+  "dotfiles.installCommand": "alias g=git",
   "editor.acceptSuggestionOnEnter": "smart",
   "editor.accessibilitySupport": "off",
   "editor.bracketPairColorization.enabled": true,
