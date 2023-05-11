@@ -15,4 +15,3 @@ code --list-extensions > "${HOME}"/dotfiles/vscode/extensions.txt
 UUID=$(uuidgen)
 jq --sort-keys < "${HOME}"/dotfiles/vscode/settings.json > /tmp/"${UUID}"
 mv /tmp/"${UUID}" "${HOME}"/dotfiles/vscode/settings.json
-
