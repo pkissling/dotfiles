@@ -102,6 +102,7 @@
   "typescript.updateImportsOnFileMove.enabled": "always",
   "window.autoDetectColorScheme": true,
   "window.commandCenter": true,
+  "workbench.colorTheme": "GitHub Dark Default",
   "workbench.editor.decorations.badges": true,
   "workbench.editor.showTabs": false,
   "workbench.editor.tabSizing": "shrink",
