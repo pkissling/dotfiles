@@ -1,3 +1,4 @@
+
 brew "ansible"
 brew "awscli"
 brew "bat"
@@ -104,6 +105,7 @@ vscode "JuanBlanco.solidity"
 vscode "VisualStudioExptTeam.intellicode-api-usage-examples"
 vscode "VisualStudioExptTeam.vscodeintellicode"
 vscode "Vue.volar"
+vscode "apollographql.vscode-apollo"
 vscode "bungcip.better-toml"
 vscode "dbaeumer.vscode-eslint"
 vscode "dracula-theme.theme-dracula"
