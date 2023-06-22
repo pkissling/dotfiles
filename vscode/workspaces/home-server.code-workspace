@@ -1,21 +1,21 @@
 {
 	"folders": [
 		{
-			"uri": "vscode-remote://tunnel+home-server/home/home-server/docker/home-assistant"
+			"uri": "vscode-remote://ssh-remote+home-server/home/home-server/docker/home-assistant"
 		},
 		{
-			"uri": "vscode-remote://tunnel+home-server/home/home-server/clock-weather-card"
+			"uri": "vscode-remote://ssh-remote+home-server/home/home-server/clock-weather-card"
 		},
 		{
-			"uri": "vscode-remote://tunnel+home-server/home/home-server/home-network-utilities"
+			"uri": "vscode-remote://ssh-remote+home-server/home/home-server/home-network-utilities"
 		},
 		{
-			"uri": "vscode-remote://tunnel+home-server/home/home-server/docker"
+			"uri": "vscode-remote://ssh-remote+home-server/home/home-server/docker"
 		},
 		{
-			"uri": "vscode-remote://tunnel+home-server/home/home-server/docker-scout"
+			"uri": "vscode-remote://ssh-remote+home-server/home/home-server/docker-scout"
 		}
 	],
-	"remoteAuthority": "tunnel+home-server",
+	"remoteAuthority": "ssh-remote+home-server",
 	"settings": {}
 }
