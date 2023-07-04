@@ -47,7 +47,7 @@
     "source.fixAll.eslint": true
   },
   "editor.cursorStyle": "line",
-  "editor.fontFamily": "Fira Code",
+  "editor.fontFamily": "Iosevka Term Extended",
   "editor.fontLigatures": true,
   "editor.formatOnSaveMode": "modificationsIfAvailable",
   "editor.guides.bracketPairs": true,
@@ -102,7 +102,7 @@
   "terminal.external.osxExec": "Alacritty.app",
   "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.enableMultiLinePasteWarning": false,
-  "terminal.integrated.fontFamily": "Fira Code",
+  "terminal.integrated.fontFamily": "Iosevka Term Extended",
   "terminal.integrated.macOptionClickForcesSelection": "true",
   "terminal.integrated.profiles.osx": {
     "zsh": {

@@ -3,14 +3,14 @@ import:
 
 font:
   normal:
-    family: Fira Code
-    style: Retina
+    family: Iosevka Term Extended
+    style: Extended
   bold:
-    family: Fira Code
+    family: Iosevka Term Extended
     style: Bold
   italic:
-    family: Fira Code
-    style: Light
+    family: Iosevka Term Extended
+    style: Italic
   size: 12
 
 window:
