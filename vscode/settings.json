@@ -38,6 +38,10 @@
     "editor.tabSize": 2
   },
   "diffEditor.diffAlgorithm": "advanced",
+  "diffEditor.experimental.collapseUnchangedRegions": true,
+  "diffEditor.experimental.showEmptyDecorations": true,
+  "diffEditor.experimental.showMoves": true,
+  "diffEditor.experimental.useVersion2": true,
   "diffEditor.ignoreTrimWhitespace": false,
   "dotfiles.installCommand": "alias g=git",
   "editor.acceptSuggestionOnEnter": "smart",
