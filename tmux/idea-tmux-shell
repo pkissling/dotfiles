@@ -1,14 +1,10 @@
 #!/bin/sh
 
-
 # from https://medium.com/@joaomoreno/persistent-terminal-sessions-in-vs-code-8fc469ed6b41
-if [ -f "/opt/homebrew/bin/tmux" ]; then
-  HOMEBREW_PREFIX="/opt/homebrew/bin/tmux"
-elif [ -f "/usr/local/bin/tmux" ]; then
-  HOMEBREW_PREFIX="/usr/local/bin/tmux"
-else
-  echo "tmux not found"
-  exit 1
-fi
+if [ "$(arch)" = "arm64" ]; then
+     eval "$(/opt/homebrew/bin/brew shellenv)"
+ else
+     eval "$(/usr/local/bin/brew shellenv)"
+ fi
 SESSION=$(echo "idea-$(pwd)" | sed 's/\./_/g')
-$("${HOMEBREW_PREFIX}") attach-session -d -t "$SESSION" || "${HOMEBREW_PREFIX}"/bin/tmux new-session -s "$SESSION"
+tmux attach-session -d -t "$SESSION" || tmux new-session -s "$SESSION"
