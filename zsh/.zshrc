@@ -96,11 +96,6 @@ function kx() {
   fi
 }
 
-# llama
-function lla {
-  cd "$(llama "$@")"
-}
-
 # set gpg path dynamically depending on $HOMEBREW_PREFIX
 export GIT_CONFIG_COUNT=1
 export GIT_CONFIG_KEY_0="gpg.program" GIT_CONFIG_VALUE_0="${HOMEBREW_PREFIX}/bin/gpg"
