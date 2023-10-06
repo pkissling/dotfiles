@@ -84,6 +84,9 @@
     "**/.project": true,
     "**/.settings": true
   },
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
   "files.watcherExclude": {
     "**/.git": true,
     "**/node_modules": true,
@@ -120,8 +123,6 @@
     }
   },
   "terraform.languageServer.enable": true,
-  "tws.highlightTrailingWhiteSpace": true,
-  "tws.trimOnSave": false,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "window.autoDetectColorScheme": true,
   "window.commandCenter": true,
