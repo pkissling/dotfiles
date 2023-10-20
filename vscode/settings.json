@@ -130,6 +130,7 @@
     "tree.indentGuidesStroke": "#FFFFFF"
   },
   "workbench.editor.decorations.badges": true,
+  "workbench.editor.empty.hint": "hidden",
   "workbench.editor.showTabs": false,
   "workbench.editor.tabSizing": "shrink",
   "workbench.editor.untitled.hint": "hidden",
