@@ -16,6 +16,8 @@ Host diskstation-root
 Host home-server
   HostName home-server
   User home-server
+  StrictHostKeyChecking no
+  UserKnownHostsFile /dev/null
 
 Host github.com
     HostName github.com
