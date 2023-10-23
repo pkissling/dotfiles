@@ -13,7 +13,7 @@ Host diskstation-root
   HostName diskstation
   User root
 
-Host home-server
+Host home-server 192.168.0.2
   HostName home-server
   User home-server
   StrictHostKeyChecking no
