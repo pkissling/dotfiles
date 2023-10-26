@@ -24,7 +24,7 @@ cat "${HOME}"/dotfiles/brew/Brewfile > /tmp/Brewfile.concat && cat "${HOME}"/dot
 brew bundle dump --file /tmp/Brewfile.dump --force
 
 # identify delta (missing packages) and append to Brewfile
-grep --invert-match --file /tmp/Brewfile.concat /tmp/Brewfile.dump >> "${HOME}"/dotfiles/brew/Brewfile."${USAGE}" || true
+grep --invert-match --line-regexp --file /tmp/Brewfile.concat /tmp/Brewfile.dump >> "${HOME}"/dotfiles/brew/Brewfile."${USAGE}" || true
 
 # sort Brewfiles
 find "${HOME}"/dotfiles/brew -type f -name "Brewfile*" ! -name "*.lock.json" -exec sort {} -o {} \;
