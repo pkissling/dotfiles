@@ -3,7 +3,12 @@ set -ex
 USAGE=$(cat "${HOME}"/dotfiles/.profile)
 
 # install brew, if not installed
-which brew || /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+if ! command -v brew &>/dev/null; then
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+    # Evaluating the brew shell environment
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
 
 # update brew
 brew update

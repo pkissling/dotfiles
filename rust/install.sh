@@ -3,6 +3,8 @@ set -ex
 
 # install and update rustup
 rustup-init -y
+# shellcheck source=/dev/null
+source "${HOME}"/.cargo/env
 rustup update
 
 # install all creates defined in crates.txt
