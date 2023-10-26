@@ -1,3 +1,4 @@
+brew "ffmpeg"
 brew "python"
 cask "calibre"
 cask "discord"
