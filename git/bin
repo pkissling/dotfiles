@@ -56,3 +56,9 @@ git-fuzzy-checkout-ticket() {
     git cob dev/"${ticket_id}"_"${slug}"
     git psu
 }
+
+git-gitlab-code-review() {
+    git fetch origin refs/merge-requests/"${0}"/head
+    git switch --detach FETCH_HEAD
+    git reset "$(git merge-base HEAD "$(git remote show origin | grep HEAD | sed 's/.* //')")"
+}
