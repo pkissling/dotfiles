@@ -1,5 +1,5 @@
 brew "ffmpeg"
-brew "python"
+brew "python@3.11"
 cask "calibre"
 cask "discord"
 cask "google-drive"
