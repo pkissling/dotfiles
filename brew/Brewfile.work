@@ -1,3 +1,4 @@
+tap "ankitpokhrel/jira-cli"
 brew "ankitpokhrel/jira-cli/jira-cli"
 brew "credstash"
 brew "gobject-introspection"
@@ -9,4 +10,3 @@ cask "mattermost"
 cask "postman"
 cask "stats"
 instance_eval(File.read(ENV['HOME'] + "/dotfiles/brew/Brewfile")) # include core Brefile
-tap "ankitpokhrel/jira-cli"

@@ -27,4 +27,9 @@ brew bundle dump --file /tmp/Brewfile.dump --force
 grep --invert-match --line-regexp --file /tmp/Brewfile.concat /tmp/Brewfile.dump >> "${HOME}"/dotfiles/brew/Brewfile."${USAGE}" || true
 
 # sort Brewfiles
-find "${HOME}"/dotfiles/brew -type f -name "Brewfile*" ! -name "*.lock.json" -exec sort {} -o {} \;
+find "${HOME}"/dotfiles/brew -type f -name "Brewfile*" ! -name "*.lock.json" -print0 | while IFS= read -r -d '' file; do
+    {
+        grep "^tap" "$file";
+        grep -v "^tap" "$file" | sort;
+    } > "$file.sorted" && mv "$file.sorted" "$file"
+done
