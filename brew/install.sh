@@ -26,7 +26,7 @@ brew bundle dump --file /tmp/Brewfile.dump --force
 # identify delta (missing packages) and append to Brewfile
 grep --invert-match --line-regexp --file /tmp/Brewfile.concat /tmp/Brewfile.dump >> "${HOME}"/dotfiles/brew/Brewfile."${USAGE}" || true
 
-# sort Brewfiles
+# sort Brewfiles (keep taps on top)
 find "${HOME}"/dotfiles/brew -type f -name "Brewfile*" ! -name "*.lock.json" -print0 | while IFS= read -r -d '' file; do
     {
         grep "^tap" "$file";

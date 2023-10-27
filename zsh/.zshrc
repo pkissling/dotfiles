@@ -12,18 +12,20 @@ plugins=(
   zoxide
 )
 
+# init zsh
+export ZSH=~/.oh-my-zsh
+source $ZSH/oh-my-zsh.sh
+
 # create new tmux default session
 if [ -z "$TMUX" ]; then
     tmux attach -t default || tmux new -s default\; split-window -h \; split-window -v \; select-pane -t 0 \;
 fi
 
-# zsh
+# configure zsh
 export DISABLE_AUTO_UPDATE=true
 export DISABLE_MAGIC_FUNCTIONS=true
 export HYPHEN_INSENSITIVE=true
-export ZSH=~/.oh-my-zsh
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
-source $ZSH/oh-my-zsh.sh
 
 # zplug
 export ZPLUG_HOME="${HOMEBREW_PREFIX}"/opt/zplug
@@ -35,7 +37,7 @@ fi
 zplug load
 
 # theme
-ln -sf $ZPLUG_HOME/repos/dracula/zsh/dracula.zsh-theme $ZSH/themes/dracula.zsh-theme
+ln -sf $ZPLUG_HOME/repos/dracula/zsh/dracula.zsh-theme $ZSH/themes/dracula.zsh-theme 2> /dev/null
 export ZSH_THEME="dracula" # theme
 
 # zsh-autosuggestions
