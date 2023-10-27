@@ -15,8 +15,8 @@ font:
 
 window:
   padding:
-   x: 10
-   y: 25
+   x: 5
+   y: 5
   decorations: full
   startup_mode: Windowed
 
