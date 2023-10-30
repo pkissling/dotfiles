@@ -33,3 +33,6 @@ find "${HOME}"/dotfiles/brew -type f -name "Brewfile*" ! -name "*.lock.json" -pr
         grep -v "^tap" "$file" | sort;
     } > "$file.sorted" && mv "$file.sorted" "$file"
 done
+
+# cleanup
+brew cleanup
