@@ -30,6 +30,7 @@ brew "kubectx"
 brew "kubernetes-cli"
 brew "kustomize"
 brew "luv"
+brew "mas"
 brew "maven"
 brew "ncdu"
 brew "neovim"
@@ -85,6 +86,11 @@ cask "viscosity"
 cask "visual-studio-code"
 cask "vlc"
 cask "whatsapp"
+mas "1Password for Safari", id: 1569813296
+mas "Amphetamine", id: 937984704
+mas "Monosnap", id: 540348655
+mas "Numbers", id: 409203825
+mas "Todoist", id: 585829637
 vscode "DavidAnson.vscode-markdownlint"
 vscode "DotJoshJohnson.xml"
 vscode "GitHub.codespaces"
