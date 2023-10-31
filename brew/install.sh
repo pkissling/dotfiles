@@ -30,7 +30,7 @@ grep --invert-match --line-regexp --file /tmp/Brewfile.concat /tmp/Brewfile.dump
 find "${HOME}"/dotfiles/brew -type f -name "Brewfile*" ! -name "*.lock.json" -print0 | while IFS= read -r -d '' file; do
     {
         grep "^tap" "$file";
-        grep -v "^tap" "$file" | sort;
+        grep -v "^tap" "$file" | awk '$1' | sort;
     } > "$file.sorted" && mv "$file.sorted" "$file"
 done
 
