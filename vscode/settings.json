@@ -49,6 +49,7 @@
   "dotfiles.installCommand": "alias g=git",
   "editor.acceptSuggestionOnEnter": "smart",
   "editor.accessibilitySupport": "off",
+  "editor.action.quickFix": true,
   "editor.bracketPairColorization.enabled": true,
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
@@ -131,9 +132,8 @@
   },
   "workbench.editor.decorations.badges": true,
   "workbench.editor.empty.hint": "hidden",
-  "workbench.editor.showTabs": false,
+  "workbench.editor.showTabs": "single",
   "workbench.editor.tabSizing": "shrink",
-  "workbench.editor.untitled.hint": "hidden",
   "workbench.editor.wrapTabs": true,
   "workbench.productIconTheme": "fluent-icons",
   "workbench.startupEditor": "none",
