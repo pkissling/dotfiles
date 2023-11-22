@@ -4,7 +4,6 @@ cask "calibre"
 cask "discord"
 cask "google-drive"
 cask "ledger-live"
-cask "raspberry-pi-imager"
 cask "slack"
 cask "telegram"
 instance_eval(File.read(ENV['HOME'] + "/dotfiles/brew/Brewfile")) # include core Brefile
