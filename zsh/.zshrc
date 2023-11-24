@@ -18,7 +18,7 @@ source $ZSH/oh-my-zsh.sh
 
 # create new tmux default session
 if [ -z "$TMUX" ]; then
-    tmux attach -t default || tmux new -s default\; split-window -h \; split-window -v \; select-pane -t 0 \;
+    tmux attach -t default || tmux new -s default\; split-window -v \; split-window -h \; select-pane -t 1 \;
 fi
 
 # configure zsh
