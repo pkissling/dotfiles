@@ -62,6 +62,9 @@
   "editor.guides.bracketPairs": true,
   "editor.inlineSuggest.enabled": true,
   "editor.minimap.enabled": false,
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
   "editor.renderWhitespace": "boundary",
   "editor.stickyScroll.enabled": true,
   "editor.suggestSelection": "first",
