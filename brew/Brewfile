@@ -92,6 +92,7 @@ mas "1Password for Safari", id: 1569813296
 mas "Amphetamine", id: 937984704
 mas "Monosnap", id: 540348655
 mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
 mas "Todoist", id: 585829637
 vscode "DavidAnson.vscode-markdownlint"
 vscode "DotJoshJohnson.xml"
