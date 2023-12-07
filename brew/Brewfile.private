@@ -7,5 +7,3 @@ cask "ledger-live"
 cask "slack"
 cask "telegram"
 instance_eval(File.read(ENV['HOME'] + "/dotfiles/brew/Brewfile")) # include core Brefile
-vscode "bradlc.vscode-tailwindcss"
-vscode "ms-playwright.playwright"
