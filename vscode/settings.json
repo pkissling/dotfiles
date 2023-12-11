@@ -44,16 +44,15 @@
   "diffEditor.diffAlgorithm": "advanced",
   "diffEditor.experimental.showEmptyDecorations": true,
   "diffEditor.experimental.showMoves": true,
-  "diffEditor.experimental.useVersion2": true,
   "diffEditor.hideUnchangedRegions.enabled": true,
   "diffEditor.ignoreTrimWhitespace": false,
   "dotfiles.installCommand": "alias g=git",
   "editor.acceptSuggestionOnEnter": "smart",
   "editor.accessibilitySupport": "off",
-  "editor.action.quickFix": true,
   "editor.bracketPairColorization.enabled": true,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
+    "source.fixAll": "always",
+    "source.fixAll.eslint": "always"
   },
   "editor.cursorStyle": "line",
   "editor.fontFamily": "Iosevka Term Extended",
@@ -106,7 +105,8 @@
   "git.ignoreRebaseWarning": true,
   "git.mergeEditor": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "mergeEditor.diffAlgorithm": "experimental",
+  "mergeEditor.diffAlgorithm": "advanced",
+  "playwright.reuseBrowser": true,
   "problems.defaultViewMode": "table",
   "redhat.telemetry.enabled": false,
   "rust-analyzer.check.command": "clippy",
@@ -119,7 +119,7 @@
   "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.enableMultiLinePasteWarning": false,
   "terminal.integrated.fontFamily": "Iosevka Term Extended",
-  "terminal.integrated.macOptionClickForcesSelection": "true",
+  "terminal.integrated.macOptionClickForcesSelection": true,
   "terminal.integrated.profiles.osx": {
     "zsh": {
       "args": [
