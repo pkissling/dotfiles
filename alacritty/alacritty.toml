@@ -1,0 +1,55 @@
+import = ["~/.config/alacritty/color.toml"]
+
+[cursor]
+style = "Beam"
+
+[font]
+size = 12
+
+[font.bold]
+family = "Iosevka Term Extended"
+style = "Bold"
+
+[font.italic]
+family = "Iosevka Term Extended"
+style = "Italic"
+
+[font.normal]
+family = "Iosevka Term Extended"
+style = "Extended"
+
+[[keyboard.bindings]]
+chars = "\u001BF"
+key = "Right"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u001BB"
+key = "Left"
+mods = "Alt"
+
+[[keyboard.bindings]]
+chars = "\u001BOH"
+key = "Left"
+mode = "AppCursor"
+mods = "Command"
+
+[[keyboard.bindings]]
+chars = "\u001BOF"
+key = "Right"
+mode = "AppCursor"
+mods = "Command"
+
+[scrolling]
+history = 10000
+
+[shell]
+program = "/bin/zsh"
+
+[window]
+decorations = "full"
+startup_mode = "Windowed"
+
+[window.padding]
+x = 5
+y = 5
