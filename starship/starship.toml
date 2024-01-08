@@ -66,11 +66,12 @@ format = """\
   format = '[$context]($style) '
   disabled = false
   style = "bold"
-[kubernetes.context_aliases]
-  "sast-pilcrow-dev_default" = "dev"
-  "sast-pilcrow-demo_default" = "demo"
-  "sast-pilcrow-live_default" = "live"
-  "sast-pilcrow-live_opsreader_default" = "live_opsreader"
+  contexts = [
+    { context_pattern = "sast-pilcrow-dev_default", context_alias = "dev" },
+    { context_pattern = "sast-pilcrow-demo_default", context_alias = "demo" },
+    { context_pattern = "sast-pilcrow-live_default", context_alias = "live" },
+    { context_pattern = "past-pilcrow-live_OpsReader", context_alias = "live-read" }
+  ]
 
 [python]
   format = '» [(\($virtualenv\))]($style)'
