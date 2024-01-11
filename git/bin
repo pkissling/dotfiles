@@ -54,7 +54,7 @@ git-fuzzy-checkout-ticket() {
     [ -z "${slug}" ] && slug="${ticket_description}"
     slug="${slug// /-}"
     git cob dev/"${ticket_id}"_"${slug}"
-    git psu
+    git p
 }
 
 git-gitlab-code-review() {
