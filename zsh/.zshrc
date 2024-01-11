@@ -48,7 +48,7 @@ source "${HOMEBREW_PREFIX}"/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 source "${HOMEBREW_PREFIX}"/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # brew
-export PATH=""${HOMEBREW_PREFIX}"/sbin:$PATH"
+export PATH="${HOMEBREW_PREFIX}/sbin:$PATH"
 
 # starship
 export STARSHIP_CONFIG="${HOME}/.starship/starship.toml"
