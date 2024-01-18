@@ -41,6 +41,9 @@
     "editor.tabSize": 2
   },
   "debug.toolBarLocation": "commandCenter",
+  "deno.enablePaths": [
+    "./supabase/functions"
+  ],
   "diffEditor.diffAlgorithm": "advanced",
   "diffEditor.experimental.showEmptyDecorations": true,
   "diffEditor.experimental.showMoves": true,
