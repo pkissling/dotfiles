@@ -40,6 +40,12 @@
     "editor.insertSpaces": true,
     "editor.tabSize": 2
   },
+  "apc.electron": {
+    "backgroundColor": "#00000000",
+    "opacity": 0.96,
+    "transparent": true,
+    "vibrancy": "ultra-dark"
+  },
   "debug.toolBarLocation": "commandCenter",
   "deno.enablePaths": [
     "./supabase/functions"
