@@ -49,6 +49,7 @@ program = "/bin/zsh"
 [window]
 decorations = "full"
 startup_mode = "Windowed"
+opacity = 0.95
 
 [window.padding]
 x = 5
