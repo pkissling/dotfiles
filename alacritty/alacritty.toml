@@ -40,6 +40,10 @@ key = "Right"
 mode = "AppCursor"
 mods = "Command"
 
+[[keyboard.bindings]]
+chars = "\r"
+key = "NumpadEnter"
+
 [scrolling]
 history = 10000
 
