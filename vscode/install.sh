@@ -8,3 +8,6 @@ ln -sfv "${HOME}"/dotfiles/vscode/settings.json "${HOME}"/Library/Application\ S
 UUID=$(uuidgen)
 jq --sort-keys < "${HOME}"/dotfiles/vscode/settings.json > /tmp/"${UUID}"
 mv /tmp/"${UUID}" "${HOME}"/dotfiles/vscode/settings.json
+
+# update extensions
+code --update-extensions
