@@ -144,11 +144,13 @@
   "workbench.colorCustomizations": {
     "tree.indentGuidesStroke": "#FFFFFF"
   },
+  "workbench.colorTheme": "GitHub Dark",
   "workbench.editor.decorations.badges": true,
   "workbench.editor.empty.hint": "hidden",
   "workbench.editor.showTabs": "single",
   "workbench.editor.tabSizing": "shrink",
   "workbench.editor.wrapTabs": true,
+  "workbench.iconTheme": "material-icon-theme",
   "workbench.productIconTheme": "fluent-icons",
   "workbench.startupEditor": "none",
   "workbench.tree.indent": 15,
