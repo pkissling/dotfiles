@@ -1,6 +1,8 @@
 tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
 tap "supabase/tap"
+tap "homebrew/cask"
+tap "homebrew/core"
 brew "ansible"
 brew "awscli"
 brew "bat"
