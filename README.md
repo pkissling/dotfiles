@@ -7,7 +7,6 @@
 This repository contains my personal Dotfiles with configuration
 for the following tools:
 
-- [alacritty](https://github.com/alacritty/alacritty)
 - [brew](https://brew.sh/)
   - [cask](https://github.com/Homebrew/homebrew-cask)
 - [git](https://git-scm.com/)
@@ -17,8 +16,8 @@ for the following tools:
 - [sdkman](https://sdkman.io/)
 - [ssh](https://www.ssh.com/)
 - [starship](https://starship.rs/)
-- [tmux](https://github.com/tmux/tmux)
 - [vscode](https://code.visualstudio.com/)
+- [warp](https://warp.dev/)
 - [zsh](https://ohmyz.sh/)
 
 Each of the folders present contains a dedicated `install.sh` script which
@@ -26,9 +25,9 @@ can be used to install the tool and its corresponding configuration manually.
 
 ### Screenshots
 
-#### Alacritty with tmux, zsh and Starship
+#### Warp with zsh and Starship
 
-![Alacritty with tmux, zsh and Starship](/.github/screenshots/alacritty_tmux_zsh_starship.png)
+![Warp with zsh and Starship](/.github/screenshots/warp_zsh_starship.png)
 
 #### nvim
 
@@ -41,16 +40,6 @@ can be used to install the tool and its corresponding configuration manually.
 ```bash
 make
 ```
-
-#### Individual targets
-
-##### alacritty
-
-```bash
-make alacritty
-```
-
-Create symlinks for alacritty config.
 
 ##### brew
 
@@ -125,14 +114,6 @@ make starship
 
 Install starship shell prompt, create symlinks.
 
-##### tmux
-
-```bash
-make tmux
-```
-
-Install tpm (tmux plugin manager), create symlinks.
-
 ##### vscode
 
 ```bash
@@ -140,6 +121,14 @@ make vscode
 ```
 
 Create symlinks for vscode configuration, install extensions.
+
+##### warp
+
+```bash
+make warp
+```
+
+Apply warp configuration.
 
 ##### zsh
 

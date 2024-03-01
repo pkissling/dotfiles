@@ -1,4 +1,4 @@
-.PHONY: alacritty brew git gpg k9s nvim rust sdkman ssh starship tmux vscode zsh
+.PHONY: brew git gpg k9s nvim rust sdkman ssh starship vscode zsh
 default: .PHONY
 
 bootstrap:
@@ -8,10 +8,6 @@ ifeq (,$(wildcard ${HOME}/dotfiles/.profile))
 	@echo "Usage (private/work)?"
 	@read line; echo $$line > ${HOME}/dotfiles/.profile
 endif
-
-alacritty: bootstrap
-	@chmod +x alacritty/install.sh
-	@./alacritty/install.sh
 
 brew: bootstrap
 	@chmod +x brew/install.sh
@@ -48,10 +44,6 @@ ssh: bootstrap
 starship: bootstrap brew
 	@chmod +x starship/install.sh
 	@./starship/install.sh
-
-tmux: bootstrap brew
-	@chmod +x tmux/install.sh
-	@./tmux/install.sh
 
 vscode: bootstrap brew
 	@chmod +x vscode/install.sh

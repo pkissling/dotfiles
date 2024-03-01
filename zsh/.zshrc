@@ -8,18 +8,12 @@ plugins=(
   git
   git-auto-fetch
   terraform
-  tmux
   zoxide
 )
 
 # init zsh
 export ZSH=~/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
-
-# create new tmux default session
-if [ -z "$TMUX" ]; then
-    tmux attach -t default || tmux new -s default\; split-window -v \; split-window -h \; select-pane -t 1 \;
-fi
 
 # configure zsh
 export DISABLE_AUTO_UPDATE=true
@@ -101,9 +95,6 @@ function kx() {
 # set gpg path dynamically depending on $HOMEBREW_PREFIX
 export GIT_CONFIG_COUNT=1
 export GIT_CONFIG_KEY_0="gpg.program" GIT_CONFIG_VALUE_0="${HOMEBREW_PREFIX}/bin/gpg"
-
-# save all tmux sessions in the global history
-export PROMPT_COMMAND='history -a; history -r'
 
 # Aliases (must be one of the last commands to overwrite zsh aliases)
 alias cat="bat"

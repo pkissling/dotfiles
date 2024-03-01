@@ -124,19 +124,11 @@
     "**/node_modules": true,
     "**/target": true
   },
-  "terminal.external.osxExec": "Alacritty.app",
+  "security.promptForLocalFileProtocolHandling": false,
+  "terminal.external.osxExec": "Warp.app",
   "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.enableMultiLinePasteWarning": false,
   "terminal.integrated.fontFamily": "Iosevka Term Extended",
-  "terminal.integrated.macOptionClickForcesSelection": true,
-  "terminal.integrated.profiles.osx": {
-    "zsh": {
-      "args": [
-        "${env:HOME}/dotfiles/tmux/vscode-tmux-shell"
-      ],
-      "path": "zsh"
-    }
-  },
   "terraform.languageServer.enable": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "window.autoDetectColorScheme": true,
