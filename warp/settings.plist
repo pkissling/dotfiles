@@ -7,7 +7,7 @@
     CompletionsOpenWhileTyping = false;
     EnforceMinimumContrast = "\\"OnlyNamedColors\\"";
     ExperimentId = "debf66fd-580f-476b-b5e8-3665465bd402";
-    FontName = "\\"Iosevka Fixed\\"";
+    FontName = "\\"Hack\\"";
     FontSize = "14.0";
     HasAutoOpenedWelcomeFolder = true;
     HonorPS1 = true;
