@@ -126,6 +126,7 @@
   },
   "security.promptForLocalFileProtocolHandling": false,
   "terminal.external.osxExec": "Warp.app",
+  "terminal.integrated.copyOnSelection": true,
   "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.enableMultiLinePasteWarning": false,
   "terminal.integrated.fontFamily": "Iosevka Term Extended",
