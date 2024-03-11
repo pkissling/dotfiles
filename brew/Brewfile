@@ -91,6 +91,7 @@ cask "warp"
 cask "whatsapp"
 mas "1Password for Safari", id: 1569813296
 mas "Amphetamine", id: 937984704
+mas "HEIC Converter", id: 1294126402
 mas "Monosnap", id: 540348655
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
