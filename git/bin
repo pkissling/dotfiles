@@ -53,7 +53,7 @@ git-fuzzy-checkout-ticket() {
     read -r -p "Define slug for [${ticket_description}]: " slug
     [ -z "${slug}" ] && slug="${ticket_description}"
     slug="${slug// /-}"
-    git cob dev/"${ticket_id}"_"${slug}"
+    git cob feature/"${ticket_id}"_"${slug}"
     git p
 }
 
