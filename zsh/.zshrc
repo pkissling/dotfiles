@@ -98,7 +98,7 @@ export GIT_CONFIG_KEY_0="gpg.program" GIT_CONFIG_VALUE_0="${HOMEBREW_PREFIX}/bin
 
 # Aliases (must be one of the last commands to overwrite zsh aliases)
 alias cat="bat"
-alias docker-wipe="(docker rm --force $(docker ps --all --quiet) || true) && docker system prune --all --force --volumes"
+alias docker-wipe='docker rm --force $(docker ps --all --quiet) 2>/dev/null || true; docker system prune --all --force --volumes'
 alias g="git"
 alias json="pbpaste | jq '.'"
 alias k="kubectl"
