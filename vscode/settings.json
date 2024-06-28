@@ -117,6 +117,7 @@
   "javascript.updateImportsOnFileMove.enabled": "always",
   "mergeEditor.diffAlgorithm": "advanced",
   "playwright.reuseBrowser": true,
+  "playwright.showTrace": false,
   "problems.defaultViewMode": "table",
   "redhat.telemetry.enabled": false,
   "rust-analyzer.check.command": "clippy",
