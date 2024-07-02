@@ -97,6 +97,7 @@ mas "MQTT Explorer", id: 1455214828
 mas "Monosnap", id: 540348655
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
+mas "The Unarchiver", id: 425424353
 mas "Todoist", id: 585829637
 vscode "bradlc.vscode-tailwindcss"
 vscode "davidanson.vscode-markdownlint"
