@@ -48,8 +48,8 @@ export PATH="${HOMEBREW_PREFIX}/sbin:/sbin:/usr/local/bin:$PATH"
 export STARSHIP_CONFIG="${HOME}/.starship/starship.toml"
 eval "$(starship init zsh)"
 
-# sdkman
-[[ -s "${HOME}/.sdkman/bin/sdkman-init.sh" ]] && source "${HOME}/.sdkman/bin/sdkman-init.sh"
+# mise
+eval "$(${HOMEBREW_PREFIX}/bin/mise activate zsh)"
 
 # rust
 source $HOME/.cargo/env

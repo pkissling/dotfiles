@@ -1,4 +1,4 @@
-.PHONY: brew git gpg k9s nvim rust sdkman ssh starship vscode zsh
+.PHONY: brew git gpg k9s mise nvim rust ssh starship vscode zsh
 default: .PHONY
 
 bootstrap:
@@ -25,6 +25,10 @@ k9s: bootstrap zsh
 	@chmod +x k9s/install.sh
 	@./k9s/install.sh
 
+mise: bootstrap brew zsh
+	@chmod +x mise/install.sh
+	@./mise/install.sh
+
 nvim: bootstrap brew
 	@chmod +x nvim/install.sh
 	@./nvim/install.sh
@@ -32,10 +36,6 @@ nvim: bootstrap brew
 rust: bootstrap brew
 	@chmod +x rust/install.sh
 	@./rust/install.sh
-
-sdkman: bootstrap
-	@chmod +x sdkman/install.sh
-	@./sdkman/install.sh
 
 ssh: bootstrap
 	@chmod +x ssh/install.sh

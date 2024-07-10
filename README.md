@@ -12,8 +12,8 @@ for the following tools:
 - [git](https://git-scm.com/)
 - [k9s](https://k9scli.io/)
 - [gnupg](https://gnupg.org/)
+- [mise](https://mise.jdx.dev/)
 - [nvim](https://neovim.io/)
-- [sdkman](https://sdkman.io/)
 - [ssh](https://www.ssh.com/)
 - [starship](https://starship.rs/)
 - [vscode](https://code.visualstudio.com/)
@@ -73,6 +73,14 @@ make k9s
 
 Create symlinks for k9s config.
 
+##### mise
+
+```bash
+make mise
+```
+
+Install mise, install & update tools using mise.
+
 <!-- markdownlint-disable -->
 ##### nvim
 <!-- markdownlint-restore -->
@@ -89,14 +97,6 @@ make rust
 ```
 
 Update rust
-
-##### sdkman
-
-```bash
-make sdkman
-```
-
-Install sdkman, install & update sdks.
 
 ##### ssh
 

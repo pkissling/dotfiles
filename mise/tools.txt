@@ -1,0 +1,4 @@
+java@19
+java@21@default
+node@20@default
+yarn@4@default
