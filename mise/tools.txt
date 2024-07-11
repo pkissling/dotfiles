@@ -1,4 +1,4 @@
-java@19
-java@21@default
+java@19@default
+java@21
 node@20@default
 yarn@4@default
