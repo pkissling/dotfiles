@@ -121,6 +121,7 @@
   "problems.defaultViewMode": "table",
   "redhat.telemetry.enabled": false,
   "rust-analyzer.check.command": "clippy",
+  "scm.experimental.showHistoryGraph": true,
   "search.exclude": {
     "**/.git": true,
     "**/node_modules": true,
