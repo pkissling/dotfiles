@@ -13,7 +13,6 @@
     EnforceMinimumContrast = "\\"OnlyNamedColors\\"";
     ExperimentId = "debf66fd-580f-476b-b5e8-3665465bd402";
     FontName = "\\"Hack\\"";
-    FontSize = "14.0";
     HasAutoOpenedWelcomeFolder = true;
     HonorPS1 = true;
     LaunchNotebookShown = true;
@@ -40,4 +39,3 @@
     WelcomeTipsFeaturesUsed = "[{\\"Action\\":\\"SplitPane\\"},{\\"Action\\":\\"OpenWarpDrive\\"},{\\"Action\\":\\"ThemePicker\\"},{\\"Hint\\":\\"CreateBlock\\"},{\\"Hint\\":\\"BlockSelect\\"},{\\"Hint\\":\\"BlockAction\\"},{\\"Action\\":\\"CommandPalette\\"},{\\"Action\\":\\"WarpAI\\"},{\\"Action\\":\\"CommandSearch\\"}]";
     WorkflowsBoxOpen = true;
 }
-
