@@ -34,7 +34,7 @@ alias unlive="(aws sts get-caller-identity --profile sast-pilcrow-dev_Developer 
 # functions
 function credfzf() {
   ENV="$(echo "dev\ndemo\nlive" | fzf)"
-  SELECTION=$(credstash -p sast-pilcrow-"${ENV}"_Developer list | fzf | head -n 1)
+  SELECTION=$(credstash -p sast-pilcrow-"${ENV}"_Developer list | awk '{print $1}' | uniq | fzf | head -n 1)
   STACK_PREFIX=$(echo "${SELECTION}" | cut -d "/" -f 1)
   if [[ "${STACK_PREFIX}" =~ "stack_" ]]; then
     STACK="stack=${STACK_PREFIX/stack_/}"
