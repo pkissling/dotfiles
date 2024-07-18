@@ -17,4 +17,3 @@ cask "postman"
 cask "stats"
 instance_eval(File.read(ENV['HOME'] + "/dotfiles/brew/Brewfile")) # include core Brefile
 mas "EasyRes", id: 688211836
-vscode "tauri-apps.tauri-vscode"
