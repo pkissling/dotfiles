@@ -1,4 +1,5 @@
 [tools]
 java = ['19', '21']
 node = ['20']
+rust = ['nightly']
 yarn = ['4']
