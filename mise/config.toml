@@ -1,5 +1,5 @@
 [tools]
-java = ['19', '21']
-node = ['20']
-rust = ['nightly']
-yarn = ['4']
+java = ["19", "21"]
+node = "22"
+rust = ["nightly"]
+yarn = ["4"]
