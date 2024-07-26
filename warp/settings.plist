@@ -7,7 +7,6 @@
     AliasExpansionBannerSeen = true;
     ApplePressAndHoldEnabled = false;
     AutosuggestionAcceptedCount = 2;
-    ChangelogVersions = "{\\"v0.2024.02.20.08.01.stable_02\\":true,\\"v0.2024.02.27.08.01.stable_03\\":true,\\"v0.2024.03.05.08.02.stable_01\\":true,\\"v0.2024.03.12.08.02.stable_01\\":true,\\"v0.2024.03.12.08.02.stable_02\\":true,\\"v0.2024.03.19.08.01.stable_01\\":true,\\"v0.2024.03.26.08.02.stable_02\\":true,\\"v0.2024.04.02.08.02.stable_01\\":true,\\"v0.2024.04.09.08.01.stable_01\\":true,\\"v0.2024.04.23.08.01.stable_03\\":true,\\"v0.2024.04.30.08.02.stable_01\\":true,\\"v0.2024.05.07.08.02.stable_02\\":true,\\"v0.2024.05.14.08.01.stable_02\\":true,\\"v0.2024.05.14.08.01.stable_04\\":true,\\"v0.2024.05.21.16.09.stable_02\\":true,\\"v0.2024.05.28.08.02.stable_00\\":true,\\"v0.2024.06.04.08.02.stable_02\\":true,\\"v0.2024.06.04.08.02.stable_03\\":true,\\"v0.2024.06.04.08.02.stable_04\\":true,\\"v0.2024.06.11.08.02.stable_01\\":true,\\"v0.2024.06.11.08.02.stable_03\\":true,\\"v0.2024.06.18.08.02.stable_03\\":true,\\"v0.2024.06.25.08.02.stable_01\\":true,\\"v0.2024.07.09.08.01.stable_00\\":true}";
     CompletionsOpenWhileTyping = false;
     CrashReportingEnabled = true;
     EnforceMinimumContrast = "\\"OnlyNamedColors\\"";
