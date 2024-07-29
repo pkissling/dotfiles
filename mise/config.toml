@@ -1,5 +1,5 @@
 [tools]
-java = ["17", "19", "21"]
+java = ["21.0.4+7.0.LTS", "19", "21"]
 node = "22"
 rust = ["nightly"]
 yarn = ["4"]
