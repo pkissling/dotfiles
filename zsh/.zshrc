@@ -16,7 +16,7 @@ export ZSH=~/.oh-my-zsh
 source $ZSH/oh-my-zsh.sh
 
 # configure zsh
-export DISABLE_AUTO_UPDATE=true
+export DISABLE_UPDATE_PROMPT=true
 export DISABLE_MAGIC_FUNCTIONS=true
 export HYPHEN_INSENSITIVE=true
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
