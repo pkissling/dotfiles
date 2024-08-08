@@ -26,7 +26,7 @@ alias remoteportal="keycloak_start && cd ~/Coding/work/integrator-portal/remotep
 alias testcafe="iotdevicemockup_start && cd ~/Coding/work/integrator-portal/test.integratorportal/testcafe && yarn test"
 alias tickets='jira issue list --assignee $(jira me) --resolution unresolved'
 alias ump='cd ~/Coding/work/ump-aa && ./gradlew localComposeUp && ./gradlew bootRun'
-alias unlock_vault_keychain='security unlock-keychain -p $(op item get "AWS Vault" --vault "Azena" --fields label=password) ~/Library/Keychains/aws-vault.keychain-db'
+alias unlock_vault_keychain='security unlock-keychain -p $(op item get "AWS Vault" --vault "Azena" --fields label=password --format json | jq -r ".value") ~/Library/Keychains/aws-vault.keychain-db'
 alias venv="source ~/Coding/work/operations/python/venv/bin/activate"
 alias verify="cd ~/Coding/work/integrator-portal && mvn checkstyle:checkstyle spotbugs:check verify -DskipTests --file parent/pom.xml"
 alias unlive="(aws sts get-caller-identity --profile sast-pilcrow-dev_Developer > /dev/null || ~/Coding/work/operations/miscellaneous/sast_temporary_mfa_credentials.sh) && venv && ~/Coding/work/operations/miscellaneous/sast_live_release_access.sh && deactivate"
