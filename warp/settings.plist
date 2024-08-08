@@ -1,6 +1,5 @@
 {
     "-string" = "${HOME}/dotfiles/warp/settings.plist";
-    AIRequestLimitInfo = "{\\"limit\\":40,\\"num_requests_used_since_refresh\\":0,\\"next_refresh_time\\":\\"2024-08-08T06:40:03.962963Z\\"}";
     AgentModeOnboardingBlockShown = true;
     AliasExpansionBannerSeen = true;
     ApplePressAndHoldEnabled = false;
