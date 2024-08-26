@@ -131,7 +131,7 @@
   "terminal.external.osxExec": "Warp.app",
   "terminal.integrated.copyOnSelection": true,
   "terminal.integrated.defaultProfile.osx": "zsh",
-  "terminal.integrated.enableMultiLinePasteWarning": false,
+  "terminal.integrated.enableMultiLinePasteWarning": "never",
   "terminal.integrated.fontFamily": "Iosevka Term Extended",
   "terraform.languageServer.enable": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
