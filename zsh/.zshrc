@@ -51,9 +51,6 @@ eval "$(starship init zsh)"
 # mise
 eval "$(${HOMEBREW_PREFIX}/bin/mise activate zsh)"
 
-# rust
-source $HOME/.cargo/env
-
 # nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s ""${HOMEBREW_PREFIX}"/opt/nvm/nvm.sh" ] && . ""${HOMEBREW_PREFIX}"/opt/nvm/nvm.sh"  # This loads nvm
