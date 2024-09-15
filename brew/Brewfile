@@ -90,7 +90,6 @@ cask "visual-studio-code"
 cask "vlc"
 cask "warp"
 cask "whatsapp"
-mas "1Password for Safari", id: 1569813296
 mas "Amphetamine", id: 937984704
 mas "HEIC Converter", id: 1294126402
 mas "MQTT Explorer", id: 1455214828
