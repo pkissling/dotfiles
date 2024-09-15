@@ -83,3 +83,6 @@
 [include]
   # user details
   path = ~/.git/.gitconfig_user
+
+[init]
+	defaultBranch = main
