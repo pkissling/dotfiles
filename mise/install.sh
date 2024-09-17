@@ -12,3 +12,6 @@ mise plugin update
 
 # install tools
 mise install
+
+# update tools
+mise up
