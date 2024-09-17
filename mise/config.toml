@@ -1,5 +1,6 @@
 [tools]
 java = ["17", "19", "21"]
-node = "22"
+node = ["22"]
+python = ["3.10"]
 rust = ["nightly"]
 yarn = ["4"]
