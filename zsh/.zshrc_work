@@ -1,5 +1,5 @@
 # misc
-export ANDROID_SDK_ROOT="${HOME}/.snst"
+export BOSCHUSER="kip1mu20"
 
 # path
 export PATH="/usr/local/opt/openssl@1.0/bin:${PATH}"
