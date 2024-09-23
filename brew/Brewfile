@@ -91,6 +91,7 @@ cask "visual-studio-code"
 cask "vlc"
 cask "warp"
 cask "whatsapp"
+cask "yaak"
 mas "Amphetamine", id: 937984704
 mas "HEIC Converter", id: 1294126402
 mas "MQTT Explorer", id: 1455214828
