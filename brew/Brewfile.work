@@ -7,14 +7,11 @@ brew "helm"
 brew "helmfile"
 brew "jesseduffield/lazydocker/lazydocker"
 brew "libpq"
-brew "php"
 brew "python@3.10"
 cask "android-platform-tools"
 cask "aws-vault"
 cask "displaylink"
 cask "mattermost"
-cask "postman"
-cask "stats"
 instance_eval(File.read(ENV['HOME'] + "/dotfiles/brew/Brewfile")) # include core Brefile
 mas "Day Progress", id: 6450280202
 mas "EasyRes", id: 688211836
