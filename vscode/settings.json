@@ -135,6 +135,7 @@
   "terminal.integrated.fontFamily": "Iosevka Term Extended",
   "terraform.languageServer.enable": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
+  "vue.server.hybridMode": true,
   "window.autoDetectColorScheme": true,
   "window.commandCenter": true,
   "workbench.colorCustomizations": {
