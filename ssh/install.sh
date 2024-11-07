@@ -15,6 +15,7 @@ ln -sfv "${HOME}"/.ssh/"${USAGE}".priv "${HOME}"/.ssh/id_rsa
 
 # create symlinks for config file
 ln -sfv "${HOME}"/dotfiles/ssh/config "${HOME}"/.ssh
+ln -sfv "${HOME}"/dotfiles/ssh/config_"${USAGE}" "${HOME}"/.ssh/config_profile_specific
 
 # add private ssh key from 1password, if not exist
 # shellcheck disable=SC2140

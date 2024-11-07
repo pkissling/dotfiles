@@ -105,4 +105,4 @@ alias vi="nvim"
 alias vim="nvim"
 
 # source usage specific configuration
-source ~/.zshrc_user
+source ~/.zshrc_profile_specific

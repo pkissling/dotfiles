@@ -4,7 +4,7 @@ USAGE=$(cat "${HOME}"/dotfiles/.profile)
 
 # create symlinks
 ln -sfv "${HOME}"/dotfiles/zsh/.zshrc "${HOME}"
-ln -sfv "${HOME}"/dotfiles/zsh/.zshrc_"${USAGE}" "${HOME}"/.zshrc_user
+ln -sfv "${HOME}"/dotfiles/zsh/.zshrc_"${USAGE}" "${HOME}"/.zshrc_profile_specific
 
 # install zsh, if not installed already
 if [ -z "${ZSH}" ] || ! [ -d "${ZSH}" ]; then
