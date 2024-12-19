@@ -108,6 +108,8 @@
   },
   "git.allowForcePush": true,
   "git.autofetch": true,
+  "git.blame.editorDecoration.enabled": true,
+  "git.blame.statusBarItem.enabled": true,
   "git.confirmForcePush": false,
   "git.confirmSync": false,
   "git.enableSmartCommit": true,
