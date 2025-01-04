@@ -1,4 +1,4 @@
-.PHONY: brew git gpg k9s mise nvim ssh starship vscode warp zsh
+.PHONY: brew git gpg k9s mise nvim ssh starship vscode zsh
 default: .PHONY
 
 bootstrap:
@@ -44,10 +44,6 @@ starship: bootstrap brew
 vscode: bootstrap brew
 	@chmod +x vscode/install.sh
 	@./vscode/install.sh
-
-warp: bootstrap brew
-	@chmod +x warp/install.sh
-	@./warp/install.sh
 
 zsh: bootstrap brew
 	@chmod +x zsh/install.sh

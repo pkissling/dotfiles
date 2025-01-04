@@ -17,7 +17,6 @@ for the following tools:
 - [ssh](https://www.ssh.com/)
 - [starship](https://starship.rs/)
 - [vscode](https://code.visualstudio.com/)
-- [warp](https://warp.dev/)
 - [zsh](https://ohmyz.sh/)
 
 Each of the folders present contains a dedicated `install.sh` script which
@@ -113,14 +112,6 @@ make vscode
 ```
 
 Create symlinks for vscode configuration, install extensions.
-
-##### warp
-
-```bash
-make warp
-```
-
-Apply warp configuration.
 
 ##### zsh
 
