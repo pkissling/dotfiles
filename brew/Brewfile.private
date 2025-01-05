@@ -1,5 +1,6 @@
 brew "ffmpeg"
 brew "python@3.11"
+brew "vercel-cli"
 cask "discord"
 cask "google-drive"
 cask "ledger-live"
