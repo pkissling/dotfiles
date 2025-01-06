@@ -6,4 +6,3 @@ cask "google-drive"
 cask "ledger-live"
 cask "slack"
 instance_eval(File.read(ENV['HOME'] + "/dotfiles/brew/Brewfile")) # include core Brefile
-mas "1Password for Safari", id: 1569813296
