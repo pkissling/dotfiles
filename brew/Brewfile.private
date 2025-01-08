@@ -4,5 +4,6 @@ brew "vercel-cli"
 cask "discord"
 cask "google-drive"
 cask "ledger-live"
+cask "lulu"
 cask "slack"
 instance_eval(File.read(ENV['HOME'] + "/dotfiles/brew/Brewfile")) # include core Brefile
