@@ -8,6 +8,9 @@ shell-integration-features = no-cursor
 window-padding-x = 10
 window-padding-y = 10
 
+# quick terminal
+quick-terminal-autohide = false
+
 # keybindings
 keybind = global:ctrl+shift+g=toggle_quick_terminal
 keybind = cmd+backspace=esc:w # delete whole inout with CMD + delete
