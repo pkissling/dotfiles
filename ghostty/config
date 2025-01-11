@@ -1,8 +1,8 @@
 background-opacity = 0.8
+copy-on-select = true
 cursor-style = bar
 cursor-style-blink = false
 keybind = global:ctrl+shift+g=toggle_quick_terminal
 font-family = Iosevka Term Extended
 theme = Dracula
 shell-integration-features = no-cursor
-
