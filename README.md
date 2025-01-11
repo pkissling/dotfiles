@@ -48,6 +48,14 @@ make brew
 
 Install brew, install & update packages (for brew & cask) via Brewfile.
 
+##### ghostty
+
+```bash
+make ghostty
+```
+
+Create symlinks for ghostty config.
+
 ##### git
 
 ```bash

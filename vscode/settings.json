@@ -133,7 +133,6 @@
     "**/target": true
   },
   "security.promptForLocalFileProtocolHandling": false,
-  "terminal.external.osxExec": "Warp.app",
   "terminal.integrated.copyOnSelection": true,
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.cursorStyle": "line",

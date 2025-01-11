@@ -1,4 +1,4 @@
-.PHONY: brew git gpg k9s mise nvim ssh starship vscode zsh
+.PHONY: brew ghostty git gpg k9s mise nvim ssh starship vscode zsh
 default: .PHONY
 
 bootstrap:
@@ -12,6 +12,10 @@ endif
 brew: bootstrap
 	@chmod +x brew/install.sh
 	@./brew/install.sh
+
+ghostty: bootstrap
+	@chmod +x ghostty/install.sh
+	@./ghostty/install.sh
 
 git: bootstrap
 	@chmod +x git/install.sh
