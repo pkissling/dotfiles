@@ -3,6 +3,9 @@ copy-on-select = true
 cursor-style = bar
 cursor-style-blink = false
 keybind = global:ctrl+shift+g=toggle_quick_terminal
+keybind = global:ctrl+shift+g=toggle_quick_terminal
 font-family = Iosevka Term Extended
 theme = Dracula
 shell-integration-features = no-cursor
+window-padding-x = 10
+window-padding-y = 10
