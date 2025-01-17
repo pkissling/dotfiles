@@ -46,7 +46,7 @@ git-fuzzy-rebase() {
 }
 
 git-fuzzy-checkout-ticket() {
-    ticket=$(jira issue list --no-headers --plain --columns KEY,SUMMARY -a "$(jira me)" -s "In Progress" | fzf)
+    ticket=$(jira issue list --no-headers --plain --columns KEY,SUMMARY --assignee "$(jira me)" --status "In Progress" --jql "project IS NOT EMPTY" | fzf)
     [[ -n $ticket ]] || exit 1
     ticket_id=$(echo "${ticket}" | choose 0)
     ticket_description=$(echo "${ticket}" | choose 1:)
