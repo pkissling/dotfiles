@@ -97,6 +97,14 @@ make nvim
 
 Create symlinks for nvim, install & update plugins.
 
+##### pam
+
+```bash
+make pam
+```
+
+Configure macOS to allow `sudo` to use Touch ID.
+
 ##### ssh
 
 ```bash
