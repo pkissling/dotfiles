@@ -22,6 +22,7 @@ alias live='function _live() { venv; ~/Coding/work/operations/miscellaneous/sast
 alias mfa="unlock_aws_vault_keychain && ~/Coding/work/operations/miscellaneous/sast_temporary_mfa_credentials.sh"
 alias owasp='cd ~/Coding/work/integrator-portal/parent && mvn org.owasp:dependency-check-maven:aggregate --projects "!com.sast:tool.root,!com.sast:swagger,!com.sast:test.integration,!com.sast:test.device,!com.sast:test.integratorportal,!com.sast:test.system,!com.sast:tool.awsmockup,!com.sast:tool.provisioningtool,!com.sast:tool.mailclient,!com.sast:tool.commonmockup,!com.sast:tool.embeddedmysql,!com.sast:tool.iotdevicemockup" && cd ..'
 alias prometheus="kubectl -n monitoring port-forward svc/ecosystem-prometheus 9090"
+alias prometheus-kube="kubectl -n monitoring port-forward svc/kube-prometheus-stack-prometheus 9090"
 alias remoteportal="keycloak_start && cd ~/Coding/work/integrator-portal/remoteportal.client/vue-app && yarn serve"
 alias testcafe="iotdevicemockup_start && cd ~/Coding/work/integrator-portal/test.integratorportal/testcafe && yarn test"
 alias tickets='jira issue list --assignee $(jira me) --resolution unresolved'
