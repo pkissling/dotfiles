@@ -119,6 +119,7 @@
   "git.ignoreRebaseWarning": true,
   "git.mergeEditor": true,
   "github.copilot.editor.enableAutoCompletions": true,
+  "github.copilot.nextEditSuggestions.enabled": true,
   "javascript.updateImportsOnFileMove.enabled": "always",
   "mergeEditor.diffAlgorithm": "advanced",
   "playwright.reuseBrowser": true,
