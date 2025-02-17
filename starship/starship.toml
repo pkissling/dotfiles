@@ -68,9 +68,11 @@ format = """\
   style = "bold"
   contexts = [
     { context_pattern = "sast-pilcrow-dev_default", context_alias = "dev" },
+    { context_pattern = "sast-pilcrow-dev_opsreader_default", context_alias = "dev (read-only)" },
     { context_pattern = "sast-pilcrow-demo_default", context_alias = "demo" },
+    { context_pattern = "sast-pilcrow-demo_opsreader_default", context_alias = "demo (read-only)" },
     { context_pattern = "sast-pilcrow-live_default", context_alias = "live" },
-    { context_pattern = "past-pilcrow-live_OpsReader", context_alias = "live-read" }
+    { context_pattern = "sast-pilcrow-live_opsreader_default", context_alias = "live (read-only)" }
   ]
 
 [python]
