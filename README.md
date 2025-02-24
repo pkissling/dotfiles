@@ -17,6 +17,7 @@ for the following tools:
 - [ssh](https://www.ssh.com/)
 - [starship](https://starship.rs/)
 - [vscode](https://code.visualstudio.com/)
+- [zed](https://zed.dev/)
 - [zsh](https://ohmyz.sh/)
 
 Each of the folders present contains a dedicated `install.sh` script which
@@ -128,6 +129,14 @@ make vscode
 ```
 
 Create symlinks for vscode configuration, install extensions.
+  
+##### zed
+
+```bash
+make zed
+```
+
+Install zed text editor, create symlinks.
 
 ##### zsh
 
