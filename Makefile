@@ -1,4 +1,4 @@
-.PHONY: brew ghostty git gpg k9s mise nvim pam ssh starship vscode zsh
+.PHONY: brew ghostty git gpg k9s mise nvim pam ssh starship vscode zed zsh
 default: .PHONY
 
 bootstrap:
