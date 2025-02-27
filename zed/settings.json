@@ -1,31 +1,36 @@
-// Zed settings
-//
-// For information on how to configure Zed, see the Zed
-// documentation: https://zed.dev/docs/configuring-zed
-//
-// To see all of Zed's default settings without changing your
-// custom settings, run `zed: open default settings` from the
-// command palette (cmd-shift-p / ctrl-shift-p)
 {
-  "vim_mode": true,
-  "features": {
-    "edit_prediction_provider": "zed"
+  "auto_install_extensions": {
+    "html": true,
+    "python": true,
+    "rust": true,
+    "scss": true,
+    "vue": true
   },
-  "ui_font_size": 16,
-  "buffer_font_size": 14,
-  "theme": {
-    "mode": "system",
-    "light": "One Light",
-    "dark": "Github Dark"
-  },
-  "buffer_font_family": "Iosevka Fixed",
   "autosave": {
     "after_delay": {
       "milliseconds": 1000
     }
   },
+  "buffer_font_family": "Iosevka Fixed",
+  "buffer_font_size": 14,
+  "features": {
+    "copilot": true
+  },
+  "icon_theme": "VSCode Icons (Dark)",
+  "indent_guides": {
+    "coloring": "indent_aware",
+    "enabled": true
+  },
   "restore_on_startup": "last_session",
+  "show_whitespaces": "all",
   "tab_bar": {
     "show": false
-  }
+  },
+  "theme": {
+    "dark": "VSCode Dark Modern",
+    "light": "One Light",
+    "mode": "system"
+  },
+  "ui_font_size": 16,
+  "vim_mode": true
 }
