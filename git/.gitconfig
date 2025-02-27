@@ -71,11 +71,18 @@
 
 [pull]
     rebase = true
+    default = simple
+    followTags = true
 
 [push]
     autoSetupRemote = true
+    default = simple
+    followTags = true
+
 [rebase]
     autoStash = true
+    default = simple
+    followTags = true
 
 [user]
     # default user config, unless overwritten via [include]
@@ -88,3 +95,27 @@
 
 [init]
     defaultBranch = main
+
+[column]
+    ui = auto
+
+[branch]
+    sort = -committerdate
+
+[tag]
+    sort = version:refname
+
+[fetch]
+    prune = true
+    pruneTags = true
+    all = true
+
+[help]
+    autocorrect = prompt
+
+[commit]
+    verbose = true
+
+[rerere]
+    enabled = true
+    autoupdate = true
