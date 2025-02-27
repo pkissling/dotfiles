@@ -1,88 +1,90 @@
 [alias]
-  # abbreviations
-  a = add
-  aa = add -A
-  ap = add -p
-  c = commit
-  ca = commit --all
-  cane = commit --amend --no-edit
-  cam = commit --all --message
-  fc = fuzzy-checkout
-  frb = fuzzy-rebase
-  cl = clean --force -d
-  co = checkout
-  cob = checkout -b
-  fcot = fuzzy-checkout-ticket
-  cm = commit --message
-  d = diff
-  ds = diff --staged
-  fd = fuzzy-diff
-  hist = log --pretty=format:'%C(dim blue)[%ad]%C(reset) %C(bold normal)[%h]%C(reset) | %C(blue)%s %C(bold normal)[%an]%C(reset)%C(bold white)%d%C(reset)' --graph --date=short
-  last = log -1 HEAD --stat
-  m = master
-  p = push
-  pfwl = push --force-with-lease
-  pl = pull-rebase
-  r = reset
-  rb = rebase
-  rbc = rebase --continue
-  rbm = rebase-master
-  rbi = rebase-interactive
-  rh = reset --hard
-  rs = reset --soft
-  s = status
-  ss = status --short --branch
+    a = add
+    aa = add -A
+    ap = add -p
+    c = commit
+    ca = commit --all
+    cane = commit --amend --no-edit
+    cam = commit --all --message
+    fc = fuzzy-checkout
+    frb = fuzzy-rebase
+    cl = clean --force -d
+    co = checkout
+    cob = checkout -b
+    fcot = fuzzy-checkout-ticket
+    cm = commit --message
+    d = diff
+    ds = diff --staged
+    fd = fuzzy-diff
+    hist = log --pretty=format:'%C(dim blue)[%ad]%C(reset) %C(bold normal)[%h]%C(reset) | %C(blue)%s %C(bold normal)[%an]%C(reset)%C(bold white)%d%C(reset)' --graph --date=short
+    last = log -1 HEAD --stat
+    m = master
+    p = push
+    pfwl = push --force-with-lease
+    pl = pull-rebase
+    r = reset
+    rb = rebase
+    rbc = rebase --continue
+    rbm = rebase-master
+    rbi = rebase-interactive
+    rh = reset --hard
+    rs = reset --soft
+    s = status
+    ss = status --short --branch
 
-  # aliases
-  cleanup = "!git fetch --prune --tags --force > /dev/null && for BRANCH in `git branch -vv | grep --invert-match '^*' | grep ': gone' | awk '{print $1}'`; do git branch -D ${BRANCH}; done"
-  pull-rebase = "!git fetch --prune --tags --force && git pull origin $(git symbolic-ref --short HEAD) --rebase --autostash"
-  rebase-master = "!git fetch --prune --tags --force && git rebase --autostash origin/$(git remote show origin | grep HEAD | sed 's/.* //')"
-  rebase-interactive = "!git rebase --autostash --interactive $(git log -n 1 origin/$(git remote show origin | grep HEAD | sed 's/.* //') --pretty=format:'%h')"
-  master = "!git checkout $(git remote show origin | grep HEAD | sed 's/.* //') && git pl && git cleanup"
+    # aliases
+    cleanup = "!git fetch --prune --tags --force > /dev/null && for BRANCH in `git branch -vv | grep --invert-match '^*' | grep ': gone' | awk '{print $1}'`; do git branch -D ${BRANCH}; done"
+    pull-rebase = "!git fetch --prune --tags --force && git pull origin $(git symbolic-ref --short HEAD) --rebase --autostash"
+    rebase-master = "!git fetch --prune --tags --force && git rebase --autostash origin/$(git remote show origin | grep HEAD | sed 's/.* //')"
+    rebase-interactive = "!git rebase --autostash --interactive $(git log -n 1 origin/$(git remote show origin | grep HEAD | sed 's/.* //') --pretty=format:'%h')"
+    master = "!git checkout $(git remote show origin | grep HEAD | sed 's/.* //') && git pl && git cleanup"
 
-  # functions
-  fuzzy-checkout = !bash -c 'source $HOME/.git/bin && git-fuzzy-checkout'
-  fuzzy-checkout-ticket = !bash -c 'source $HOME/.git/bin && git-fuzzy-checkout-ticket'
-  fuzzy-rebase = !bash -c 'source $HOME/.git/bin && git-fuzzy-rebase'
-  fuzzy-diff = !bash -c 'source $HOME/.git/bin && git-fuzzy-diff'
-  gitlab-review = !bash -c 'source $HOME/.git/bin && git-gitlab-code-review \"$1\"'
+    # functions
+    fuzzy-checkout = !bash -c 'source $HOME/.git/bin && git-fuzzy-checkout'
+    fuzzy-checkout-ticket = !bash -c 'source $HOME/.git/bin && git-fuzzy-checkout-ticket'
+    fuzzy-rebase = !bash -c 'source $HOME/.git/bin && git-fuzzy-rebase'
+    fuzzy-diff = !bash -c 'source $HOME/.git/bin && git-fuzzy-diff'
+    gitlab-review = !bash -c 'source $HOME/.git/bin && git-gitlab-code-review \"$1\"'
 
 [core]
-  pager = delta --dark
-  excludesfile = ~/.git/.gitignore_global
+    pager = delta --dark
+    excludesfile = ~/.git/.gitignore_global
 
 [credential "https://dev.azure.com"]
-  useHttpPath = true
+    useHttpPath = true
 
 [delta]
-  features = side-by-side line-numbers
+    features = side-by-side line-numbers
 
 [diff]
-  colorMoved = default
+    colorMoved = plain
+    algorithm = histogram
+    mnemonicPrefix = true
+    renames = true
 
-[gpg] # default path, will be overwritten in .zshrc
-  program = /usr/local/bin/gpg
+[gpg]
+    # default path, will be overwritten in .zshrc
+    program = /usr/local/bin/gpg
 
 [interactive]
-  diffFilter = delta --color-only --dark
+    diffFilter = delta --color-only --dark
 
 [pull]
-  rebase = true
+    rebase = true
 
 [push]
-	autoSetupRemote = true
-
+    autoSetupRemote = true
 [rebase]
-  autoStash = true
+    autoStash = true
 
 [user]
-  # default user config, unless overwritten via [include]
-  name = Patrick Kissling
-  email = clip_lye.0j@icloud.com
+    # default user config, unless overwritten via [include]
+    name = Patrick Kissling
+    email = clip_lye.0j@icloud.com
 
 [include]
-  # user details
-  path = ~/.git/.gitconfig_user
+    # user details
+    path = ~/.git/.gitconfig_user
 
 [init]
-	defaultBranch = main
+    defaultBranch = main
