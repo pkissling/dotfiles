@@ -6,7 +6,7 @@ USAGE=$(cat "${HOME}"/dotfiles/.profile)
 mkdir -p "${HOME}"/.gnupg
 
 # create symlink
-ln -sfv "${HOME}"/dotfiles/gpg/gpg-agent_"${USAGE}".conf "${HOME}"/.gnupg/gpg-agent.conf
+ln -sfv "${HOME}"/dotfiles/gpg/gpg-agent.conf "${HOME}"/.gnupg/gpg-agent.conf
 
 # import public gpg keys
 gpg --import ~/dotfiles/gpg/private.asc
@@ -22,3 +22,6 @@ if [ -z "$(gpg --list-secret-keys)" ]; then
   ONE_PASSWORD_DOCUMENT_ID=$(op item get 'GPG Private Key' --vault "${ONE_PASSWORD_VAULT}" --format json | jq -r .id)
   gpg --import <(op document get "${ONE_PASSWORD_DOCUMENT_ID}")
 fi
+
+# Restart gpg-agent to apply config changes
+gpgconf --kill gpg-agent
