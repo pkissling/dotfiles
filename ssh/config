@@ -5,6 +5,7 @@ Host *
   UseKeychain yes
   AddKeysToAgent yes
   IdentityFile ~/.ssh/id_rsa
+  SetEnv TERM=xterm-256color
 
 Host diskstation
   HostName diskstation
