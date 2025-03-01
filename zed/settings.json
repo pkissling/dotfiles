@@ -4,6 +4,9 @@
     "python": true,
     "rust": true,
     "scss": true,
+    "terraform": true,
+    "vscode-dark-modern": true,
+    "vscode-icons": true,
     "vue": true
   },
   "autosave": {
