@@ -24,6 +24,11 @@
     "coloring": "indent_aware",
     "enabled": true
   },
+  "languages": {
+    "Vue.js": {
+      "format_on_save": "off"
+    }
+  },
   "restore_on_startup": "last_session",
   "show_whitespaces": "all",
   "tab_bar": {
