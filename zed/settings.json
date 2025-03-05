@@ -4,6 +4,7 @@
     "python": true,
     "rust": true,
     "scss": true,
+    "sql": true,
     "terraform": true,
     "vscode-dark-modern": true,
     "vscode-icons": true,
@@ -25,6 +26,9 @@
     "enabled": true
   },
   "languages": {
+    "JavaScript": {
+      "format_on_save": "off"
+    },
     "Vue.js": {
       "format_on_save": "off"
     }
