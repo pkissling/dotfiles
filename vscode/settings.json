@@ -90,7 +90,6 @@
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "explorer.excludeGitIgnore": false,
-  "explorer.openEditors.visible": 0,
   "files.associations": {
     "*.yaml": "yaml"
   },
@@ -127,7 +126,6 @@
   "problems.defaultViewMode": "table",
   "redhat.telemetry.enabled": false,
   "rust-analyzer.check.command": "clippy",
-  "scm.experimental.showHistoryGraph": true,
   "search.exclude": {
     "**/.git": true,
     "**/node_modules": true,
