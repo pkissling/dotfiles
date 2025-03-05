@@ -19,3 +19,4 @@ cask "mattermost"
 cask "obsidian"
 instance_eval(File.read(ENV['HOME'] + "/dotfiles/brew/Brewfile")) # include core Brefile
 mas "EasyRes", id: 688211836
+mas "Xcode", id: 497799835
