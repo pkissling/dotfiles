@@ -140,6 +140,7 @@
   "terminal.integrated.defaultProfile.osx": "zsh",
   "terminal.integrated.enableMultiLinePasteWarning": "never",
   "terminal.integrated.fontFamily": "Iosevka Term Extended",
+  "terminal.integrated.scrollback": 100000,
   "terminal.integrated.smoothScrolling": true,
   "terraform.languageServer.enable": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
