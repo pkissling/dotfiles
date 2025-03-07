@@ -17,6 +17,6 @@ cask "aws-vault"
 cask "displaylink"
 cask "mattermost"
 cask "obsidian"
-instance_eval(File.read(ENV['HOME'] + "/dotfiles/brew/Brewfile")) # include core Brefile
+instance_eval(File.read(ENV['HOME'] + "/dotfiles/brew/Brewfile")) # include core Brewfile
 mas "EasyRes", id: 688211836
 mas "Xcode", id: 497799835
