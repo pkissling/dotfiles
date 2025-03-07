@@ -18,7 +18,7 @@
   "buffer_font_family": "Iosevka Fixed",
   "buffer_font_size": 14,
   "features": {
-    "copilot": true
+    "edit_prediction_provider": "copilot"
   },
   "icon_theme": "VSCode Icons (Dark)",
   "indent_guides": {
