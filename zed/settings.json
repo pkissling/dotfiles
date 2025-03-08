@@ -18,7 +18,8 @@
   "buffer_font_family": "Iosevka Fixed",
   "buffer_font_size": 14,
   "features": {
-    "edit_prediction_provider": "copilot"
+    "edit_prediction_provider": "copilot",
+    "copilot": true
   },
   "icon_theme": "VSCode Icons (Dark)",
   "indent_guides": {
@@ -32,6 +33,9 @@
     "Vue.js": {
       "format_on_save": "off"
     }
+  },
+  "outline_panel": {
+    "dock": "right"
   },
   "restore_on_startup": "last_session",
   "show_whitespaces": "all",
