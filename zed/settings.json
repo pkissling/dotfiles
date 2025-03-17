@@ -28,10 +28,27 @@
   },
   "languages": {
     "JavaScript": {
-      "format_on_save": "off"
+      "code_actions_on_format": {
+        "source.fixAll.esLint": true
+      }
+    },
+    "Rust": {
+      "format_on_save": "on"
+    },
+    "TypeScript": {
+      "code_actions_on_format": {
+        "source.fixAll.esLint": true
+      }
     },
     "Vue.js": {
-      "format_on_save": "off"
+      "formatter": {
+        "code_actions": {
+          "source.fixAll.eslint": true
+        }
+      },
+      "code_actions_on_format": {
+        "source.fixAll.esLint": true
+      }
     }
   },
   "outline_panel": {
@@ -42,6 +59,7 @@
   "tab_bar": {
     "show": false
   },
+  "tab_size": 2,
   "theme": {
     "dark": "VSCode Dark Modern",
     "light": "One Light",
