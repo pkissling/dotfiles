@@ -4,6 +4,7 @@ cursor-style = bar
 cursor-style-blink = false
 font-family = Iosevka Term Extended
 macos-titlebar-proxy-icon = "hidden"
+quick-terminal-position = "left"
 title = " "
 theme = Dracula
 shell-integration-features = no-cursor
@@ -11,5 +12,5 @@ window-padding-x = 10
 window-padding-y = 10
 
 # keybindings
-keybind = global:ctrl+g=toggle_quick_terminal
+keybind = global:ctrl+`=toggle_quick_terminal
 keybind = cmd+backspace=esc:w # delete whole inout with CMD + delete
