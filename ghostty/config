@@ -12,5 +12,5 @@ window-padding-x = 10
 window-padding-y = 10
 
 # keybindings
-keybind = global:ctrl+`=toggle_quick_terminal
+keybind = global:cmd+shift+g=toggle_quick_terminal
 keybind = cmd+backspace=esc:w # delete whole inout with CMD + delete
