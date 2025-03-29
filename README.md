@@ -2,146 +2,66 @@
 
 ![Lint](https://github.com/pkissling/dotfiles/workflows/Lint/badge.svg) ![Valid links](https://github.com/pkissling/dotfiles/workflows/Valid%20links/badge.svg)
 
-## Overview
+## 🚀 Overview
 
-This repository contains my personal Dotfiles with configuration
-for the following tools:
+Welcome to my dotfiles repository! This collection represents my curated development environment setup enabling me to work efficiently across various projects and technologies. The configurations included in this repository are tailored to my personal preferences and workflows, but feel free to use them as a starting point for your own setup.
 
-- [brew](https://brew.sh/)
-  - [cask](https://github.com/Homebrew/homebrew-cask)
-- [git](https://git-scm.com/)
-- [k9s](https://k9scli.io/)
-- [gnupg](https://gnupg.org/)
-- [mise](https://mise.jdx.dev/)
-- [nvim](https://neovim.io/)
-- [ssh](https://www.ssh.com/)
-- [starship](https://starship.rs/)
-- [vscode](https://code.visualstudio.com/)
-- [zed](https://zed.dev/)
-- [zsh](https://ohmyz.sh/)
+## 🛠️ Tools & Configurations
 
-Each of the folders present contains a dedicated `install.sh` script which
-can be used to install the tool and its corresponding configuration manually.
+Below is a comprehensive overview of the tools and their configurations included in this repository:
 
-### Screenshots
+```bash
+$ git clone git@github.com:pkissling/dotfiles.git
+$ tree dotfiles
+.
+├── brew
+│   └── // https://brew.sh/ - macOS package manager
+├── eza
+│   └── // https://github.com/ogham/exa - Modern replacement for ls
+├── ghostty
+│   └── // https://ghostty.org - Modern terminal emulator
+├── git
+│   └── // https://git-scm.com/ - Version control system
+├── gnugp
+│   └── // https://gnupg.org - Encryption and signing tools
+├── k9s
+│   └── // https://k9scli.io - Kubernetes management tool
+├── mise
+│   └── // https://mise.jdx.dev - Runtime version manager
+├── nvim
+│   └── // https://neovim.io - Modern Vim editor (kickstarted using https://github.com/nvim-lua/kickstart.nvim)
+├── ssh
+│   └── // - Secure shell configuration
+├── starship
+│   └── // https://starship.rs - Minimal, fast shell prompt
+├── vscode
+│   └── // https://code.visualstudio.com - Code editor
+├── zed
+│   └── // https://zed.dev - Modern code editor
+└── zsh
+    └── // https://ohmyz.sh - Shell environment
+```
 
-#### Warp with zsh and Starship
+Each tool in this collection comes with its own `install.sh` script, allowing for modular installation and configuration. This modular approach enables you to pick and choose which components you'd like to integrate into your environment.
 
-![Warp with zsh and Starship](/.github/screenshots/warp_zsh_starship.png)
+## 🖼️ Visual Tour
 
-#### nvim
+### Terminal Environment
 
-![nvim](/.github/screenshots/nvim.png)
+A terminal setup featuring Ghostty, zsh, and Starship prompt,
 
-### Install
+![ghostty with zsh and Starship](.github/screenshots/ghostty_zsh_startship.png)
 
-#### All
+### Neovim Configuration
+
+![nvim](.github/screenshots/nvim.png)
+
+## 🚀 Quick Start
+
+To install all configurations, simply run:
 
 ```bash
 make
 ```
 
-##### brew
-
-```bash
-make brew
-```
-
-Install brew, install & update packages (for brew & cask) via Brewfile.
-
-##### ghostty
-
-```bash
-make ghostty
-```
-
-Create symlinks for ghostty config.
-
-##### git
-
-```bash
-make git
-```
-
-Create symlinks for git config.
-
-##### gpg
-
-```bash
-make gpg
-```
-
-Create symlinks for gpg config.
-
-##### k9s
-
-```bash
-make k9s
-```
-
-Create symlinks for k9s config.
-
-##### mise
-
-```bash
-make mise
-```
-
-Install mise, install & update tools using mise.
-
-<!-- markdownlint-disable -->
-##### nvim
-<!-- markdownlint-restore -->
-```bash
-make nvim
-```
-
-Create symlinks for nvim, install & update plugins.
-
-##### pam
-
-```bash
-make pam
-```
-
-Configure macOS to allow `sudo` to use Touch ID.
-
-##### ssh
-
-```bash
-make ssh
-```
-
-Create symlinks for ssh config.
-
-##### starship
-
-```bash
-make starship
-```
-
-Install starship shell prompt, create symlinks.
-
-##### vscode
-
-```bash
-make vscode
-```
-
-Create symlinks for vscode configuration, install extensions.
-  
-##### zed
-
-```bash
-make zed
-```
-
-Install zed text editor, create symlinks.
-
-##### zsh
-
-```bash
-make zsh
-```
-
-Install zsh, create symlinks.
+For individual tool installations, navigate to the respective directory and run its `install.sh` script.
