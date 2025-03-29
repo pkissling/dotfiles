@@ -3,13 +3,14 @@ copy-on-select = true
 cursor-style = bar
 cursor-style-blink = false
 font-family = Iosevka Term Extended
-macos-titlebar-proxy-icon = "hidden"
-quick-terminal-position = "left"
+macos-titlebar-proxy-icon = hidden
+quick-terminal-position = center
 title = " "
-theme = Dracula
-shell-integration-features = no-cursor
+theme = GruvboxDark
+shell-integration-features = cursor,sudo,title
 window-padding-x = 10
 window-padding-y = 10
+window-save-state = always
 
 # keybindings
 keybind = global:cmd+shift+g=toggle_quick_terminal

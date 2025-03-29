@@ -40,12 +40,6 @@
     "editor.insertSpaces": true,
     "editor.tabSize": 2
   },
-  "apc.electron": {
-    "backgroundColor": "#00000000",
-    "opacity": 0.96,
-    "transparent": true,
-    "vibrancy": "ultra-dark"
-  },
   "debug.toolBarLocation": "commandCenter",
   "deno.enablePaths": [
     "./supabase/functions"
@@ -148,7 +142,7 @@
   "workbench.colorCustomizations": {
     "tree.indentGuidesStroke": "#FFFFFF"
   },
-  "workbench.colorTheme": "GitHub Dark",
+  "workbench.colorTheme": "Gruvbox Dark Hard",
   "workbench.editor.decorations.badges": true,
   "workbench.editor.empty.hint": "hidden",
   "workbench.editor.showTabs": "single",
@@ -164,5 +158,6 @@
     "!include_dir_merge_list",
     "!include_dir_merge_named",
     "!secret"
-  ]
+  ],
+  "workbench.preferredDarkColorTheme": "Gruvbox Dark Hard"
 }

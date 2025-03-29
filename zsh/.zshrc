@@ -24,15 +24,7 @@ export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 # zplug
 export ZPLUG_HOME="${HOMEBREW_PREFIX}"/opt/zplug
 source $ZPLUG_HOME/init.zsh
-zplug "dracula/zsh", as:theme
-if ! zplug check; then
-  zplug install
-fi
-zplug load
 
-# theme
-ln -sf $ZPLUG_HOME/repos/dracula/zsh/dracula.zsh-theme $ZSH/themes/dracula.zsh-theme 2> /dev/null
-export ZSH_THEME="dracula" # theme
 
 # zsh-autosuggestions
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=10"
@@ -61,7 +53,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 
 # bat
 export BAT_STYLE="changes,header"
-export BAT_THEME="Dracula"
+export BAT_THEME="gruvbox-dark"
 
 # tools
 export EDITOR="nvim" # vim

@@ -1,4 +1,4 @@
-.PHONY: brew ghostty git gpg k9s mise nvim pam ssh starship vscode zed zsh
+.PHONY: brew eza ghostty git gnupg k9s mise nvim ssh starship vscode zed zsh
 default: .PHONY
 
 bootstrap:
@@ -13,6 +13,10 @@ brew: bootstrap
 	@chmod +x brew/install.sh
 	@./brew/install.sh
 
+eza: bootstrap brew
+	@chmod +x eza/install.sh
+	@./eza/install.sh
+	
 ghostty: bootstrap
 	@chmod +x ghostty/install.sh
 	@./ghostty/install.sh
@@ -21,9 +25,9 @@ git: bootstrap
 	@chmod +x git/install.sh
 	@./git/install.sh
 
-gpg: bootstrap brew
-	@chmod +x gpg/install.sh
-	@./gpg/install.sh
+gnupg: bootstrap brew
+	@chmod +x gnupg/install.sh
+	@./gnupg/install.sh
 
 k9s: bootstrap zsh
 	@chmod +x k9s/install.sh
@@ -36,10 +40,6 @@ mise: bootstrap brew zsh
 nvim: bootstrap brew
 	@chmod +x nvim/install.sh
 	@./nvim/install.sh
-
-pam: bootstrap
-	@chmod +x pam/install.sh
-	@./pam/install.sh
 
 ssh: bootstrap
 	@chmod +x ssh/install.sh
