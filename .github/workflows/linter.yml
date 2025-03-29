@@ -15,3 +15,4 @@ jobs:
         env:
           # vscode json settings comments break linting
           VALIDATE_JSON: false
+          FILTER_REGEX_EXCLUDE: 'nvim\/kickstart.nvim'
