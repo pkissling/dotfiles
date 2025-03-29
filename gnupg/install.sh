@@ -6,13 +6,13 @@ USAGE=$(cat "${HOME}"/dotfiles/.profile)
 mkdir -p "${HOME}"/.gnupg
 
 # create symlink
-ln -sfv "${HOME}"/dotfiles/gpg/gpg-agent.conf "${HOME}"/.gnupg/gpg-agent.conf
+ln -sfv "${HOME}"/dotfiles/gnupg/gpg-agent.conf "${HOME}"/.gnupg/gpg-agent.conf
 
-# import public gpg keys
-gpg --import ~/dotfiles/gpg/private.asc
-gpg --import ~/dotfiles/gpg/work.asc
+# import public gnupg keys
+gpg --import ~/dotfiles/gnupg/private.asc
+gpg --import ~/dotfiles/gnupg/work.asc
 
-# add private gpg key from 1password, if not exist
+# add private gnupg key from 1password, if not exist
 if [ -z "$(gpg --list-secret-keys)" ]; then
   if [ "${USAGE}" = "work" ]; then
     ONE_PASSWORD_VAULT="Azena"
@@ -23,5 +23,5 @@ if [ -z "$(gpg --list-secret-keys)" ]; then
   gpg --import <(op document get "${ONE_PASSWORD_DOCUMENT_ID}")
 fi
 
-# Restart gpg-agent to apply config changes
+# Restart gnupg-agent to apply config changes
 gpgconf --kill gpg-agent
