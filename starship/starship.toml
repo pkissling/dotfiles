@@ -26,22 +26,22 @@ format = """\
   style = "bold red"
 
 [character]
-  success_symbol = "[»](bold #50fa7b)"
-  error_symbol = "[✗](bold #ff5555)"
+  success_symbol = "[»](bold #b8bb26)"
+  error_symbol = "[✗](bold #fb4934)"
 
 [cmd_duration]
   min_time = 1000
-  format = "[»](bold #a6a6a6) took [$duration]($style) "
+  format = "[»](bold #fe8019) took [$duration]($style) "
   style = "bold"
 
 [directory]
   truncation_length = 8
   truncation_symbol = "…/"
   style = "bold"
-  format = "[»](bold #a6a6a6) [$path]($style)[$read_only]($read_only_style) "
+  format = "[$path]($style)[$read_only]($read_only_style) "
 
 [git_branch]
-  format = "[»](bold #a6a6a6) [$symbol$branch]($style) "
+  format = "[»](bold #fe8019) [$symbol$branch]($style) "
   style = "bold"
 
 [git_status]
@@ -59,11 +59,11 @@ format = """\
   style = "bold"
 
 [git_state]
-  format = '[»](bold #a6a6a6) [$state( $progress_current/$progress_total)]($style) '
+  format = '[»](bold #fe8019) [$state( $progress_current/$progress_total)]($style) '
   style = "bold"
 
 [kubernetes]
-  format = '[$context]($style) '
+  format = '[$context]($style) [»](bold #fe8019)'
   disabled = false
   style = "bold"
   contexts = [
@@ -76,7 +76,7 @@ format = """\
   ]
 
 [python]
-  format = '[»](bold #a6a6a6) [(\($virtualenv\))]($style)'
+  format = '[»](bold #fe8019) [(\($virtualenv\))]($style)'
   style = "bold"
 
 [time]
@@ -88,4 +88,4 @@ format = """\
 [custom.aws_mfa_renewal]
   command = "echo 🔒"
   when = """ source $HOME/.starship/helper/aws_mfa_renewal_check.sh """
-  format = "[»](bold #a6a6a6) [$output]($style) "
+  format = "[»](bold #fe8019) [$output]($style) "
