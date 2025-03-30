@@ -27,7 +27,7 @@ source $ZPLUG_HOME/init.zsh
 
 
 # zsh-autosuggestions
-export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=10"
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#a89984"
 source "${HOMEBREW_PREFIX}"/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # zsh-syntax-highlighting
