@@ -150,6 +150,7 @@
   "workbench.editor.wrapTabs": true,
   "workbench.iconTheme": "material-icon-theme",
   "workbench.list.smoothScrolling": true,
+  "workbench.preferredDarkColorTheme": "Gruvbox Dark Hard",
   "workbench.productIconTheme": "fluent-icons",
   "workbench.startupEditor": "none",
   "workbench.tree.indent": 15,
@@ -158,6 +159,5 @@
     "!include_dir_merge_list",
     "!include_dir_merge_named",
     "!secret"
-  ],
-  "workbench.preferredDarkColorTheme": "Gruvbox Dark Hard"
+  ]
 }
