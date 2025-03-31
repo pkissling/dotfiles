@@ -1,9 +1,6 @@
 # misc
 export BOSCHUSER="kip1mu20"
 
-# path
-export PATH="/usr/local/opt/openssl@1.0/bin:${PATH}"
-
 # aliases
 alias argo="kubectl port-forward service/argocd-server 8910:443 -n argocd"
 alias checkstyle="cd ~/Coding/work/integrator-portal && mvn checkstyle:checkstyle spotbugs:check verify -DskipTests --file parent/pom.xml"
