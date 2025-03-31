@@ -63,7 +63,7 @@ format = """\
   style = "bold"
 
 [kubernetes]
-  format = '[$context]($style) [»](bold #fe8019)'
+  format = '[$context]($style) [»](bold #fe8019) '
   disabled = false
   style = "bold"
   contexts = [
