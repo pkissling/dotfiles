@@ -9,4 +9,4 @@ mkdir -p "${XDG_CONFIG_HOME}"/k9s/skins
 ln -sfv "${HOME}"/dotfiles/k9s/config.yaml "${XDG_CONFIG_HOME}"/k9s/config.yaml
 
 # create skin symlink
-ln -sfv "${HOME}"/dotfiles/k9s/transparent.yaml "${XDG_CONFIG_HOME}"/k9s/skins/transparent.yaml
+ln -sfv "${HOME}"/dotfiles/k9s/skin.yaml "${XDG_CONFIG_HOME}"/k9s/skins/skin.yaml
