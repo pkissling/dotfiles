@@ -15,7 +15,7 @@
       "milliseconds": 1000
     }
   },
-  "buffer_font_family": "Iosevka Term Extended",
+  "buffer_font_family": "JetBrainsMono Nerd Font",
   "buffer_font_size": 14,
   "features": {
     "edit_prediction_provider": "copilot",
@@ -66,7 +66,7 @@
     "mode": "system"
   },
   "terminal": {
-    "font_family": "Iosevka Term Extended"
+    "font_family": "JetBrainsMono Nerd Font"
   },
   "ui_font_size": 16,
   "vim_mode": true,
