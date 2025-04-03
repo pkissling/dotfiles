@@ -21,7 +21,7 @@ alias prometheus="kubectl -n monitoring port-forward svc/ecosystem-prometheus 90
 alias prometheus-kube="kubectl -n monitoring port-forward svc/kube-prometheus-stack-prometheus 9090"
 alias remoteportal="keycloak_start && cd ~/Coding/work/integrator-portal/remoteportal.client/vue-app && yarn serve"
 alias testcafe="iotdevicemockup_start && cd ~/Coding/work/integrator-portal/test.integratorportal/testcafe && yarn test"
-alias tickets='jira issue list --assignee $(jira me) --resolution unresolved'
+alias tickets=jira issue list --assignee $(jira me) --resolution unresolved -q "project IN ('BOSS','EB','IN') and status != Done"
 alias ump='cd ~/Coding/work/ump-aa && ./gradlew localComposeUp && ./gradlew bootRun'
 alias unlock_aws_vault_keychain='security unlock-keychain -p $(op item get "aws-vault Keychain" --vault "Azena" --fields label=password --format json | jq -r ".value") ~/Library/Keychains/aws-vault.keychain-db'
 alias venv="source ~/Coding/work/operations/python/venv/bin/activate"
