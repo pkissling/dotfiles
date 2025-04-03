@@ -81,6 +81,14 @@ function kx() {
   fi
 }
 
+function ide() {
+  local ide_bin=$(echo 'nvim\nzed\nidea\ncode\ncursor' | fzf)
+  [ -z "$ide_bin" ] && return
+  local folder=$(find ~/coding -maxdepth 3 -type d -not -path '*/\.*' | fzf)
+  [ -z "$folder" ] && return
+  eval "${ide_bin} ${folder}"
+}
+
 # set gpg path dynamically depending on $HOMEBREW_PREFIX
 export GIT_CONFIG_COUNT=1
 export GIT_CONFIG_KEY_0="gpg.program" GIT_CONFIG_VALUE_0="${HOMEBREW_PREFIX}/bin/gpg"
@@ -93,8 +101,6 @@ alias k="kubectl"
 alias l="ls -la"
 alias ls="eza"
 alias up="cd ${HOME}/dotfiles && git pull --rebase origin && make"
-alias vi="nvim"
-alias vim="nvim"
 
 # source usage specific configuration
 source ~/.zshrc_profile_specific
