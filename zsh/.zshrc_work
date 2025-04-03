@@ -4,7 +4,6 @@ export BOSCHUSER="kip1mu20"
 # aliases
 alias argo="kubectl port-forward service/argocd-server 8910:443 -n argocd"
 alias checkstyle="cd ~/Coding/work/integrator-portal && mvn checkstyle:checkstyle spotbugs:check verify -DskipTests --file parent/pom.xml"
-alias db="kubectl port-forward deployment/ump-aa-db-forwarder 3320:13306 -n ump-aa"
 alias deploy='function deploy() { k apply -k kustomize/overlays/$1/dev}; deploy'
 alias keycloak_start="~/Coding/work/scripts/keycloak_start.sh"
 alias keycloak_stop="~/Coding/work/scripts/keycloak_stop.sh"
@@ -42,4 +41,15 @@ function credfzf() {
   KEY=$(echo "${SELECTION}" | cut -d "/" -f 2 | cut -d " " -f 1)
   PASSWORD=$(credstash -p "${PROFILE_PREFIX}"_Developer get "${STACK_PREFIX}"/"${KEY}" $STACK)
   echo Password for "[${KEY}"] is: "${PASSWORD}"
+}
+
+function db {
+  local deployment_ns=$(kubectl get deployments -A -o json | jq -r '.items[] | select(.metadata.name | test("db-forwarder$")) | "\(.metadata.namespace)/\(.metadata.name)"' | fzf)
+  [ -z "$deployment_ns" ] && return  # Exit if no selection
+
+  local namespace="${deployment_ns%/*}"
+  local deployment="${deployment_ns#*/}"
+
+  echo "Forwarding port 3320 to ${namespace}/${deployment}"
+  kubectl port-forward deployment/$deployment -n $namespace 3320:
 }
