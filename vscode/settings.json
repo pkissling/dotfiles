@@ -136,6 +136,7 @@
   "terminal.integrated.smoothScrolling": true,
   "terraform.languageServer.enable": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
+  "vim.leader": "<space>",
   "vue.server.hybridMode": false,
   "window.autoDetectColorScheme": true,
   "window.commandCenter": true,

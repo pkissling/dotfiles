@@ -11,3 +11,7 @@ mv /tmp/"${UUID}" "${HOME}"/dotfiles/vscode/settings.json
 
 # update extensions
 code --update-extensions
+
+# Allow vim key repeat
+defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
+defaults delete -g ApplePressAndHoldEnabled || true
