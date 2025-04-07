@@ -65,6 +65,7 @@
   "editor.formatOnSaveMode": "modificationsIfAvailable",
   "editor.guides.bracketPairs": true,
   "editor.inlineSuggest.enabled": true,
+  "editor.lineNumbers": "relative",
   "editor.minimap.enabled": false,
   "editor.quickSuggestions": {
     "strings": "on"
