@@ -11,7 +11,6 @@ theme = GruvboxDark
 shell-integration-features = cursor,sudo,title
 window-padding-x = 10
 window-padding-y = 10
-window-save-state = always
 
 # keybindings
 keybind = global:cmd+shift+g=toggle_quick_terminal
