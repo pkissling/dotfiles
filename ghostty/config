@@ -15,4 +15,5 @@ window-save-state = always
 
 # keybindings
 keybind = global:cmd+shift+g=toggle_quick_terminal
-keybind = cmd+backspace=esc:w # delete whole inout with CMD + delete
+# delete whole line with CMD + delete 
+keybind = cmd+backspace=esc:w
