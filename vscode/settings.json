@@ -40,6 +40,7 @@
     "editor.insertSpaces": true,
     "editor.tabSize": 2
   },
+  "chat.agent.enabled": true,
   "debug.toolBarLocation": "commandCenter",
   "deno.enablePaths": [
     "./supabase/functions"
