@@ -17,7 +17,6 @@ cask "aws-vault"
 cask "displaylink"
 cask "freelens"
 cask "mattermost"
-cask "obsidian"
 cask "viscosity"
 instance_eval(File.read(ENV['HOME'] + "/dotfiles/brew/Brewfile")) # include core Brewfile
 mas "EasyRes", id: 688211836
