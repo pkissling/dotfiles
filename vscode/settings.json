@@ -138,6 +138,8 @@
   "terraform.languageServer.enable": true,
   "typescript.updateImportsOnFileMove.enabled": "always",
   "vim.leader": "<space>",
+  "vim.replaceWithRegister": true,
+  "vim.useSystemClipboard": true,
   "vue.server.hybridMode": false,
   "window.autoDetectColorScheme": true,
   "window.commandCenter": true,
