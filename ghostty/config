@@ -9,6 +9,8 @@ quick-terminal-position = center
 title = " "
 theme = GruvboxDark
 shell-integration-features = cursor,sudo,title
+# 100 MB
+scrollback-limit = 100_000_000
 window-padding-x = 10
 window-padding-y = 10
 
