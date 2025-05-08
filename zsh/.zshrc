@@ -100,7 +100,7 @@ alias json="pbpaste | jq '.'"
 alias k="kubectl"
 alias l="ls -la"
 alias ls="eza"
-alias up="cd ${HOME}/dotfiles && git pull --rebase origin && make"
+alias up="cd ${HOME}/dotfiles && git pull origin master --rebase && make"
 
 # source usage specific configuration
 source ~/.zshrc_profile_specific
