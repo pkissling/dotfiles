@@ -1,5 +1,0 @@
-- Sync tree with buffer
-- Trailing whitepsaces
-- If tree is last tab, close it
-- yank visualize selection
-- Visualize difference between whitepsace and tab
