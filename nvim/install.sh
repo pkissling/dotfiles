@@ -8,4 +8,4 @@ mkdir -p "${HOME}"/.config
 rm -rf "${HOME}/.config/nvim"
 
 # create symlink
-ln -sfv "${HOME}"/dotfiles/nvim/kickstart.nvim "${HOME}"/.config/nvim
+ln -sfv "${HOME}"/dotfiles/nvim "${HOME}"/.config/nvim
