@@ -14,6 +14,7 @@ vim.opt.number = true
 
 -- keymap
 vim.keymap.set("n", "<ESC>", ":nohlsearch<CR>") -- clear search highlight
+vim.keymap.set("n", "<leader>l", ":Lazy<CR>") -- open lazy.nvim
 
 -- save undo history
 vim.opt.undofile = true
