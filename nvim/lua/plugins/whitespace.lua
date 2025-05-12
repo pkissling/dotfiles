@@ -4,7 +4,7 @@ return {
         require('whitespace-nvim').setup()
 		local wk = require("which-key")
 		wk.add({
-            { "<leader>t", function() require('whitespace-nvim').trim() end, desc = "[T]rim trailing whitespaces" }
+            { "gW", function() require('whitespace-nvim').trim() end, desc = "Trim trailing [W]hitespaces" }
         })
 	end
 }
