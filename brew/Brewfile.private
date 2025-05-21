@@ -1,7 +1,6 @@
-tap "mhaeuser/mhaeuser"
 brew "ffmpeg"
-brew "python@3.11"
 brew "vercel-cli"
+brew "webp"
 cask "balenaetcher"
 cask "bluesnooze"
 cask "cursor"
