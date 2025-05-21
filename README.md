@@ -29,7 +29,7 @@ $ tree dotfiles
 ├── mise
 │   └── // https://mise.jdx.dev - Runtime version manager
 ├── nvim
-│   └── // https://neovim.io - Modern Vim editor (kickstarted using https://github.com/nvim-lua/kickstart.nvim)
+│   └── // https://neovim.io - Modern Vim editor
 ├── ssh
 │   └── // - Secure shell configuration
 ├── starship
