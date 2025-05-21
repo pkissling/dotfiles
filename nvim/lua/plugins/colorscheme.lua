@@ -1,8 +1,8 @@
 return {
 	"ellisonleao/gruvbox.nvim",
-	priority = 1000, 
+	priority = 1000,
 	opts = {},
-	config = function() 
+	config = function()
 		vim.o.background = "dark"
 		vim.cmd([[colorscheme gruvbox]])
 	end

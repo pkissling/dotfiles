@@ -20,7 +20,7 @@ return {
    config = function(_, opts)
       require('mason').setup()
       require('mason-lspconfig').setup({
-         ensure_installed = { "lua_ls" },
+         ensure_installed = { "lua_ls", "java", "rust_analyzer", "standardjs", "typescript-language-server" },
       })
 
       vim.diagnostic.config({
