@@ -1,3 +1,5 @@
+-- luacheck: globals vim
+
 return {
 	"ellisonleao/gruvbox.nvim",
 	priority = 1000,

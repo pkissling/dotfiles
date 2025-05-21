@@ -1,3 +1,5 @@
+-- luacheck: globals vim
+
 -- set leader key
 vim.g.mapleader = "space"
 
