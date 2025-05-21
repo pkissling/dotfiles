@@ -1,4 +1,3 @@
-tap "homebrew/bundle"
 tap "artginzburg/tap"
 tap "supabase/tap"
 tap "ynqa/tap"
