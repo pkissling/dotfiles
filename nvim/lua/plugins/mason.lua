@@ -1,3 +1,4 @@
+-- luacheck: globals vim
 return {
    "mason-org/mason.nvim",
    dependencies = {
