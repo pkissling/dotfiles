@@ -25,7 +25,7 @@ git: bootstrap
 	@chmod +x git/install.sh
 	@./git/install.sh
 
-gnupg: bootstrap brew
+gnupg: bootstrap brew zsh
 	@chmod +x gnupg/install.sh
 	@./gnupg/install.sh
 
