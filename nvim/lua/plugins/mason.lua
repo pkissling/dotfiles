@@ -21,7 +21,16 @@ return {
    config = function(_, opts)
       require('mason').setup()
       require('mason-lspconfig').setup({
-         ensure_installed = { "lua_ls", "java", "rust_analyzer", "standardjs", "typescript-language-server" },
+         ensure_installed = {
+            "lua_ls",
+            "rust_analyzer",
+            "ts_ls",
+            "standardjs",
+            "vue_ls",
+            "py_lsp",
+            "terraform",
+            "java_language_server"
+         }
       })
 
       vim.diagnostic.config({
