@@ -36,5 +36,8 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+-- Auto update lazy.nvim plugins
+vim.api.nvim_create_autocmd("VimEnter", { callback = function() require("lazy").update({ show = false }) end })
+
 -- init lazy.nvim
 require("config.lazy")
