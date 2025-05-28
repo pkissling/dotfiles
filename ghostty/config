@@ -7,7 +7,7 @@ font-family = JetBrainsMono Nerd Font
 macos-titlebar-proxy-icon = hidden
 quick-terminal-position = center
 title = " "
-theme = GruvboxDark
+theme = tokyonight
 shell-integration-features = cursor,sudo,title
 # 100 MB
 scrollback-limit = 100_000_000
@@ -16,5 +16,5 @@ window-padding-y = 10
 
 # keybindings
 keybind = global:cmd+shift+g=toggle_quick_terminal
-# delete whole line with CMD + delete 
+# delete whole line with CMD + delete
 keybind = cmd+backspace=esc:w

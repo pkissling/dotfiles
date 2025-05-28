@@ -53,7 +53,7 @@ export XDG_CONFIG_HOME="$HOME/.config"
 
 # bat
 export BAT_STYLE="changes,header"
-export BAT_THEME="gruvbox-dark"
+export BAT_THEME="tokyonight"
 
 # tools
 export EDITOR="nvim" # vim

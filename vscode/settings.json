@@ -149,7 +149,7 @@
   "workbench.colorCustomizations": {
     "tree.indentGuidesStroke": "#FFFFFF"
   },
-  "workbench.colorTheme": "Gruvbox Dark Hard",
+  "workbench.colorTheme": "Tokyo Night",
   "workbench.editor.decorations.badges": true,
   "workbench.editor.empty.hint": "hidden",
   "workbench.editor.showTabs": "single",
@@ -157,7 +157,7 @@
   "workbench.editor.wrapTabs": true,
   "workbench.iconTheme": "material-icon-theme",
   "workbench.list.smoothScrolling": true,
-  "workbench.preferredDarkColorTheme": "Gruvbox Dark Hard",
+  "workbench.preferredDarkColorTheme": "Tokyo Night",
   "workbench.productIconTheme": "fluent-icons",
   "workbench.startupEditor": "none",
   "workbench.tree.indent": 15,

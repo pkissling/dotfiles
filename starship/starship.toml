@@ -31,7 +31,7 @@ format = """\
 
 [cmd_duration]
   min_time = 1000
-  format = "[»](bold #fe8019) took [$duration]($style) "
+  format = "[»](bold #ff9e64) took [$duration]($style) "
   style = "bold"
 
 [directory]
@@ -41,7 +41,7 @@ format = """\
   format = "[$path]($style)[$read_only]($read_only_style) "
 
 [git_branch]
-  format = "[»](bold #fe8019) [$symbol$branch]($style) "
+  format = "[»](bold #ff9e64) [$symbol$branch]($style) "
   style = "bold"
 
 [git_status]
@@ -59,11 +59,11 @@ format = """\
   style = "bold"
 
 [git_state]
-  format = '[»](bold #fe8019) [$state( $progress_current/$progress_total)]($style) '
+  format = '[»](bold #ff9e64) [$state( $progress_current/$progress_total)]($style) '
   style = "bold"
 
 [kubernetes]
-  format = '[$context]($style) [»](bold #fe8019) '
+  format = '[$context]($style) [»](bold #e8019) '
   disabled = false
   style = "bold"
   contexts = [
@@ -76,7 +76,7 @@ format = """\
   ]
 
 [python]
-  format = '[»](bold #fe8019) [(\($virtualenv\))]($style)'
+  format = '[»](bold #ff9e64) [(\($virtualenv\))]($style)'
   style = "bold"
 
 [time]
@@ -88,4 +88,4 @@ format = """\
 [custom.aws_mfa_renewal]
   command = "echo 🔒"
   when = """ source $HOME/.starship/helper/aws_mfa_renewal_check.sh """
-  format = "[»](bold #fe8019) [$output]($style) "
+  format = "[»](bold #ff9e64) [$output]($style) "

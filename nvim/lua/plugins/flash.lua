@@ -19,8 +19,6 @@ return {
     { "<c-s>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
   },
   config = function(_, opts)
-    local palette = require('gruvbox').palette
-    vim.api.nvim_command("hi FlashLabel guibg=" .. palette.faded_yellow .. " guifg=" .. palette.dark_red_hard)
     require("flash").setup(opts)
   end
 }
