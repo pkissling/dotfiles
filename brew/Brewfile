@@ -83,7 +83,6 @@ mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "The Unarchiver", id: 425424353
 mas "Todoist", id: 585829637
-vscode "asvetliakov.vscode-neovim"
 vscode "bradlc.vscode-tailwindcss"
 vscode "davidanson.vscode-markdownlint"
 vscode "dbaeumer.vscode-eslint"
@@ -134,6 +133,7 @@ vscode "usernamehw.errorlens"
 vscode "vadimcn.vscode-lldb"
 vscode "visualstudioexptteam.intellicode-api-usage-examples"
 vscode "visualstudioexptteam.vscodeintellicode"
+vscode "vscodevim.vim"
 vscode "vue.volar"
 vscode "wix.vscode-import-cost"
 vscode "yzhang.markdown-all-in-one"
