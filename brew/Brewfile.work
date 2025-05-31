@@ -6,6 +6,5 @@ brew "crowdin"
 cask "aws-vault"
 cask "displaylink"
 cask "mattermost"
-cask "viscosity"
 instance_eval(File.read(ENV['HOME'] + "/dotfiles/brew/Brewfile")) # include core Brewfile
 mas "Xcode", id: 497799835
