@@ -139,6 +139,7 @@
   "terminal.integrated.scrollback": 100000,
   "terminal.integrated.smoothScrolling": true,
   "terraform.languageServer.enable": true,
+  "typescript.preferences.importModuleSpecifier": "relative",
   "typescript.updateImportsOnFileMove.enabled": "always",
   "vim.leader": "<space>",
   "vim.replaceWithRegister": true,
