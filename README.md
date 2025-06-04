@@ -22,7 +22,7 @@ $ tree dotfiles
 │   └── // https://ghostty.org - Modern terminal emulator
 ├── git
 │   └── // https://git-scm.com/ - Version control system
-├── gnugp
+├── gnupg
 │   └── // https://gnupg.org - Encryption and signing tools
 ├── k9s
 │   └── // https://k9scli.io - Kubernetes management tool
