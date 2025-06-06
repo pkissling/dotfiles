@@ -95,6 +95,7 @@ export GIT_CONFIG_KEY_0="gpg.program" GIT_CONFIG_VALUE_0="${HOMEBREW_PREFIX}/bin
 
 # Aliases (must be one of the last commands to overwrite zsh aliases)
 alias cat="bat"
+alias cd="z"
 alias g="git"
 alias json="pbpaste | jq '.'"
 alias k="kubectl"
