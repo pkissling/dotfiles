@@ -11,3 +11,4 @@ cask "ledger-live"
 cask "lulu"
 cask "slack"
 instance_eval(File.read(ENV['HOME'] + "/dotfiles/brew/Brewfile")) # include core Brewfile
+vscode "anthropic.claude-code"
