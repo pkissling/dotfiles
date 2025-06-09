@@ -16,5 +16,6 @@ window-padding-y = 10
 
 # keybindings
 keybind = global:cmd+shift+g=toggle_quick_terminal
-# delete whole line with CMD + delete 
+# delete whole line with CMD + delete
 keybind = cmd+backspace=esc:w
+keybind = shift+enter=text:\n
