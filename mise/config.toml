@@ -4,7 +4,7 @@ java = ["23", "21", "19", "17"]
 node = ["22"]
 python = ["3.13", "3.10"]
 rust = ["1.87.0"]
-terraform = ["1.12.1"]
+terraform = ["1.12.2"]
 yarn = ["4"]
 
 [settings]
