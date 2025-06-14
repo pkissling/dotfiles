@@ -5,6 +5,7 @@ brew "credstash"
 brew "crowdin"
 brew "helm"
 cask "aws-vault"
+cask "battery-toolkit"
 cask "displaylink"
 cask "mattermost"
 instance_eval(File.read(ENV['HOME'] + "/dotfiles/brew/Brewfile")) # include core Brewfile
