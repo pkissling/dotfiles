@@ -50,6 +50,7 @@
   "diffEditor.experimental.showMoves": true,
   "diffEditor.hideUnchangedRegions.enabled": true,
   "diffEditor.ignoreTrimWhitespace": false,
+  "docker.extension.enableComposeLanguageServer": true,
   "dotfiles.installCommand": "alias g=git",
   "editor.acceptSuggestionOnEnter": "smart",
   "editor.accessibilitySupport": "off",
