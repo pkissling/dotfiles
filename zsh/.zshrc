@@ -4,7 +4,6 @@ plugins=(
   brew
   docker
   docker-compose
-  fzf
   git
   git-auto-fetch
   terraform
@@ -24,7 +23,6 @@ export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
 # zplug
 export ZPLUG_HOME="${HOMEBREW_PREFIX}"/opt/zplug
 source $ZPLUG_HOME/init.zsh
-
 
 # zsh-autosuggestions
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#a89984"
@@ -51,22 +49,12 @@ export XDG_CONFIG_HOME="$HOME/.config"
 export BAT_STYLE="changes,header"
 export BAT_THEME="gruvbox-dark"
 
+# atuin
+eval "$(atuin init zsh)"
+
 # tools
 export EDITOR="nvim" # vim
 export GPG_TTY=$(tty) # gpg
-
-# custom functions
-# rename
-function mv() {
-  if [ "$#" -ne 1 ] || [ ! -f "$1" ]; then
-    command mv "$@"
-    return
-  fi
-
-  newfilename="$1"
-  vared newfilename
-  command mv -v -- "$1" "$newfilename"
-}
 
 # kubecontext
 function kx() {
