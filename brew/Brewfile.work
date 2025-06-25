@@ -1,6 +1,7 @@
 tap "ankitpokhrel/jira-cli"
 tap "crowdin/crowdin"
 brew "ankitpokhrel/jira-cli/jira-cli"
+brew "atuin"
 brew "credstash"
 brew "crowdin"
 brew "helm"
