@@ -43,10 +43,6 @@ eval "$(starship init zsh)"
 # mise
 eval "$(${HOMEBREW_PREFIX}/bin/mise activate zsh)"
 
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s ""${HOMEBREW_PREFIX}"/opt/nvm/nvm.sh" ] && . ""${HOMEBREW_PREFIX}"/opt/nvm/nvm.sh"  # This loads nvm
-[ -s ""${HOMEBREW_PREFIX}"/opt/nvm/etc/bash_completion.d/nvm" ] && . ""${HOMEBREW_PREFIX}"/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 # XDG
 export XDG_CONFIG_HOME="$HOME/.config"
