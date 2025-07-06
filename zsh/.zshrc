@@ -50,7 +50,7 @@ export BAT_STYLE="changes,header"
 export BAT_THEME="gruvbox-dark"
 
 # atuin
-eval "$(atuin init zsh)"
+eval "$(atuin init zsh --disable-up-arrow)"
 
 # tools
 export EDITOR="nvim" # vim
