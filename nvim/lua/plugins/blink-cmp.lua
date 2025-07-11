@@ -2,6 +2,7 @@ return {
   'saghen/blink.cmp',
   dependencies = { 'rafamadriz/friendly-snippets' },
   build = 'cargo +nightly build --release',
+  version = '1.*',
   opts = {
     keymap = {
       preset = 'default',
