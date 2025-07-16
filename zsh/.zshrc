@@ -41,7 +41,6 @@ eval "$(starship init zsh)"
 # mise
 eval "$(${HOMEBREW_PREFIX}/bin/mise activate zsh)"
 
-
 # XDG
 export XDG_CONFIG_HOME="$HOME/.config"
 
@@ -50,7 +49,7 @@ export BAT_STYLE="changes,header"
 export BAT_THEME="gruvbox-dark"
 
 # atuin
-eval "$(atuin init zsh --disable-up-arrow)"
+eval "$(atuin init zsh)"
 
 # tools
 export EDITOR="nvim" # vim

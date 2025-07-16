@@ -14,6 +14,8 @@ Below is a comprehensive overview of the tools and their configurations included
 $ git clone git@github.com:pkissling/dotfiles.git
 $ tree dotfiles
 .
+├── atuin
+│   └── // https://atuin.sh - Powerful shell history manager
 ├── brew
 │   └── // https://brew.sh/ - macOS package manager
 ├── eza

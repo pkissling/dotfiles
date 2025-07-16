@@ -1,4 +1,4 @@
-.PHONY: brew eza ghostty git gnupg k9s mise nvim ssh starship vscode zed zsh
+.PHONY: atuin brew eza ghostty git gnupg k9s mise nvim ssh starship vscode zed zsh
 default: .PHONY
 
 bootstrap:
@@ -9,6 +9,10 @@ ifeq (,$(wildcard ${HOME}/dotfiles/.profile))
 	@read line; echo $$line > ${HOME}/dotfiles/.profile
 endif
 
+atuin: bootstrap zsh
+	@chmod +x atuin/install.sh
+	@./atuin/install.sh
+
 brew: bootstrap
 	@chmod +x brew/install.sh
 	@./brew/install.sh
@@ -16,7 +20,7 @@ brew: bootstrap
 eza: bootstrap brew
 	@chmod +x eza/install.sh
 	@./eza/install.sh
-	
+
 ghostty: bootstrap
 	@chmod +x ghostty/install.sh
 	@./ghostty/install.sh
