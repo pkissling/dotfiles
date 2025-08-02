@@ -15,7 +15,7 @@ CURRENT_EXPIRATION_IN_SECONDS=$(date -j -f "%Y-%m-%dT%H:%M:%SZ" "$NORMALIZED_EXP
 NOW_IN_SECONDS=$(date +%s)
 REMAINING_VALIDILITY_IN_MINUTES=$(( (CURRENT_EXPIRATION_IN_SECONDS - NOW_IN_SECONDS) / 60 ))
 
-if [ "${REMAINING_VALIDILITY_IN_MINUTES}" -ge 30 ]; then
+if [ "$REMAINING_VALIDILITY_IN_MINUTES" -gt 0 ]; then
     # credentials are still valid
     exit 1
 else
