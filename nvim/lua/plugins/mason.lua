@@ -28,7 +28,7 @@ return {
             "standardjs",
             "vue_ls",
             "py_lsp",
-            "terraform",
+            "terraform_ls",
             "java_language_server"
          }
       })
