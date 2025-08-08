@@ -6,6 +6,7 @@ brew "crowdin"
 brew "helm"
 cask "aws-vault-binary"
 cask "battery-toolkit"
+cask "bruno"
 cask "displaylink"
 cask "mattermost"
 instance_eval(File.read(ENV['HOME'] + "/dotfiles/brew/Brewfile")) # include core Brewfile
