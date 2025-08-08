@@ -4,9 +4,10 @@ copy-on-select = true
 cursor-style = bar
 cursor-style-blink = false
 font-family = JetBrainsMono Nerd Font
+macos-option-as-alt = left
 macos-titlebar-proxy-icon = hidden
-quick-terminal-position = center
 title = " "
+fullscreen = true
 theme = GruvboxDark
 shell-integration-features = cursor,sudo,title
 # 100 MB
@@ -15,7 +16,9 @@ window-padding-x = 10
 window-padding-y = 10
 
 # keybindings
-keybind = global:cmd+shift+g=toggle_quick_terminal
 # delete whole line with CMD + delete
 keybind = cmd+backspace=esc:w
 keybind = shift+enter=text:\n
+# option as alt
+keybind = alt+left=unbind
+keybind = alt+right=unbind
