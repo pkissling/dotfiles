@@ -64,14 +64,6 @@ function kx() {
   fi
 }
 
-function ide() {
-  local ide_bin=$(echo 'nvim\nzed\nidea\ncode\ncursor' | fzf)
-  [ -z "$ide_bin" ] && return
-  local folder=$(find ~/coding -maxdepth 3 -type d -not -path '*/\.*' | fzf)
-  [ -z "$folder" ] && return
-  eval "${ide_bin} ${folder}"
-}
-
 # set gpg path dynamically depending on $HOMEBREW_PREFIX
 export GIT_CONFIG_COUNT=1
 export GIT_CONFIG_KEY_0="gpg.program" GIT_CONFIG_VALUE_0="${HOMEBREW_PREFIX}/bin/gpg"
@@ -79,6 +71,7 @@ export GIT_CONFIG_KEY_0="gpg.program" GIT_CONFIG_VALUE_0="${HOMEBREW_PREFIX}/bin
 # Aliases (must be one of the last commands to overwrite zsh aliases)
 alias cat="bat"
 alias cd="z"
+alias coding='~/dotfiles/zellij/scripts/coding.sh'
 alias g="git"
 alias json="pbpaste | jq '.'"
 alias k="kubectl"
@@ -88,3 +81,9 @@ alias up="cd ${HOME}/dotfiles && git pull origin master --rebase && make"
 
 # source usage specific configuration
 source ~/.zshrc_profile_specific
+
+# init zellij if running ghostty
+if [[ -z "${ZELLIJ}" && "${TERM_PROGRAM}" == "ghostty" ]]; then
+    zellij attach --create "ghostty"
+    exit # exit after zellij exists
+fi

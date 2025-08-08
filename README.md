@@ -40,6 +40,8 @@ $ tree dotfiles
 │   └── // https://code.visualstudio.com - Code editor
 ├── zed
 │   └── // https://zed.dev - Modern code editor
+├── zellij
+│   └── // https://zellij.dev - Terminal multiplexer
 └── zsh
     └── // https://ohmyz.sh - Shell environment
 ```
