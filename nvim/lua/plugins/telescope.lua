@@ -11,5 +11,14 @@ return {
            { "<leader>sg", cmd = "<cmd>Telescope live_grep<cr>", desc = "[G]rep" },
            { "<leader><space>", cmd = "<cmd>Telescope buffers<cr>", desc = "Recent Files" }
        })
+
+       local telescope = require('telescope')
+       telescope.setup({
+          pickers = {
+             find_files = {
+                hidden = true
+             }
+          }
+       })
    end
 }
