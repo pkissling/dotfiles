@@ -6,4 +6,4 @@ mkdir -p "${HOME}"/.config/zellij
 
 # create symlinks
 ln -sfv "${HOME}"/dotfiles/zellij/config.kdl "${HOME}"/.config/zellij/config.kdl
-ln -sfv "${HOME}"/dotfiles/zellij/layouts "${HOME}"/.config/zellij/layouts
+ln -sfv "${HOME}"/dotfiles/zellij/layouts "${HOME}"/.config/zellij/
