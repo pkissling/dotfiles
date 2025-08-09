@@ -20,18 +20,7 @@ return {
    },
    config = function(_, opts)
       require('mason').setup()
-      require('mason-lspconfig').setup({
-         ensure_installed = {
-            "lua_ls",
-            "rust_analyzer",
-            "ts_ls",
-            "standardjs",
-            "vue_ls",
-            "py_lsp",
-            "terraform_ls",
-            "java_language_server"
-         }
-      })
+      require('mason-lspconfig').setup()
 
       vim.diagnostic.config({
          virtual_text = true
