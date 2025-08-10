@@ -4,6 +4,7 @@ copy-on-select = true
 cursor-style = bar
 cursor-style-blink = false
 font-family = JetBrainsMono Nerd Font
+fullscreen = true
 macos-titlebar-proxy-icon = hidden
 quick-terminal-position = center
 title = " "
