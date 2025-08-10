@@ -1,4 +1,4 @@
-.PHONY: atuin brew eza ghostty git gnupg k9s mise nvim ssh starship vscode zed zsh
+.PHONY: atuin brew claude eza ghostty git gnupg k9s mise nvim ssh starship vscode zed zsh
 default: .PHONY
 
 bootstrap:
@@ -16,6 +16,10 @@ atuin: bootstrap zsh
 brew: bootstrap
 	@chmod +x brew/install.sh
 	@./brew/install.sh
+
+claude: bootstrap brew
+	@chmod +x claude/install.sh
+	@./claude/install.sh
 
 eza: bootstrap brew
 	@chmod +x eza/install.sh
