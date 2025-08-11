@@ -1,6 +1,6 @@
 # dotfiles
 
-![Lint](https://github.com/pkissling/dotfiles/workflows/Lint/badge.svg) ![Valid links](https://github.com/pkissling/dotfiles/workflows/Valid%20links/badge.svg)
+![Lint](https:#github.com/pkissling/dotfiles/workflows/Lint/badge.svg) ![Valid links](https://github.com/pkissling/dotfiles/workflows/Valid%20links/badge.svg)
 
 ## 🚀 Overview
 
@@ -15,33 +15,33 @@ $ git clone git@github.com:pkissling/dotfiles.git
 $ tree dotfiles
 .
 ├── atuin
-│   └── // https://atuin.sh - Powerful shell history manager
+│   └── # https://atuin.sh - Powerful shell history manager
 ├── brew
-│   └── // https://brew.sh/ - macOS package manager
+│   └── # https://brew.sh/ - macOS package manager
 ├── eza
-│   └── // https://github.com/ogham/exa - Modern replacement for ls
+│   └── # https://github.com/ogham/exa - Modern replacement for ls
 ├── ghostty
-│   └── // https://ghostty.org - Modern terminal emulator
+│   └── # https://ghostty.org - Modern terminal emulator
 ├── git
-│   └── // https://git-scm.com/ - Version control system
+│   └── # https://git-scm.com/ - Version control system
 ├── gnupg
-│   └── // https://gnupg.org - Encryption and signing tools
+│   └── # https://gnupg.org - Encryption and signing tools
 ├── k9s
-│   └── // https://k9scli.io - Kubernetes management tool
+│   └── # https://k9scli.io - Kubernetes management tool
 ├── mise
-│   └── // https://mise.jdx.dev - Runtime version manager
+│   └── # https://mise.jdx.dev - Runtime version manager
 ├── nvim
-│   └── // https://neovim.io - Modern Vim editor
+│   └── # https://neovim.io - Modern Vim editor
 ├── ssh
-│   └── // - Secure shell configuration
+│   └── # - Secure shell configuration
 ├── starship
-│   └── // https://starship.rs - Minimal, fast shell prompt
+│   └── # https://starship.rs - Minimal, fast shell prompt
 ├── vscode
-│   └── // https://code.visualstudio.com - Code editor
+│   └── # https://code.visualstudio.com - Code editor
 ├── zed
-│   └── // https://zed.dev - Modern code editor
+│   └── # https://zed.dev - Modern code editor
 └── zsh
-    └── // https://ohmyz.sh - Shell environment
+    └── # https://ohmyz.sh - Shell environment
 ```
 
 Each tool in this collection comes with its own `install.sh` script, allowing for modular installation and configuration. This modular approach enables you to pick and choose which components you'd like to integrate into your environment.
