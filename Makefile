@@ -25,7 +25,7 @@ eza: bootstrap brew
 	@chmod +x eza/install.sh
 	@./eza/install.sh
 
-ghostty: bootstrap
+ghostty: bootstrap brew
 	@chmod +x ghostty/install.sh
 	@./ghostty/install.sh
 

@@ -6,3 +6,4 @@ mkdir -p "${HOME}"/Library/Application\ Support/com.mitchellh.ghostty
 
 # create symlinks
 ln -sfv "${HOME}"/dotfiles/ghostty/config "${HOME}"/Library/Application\ Support/com.mitchellh.ghostty/config
+ln -sfv "${HOME}"/dotfiles/ghostty/shaders "${HOME}"/Library/Application\ Support/com.mitchellh.ghostty/shaders
