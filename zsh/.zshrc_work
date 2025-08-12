@@ -30,6 +30,7 @@ function credfzf() {
 }
 
 function db {
+  kubectx
   local deployment_ns=$(kubectl get deployments -A -o json | jq -r '.items[] | select(.metadata.name | test("db-forwarder$")) | "\(.metadata.namespace)/\(.metadata.name)"' | fzf)
   [ -z "$deployment_ns" ] && return  # Exit if no selection
 
