@@ -8,7 +8,7 @@ return {
       preset = 'default',
       ['<C-k>'] = { 'select_prev', 'fallback' },
       ['<C-j>'] = { 'select_next', 'fallback' },
-      ['<C-Enter>'] = { 'accept' },
+      ['<CR>'] = { 'accept', 'fallback' },
       ['<C-Space>'] = { 'show' }
     },
 
