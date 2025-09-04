@@ -14,5 +14,4 @@ code --update-extensions
 
 # Allow vim key repeat
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
-defaults write "$(osascript -e 'id of app "Cursor"')" ApplePressAndHoldEnabled -bool false
 defaults delete -g ApplePressAndHoldEnabled || true
