@@ -8,6 +8,7 @@ brew "helm"
 cask "aws-vault-binary"
 cask "bruno"
 cask "displaylink"
+cask "gcloud-cli"
 cask "mattermost"
 instance_eval(File.read(ENV['HOME'] + "/dotfiles/brew/Brewfile")) # include core Brewfile
 mas "Xcode", id: 497799835
