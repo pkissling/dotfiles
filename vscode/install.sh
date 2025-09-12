@@ -14,4 +14,5 @@ code --update-extensions
 
 # Allow vim key repeat
 defaults write com.microsoft.VSCode ApplePressAndHoldEnabled -bool false
-defaults delete -g ApplePressAndHoldEnabled || true
+defaults write com.jetbrains.intellij ApplePressAndHoldEnabled -bool false
+defaults write -g ApplePressAndHoldEnabled -bool false
