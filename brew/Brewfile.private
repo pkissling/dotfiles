@@ -9,5 +9,6 @@ cask "google-drive"
 cask "iina"
 cask "ledger-live"
 cask "lulu"
+cask "multiviewer"
 cask "slack"
 instance_eval(File.read(ENV['HOME'] + "/dotfiles/brew/Brewfile")) # include core Brewfile
