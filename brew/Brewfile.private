@@ -12,3 +12,4 @@ cask "lulu"
 cask "multiviewer"
 cask "slack"
 instance_eval(File.read(ENV['HOME'] + "/dotfiles/brew/Brewfile")) # include core Brewfile
+mas "Home Assistant", id: 1099568401
