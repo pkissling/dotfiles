@@ -1,0 +1,9 @@
+{
+	"folders": [
+		{
+			"uri": "vscode-remote://tunnel+home-server/home/home-server/clock-weather-card"
+		}
+	],
+	"remoteAuthority": "tunnel+home-server",
+	"settings": {}
+}
