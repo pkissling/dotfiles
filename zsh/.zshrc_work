@@ -37,8 +37,17 @@ function db {
   local namespace="${deployment_ns%/*}"
   local deployment="${deployment_ns#*/}"
 
-  echo "Forwarding port 3320 to ${namespace}/${deployment}"
-  kubectl port-forward deployment/$deployment -n $namespace 3320:
+  # Look up the first container port defined on the deployment
+  local remote_port=$(kubectl get deployment "$deployment" -n "$namespace" -o json \
+    | jq -r '[.spec.template.spec.containers[].ports[]? | .containerPort] | first')
+
+  if [ -z "$remote_port" ] || [ "$remote_port" = "null" ]; then
+    echo "Could not determine container port for ${namespace}/${deployment}"
+    return 1
+  fi
+
+  echo "Forwarding local 3320 to ${namespace}/${deployment}:${remote_port}"
+  kubectl port-forward deployment/$deployment -n $namespace 3320:$remote_port
 }
 
 # claude
