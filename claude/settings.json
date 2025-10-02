@@ -3,5 +3,8 @@
   "statusLine": {
     "type": "command",
     "command": "bun x ccusage statusline"
+  },
+  "env": {
+    "DISABLE_AUTOUPDATER": 1
   }
 }
