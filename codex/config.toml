@@ -1,0 +1,12 @@
+model = "gpt-5-codex"
+model_reasoning_effort = "high"
+
+[mcp_servers.playwright]
+command = "npx"
+args = ["@playwright/mcp@latest"]
+env = {}
+
+[mcp_servers.linear]
+command = "npx"
+args = ["-y", "mcp-remote", "https://mcp.linear.app/sse"]
+

@@ -18,6 +18,10 @@ $ tree dotfiles
 │   └── # https://atuin.sh - Powerful shell history manager
 ├── brew
 │   └── # https://brew.sh/ - macOS package manager
+├── codex
+│   └── # https://openai.com/codex/ - AI-powered coding agent by OpenAI
+├── claude
+│   └── # https://claude.ai - AI-powered coding agent by Anthropic
 ├── eza
 │   └── # https://github.com/ogham/exa - Modern replacement for ls
 ├── ghostty
