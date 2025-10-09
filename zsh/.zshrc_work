@@ -1,6 +1,9 @@
 # misc
 export BOSCHUSER="kip1mu20"
 
+# path
+PATH="${PATH}:/Users/kip1mu20/Coding/work/operations/kubernetes/bin"
+
 # aliases
 alias goodmorning="mfa && up"
 alias live='function _live() { venv; ~/Coding/work/operations/miscellaneous/sast_live_acquire_access.sh $1; deactivate}; _live'
