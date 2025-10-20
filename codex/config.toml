@@ -1,5 +1,5 @@
 model = "gpt-5-codex"
-model_reasoning_effort = "high"
+model_reasoning_effort = "medium"
 
 [mcp_servers.playwright]
 command = "npx"
