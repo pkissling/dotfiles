@@ -1,20 +1,18 @@
 # -----------------------------------------------------------------------------
-# K9s Gruvbox Dark Skin
-# Author: [@indiebrain](https://github.com/indiebrain)
+# K9s Nord Skin
 # -----------------------------------------------------------------------------
 
-# Styles...
-foreground: &foreground "#ebdbb2"
-background: &background "#272727"
-current_line: &current_line "#ebdbb2"
-selection: &selection "#3c3735"
-comment: &comment "#bdad93"
-cyan: &cyan "#689d69"
-green: &green "#989719"
-orange: &orange "#d79920"
-magenta: &magenta "#b16185"
-blue: &blue "#448488"
-red: &red "#cc231c"
+foreground: &foreground "#E5E9F0"
+background: &background "#2E3440"
+current_line: &current_line "#3B4252"
+selection: &selection "#4C566A"
+comment: &comment "#81A1C1"
+cyan: &cyan "#8FBCBB"
+green: &green "#A3BE8C"
+orange: &orange "#EBCB8B"
+magenta: &magenta "#B48EAD"
+blue: &blue "#88C0D0"
+red: &red "#BF616A"
 
 k9s:
   body:
@@ -37,11 +35,11 @@ k9s:
   dialog:
     fgColor: *foreground
     bgColor: *background
-    buttonFgColor: *foreground
-    buttonBgColor: *magenta
-    buttonFocusFgColor: white
-    buttonFocusBgColor: *cyan
-    labelFgColor: *orange
+    buttonFgColor: *background
+    buttonBgColor: *blue
+    buttonFocusFgColor: *background
+    buttonFocusBgColor: *orange
+    labelFgColor: *magenta
     fieldFgColor: *foreground
   frame:
     border:
@@ -61,13 +59,13 @@ k9s:
       addColor: *green
       errorColor: *red
       highlightColor: *orange
-      killColor: *comment
+      killColor: *magenta
       completedColor: *comment
     title:
       fgColor: *foreground
       bgColor: *background
-      highlightColor: *orange
-      counterColor: *blue
+      highlightColor: *blue
+      counterColor: *orange
       filterColor: *magenta
   views:
     charts:
@@ -81,7 +79,7 @@ k9s:
     table:
       fgColor: *foreground
       bgColor: *background
-      cursorFgColor: "#fff"
+      cursorFgColor: *background
       cursorBgColor: *current_line
       header:
         fgColor: *foreground
@@ -94,8 +92,8 @@ k9s:
       graphicColor: *blue
       showIcons: false
     yaml:
-      keyColor: *magenta
-      colonColor: *blue
+      keyColor: *blue
+      colonColor: *magenta
       valueColor: *foreground
     logs:
       fgColor: *foreground

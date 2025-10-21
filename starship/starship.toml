@@ -20,29 +20,30 @@ format = """\
   format = "[$symbol $percentage]($style) "
 [[battery.display]]
   threshold = 20
-  style = "bold #f1fa8c"
+  style = "bold #EBCB8B"
 [[battery.display]]
   threshold = 10
-  style = "bold red"
+  style = "bold #BF616A"
 
 [character]
-  success_symbol = "[»](bold #b8bb26)"
-  error_symbol = "[✗](bold #fb4934)"
+  success_symbol = "[»](bold #A3BE8C)"
+  error_symbol = "[✗](bold #BF616A)"
 
 [cmd_duration]
   min_time = 1000
-  format = "[»](bold #fe8019) took [$duration]($style) "
+  format = "[»](bold #81A1C1) took [$duration]($style) "
   style = "bold"
 
 [directory]
   truncation_length = 8
   truncation_symbol = "…/"
-  style = "bold"
+  style = "bold #E5E9F0"
   format = "[$path]($style)[$read_only]($read_only_style) "
+  read_only_style = "bold #BF616A"
 
 [git_branch]
-  format = "[»](bold #fe8019) [$symbol$branch]($style) "
-  style = "bold"
+  format = "[»](bold #81A1C1) [$symbol$branch]($style) "
+  style = "bold #E5E9F0"
 
 [git_status]
   ahead = "⇡${count}"
@@ -56,16 +57,16 @@ format = """\
   tag_disabled = false
   only_detached = false
   format = "on [$hash]($style) "
-  style = "bold"
+  style = "bold #88C0D0"
 
 [git_state]
-  format = '[»](bold #fe8019) [$state( $progress_current/$progress_total)]($style) '
-  style = "bold"
+  format = '[»](bold #81A1C1) [$state( $progress_current/$progress_total)]($style) '
+  style = "bold #88C0D0"
 
 [kubernetes]
-  format = '[$context]($style) [»](bold #fe8019) '
+  format = '[$context]($style) [»](bold #81A1C1) '
   disabled = false
-  style = "bold"
+  style = "bold #5E81AC"
   contexts = [
     { context_pattern = "sast-pilcrow-dev_default", context_alias = "dev" },
     { context_pattern = "sast-pilcrow-dev_opsreader_default", context_alias = "dev (read-only)" },
@@ -76,16 +77,16 @@ format = """\
   ]
 
 [python]
-  format = '[»](bold #fe8019) [(\($virtualenv\))]($style)'
-  style = "bold"
+  format = '[»](bold #81A1C1) [(\($virtualenv\))]($style)'
+  style = "bold #88C0D0"
 
 [time]
   disabled = false
   format = "[$time]($style) "
-  style = "bold"
+  style = "bold #81A1C1"
 
 # custom
 [custom.aws_mfa_renewal]
   command = "echo 🔒"
   when = """ source $HOME/.starship/helper/aws_mfa_renewal_check.sh """
-  format = "[»](bold #fe8019) [$output]($style) "
+  format = "[»](bold #81A1C1) [$output]($style) "

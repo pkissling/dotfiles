@@ -7,7 +7,8 @@ return {
         require('lualine').setup({
             sections = {
               lualine_z = {'searchcount', 'location'}
-            }
+            },
+            theme = 'nord'
         })
     end,
 }

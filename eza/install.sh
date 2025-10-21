@@ -5,4 +5,4 @@ set -ex
 mkdir -p "${HOME}"/.config/eza
 
 # create symlinks
-ln -sfv "${HOME}"/dotfiles/eza/themes/gruvbox-dark.yml "${HOME}"/.config/eza/theme.yml
+ln -sfv "${HOME}"/dotfiles/eza/themes/nord.yml "${HOME}"/.config/eza/theme.yml

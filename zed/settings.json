@@ -41,11 +41,7 @@
       }
     },
     "Vue.js": {
-      "formatter": {
-        "code_actions": {
-          "source.fixAll.eslint": true
-        }
-      },
+      "formatter": "prettier",
       "code_actions_on_format": {
         "source.fixAll.esLint": true
       }
@@ -60,11 +56,7 @@
     "show": false
   },
   "tab_size": 2,
-  "theme": {
-    "dark": "Gruvbox Dark Hard",
-    "light": "One Light",
-    "mode": "system"
-  },
+  "theme": "Nord Dark",
   "terminal": {
     "font_family": "JetBrainsMono Nerd Font"
   },
