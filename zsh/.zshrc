@@ -25,7 +25,6 @@ export ZPLUG_HOME="${HOMEBREW_PREFIX}"/opt/zplug
 source $ZPLUG_HOME/init.zsh
 
 # zsh-autosuggestions
-export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=#4C566A"
 source "${HOMEBREW_PREFIX}"/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # zsh-syntax-highlighting
