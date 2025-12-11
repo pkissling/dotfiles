@@ -5,7 +5,7 @@ maven = ["3"]
 node = ["24"]
 python = ["3.14", "3.10"]
 rust = ["1.90"]
-terraform = ["1.13", "1.12.1"]
+terraform = ["1.14.2", "1.12.1"]
 yarn = ["4"]
 
 [settings]
