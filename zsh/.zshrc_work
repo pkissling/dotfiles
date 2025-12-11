@@ -53,8 +53,3 @@ function db {
   kubectl port-forward deployment/$deployment -n $namespace 3320:$remote_port
 }
 
-# claude
-export CLAUDE_CODE_USE_VERTEX=1
-export ANTHROPIC_VERTEX_PROJECT_ID=rbprj-100357
-export GOOGLE_APPLICATION_CREDENTIALS=~/.claude/gcloud-credentials.json
-export CLOUD_ML_REGION=global
