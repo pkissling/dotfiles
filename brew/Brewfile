@@ -87,7 +87,6 @@ cask "whatsapp"
 cask "yaak"
 cask "zed"
 mas "1Password for Safari", id: 1569813296
-mas "Amphetamine", id: 937984704
 mas "Monosnap", id: 540348655
 mas "MQTT Explorer", id: 1455214828
 mas "Numbers", id: 409203825

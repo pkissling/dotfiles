@@ -13,5 +13,6 @@ cask "gcloud-cli"
 cask "jetbrains-toolbox"
 cask "mattermost"
 instance_eval(File.read(ENV['HOME'] + "/dotfiles/brew/Brewfile")) # include core Brewfile
+mas "Amphetamine", id: 937984704
 mas "Xcode", id: 497799835
 vscode "jebbs.plantuml"
