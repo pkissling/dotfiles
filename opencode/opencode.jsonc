@@ -1,0 +1,6 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "github/claude-sonnet-4-5",
+  "autoupdate": true,
+  "theme": "nord"
+}

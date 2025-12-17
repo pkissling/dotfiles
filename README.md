@@ -36,6 +36,8 @@ $ tree dotfiles
 │   └── # https://mise.jdx.dev - Runtime version manager
 ├── nvim
 │   └── # https://neovim.io - Modern Vim editor
+├── opencode
+│   └── # https://opencode.ai - Agnostic AI coding assistant
 ├── ssh
 │   └── # - Secure shell configuration
 ├── starship
