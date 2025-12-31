@@ -3,13 +3,10 @@ brew "vercel-cli"
 brew "webp"
 cask "balenaetcher"
 cask "bluesnooze"
-cask "cursor"
 cask "discord"
 cask "google-drive"
 cask "iina"
 cask "ledger-wallet"
 cask "lulu"
 cask "multiviewer"
-cask "slack"
 instance_eval(File.read(ENV['HOME'] + "/dotfiles/brew/Brewfile")) # include core Brewfile
-mas "Home Assistant", id: 1099568401
