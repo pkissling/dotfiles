@@ -12,13 +12,15 @@ plugins=(
 
 # init zsh
 export ZSH=~/.oh-my-zsh
-source $ZSH/oh-my-zsh.sh
 
-# configure zsh
+# configure zsh (must be set before sourcing oh-my-zsh)
 export DISABLE_UPDATE_PROMPT=true
+export DISABLE_AUTO_UPDATE=true
 export DISABLE_MAGIC_FUNCTIONS=true
 export HYPHEN_INSENSITIVE=true
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
+
+source $ZSH/oh-my-zsh.sh
 
 # zplug
 export ZPLUG_HOME="${HOMEBREW_PREFIX}"/opt/zplug
