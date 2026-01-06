@@ -1,10 +1,22 @@
 {
-  "model": "opusplan",
+  "env": {
+    "DISABLE_AUTOUPDATER": "1"
+  },
   "statusLine": {
     "type": "command",
-    "command": "bun x ccusage statusline"
+    "command": "~/.claude/statusline-command.sh"
   },
-  "env": {
-    "DISABLE_AUTOUPDATER": 1
+  "extraKnownMarketplaces": {
+    "samber": {
+      "source": {
+        "source": "github",
+        "repo": "samber/cc"
+      }
+    }
+  },
+  "enabledPlugins": {
+    "cc-caffeine@samber": true,
+    "code-review@claude-plugins-official": true,
+    "frontend-design@claude-plugins-official": true
   }
 }
