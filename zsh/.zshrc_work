@@ -2,20 +2,20 @@
 export BOSCHUSER="kip1mu20"
 
 # path
-PATH="${PATH}:/Users/kip1mu20/Coding/work/operations/kubernetes/bin"
+PATH="${PATH}:/Users/kip1mu20/Projects/work/operations/kubernetes/bin"
 
 # aliases
 alias goodmorning="mfa && up"
-alias live='function _live() { venv; ~/Coding/work/operations/miscellaneous/sast_live_acquire_access.sh $1; deactivate}; _live'
-alias mfa="unlock_aws_vault_keychain && ~/Coding/work/operations/miscellaneous/sast_temporary_mfa_credentials.sh"
-alias mfa-vault="unlock_aws_vault_keychain && ~/Coding/work/operations/miscellaneous/sast_temporary_mfa_credentials.sh -a sast-vault"
+alias live='function _live() { venv; ~/Projects/work/operations/miscellaneous/sast_live_acquire_access.sh $1; deactivate}; _live'
+alias mfa="unlock_aws_vault_keychain && ~/Projects/work/operations/miscellaneous/sast_temporary_mfa_credentials.sh"
+alias mfa-vault="unlock_aws_vault_keychain && ~/Projects/work/operations/miscellaneous/sast_temporary_mfa_credentials.sh -a sast-vault"
 alias prometheus="kubectl -n monitoring port-forward svc/ecosystem-prometheus 9090"
 alias prometheus-kube="kubectl -n monitoring port-forward svc/kube-prometheus-stack-prometheus 9090"
 alias tickets="jira issues list --assignee $(jira me) --jql \"project IN (BOSS, Infrastructure, 'Ecosystem Backlog') AND status IN (Inprogress, 'In Progress', IN-PROGRESS)\""
-alias ump='cd ~/Coding/work/ump-aa && ./gradlew localComposeUp && ./gradlew bootRun'
+alias ump='cd ~/Projects/work/ump-aa && ./gradlew localComposeUp && ./gradlew bootRun'
 alias unlock_aws_vault_keychain='security unlock-keychain -p $(op item get "aws-vault Keychain" --vault "Azena" --fields label=password --format json | jq -r ".value") ~/Library/Keychains/aws-vault.keychain-db'
-alias venv="source ~/Coding/work/operations/python/venv/bin/activate"
-alias unlive="(aws sts get-caller-identity --profile sast-pilcrow-dev_Developer > /dev/null || ~/Coding/work/operations/miscellaneous/sast_temporary_mfa_credentials.sh) && venv && ~/Coding/work/operations/miscellaneous/sast_live_release_access.sh && deactivate"
+alias venv="source ~/Projects/work/operations/python/venv/bin/activate"
+alias unlive="(aws sts get-caller-identity --profile sast-pilcrow-dev_Developer > /dev/null || ~/Projects/work/operations/miscellaneous/sast_temporary_mfa_credentials.sh) && venv && ~/Projects/work/operations/miscellaneous/sast_live_release_access.sh && deactivate"
 
 # functions
 function credfzf() {
