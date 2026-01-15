@@ -5,9 +5,7 @@ plugins=(
   docker
   docker-compose
   git
-  git-auto-fetch
   terraform
-  zoxide
 )
 
 # init zsh
@@ -19,12 +17,17 @@ export DISABLE_AUTO_UPDATE=true
 export DISABLE_MAGIC_FUNCTIONS=true
 export HYPHEN_INSENSITIVE=true
 export ZSH_COMPDUMP=$ZSH/cache/.zcompdump-$HOST
+skip_global_compinit=1
 
 source $ZSH/oh-my-zsh.sh
 
-# zplug
-export ZPLUG_HOME="${HOMEBREW_PREFIX}"/opt/zplug
-source $ZPLUG_HOME/init.zsh
+# compinit: only rebuild dump once per day
+autoload -Uz compinit
+if [[ -f "$ZSH_COMPDUMP" && $(date +'%j') == $(stat -f '%Sm' -t '%j' "$ZSH_COMPDUMP" 2>/dev/null) ]]; then
+  compinit -C -d "$ZSH_COMPDUMP"
+else
+  compinit -d "$ZSH_COMPDUMP"
+fi
 
 # zsh-autosuggestions
 source "${HOMEBREW_PREFIX}"/share/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -51,6 +54,9 @@ export BAT_THEME="Nord"
 
 # atuin
 eval "$(atuin init zsh)"
+
+# zoxide
+eval "$(zoxide init zsh)"
 
 # tools
 export EDITOR="nvim" # vim
