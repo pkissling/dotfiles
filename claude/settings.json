@@ -1,22 +1,23 @@
 {
-  "env": {
-    "DISABLE_AUTOUPDATER": "1"
-  },
-  "statusLine": {
-    "type": "command",
-    "command": "~/.claude/statusline-command.sh"
-  },
-  "extraKnownMarketplaces": {
-    "samber": {
-      "source": {
-        "source": "github",
-        "repo": "samber/cc"
-      }
-    }
-  },
   "enabledPlugins": {
     "cc-caffeine@samber": true,
     "code-review@claude-plugins-official": true,
     "frontend-design@claude-plugins-official": true
+  },
+  "env": {
+    "DISABLE_AUTOUPDATER": "1"
+  },
+  "extraKnownMarketplaces": {
+    "samber": {
+      "source": {
+        "repo": "samber/cc",
+        "source": "github"
+      }
+    }
+  },
+  "model": "opus",
+  "statusLine": {
+    "command": "~/.claude/statusline-command.sh",
+    "type": "command"
   }
 }
