@@ -1,0 +1,7 @@
+{
+	"folders": [
+		{ "uri": "vscode-remote://tunnel+home-server/home/home-server/carvis" }
+	],
+	"remoteAuthority": "tunnel+home-server",
+	"settings": {}
+}
