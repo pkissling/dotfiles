@@ -10,6 +10,8 @@ git-fuzzy-diff() {
 git-fuzzy-branch() {
     git rev-parse HEAD >/dev/null 2>&1 || return
 
+    git fetch --prune --quiet
+
     # shellcheck disable=SC2016
     git branch --color=always --all --sort=-committerdate |
         grep -v HEAD |
