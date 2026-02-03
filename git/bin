@@ -14,6 +14,7 @@ git-fuzzy-branch() {
     git branch --color=always --all --sort=-committerdate |
         grep -v HEAD |
         sort --reverse |
+        grep -vFf <(git branch --format='remotes/origin/%(refname:short)') |
         fzf --height 50% --ansi --no-multi --preview-window right:65% \
             --preview 'git log -n 50 --color=always --date=short --pretty=format:"%C(dim blue)[%ad]%C(reset) %C(bold normal)[%h]%C(reset) | %C(blue)%s %C(bold normal)[%an]%C(reset)%C(bold white)%d%C(reset)" --graph --date=short $(sed "s/.* //" <<< {})' |
         sed "s/.* //"
