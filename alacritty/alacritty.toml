@@ -1,0 +1,72 @@
+[general]
+live_config_reload = true
+
+[terminal.shell]
+program = "/bin/zsh"
+args = ["-l", "-c", "ssh home-server"]
+
+[window]
+startup_mode = "Fullscreen"
+option_as_alt = "Both"
+padding = { x = 10, y = 10 }
+opacity = 0.9
+
+[scrolling]
+history = 100000
+
+[font]
+size = 13.0
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "Regular"
+
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+style = "Bold"
+
+[font.italic]
+family = "JetBrainsMono Nerd Font"
+style = "Italic"
+
+[cursor.style]
+shape = "Beam"
+blinking = "Never"
+
+[selection]
+save_to_clipboard = true
+
+# Nord theme
+[colors.primary]
+background = "#2E3440"
+foreground = "#D8DEE9"
+
+[colors.cursor]
+text = "#2E3440"
+cursor = "#D8DEE9"
+
+[colors.normal]
+black = "#3B4252"
+red = "#BF616A"
+green = "#A3BE8C"
+yellow = "#EBCB8B"
+blue = "#81A1C1"
+magenta = "#B48EAD"
+cyan = "#88C0D0"
+white = "#E5E9F0"
+
+[colors.bright]
+black = "#4C566A"
+red = "#BF616A"
+green = "#A3BE8C"
+yellow = "#EBCB8B"
+blue = "#81A1C1"
+magenta = "#B48EAD"
+cyan = "#8FBCBB"
+white = "#ECEFF4"
+
+[keyboard]
+bindings = [
+  # delete whole line with CMD + delete
+  { key = "Back", mods = "Command", chars = "\u001Bw" },
+]
