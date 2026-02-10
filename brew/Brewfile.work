@@ -9,6 +9,7 @@ cask "aws-vault-binary"
 cask "bruno"
 cask "displaylink"
 cask "gcloud-cli"
+cask "jabra-direct"
 cask "jetbrains-toolbox"
 instance_eval(File.read(ENV['HOME'] + "/dotfiles/brew/Brewfile")) # include core Brewfile
 mas "Amphetamine", id: 937984704
