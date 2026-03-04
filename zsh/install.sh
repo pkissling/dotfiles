@@ -18,4 +18,4 @@ if [ -z "${ZSH}" ] || ! [ -d "${ZSH}" ]; then
 fi
 
 # upgrade zsh
-sh "$ZSH/tools/upgrade.sh"
+zsh "$ZSH/tools/upgrade.sh"
