@@ -8,5 +8,6 @@ cask "iina"
 cask "ledger-wallet"
 cask "lulu"
 cask "multiviewer"
+cask "viscosity"
 instance_eval(File.read(ENV['HOME'] + "/dotfiles/brew/Brewfile")) # include core Brewfile
 mas "ScreenZen", id: 1541027222
