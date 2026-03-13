@@ -2,7 +2,7 @@
 set -ex
 
 # ensure config directory exists
-mkdir -p "${HOME}"/.config/claude
+mkdir -p "${HOME}"/.claude
 
 # create symlinks
 ln -sfv "${HOME}"/dotfiles/claude/settings.json "${HOME}"/.claude/settings.json
