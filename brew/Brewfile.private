@@ -1,4 +1,5 @@
 brew "ffmpeg"
+brew "tmux"
 brew "vercel-cli"
 brew "webp"
 cask "balenaetcher"
