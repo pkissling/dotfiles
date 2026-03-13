@@ -20,5 +20,6 @@
       }
     }
   },
-  "effortLevel": "high"
+  "effortLevel": "high",
+  "voiceEnabled": true
 }
