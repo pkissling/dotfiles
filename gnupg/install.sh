@@ -1,6 +1,8 @@
 #!/usr/bin/env bash
 set -ex
 USAGE=$(cat "${HOME}"/dotfiles/.profile)
+BASE_PROFILE="${USAGE}"
+[[ "$USAGE" == private-* ]] && BASE_PROFILE="private"
 
 # create .gnupg folder, if not exist
 mkdir -p "${HOME}"/.gnupg
@@ -14,7 +16,7 @@ gpg --import ~/dotfiles/gnupg/work.asc
 
 # add private gnupg key from 1password, if not exist
 if [ -z "$(gpg --list-secret-keys)" ]; then
-  if [ "${USAGE}" = "work" ]; then
+  if [ "${BASE_PROFILE}" = "work" ]; then
     ONE_PASSWORD_VAULT="Azena"
   else
     ONE_PASSWORD_VAULT="Personal"

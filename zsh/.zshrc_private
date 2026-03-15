@@ -1,1 +1,2 @@
-# empty
+# source machine-specific configuration
+source ~/.zshrc_machine_specific

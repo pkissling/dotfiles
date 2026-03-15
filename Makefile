@@ -5,8 +5,12 @@ bootstrap:
 	# ln will fail if repo was already checked out in ~/dotfiles
 	@ln -sfv $(shell pwd -P) ${HOME} || true
 ifeq (,$(wildcard ${HOME}/dotfiles/.profile))
-	@echo "Usage (private/work)?"
-	@read line; echo $$line > ${HOME}/dotfiles/.profile
+	@echo "Usage (work/private-macbook-pro/private-mac-mini)?"
+	@read line; \
+	if [ "$$line" != "work" ] && [ "$$line" != "private-macbook-pro" ] && [ "$$line" != "private-mac-mini" ]; then \
+		echo "Invalid profile: $$line"; exit 1; \
+	fi; \
+	echo $$line > ${HOME}/dotfiles/.profile
 endif
 
 alacritty: bootstrap brew
