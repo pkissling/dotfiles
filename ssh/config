@@ -11,14 +11,14 @@ Host diskstation
   HostName diskstation
   User patrick
 
-Host diskstation-root
-  HostName diskstation
-  User root
-
 Host home-server 192.168.0.2
   User home-server
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
+
+Host mac-mini
+  HostName mac-mini
+  User patrick
 
 Host github.com
     HostName github.com
