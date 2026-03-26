@@ -20,6 +20,10 @@ Host mac-mini
   HostName mac-mini
   User patrick
 
+Host coding
+  HostName coding
+  User patrick
+
 Host github.com
     HostName github.com
     Port 22
