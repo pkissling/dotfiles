@@ -3,7 +3,7 @@ live_config_reload = true
 
 [terminal.shell]
 program = "/bin/zsh"
-args = ["-l", "-c", "if [[ $(hostname -s) != Patricks-Mac-mini ]]; then exec ssh mac-mini; else exec zsh -l; fi"]
+args = ["-l", "-c", "ssh coding"]
 
 [window]
 startup_mode = "Fullscreen"

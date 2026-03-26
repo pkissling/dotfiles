@@ -1,0 +1,10 @@
+{
+	"folders": [
+		{ "uri": "vscode-remote://tunnel+coding/home/patrick/carvis" },
+		{ "uri": "vscode-remote://tunnel+coding/home/patrick/tmx" },
+		{ "uri": "vscode-remote://tunnel+coding/home/patrick/home-network-utilities" },
+		{ "uri": "vscode-remote://tunnel+coding/home/patrick/dotfiles" }
+	],
+	"remoteAuthority": "tunnel+coding",
+	"settings": {}
+}
