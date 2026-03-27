@@ -5,7 +5,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "~/.claude/hooks/ha-cancel.sh"
+            "command": "~/.claude/hooks/ha-cancel.py $PPID"
           }
         ]
       }
@@ -15,7 +15,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "~/.claude/hooks/ha-cancel.sh"
+            "command": "~/.claude/hooks/ha-cancel.py $PPID"
           }
         ]
       }
@@ -25,7 +25,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "~/.claude/hooks/ha-cancel.sh"
+            "command": "~/.claude/hooks/ha-cancel.py $PPID"
           }
         ]
       }
@@ -35,7 +35,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "~/.claude/hooks/ha-notify.sh"
+            "command": "~/.claude/hooks/ha-notify.py $PPID"
           }
         ]
       }
@@ -45,7 +45,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "~/.claude/hooks/ha-cancel.sh"
+            "command": "~/.claude/hooks/ha-cancel.py $PPID"
           }
         ]
       }

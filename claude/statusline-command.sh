@@ -189,7 +189,13 @@ _actions_fetch() {
 
   [ -n "$queued_icons" ] || [ -n "$running_icons" ] || [ -n "$completed_icons" ] || return 1
 
-  local result="${queued_icons}${running_icons}|${completed_icons}"
+  local in_progress="${queued_icons}${running_icons}"
+  local result
+  if [ -n "$in_progress" ]; then
+    result="${in_progress}|${completed_icons}"
+  else
+    result="${completed_icons}"
+  fi
   { echo "$now"; echo "$result"; } > "$cache_file" 2>/dev/null
   echo "$result"
 }
