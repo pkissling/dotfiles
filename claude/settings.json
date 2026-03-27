@@ -1,4 +1,7 @@
 {
+  "env": {
+    "DISABLE_AUTOUPDATER": "1"
+  },
   "hooks": {
     "PreToolUse": [
       {
@@ -56,12 +59,6 @@
     "command": "~/.claude/statusline-command.sh",
     "padding": 0
   },
-  "effortLevel": "high",
-  "voiceEnabled": true,
-  "env": {
-    "DISABLE_AUTOUPDATER": "1",
-    "CLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS": "1"
-  },
   "enabledPlugins": {
     "rust-analyzer-lsp@claude-plugins-official": true,
     "cc-caffeine@samber": true,
@@ -75,5 +72,8 @@
         "repo": "samber/cc"
       }
     }
-  }
+  },
+  "effortLevel": "high",
+  "voiceEnabled": true,
+  "skipDangerousModePermissionPrompt": true
 }
