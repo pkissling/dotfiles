@@ -6,7 +6,7 @@ DOTFILES_DIR="$(cd "$(dirname "$0")/.." && pwd)"
 # unlock git-crypt
 git -C "${DOTFILES_DIR}" stash
 git -C "${DOTFILES_DIR}" crypt unlock
-git -C "${DOTFILES_DIR}" stash pop
+git -C "${DOTFILES_DIR}" stash pop || true
 
 # ensure config directory exists
 mkdir -p "${HOME}"/.claude
