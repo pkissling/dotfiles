@@ -12,12 +12,12 @@ Host diskstation
   User patrick
 
 Host home-server 192.168.0.2
-  User home-server
+  User patrick
   StrictHostKeyChecking no
   UserKnownHostsFile /dev/null
 
 Host mac-mini
-  HostName mac-mini
+  HostName patricks-mac-mini
   User patrick
 
 Host coding
