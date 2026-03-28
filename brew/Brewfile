@@ -82,6 +82,7 @@ cask "pocket-casts"
 cask "protonvpn"
 cask "raycast"
 cask "spotify"
+cask "tailscale-app"
 cask "thaw"
 cask "todoist-app"
 cask "visual-studio-code"
@@ -93,7 +94,6 @@ mas "Flow", id: 1423210932
 mas "Monosnap", id: 540348655
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
-mas "Tailscale", id: 1475387142
 mas "The Unarchiver", id: 425424353
 mas "Todoist", id: 585829637
 mas "Xcode", id: 497799835
