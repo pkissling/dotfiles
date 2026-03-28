@@ -1,5 +1,4 @@
 brew "ffmpeg"
-brew "osx-cpu-temp"
 brew "tmux"
 brew "vercel-cli"
 brew "webp"

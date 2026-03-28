@@ -1,1 +1,0 @@
-alias up="cd ${HOME}/dotfiles && git pull --rebase origin master && make && cd ${HOME}/Coding/home-network-utilities && git stash && git pull && (git stash pop || true) && just mac-mini"
