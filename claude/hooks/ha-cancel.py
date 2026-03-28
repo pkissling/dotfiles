@@ -1,6 +1,10 @@
 #!/usr/bin/env python3
 """Cancel pending HA notification timer and clear delivered notification."""
-import json, os, signal, sys
+
+import json
+import os
+import signal
+import sys
 from urllib.request import Request, urlopen
 
 PID_DIR = "/tmp"
@@ -52,7 +56,10 @@ def main():
     req = Request(
         f"{url}/api/events/claude_code_clear",
         data=payload,
-        headers={"Authorization": f"Bearer {token}", "Content-Type": "application/json"},
+        headers={
+            "Authorization": f"Bearer {token}",
+            "Content-Type": "application/json",
+        },
         method="POST",
     )
     try:

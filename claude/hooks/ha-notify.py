@@ -1,6 +1,11 @@
 #!/usr/bin/env python3
 """Send HA notification after 5 min of waiting for user input."""
-import json, os, signal, sys, time
+
+import json
+import os
+import signal
+import sys
+import time
 from urllib.request import Request, urlopen
 
 DELAY = 300  # seconds
@@ -36,7 +41,10 @@ def kill_existing(pid_file):
 def main():
     hook_input = json.load(sys.stdin)
 
-    if hook_input.get("notification_type") not in ("permission_prompt", "elicitation_dialog"):
+    if hook_input.get("notification_type") not in (
+        "permission_prompt",
+        "elicitation_dialog",
+    ):
         return
 
     env = load_env()
@@ -77,17 +85,22 @@ def main():
 
     time.sleep(DELAY)
 
-    payload = json.dumps({
-        "title": "Claude Code",
-        "message": message,
-        "tag": tag,
-        "hostname": os.uname().nodename,
-    }).encode()
+    payload = json.dumps(
+        {
+            "title": "Claude Code",
+            "message": message,
+            "tag": tag,
+            "hostname": os.uname().nodename,
+        }
+    ).encode()
 
     req = Request(
         f"{url}/api/events/claude_code_notify",
         data=payload,
-        headers={"Authorization": f"Bearer {token}", "Content-Type": "application/json"},
+        headers={
+            "Authorization": f"Bearer {token}",
+            "Content-Type": "application/json",
+        },
         method="POST",
     )
     try:

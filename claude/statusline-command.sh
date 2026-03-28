@@ -104,7 +104,8 @@ _actions_fetch() {
   [ -n "$repo_slug" ] || return 1
 
   # Cache per repo+branch; refresh every 60 seconds
-  local cache_file="/tmp/.statusline_actions_$(echo "${repo_slug}__${branch}" | tr '/' '_' | tr ':' '_').cache"
+  local cache_file
+  cache_file="/tmp/.statusline_actions_$(echo "${repo_slug}__${branch}" | tr '/' '_' | tr ':' '_').cache"
   local cache_ttl=60
   local now
   now=$(date +%s)
@@ -202,8 +203,7 @@ _actions_fetch() {
 
 actions_segment=""
 if [ -n "$cwd" ] && [ -n "$git_branch" ]; then
-  commit_icons=$(_actions_fetch "$cwd" "$git_branch")
-  if [ $? -eq 0 ] && [ -n "$commit_icons" ]; then
+  if commit_icons=$(_actions_fetch "$cwd" "$git_branch") && [ -n "$commit_icons" ]; then
     actions_segment=" | Actions: [${commit_icons}]"
   fi
 fi
