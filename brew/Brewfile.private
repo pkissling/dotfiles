@@ -1,4 +1,5 @@
 brew "ffmpeg"
+brew "glances"
 brew "tmux"
 brew "vercel-cli"
 brew "webp"
