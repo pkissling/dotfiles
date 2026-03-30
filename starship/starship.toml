@@ -1,5 +1,5 @@
 format = """\
-  ${custom.ssh}${custom.host}\
+  ${custom.ssh}$username${custom.host}\
   $kubernetes\
   $directory\
   $git_branch\
@@ -93,6 +93,11 @@ format = """\
   when = '[ -n "$SSH_CONNECTION" ]'
   format = "[$output]($style)"
   style = "bold #EBCB8B"
+
+[username]
+  show_always = true
+  format = "[$user](bold #E5E9F0)[@](bold #88C0D0)"
+  style_root = "bold #BF616A"
 
 [custom.host]
   command = 'if [ -n "$TMUX" ]; then echo "$(hostname)@$(tmux display-message -p "#S")"; else echo "$(hostname)"; fi'
