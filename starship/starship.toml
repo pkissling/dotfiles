@@ -1,5 +1,5 @@
 format = """\
-  ${custom.ssh}$username${custom.host}\
+  ${custom.ssh}${custom.tmux}$username${custom.host}\
   $kubernetes\
   $directory\
   $git_branch\
@@ -100,9 +100,15 @@ format = """\
   style_root = "bold #BF616A"
 
 [custom.host]
-  command = 'if [ -n "$TMUX" ]; then echo "$(hostname)@$(tmux display-message -p "#S")"; else echo "$(hostname)"; fi'
+  command = "hostname"
   when = "true"
   format = "[$output]($style) "
+  style = "bold #E5E9F0"
+
+[custom.tmux]
+  command = 'tmux display-message -p "#S"'
+  when = '[ -n "$TMUX" ]'
+  format = "[$output]($style)[@](bold #88C0D0)"
   style = "bold #E5E9F0"
 
 [custom.aws_mfa_renewal]

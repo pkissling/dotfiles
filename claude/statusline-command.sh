@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Claude Code status line
-# Format: [🌐 ssh://session@host |] 📂 dir [branch] | 🤖 model | 📊 ctx% | Actions: [⌛🔄|✅❌]
+# Format: 🌐 [ssh://][session@]user@host | 📂 dir [branch] | 🤖 model | 📊 ctx% | Actions: [⌛🔄|✅❌]
 
 # Read JSON from stdin (provided by Claude Code)
 if [ -t 0 ]; then input=""; else input=$(cat 2>/dev/null) || true; fi
@@ -10,6 +10,7 @@ if [ -t 0 ]; then input=""; else input=$(cat 2>/dev/null) || true; fi
 # ---------------------------------------------------------------------------
 conn_segment=""
 host_name=$(hostname -s 2>/dev/null || echo "$HOSTNAME")
+user_name=$(whoami 2>/dev/null || echo "$USER")
 is_ssh=""
 tmux_session=""
 
@@ -21,18 +22,15 @@ if [ -n "$TMUX" ]; then
   tmux_session=$(tmux display-message -p '#S' 2>/dev/null) || true
 fi
 
-if [ -n "$is_ssh" ] || [ -n "$tmux_session" ]; then
-  conn_segment=""
-  if [ -n "$is_ssh" ]; then
-    conn_segment="ssh://"
-  fi
-  if [ -n "$tmux_session" ]; then
-    conn_segment="${conn_segment}${tmux_session}@"
-  fi
-  conn_segment="🌐 ${conn_segment}${host_name}"
-else
-  conn_segment="🌐 ${host_name}"
+# Format: ssh://session@user@host (components omitted when not applicable)
+conn_segment=""
+if [ -n "$is_ssh" ]; then
+  conn_segment="ssh://"
 fi
+if [ -n "$tmux_session" ]; then
+  conn_segment="${conn_segment}${tmux_session}@"
+fi
+conn_segment="🌐 ${conn_segment}${user_name}@${host_name}"
 
 # ---------------------------------------------------------------------------
 # Section 2 - Working Directory & Branch
