@@ -8,20 +8,18 @@ Host *
   SetEnv TERM=xterm-256color
 
 Host diskstation
-  HostName diskstation
   User patrick
 
-Host home-server 192.168.0.2
+Host home-server
   User patrick
-  StrictHostKeyChecking no
-  UserKnownHostsFile /dev/null
 
-Host mac-mini
-  HostName patricks-mac-mini
+Host patricks-mac-mini
+  User patrick
+
+Host patricks-mac-mini
   User patrick
 
 Host coding
-  HostName coding
   User patrick
 
 Host github.com
