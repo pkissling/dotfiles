@@ -19,7 +19,8 @@ alias unlive="(aws sts get-caller-identity --profile sast-pilcrow-dev_Developer 
 
 # functions
 function credfzf() {
-  PROFILE_PREFIX="$(echo "sast-pilcrow-dev\nsast-pilcrow-demo\nsast-pilcrow-live\nsast-project\n" | fzf)"
+  PROFILE_PREFIX="$(grep '^\[profile .*_Developer\]' ~/.aws/config | sed 's/\[profile //;s/_Developer\]//' | sort -u | fzf)"
+  [ -z "$PROFILE_PREFIX" ] && return
   SELECTION=$(credstash -p "${PROFILE_PREFIX}"_Developer list | awk '{print $1}' | uniq | fzf | head -n 1)
   STACK_PREFIX=$(echo "${SELECTION}" | cut -d "/" -f 1)
   if [[ "${STACK_PREFIX}" =~ "stack_" ]]; then
