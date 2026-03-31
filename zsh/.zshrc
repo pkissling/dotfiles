@@ -71,18 +71,6 @@ function kx() {
   fi
 }
 
-function ide() {
-  local ide_bin=$(echo 'nvim\nidea\ncode\ncursor' | fzf)
-  [ -z "$ide_bin" ] && return
-  local folder=$(find ~/coding -maxdepth 3 -type d -not -path '*/\.*' | fzf)
-  [ -z "$folder" ] && return
-  eval "${ide_bin} ${folder}"
-}
-
-# set gpg path dynamically depending on $HOMEBREW_PREFIX
-export GIT_CONFIG_COUNT=1
-export GIT_CONFIG_KEY_0="gpg.program" GIT_CONFIG_VALUE_0="${HOMEBREW_PREFIX}/bin/gpg"
-
 # Aliases (must be one of the last commands to overwrite zsh aliases)
 alias vscode='code ~/dotfiles/vscode/workspaces/$(ls ~/dotfiles/vscode/workspaces | fzf)'
 alias cat="bat"
