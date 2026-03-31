@@ -72,7 +72,7 @@ function kx() {
 }
 
 function ide() {
-  local ide_bin=$(echo 'nvim\nzed\nidea\ncode\ncursor' | fzf)
+  local ide_bin=$(echo 'nvim\nidea\ncode\ncursor' | fzf)
   [ -z "$ide_bin" ] && return
   local folder=$(find ~/coding -maxdepth 3 -type d -not -path '*/\.*' | fzf)
   [ -z "$folder" ] && return

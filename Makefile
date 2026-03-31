@@ -1,4 +1,4 @@
-.PHONY: alacritty atuin brew codex claude eza ghostty git gnupg k9s mise nvim opencode ssh starship vscode zed zsh
+.PHONY: alacritty atuin brew claude eza ghostty git gnupg k9s mise nvim ssh starship vscode zsh
 default: .PHONY
 
 bootstrap:
@@ -20,10 +20,6 @@ atuin: bootstrap zsh
 brew: bootstrap
 	@chmod +x brew/install.sh
 	@./brew/install.sh
-
-codex: bootstrap brew
-	@chmod +x codex/install.sh
-	@./codex/install.sh
 
 claude: bootstrap brew
 	@chmod +x claude/install.sh
@@ -53,10 +49,6 @@ mise: bootstrap brew zsh
 	@chmod +x mise/install.sh
 	@./mise/install.sh
 
-opencode: bootstrap brew
-	@chmod +x opencode/install.sh
-	@./opencode/install.sh
-
 nvim: bootstrap brew
 	@chmod +x nvim/install.sh
 	@./nvim/install.sh
@@ -72,10 +64,6 @@ starship: bootstrap brew
 vscode: bootstrap brew
 	@chmod +x vscode/install.sh
 	@./vscode/install.sh
-
-zed: bootstrap brew
-	@chmod +x zed/install.sh
-	@./zed/install.sh
 
 zsh: bootstrap brew
 	@chmod +x zsh/install.sh

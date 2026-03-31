@@ -20,8 +20,6 @@ $ tree dotfiles
 │   └── # https://atuin.sh - Powerful shell history manager
 ├── brew
 │   └── # https://brew.sh/ - macOS package manager
-├── codex
-│   └── # https://openai.com/codex/ - AI-powered coding agent by OpenAI
 ├── claude
 │   └── # https://claude.ai - AI-powered coding agent by Anthropic
 ├── eza
@@ -38,16 +36,12 @@ $ tree dotfiles
 │   └── # https://mise.jdx.dev - Runtime version manager
 ├── nvim
 │   └── # https://neovim.io - Modern Vim editor
-├── opencode
-│   └── # https://opencode.ai - Agnostic AI coding assistant
 ├── ssh
 │   └── # - Secure shell configuration
 ├── starship
 │   └── # https://starship.rs - Minimal, fast shell prompt
 ├── vscode
 │   └── # https://code.visualstudio.com - Code editor
-├── zed
-│   └── # https://zed.dev - Modern code editor
 └── zsh
     └── # https://ohmyz.sh - Shell environment
 ```
