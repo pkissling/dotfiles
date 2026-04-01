@@ -49,10 +49,10 @@ git-fuzzy-rebase() {
 }
 
 git-fuzzy-checkout-ticket() {
-    ticket=$(jira issue list --no-headers --plain --columns KEY,SUMMARY --assignee "$(jira me)" --status "In Progress" --jql "project IS NOT EMPTY" | fzf)
+    ticket=$(jira issue list --no-headers --plain --columns KEY,TYPE,SUMMARY --assignee "$(jira me)" --status "In Progress" --jql "project IS NOT EMPTY" | fzf)
     [[ -n $ticket ]] || exit 1
     ticket_id=$(echo "${ticket}" | choose 0)
-    ticket_description=$(echo "${ticket}" | choose 1:)
+    ticket_description=$(echo "${ticket}" | choose 2:)
     read -r -p "Define slug for [${ticket_description}]: " slug
     [ -z "${slug}" ] && slug="${ticket_description}"
     slug="${slug// /-}"

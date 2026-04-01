@@ -40,15 +40,15 @@
     master = "!git checkout $(git remote show origin | grep HEAD | sed 's/.* //') && git pl && git cleanup"
 
     # functions
-    fuzzy-checkout = !bash -c 'source $HOME/.git/bin && git-fuzzy-checkout'
-    fuzzy-checkout-ticket = !bash -c 'source $HOME/.git/bin && git-fuzzy-checkout-ticket'
-    fuzzy-rebase = !bash -c 'source $HOME/.git/bin && git-fuzzy-rebase'
-    fuzzy-diff = !bash -c 'source $HOME/.git/bin && git-fuzzy-diff'
-    gitlab-review = !bash -c 'source $HOME/.git/bin && git-gitlab-code-review \"$1\"'
+    fuzzy-checkout = !bash -c 'source $HOME/.git_functions && git-fuzzy-checkout'
+    fuzzy-checkout-ticket = !bash -c 'source $HOME/.git_functions && git-fuzzy-checkout-ticket'
+    fuzzy-rebase = !bash -c 'source $HOME/.git_functions && git-fuzzy-rebase'
+    fuzzy-diff = !bash -c 'source $HOME/.git_functions && git-fuzzy-diff'
+    gitlab-review = !bash -c 'source $HOME/.git_functions && git-gitlab-code-review \"$1\"'
 
 [core]
     pager = delta --dark
-    excludesfile = ~/.git/.gitignore_global
+    excludesfile = ~/.gitignore_global
 
 [credential "https://dev.azure.com"]
     useHttpPath = true
@@ -91,7 +91,7 @@
 
 [include]
     # user details
-    path = ~/.git/.gitconfig_user
+    path = ~/.gitconfig_user
 
 [init]
     defaultBranch = main
