@@ -12,7 +12,7 @@
           },
           {
             "type": "command",
-            "command": "tmx hook PreToolUse"
+            "command": "tmx hook PreToolUse || true"
           }
         ]
       }
@@ -26,7 +26,7 @@
           },
           {
             "type": "command",
-            "command": "tmx hook PostToolUse"
+            "command": "tmx hook PostToolUse || true"
           }
         ]
       }
@@ -40,7 +40,7 @@
           },
           {
             "type": "command",
-            "command": "tmx hook UserPromptSubmit"
+            "command": "tmx hook UserPromptSubmit || true"
           }
         ]
       }
@@ -64,7 +64,7 @@
           },
           {
             "type": "command",
-            "command": "tmx hook Stop"
+            "command": "tmx hook Stop || true"
           }
         ]
       }
