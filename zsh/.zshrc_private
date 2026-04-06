@@ -1,1 +1,2 @@
-alias up="cd ${HOME}/dotfiles && git pull --rebase origin master && make && cd ~/Coding/home-network-utilities && git pull --rebase origin master && just coding && just home-server"
+# empty
+
