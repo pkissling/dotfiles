@@ -1,4 +1,4 @@
-.PHONY: alacritty atuin brew claude eza ghostty git gnupg k9s mise nvim ssh starship vscode zsh
+.PHONY: alacritty atuin brew claude eza ghostty git git-crypt gnupg k9s mise nvim ssh starship vscode zsh
 default: .PHONY
 
 bootstrap:
@@ -21,7 +21,7 @@ brew: bootstrap
 	@chmod +x brew/install.sh
 	@./brew/install.sh
 
-claude: bootstrap brew
+claude: bootstrap git-crypt
 	@chmod +x claude/install.sh
 	@./claude/install.sh
 
@@ -32,6 +32,9 @@ eza: bootstrap brew
 ghostty: bootstrap brew
 	@chmod +x ghostty/install.sh
 	@./ghostty/install.sh
+
+git-crypt: bootstrap brew
+	@git -C ${HOME}/dotfiles crypt unlock
 
 git: bootstrap
 	@chmod +x git/install.sh
