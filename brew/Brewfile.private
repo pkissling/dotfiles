@@ -11,5 +11,6 @@ cask "ledger-wallet"
 cask "lulu"
 cask "multiviewer"
 cask "protonvpn"
+cask "utm"
 instance_eval(File.read(ENV['HOME'] + "/dotfiles/brew/Brewfile")) # include core Brewfile
 mas "ScreenZen", id: 1541027222
