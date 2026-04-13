@@ -36,9 +36,6 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
--- Auto update lazy.nvim plugins
-vim.api.nvim_create_autocmd("VimEnter", { callback = function() require("lazy").update({ show = false }) end })
-
 -- Auto reload file if changed externally
 vim.opt.autoread = true
 

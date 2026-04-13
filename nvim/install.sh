@@ -9,3 +9,6 @@ rm -rf "${HOME}/.config/nvim"
 
 # create symlink
 ln -sfv "${HOME}"/dotfiles/nvim "${HOME}"/.config/nvim
+
+# update plugins
+nvim --headless "+Lazy! sync" +qa
