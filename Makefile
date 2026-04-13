@@ -34,7 +34,12 @@ ghostty: bootstrap brew
 	@./ghostty/install.sh
 
 git-crypt: bootstrap brew
-	@git -C ${HOME}/dotfiles crypt unlock
+	@stashed=0; \
+	if ! git -C ${HOME}/dotfiles diff-index --quiet HEAD --; then \
+		git -C ${HOME}/dotfiles stash push -m "git-crypt unlock auto-stash" && stashed=1; \
+	fi; \
+	git -C ${HOME}/dotfiles crypt unlock; \
+	if [ $$stashed -eq 1 ]; then git -C ${HOME}/dotfiles stash pop; fi
 
 git: bootstrap
 	@chmod +x git/install.sh
