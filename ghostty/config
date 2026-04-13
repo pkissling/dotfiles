@@ -7,6 +7,7 @@ font-family = JetBrainsMono Nerd Font
 font-size = 13
 font-thicken = true
 fullscreen = true
+macos-option-as-alt = true
 macos-titlebar-proxy-icon = hidden
 notify-on-command-finish = unfocused
 notify-on-command-finish-action = bell,notify

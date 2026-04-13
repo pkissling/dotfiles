@@ -1,0 +1,15 @@
+theme "nord"
+
+// Workaround: Ghostty on macOS maps Alt+Left/Right to Alt+b/Alt+f for word
+// jumping, which conflicts with zellij's Alt+f (ToggleFloatingPanes).
+// Rebind to Alt+Shift+F to free up Alt+f for word navigation.
+// See: https://github.com/zellij-org/zellij/issues/4151
+keybinds {
+    normal {
+        unbind "Alt f"
+        bind "Alt F" { ToggleFloatingPanes; }
+    }
+    shared_except "locked" {
+        unbind "Alt left" "Alt right" "Alt down" "Alt up"
+    }
+}
