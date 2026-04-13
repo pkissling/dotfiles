@@ -1,5 +1,8 @@
 # misc
 export BOSCHUSER="kip1mu20"
+export HYBRIS_HOME_DIR=${HOME}/Projects/work/iot_store
+export HYBRIS_OPT_CONFIG_DIR=${HYBRIS_HOME_DIR}/hybris/config/environment_specific_config/localdev/
+export M2_HOME=${HOME}/.m2/
 
 # path
 PATH="${PATH}:/Users/kip1mu20/Projects/work/operations/kubernetes/bin"
@@ -15,6 +18,20 @@ alias tickets="jira issues list --assignee $(jira me) --jql \"project IN (BOSS, 
 alias unlock_aws_vault_keychain='security unlock-keychain -p $(op item get "aws-vault Keychain" --vault "Azena" --fields label=password --format json | jq -r ".value") ~/Library/Keychains/aws-vault.keychain-db'
 alias venv="source ~/Projects/work/operations/python/venv/bin/activate"
 alias unlive="(aws sts get-caller-identity --profile sast-pilcrow-dev_Developer > /dev/null || ~/Projects/work/operations/miscellaneous/sast_temporary_mfa_credentials.sh) && venv && ~/Projects/work/operations/miscellaneous/sast_live_release_access.sh && deactivate"
+# hybris aliases
+alias cds="cd ${HYBRIS_HOME_DIR}/miscellaneous/scripts"
+alias cdp="cd ${HYBRIS_HOME_DIR}/hybris/bin/platform"
+alias buildNoFrontend="cdp && . ./setantenv.sh && ant build -DbuildFrontend=false -Dbackoffice.sass.enabled=false"
+alias buildOnlyFrontend="cdp && . ./setantenv.sh && ant build_js_in_dev_mode_for_acctests"
+alias rebuildAll="cdp && . ./setantenv.sh && ant clean customize && ant updateMavenDependencies && ant all"
+alias rebuildUnclean="cdp && . ./setantenv.sh && ant all"
+alias platformUpdate="cdp && . ./setantenv.sh && y_spring_profiles_active=init ant updateWithoutBuild -DconfigFile=${HYBRIS_HOME_DIR}/gitlab-ci/templates/hybris/updateConfiguration.json"
+alias fullUpdate="cdp && . ./setantenv.sh && y_spring_profiles_active=init ant updateWithoutBuild cisyunitupdate -DconfigFile=${HYBRIS_HOME_DIR}/gitlab-ci/templates/hybris/updateConfiguration.json"
+alias platformInit="cdp && . ./setantenv.sh && y_spring_profiles_active=init ant initWithoutBuild -DconfigFile=${HYBRIS_HOME_DIR}/gitlab-ci/templates/hybris/initConfiguration.json"
+alias fullInit="cdp && . ./setantenv.sh && y_spring_profiles_active=init ant initWithoutBuild yunitinit -DconfigFile=${HYBRIS_HOME_DIR}/gitlab-ci/templates/hybris/initConfiguration.json"
+alias resetContainers="cds && docker-compose -f docker_compose_config/docker-compose.yml down && docker volume prune -af"
+alias unitTests="buildNoFrontend && ant unittests -Dtestclasses.suppress.junit.tenant=true -Dtestclasses.packages=com.sast.\*"
+
 
 # functions
 function credfzf() {

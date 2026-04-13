@@ -1,11 +1,13 @@
 tap "ankitpokhrel/jira-cli"
 tap "crowdin/crowdin"
+tap "sap/sapmachine"
 brew "ankitpokhrel/jira-cli/jira-cli"
 brew "credstash"
 brew "go"
 brew "graphviz"
 brew "helm"
 brew "hl"
+brew "nvm"
 brew "plantuml"
 brew "postgresql@18"
 cask "aws-vault-binary"
@@ -15,6 +17,7 @@ cask "displaylink"
 cask "gcloud-cli"
 cask "jabra-direct"
 cask "jetbrains-toolbox"
+cask "sap/sapmachine/sapmachine17-jdk"
 instance_eval(File.read(ENV['HOME'] + "/dotfiles/brew/Brewfile")) # include core Brewfile
 mas "Amphetamine", id: 937984704
 mas "Xcode", id: 497799835
