@@ -1,14 +1,7 @@
 # zellij
 if [[ -z "$ZELLIJ" && "$TERM_PROGRAM" != "vscode" ]]; then
-    if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
-        zellij attach -c -l welcome
-    else
-        zellij -l welcome
-    fi
-
-    if [[ "$ZELLIJ_AUTO_EXIT" == "true" ]]; then
-        exit
-    fi
+    zellij -l welcome
+    exit
 fi
 
 # Plugins
