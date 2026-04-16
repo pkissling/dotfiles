@@ -1,9 +1,3 @@
-# zellij
-if [[ -z "$ZELLIJ" && "$TERM_PROGRAM" != "vscode" ]]; then
-    zellij attach -c main
-    exit
-fi
-
 # Plugins
 plugins=(
   aws

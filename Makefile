@@ -1,4 +1,4 @@
-.PHONY: alacritty atuin brew claude eza ghostty git git-crypt gnupg k9s mise nvim ssh starship vscode zellij zsh
+.PHONY: alacritty atuin brew claude eza ghostty git git-crypt gnupg k9s mise nvim ssh starship vscode zsh
 default: .PHONY
 
 bootstrap:
@@ -34,12 +34,13 @@ ghostty: bootstrap brew
 	@./ghostty/install.sh
 
 git-crypt: bootstrap brew
-	@stashed=0; \
-	if ! git -C ${HOME}/dotfiles diff-index --quiet HEAD --; then \
-		git -C ${HOME}/dotfiles stash push -m "git-crypt unlock auto-stash" && stashed=1; \
+	@stash_ref=$$(git -C ${HOME}/dotfiles stash create "git-crypt unlock auto-stash"); \
+	if [ -n "$$stash_ref" ]; then \
+		git -C ${HOME}/dotfiles stash store -m "git-crypt unlock auto-stash" "$$stash_ref" && \
+		git -C ${HOME}/dotfiles reset --hard HEAD; \
 	fi; \
 	git -C ${HOME}/dotfiles crypt unlock; \
-	if [ $$stashed -eq 1 ]; then git -C ${HOME}/dotfiles stash pop; fi
+	if [ -n "$$stash_ref" ]; then git -C ${HOME}/dotfiles stash pop; fi
 
 git: bootstrap
 	@chmod +x git/install.sh
@@ -72,10 +73,6 @@ starship: bootstrap brew
 vscode: bootstrap brew
 	@chmod +x vscode/install.sh
 	@./vscode/install.sh
-
-zellij: bootstrap brew
-	@chmod +x zellij/install.sh
-	@./zellij/install.sh
 
 zsh: bootstrap brew
 	@chmod +x zsh/install.sh
