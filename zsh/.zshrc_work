@@ -31,6 +31,7 @@ alias platformInit="cdp && . ./setantenv.sh && y_spring_profiles_active=init ant
 alias fullInit="cdp && . ./setantenv.sh && y_spring_profiles_active=init ant initWithoutBuild yunitinit -DconfigFile=${HYBRIS_HOME_DIR}/gitlab-ci/templates/hybris/initConfiguration.json"
 alias resetContainers="cds && docker-compose -f docker_compose_config/docker-compose.yml down && docker volume prune -af"
 alias unitTests="buildNoFrontend && ant unittests -Dtestclasses.suppress.junit.tenant=true -Dtestclasses.packages=com.sast.\*"
+alias hybfront="cd ${HYBRIS_HOME_DIR}/hybris/bin/custom/ciswebui && ${HYBRIS_HOME_DIR}/hybris/bin/custom/ciswebui/build_js --build-aa --watch"
 
 
 # functions
