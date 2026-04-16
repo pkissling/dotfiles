@@ -1,4 +1,5 @@
 theme "nord"
+session_serialization false
 
 // Workaround: Ghostty on macOS maps Alt+Left/Right to Alt+b/Alt+f for word
 // jumping, which conflicts with zellij's Alt+f (ToggleFloatingPanes).
