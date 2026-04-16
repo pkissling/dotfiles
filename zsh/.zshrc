@@ -1,6 +1,6 @@
 # zellij
 if [[ -z "$ZELLIJ" && "$TERM_PROGRAM" != "vscode" ]]; then
-    zellij -l welcome
+    zellij attach -c main
     exit
 fi
 
