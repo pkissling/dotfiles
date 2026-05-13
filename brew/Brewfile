@@ -96,7 +96,6 @@ mas "Xcode", id: 497799835
 vscode "anthropic.claude-code"
 vscode "arcticicestudio.nord-visual-studio-code"
 vscode "bradlc.vscode-tailwindcss"
-vscode "davidanson.vscode-markdownlint"
 vscode "dbaeumer.vscode-eslint"
 vscode "denoland.vscode-deno"
 vscode "docker.docker"
