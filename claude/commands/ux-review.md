@@ -1,3 +1,5 @@
+# UX Review
+
 Review the changes in the current PR from a UI/UX perspective by launching a subagent with UI/UX expertise.
 
 The subagent should first study existing pages and components in the codebase to understand the project's established look, feel, and patterns. Consistency with existing UI is paramount — new or changed UI must not feel out of place.
