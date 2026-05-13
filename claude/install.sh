@@ -5,10 +5,12 @@ set -ex
 mkdir -p "${HOME}"/.claude
 
 # create symlinks
+ln -sfv "${HOME}"/dotfiles/claude/CLAUDE.md "${HOME}"/.claude/CLAUDE.md
 ln -sfv "${HOME}"/dotfiles/claude/settings.json "${HOME}"/.claude/settings.json
 ln -sfv "${HOME}"/dotfiles/claude/statusline-command.sh "${HOME}"/.claude/statusline-command.sh
 ln -sfv "${HOME}"/dotfiles/claude/.env "${HOME}"/.claude/.env
 ln -sfvn "${HOME}"/dotfiles/claude/hooks "${HOME}"/.claude/hooks
+ln -sfvn "${HOME}"/dotfiles/claude/commands "${HOME}"/.claude/commands
 
 # install or update claude code
 if command -v claude &>/dev/null; then
