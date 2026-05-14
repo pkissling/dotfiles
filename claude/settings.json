@@ -3,6 +3,9 @@
     "commit": "",
     "pr": ""
   },
+  "permissions": {
+    "defaultMode": "auto"
+  },
   "hooks": {
     "PreToolUse": [
       {
@@ -100,9 +103,8 @@
   "effortLevel": "xhigh",
   "tui": "fullscreen",
   "skipDangerousModePermissionPrompt": true,
-  "voiceEnabled": true,
+  "inputNeededNotifEnabled": true,
   "skipAutoPermissionPrompt": true,
-  "permissions": {
-    "defaultMode": "auto"
-  }
+  "voiceEnabled": true,
+  "agentPushNotifEnabled": true
 }
