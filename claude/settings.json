@@ -100,11 +100,10 @@
       }
     }
   },
-  "effortLevel": "xhigh",
   "tui": "fullscreen",
   "skipDangerousModePermissionPrompt": true,
   "inputNeededNotifEnabled": true,
+  "agentPushNotifEnabled": true,
   "skipAutoPermissionPrompt": true,
-  "voiceEnabled": true,
-  "agentPushNotifEnabled": true
+  "voiceEnabled": true
 }
