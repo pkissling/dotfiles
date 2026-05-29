@@ -93,6 +93,7 @@ mas "Pages", id: 409201541
 mas "The Unarchiver", id: 425424353
 mas "Todoist", id: 585829637
 mas "Xcode", id: 497799835
+npm "corepack"
 vscode "anthropic.claude-code"
 vscode "arcticicestudio.nord-visual-studio-code"
 vscode "bradlc.vscode-tailwindcss"
