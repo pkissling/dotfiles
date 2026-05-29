@@ -63,7 +63,6 @@
     renames = true
 
 [gpg]
-    # default path, will be overwritten in .zshrc
     program = /usr/local/bin/gpg
 
 [interactive]
