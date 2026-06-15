@@ -42,6 +42,8 @@ $ tree dotfiles
 │   └── # https://starship.rs - Minimal, fast shell prompt
 ├── vscode
 │   └── # https://code.visualstudio.com - Code editor
+├── zed
+│   └── # https://zed.dev - Modern code editor
 └── zsh
     └── # https://ohmyz.sh - Shell environment
 ```

@@ -84,6 +84,7 @@ cask "todoist-app"
 cask "visual-studio-code"
 cask "whatsapp"
 cask "yaak"
+cask "zed"
 mas "1Password for Safari", id: 1569813296
 mas "Flow", id: 1423210932
 mas "Monosnap", id: 540348655
