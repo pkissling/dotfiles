@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -ex
-USAGE=$(cat "${HOME}"/dotfiles/.profile)
+DIR="${HOME}/dotfiles/brew"
+PROFILE=$(cat "${HOME}/dotfiles/.profile")
 
 # install brew, if not installed
 if ! command -v brew &>/dev/null; then
@@ -16,23 +17,39 @@ brew update
 # upgrade packages installed via brew
 brew upgrade
 
-# install packages from Brewfile
-brew bundle --file "${HOME}"/dotfiles/brew/Brewfile."${USAGE}"
+# apply the base Brewfile plus the active profile's extras
+brew bundle --file "${DIR}/Brewfile"
+brew bundle --file "${DIR}/Brewfile.${PROFILE}"
 
-# create two temp files to compare delta
-cat "${HOME}"/dotfiles/brew/Brewfile > /tmp/Brewfile.concat && cat "${HOME}"/dotfiles/brew/Brewfile."${USAGE}" >> /tmp/Brewfile.concat
-brew bundle dump --file /tmp/Brewfile.dump --force
+# snapshot everything currently installed (sorted, with descriptions)
+brew bundle dump --describe --force --file /tmp/Brewfile.dump
 
-# identify delta (missing packages) and append to Brewfile
-grep --invert-match --line-regexp --file /tmp/Brewfile.concat /tmp/Brewfile.dump >> "${HOME}"/dotfiles/brew/Brewfile."${USAGE}" || true
+# regenerate the profile file = installed packages not already tracked in base.
+# auto-captures newly installed packages and auto-prunes removed ones.
+# keys ignore ", trusted: true" so cosmetic dump differences don't matter.
+awk '
+    NR==FNR { if (/^#/ || !NF) next; k=$0; sub(/, trusted: true/, "", k); base[k]=1; next }
+    /^[[:space:]]*$/ { next }
+    /^#/ { comment=$0; next }
+    { key=$0; sub(/, trusted: true/, "", key)
+      if (!(key in base)) { if (comment) print comment; print }
+      comment="" }
+' "${DIR}/Brewfile" /tmp/Brewfile.dump > "${DIR}/Brewfile.${PROFILE}"
 
-# sort Brewfiles (keep taps on top)
-find "${HOME}"/dotfiles/brew -type f -name "Brewfile*" ! -name "*.lock.json" -print0 | while IFS= read -r -d '' file; do
+# keep the hand-curated base tidy (taps on top; comments attached to entries)
+sort_brewfile() {
+    local file="$1" us rs
+    us=$(printf '\037'); rs=$(printf '\036')
     {
-        grep "^tap" "$file";
-        grep -v "^tap" "$file" | awk '$1' | LC_ALL="en_US.UTF-8" sort;
+        grep "^tap" "$file" | LC_ALL="en_US.UTF-8" sort -u
+        grep -v "^tap" "$file" | awk -v rs="$rs" -v us="$us" '
+            /^[[:space:]]*$/ { next }
+            /^#/ { buf = buf $0 rs; next }
+            { print $0 us buf $0; buf = "" }
+        ' | LC_ALL="en_US.UTF-8" sort -t "$us" -k1,1 | cut -d "$us" -f2- | tr "$rs" "\n"
     } > "$file.sorted" && mv "$file.sorted" "$file"
-done
+}
+sort_brewfile "${DIR}/Brewfile"
 
 # cleanup
 brew cleanup

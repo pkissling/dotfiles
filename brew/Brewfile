@@ -1,88 +1,168 @@
 tap "artginzburg/tap", trusted: true
-tap "oven-sh/bun"
-tap "codecrafters-io/tap"
-tap "mhaeuser/mhaeuser"
-tap "supabase/tap"
+tap "codecrafters-io/tap", trusted: true
+tap "mhaeuser/mhaeuser", trusted: true
+tap "oven-sh/bun", trusted: true
+tap "supabase/tap", trusted: true
+# Automate deployment, configuration, and upgrading
 brew "ansible"
+# Permanent TouchID support for sudo
 brew "artginzburg/tap/sudo-touchid", trusted: true
+# Improved shell history for zsh, bash, fish and nushell
 brew "atuin"
+# Official Amazon AWS command-line interface
 brew "awscli"
+# Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
+# Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Human-friendly and fast alternative to cut and (sometimes) awk
 brew "choose-rust"
+# Cross-platform make
 brew "cmake"
+# Modern, maintained replacement for ls
 brew "eza"
+# Simple, fast and user-friendly alternative to find
 brew "fd"
+# Command-line fuzzy finder written in Go
 brew "fzf"
+# GitHub command-line tool
 brew "gh"
+# Enable transparent encryption/decryption of files in a git repo
 brew "git-crypt"
+# Syntax-highlighting pager for git and diff output
 brew "git-delta"
+# Distributed revision control system
 brew "git"
+# Core application library for C
 brew "glib"
+# GNU Privacy Guard (OpenPGP)
 brew "gnupg"
+# GNU Transport Layer Security (TLS) Library
 brew "gnutls"
+# GNU grep, egrep and fgrep
 brew "grep"
+# OpenType text shaping engine
 brew "harfbuzz"
+# Improved top (interactive process viewer)
 brew "htop"
+# Interactive jq
 brew "ijq"
+# Lightweight and flexible command-line JSON processor
 brew "jq"
+# Handy way to save and run project-specific commands
 brew "just"
+# Kubernetes CLI To Manage Your Clusters In Style!
 brew "k9s"
+# Tool that can switch between kubectl contexts easily and create aliases
 brew "kubectx"
+# Kubernetes command-line interface
 brew "kubernetes-cli"
+# Template-free customization of Kubernetes YAML manifests
 brew "kustomize"
+# Simple terminal UI for git commands
 brew "lazygit"
+# Bare libuv bindings for lua
 brew "luv"
+# Mac App Store command-line interface
 brew "mas"
+# Polyglot runtime manager (asdf rust clone)
 brew "mise"
+# Deep clean and optimize your Mac
 brew "mole"
+# NCurses Disk Usage
 brew "ncdu"
+# Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
 brew "oven-sh/bun/bun", trusted: true
+# Library to load and enumerate PKCS#11 modules
 brew "p11-kit"
+# PAM module for reattaching to the user's GUI (Aqua) session
 brew "pam-reattach"
+# Pinentry for GPG on Mac
 brew "pinentry-mac"
+# Framework for managing multi-language pre-commit hooks
 brew "pre-commit"
+# Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Add a public key to a remote machine's authorized_keys file
 brew "ssh-copy-id"
+# Cross-shell prompt for astronauts
 brew "starship"
+# Supabase CLI
 brew "supabase/tap/supabase", trusted: true
+# Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Language for application scale JavaScript development
 brew "typescript"
+# Validating, recursive, caching DNS resolver
 brew "unbound"
+# Extremely fast Python package installer and resolver, written in Rust
 brew "uv"
+# Executes a program periodically, showing output fullscreen
 brew "watch"
+# Internet file retriever
 brew "wget"
+# JavaScript package manager
 brew "yarn"
+# Shell extension to navigate your filesystem faster
 brew "zoxide"
+# Next-generation plugin manager for zsh
 brew "zplug"
+# Fish-like fast/unobtrusive autosuggestions for zsh
 brew "zsh-autosuggestions"
+# Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
+# UNIX shell (command interpreter)
 brew "zsh"
+# Command-line interface for 1Password
 cask "1password-cli"
+# Password manager that keeps all passwords secure behind one password
 cask "1password"
+# GPU-accelerated terminal emulator
 cask "alacritty"
+# Scriptable scratchpad for developers
 cask "boop"
+# Anthropic's official Claude AI desktop app
 cask "claude"
+# Web browser
 cask "firefox"
 cask "font-jetbrains-mono-nerd-font"
+# Terminal emulator that uses platform-native UI and GPU acceleration
 cask "ghostty"
+# Web browser
 cask "google-chrome"
+# Tools to protect your emails and files
 cask "gpg-suite"
+# App to manage software development and track bugs
 cask "linear"
+# Software for Logitech devices
 cask "logi-options+"
+# Control the platform power state of your Apple Silicon device
 cask "mhaeuser/mhaeuser/battery-toolkit", trusted: true
+# Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
+# Replacement for Docker Desktop
 cask "orbstack"
+# Podcast platform
 cask "pocket-casts"
+# Control your tools with a few keystrokes
 cask "raycast"
+# Music streaming service
 cask "spotify"
+# Mesh VPN based on WireGuard
 cask "tailscale-app"
+# Messaging app with a focus on speed and security
 cask "telegram"
+# Menu bar manager
 cask "thaw"
+# To-do list
 cask "todoist-app"
+# Open-source code editor
 cask "visual-studio-code"
+# Native desktop client for WhatsApp
 cask "whatsapp"
+# REST, GraphQL and gRPC client
 cask "yaak"
 cask "zed"
 mas "1Password for Safari", id: 1569813296
