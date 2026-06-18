@@ -11,6 +11,10 @@ if ! command -v brew &>/dev/null; then
     eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
 
+# run non-interactively: skip the upgrade confirmation prompt (brew 6.0 made
+# "ask mode" the default)
+export HOMEBREW_NO_ASK=1
+
 # update brew
 brew update
 
