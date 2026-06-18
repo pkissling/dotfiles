@@ -1,16 +1,30 @@
+# Play, record, convert, and stream select audio and video codecs
 brew "ffmpeg"
+# Alternative to top/htop
 brew "glances"
+# Terminal multiplexer
 brew "tmux"
+# Command-line interface for Vercel
 brew "vercel-cli"
+# Image format providing lossless and lossy compression for web images
 brew "webp"
+# Tool to flash OS images to SD cards & USB drives
 cask "balenaetcher"
+# Voice and text chat software
 cask "discord"
+# Client for the Google Drive storage service
 cask "google-drive"
+# Free and open-source media player
 cask "iina"
+# Wallet desktop application to maintain multiple cryptocurrencies
 cask "ledger-wallet"
+# Open-source firewall to block unknown outgoing connections
 cask "lulu"
+# Unofficial desktop client for F1 TV
 cask "multiviewer"
+# VPN client focusing on security
 cask "protonvpn"
+# Virtual machines UI using QEMU
 cask "utm"
 mas "Pages", id: 361309726
 mas "ScreenZen", id: 1541027222
