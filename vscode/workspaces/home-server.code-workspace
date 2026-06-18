@@ -1,10 +1,8 @@
 {
 	"folders": [
 		{ "uri": "vscode-remote://tunnel+home-server/home/patrick/docker/home-assistant" },
-		{ "uri": "vscode-remote://tunnel+home-server/home/patrick/clock-weather-card" },
 		{ "uri": "vscode-remote://tunnel+home-server/home/patrick/home-network-utilities" },
 		{ "uri": "vscode-remote://tunnel+home-server/home/patrick/docker" },
-		{ "uri": "vscode-remote://tunnel+home-server/home/patrick/docker-scout" },
 		{ "uri": "vscode-remote://tunnel+home-server/home/patrick/dotfiles" }
 	],
 	"remoteAuthority": "tunnel+home-server",
