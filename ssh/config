@@ -1,4 +1,3 @@
-Include ~/.orbstack/ssh/config
 Include ~/.ssh/config_profile_specific
 
 Host *

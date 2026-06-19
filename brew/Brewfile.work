@@ -3,6 +3,10 @@ tap "crowdin/crowdin", trusted: true
 tap "sap/sapmachine", trusted: true
 # Little utility for managing credentials in the cloud
 brew "credstash"
+# Docker CLI plugin for extended build capabilities with BuildKit
+brew "docker-buildx"
+# Isolated development environments using Docker
+brew "docker-compose"
 # Interact with Google Gemini AI models from the command-line
 brew "gemini-cli"
 # Open source programming language to build simple/reliable/efficient software
@@ -39,6 +43,8 @@ cask "bruno"
 cask "cursor"
 # Drivers for DisplayLink docks, adapters and monitors
 cask "displaylink"
+# App to build and share containerised applications and microservices
+cask "docker-desktop"
 # Set of tools to manage resources and applications hosted on Google Cloud
 cask "gcloud-cli"
 # Optimise and personalise your Jabra headset
