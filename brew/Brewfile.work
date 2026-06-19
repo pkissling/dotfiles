@@ -15,6 +15,12 @@ brew "helm"
 brew "hl"
 # Tools and libraries to manipulate images in select formats
 brew "imagemagick"
+# Kubernetes CLI To Manage Your Clusters In Style!
+brew "k9s"
+# Tool that can switch between kubectl contexts easily and create aliases
+brew "kubectx"
+# Kubernetes command-line interface
+brew "kubernetes-cli"
 # Manage multiple Node.js versions
 brew "nvm"
 # AI coding agent, built for the terminal

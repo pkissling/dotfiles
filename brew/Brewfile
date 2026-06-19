@@ -28,8 +28,6 @@ brew "fzf"
 # GitHub command-line tool
 brew "gh"
 # Enable transparent encryption/decryption of files in a git repo
-brew "git-crypt"
-# Syntax-highlighting pager for git and diff output
 brew "git-delta"
 # Distributed revision control system
 brew "git"
@@ -51,12 +49,6 @@ brew "ijq"
 brew "jq"
 # Handy way to save and run project-specific commands
 brew "just"
-# Kubernetes CLI To Manage Your Clusters In Style!
-brew "k9s"
-# Tool that can switch between kubectl contexts easily and create aliases
-brew "kubectx"
-# Kubernetes command-line interface
-brew "kubernetes-cli"
 # Template-free customization of Kubernetes YAML manifests
 brew "kustomize"
 # Simple terminal UI for git commands
@@ -81,8 +73,6 @@ brew "p11-kit"
 brew "pam-reattach"
 # Pinentry for GPG on Mac
 brew "pinentry-mac"
-# Framework for managing multi-language pre-commit hooks
-brew "pre-commit"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Add a public key to a remote machine's authorized_keys file
@@ -142,18 +132,12 @@ cask "logi-options+"
 cask "mhaeuser/mhaeuser/battery-toolkit", trusted: true
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
-# Replacement for Docker Desktop
-cask "orbstack"
-# Podcast platform
-cask "pocket-casts"
 # Control your tools with a few keystrokes
 cask "raycast"
 # Music streaming service
 cask "spotify"
 # Mesh VPN based on WireGuard
 cask "tailscale-app"
-# Messaging app with a focus on speed and security
-cask "telegram"
 # Menu bar manager
 cask "thaw"
 # To-do list
@@ -162,14 +146,10 @@ cask "todoist-app"
 cask "visual-studio-code"
 # Native desktop client for WhatsApp
 cask "whatsapp"
-# REST, GraphQL and gRPC client
-cask "yaak"
 cask "zed"
 mas "1Password for Safari", id: 1569813296
 mas "Flow", id: 1423210932
 mas "Monosnap", id: 540348655
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
 mas "The Unarchiver", id: 425424353
 mas "Todoist", id: 585829637
 mas "Xcode", id: 497799835

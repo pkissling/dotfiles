@@ -1,11 +1,9 @@
 # Play, record, convert, and stream select audio and video codecs
 brew "ffmpeg"
-# Alternative to top/htop
-brew "glances"
+# Enable transparent encryption/decryption of files in a git repo
+brew "git-crypt"
 # Terminal multiplexer
 brew "tmux"
-# Command-line interface for Vercel
-brew "vercel-cli"
 # Image format providing lossless and lossy compression for web images
 brew "webp"
 # Tool to flash OS images to SD cards & USB drives
@@ -20,11 +18,12 @@ cask "iina"
 cask "ledger-wallet"
 # Open-source firewall to block unknown outgoing connections
 cask "lulu"
-# Unofficial desktop client for F1 TV
-cask "multiviewer"
+# Replacement for Docker Desktop
+cask "orbstack"
 # VPN client focusing on security
 cask "protonvpn"
 # Virtual machines UI using QEMU
 cask "utm"
+mas "Numbers", id: 409203825
 mas "Pages", id: 361309726
 mas "ScreenZen", id: 1541027222
