@@ -13,8 +13,6 @@ brew "gemini-cli"
 brew "go"
 # Graph visualization software from AT&T and Bell Labs
 brew "graphviz"
-# Kubernetes package manager
-brew "helm"
 # Fast and powerful log viewer and processor
 brew "hl"
 # Tools and libraries to manipulate images in select formats
