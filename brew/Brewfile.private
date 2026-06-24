@@ -25,5 +25,4 @@ cask "protonvpn"
 # Virtual machines UI using QEMU
 cask "utm"
 mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
 mas "ScreenZen", id: 1541027222
