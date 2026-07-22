@@ -2,8 +2,6 @@
 brew "ffmpeg"
 # Enable transparent encryption/decryption of files in a git repo
 brew "git-crypt"
-# Terminal multiplexer
-brew "tmux"
 # Image format providing lossless and lossy compression for web images
 brew "webp"
 # Tool to flash OS images to SD cards & USB drives
