@@ -1,6 +1,7 @@
-[commit]
-    gpgsign = true
-
-[user]
-    email = patrick.kissling@de.bosch.com
-    signingkey = 7933040FBF9E404D
+# [commit]
+#     gpgsign = true
+# 
+# [user]
+#     email = todo
+#     signingkey = todo
+# 
