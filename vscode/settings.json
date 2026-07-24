@@ -1,187 +1,33 @@
 {
-  "[dockercompose]": {
-    "editor.autoIndent": "advanced",
-    "editor.defaultFormatter": "redhat.vscode-yaml",
-    "editor.insertSpaces": true,
-    "editor.quickSuggestions": {
-      "comments": false,
-      "other": true,
-      "strings": true
-    },
-    "editor.tabSize": 2
-  },
-  "[github-actions-workflow]": {
-    "editor.defaultFormatter": "redhat.vscode-yaml"
-  },
-  "[html]": {
-    "editor.defaultFormatter": "vscode.html-language-features"
-  },
-  "[javascript]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-  },
-  "[json]": {
-    "editor.defaultFormatter": "vscode.json-language-features",
-    "editor.formatOnSave": true
-  },
-  "[jsonc]": {
-    "editor.defaultFormatter": "vscode.json-language-features"
-  },
-  "[markdown]": {
-    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
-  },
-  "[python]": {
-    "editor.formatOnType": true
-  },
-  "[rust]": {
-    "editor.defaultFormatter": "rust-lang.rust-analyzer",
-    "editor.formatOnSave": true,
-    "editor.formatOnSaveMode": "file"
-  },
-  "[terraform]": {
-    "editor.formatOnSave": true
-  },
-  "[typescript]": {
-    "editor.defaultFormatter": "vscode.typescript-language-features"
-  },
-  "[typescriptreact]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode"
-  },
-  "[vue]": {
-    "editor.defaultFormatter": "Vue.volar"
-  },
-  "[yaml]": {
-    "editor.autoIndent": "none",
-    "editor.insertSpaces": true,
-    "editor.tabSize": 2
-  },
-  "chat.agent.enabled": true,
-  "debug.toolBarLocation": "commandCenter",
-  "deno.enablePaths": [
-    "./supabase/functions"
-  ],
-  "diffEditor.diffAlgorithm": "advanced",
-  "diffEditor.experimental.showEmptyDecorations": true,
-  "diffEditor.experimental.showMoves": true,
-  "diffEditor.hideUnchangedRegions.enabled": true,
-  "diffEditor.ignoreTrimWhitespace": false,
-  "docker.extension.enableComposeLanguageServer": true,
-  "dotfiles.installCommand": "alias g=git",
-  "editor.acceptSuggestionOnEnter": "smart",
-  "editor.accessibilitySupport": "off",
-  "editor.bracketPairColorization.enabled": true,
-  "editor.codeActionsOnSave": {
-    "source.fixAll": "always",
-    "source.fixAll.eslint": "always"
-  },
   "editor.cursorBlinking": "smooth",
   "editor.cursorSmoothCaretAnimation": "on",
-  "editor.cursorStyle": "line",
   "editor.fontFamily": "JetBrainsMono Nerd Font",
   "editor.fontLigatures": true,
-  "editor.formatOnSaveMode": "modificationsIfAvailable",
-  "editor.guides.bracketPairs": true,
-  "editor.inlineSuggest.enabled": true,
   "editor.lineNumbers": "relative",
   "editor.minimap.enabled": false,
-  "editor.quickSuggestions": {
-    "strings": "on"
-  },
   "editor.renderWhitespace": "boundary",
   "editor.smoothScrolling": true,
   "editor.stickyScroll.enabled": true,
-  "editor.suggestSelection": "first",
   "editor.tabSize": 2,
-  "eslint.format.enable": true,
-  "eslint.validate": [
-    "javascript",
-    "typescript",
-    "typescriptreact",
-    "vue"
-  ],
-  "explorer.confirmDelete": false,
-  "explorer.confirmDragAndDrop": false,
-  "explorer.excludeGitIgnore": false,
-  "extensions.experimental.affinity": {
-    "asvetliakov.vscode-neovim": 1
-  },
-  "files.associations": {
-    "*.yaml": "yaml"
-  },
   "files.autoSave": "afterDelay",
-  "files.exclude": {
-    "**/.classpath": true,
-    "**/.factorypath": true,
-    "**/.project": true,
-    "**/.settings": true
-  },
   "files.insertFinalNewline": true,
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
-  "files.watcherExclude": {
-    "**/.git": true,
-    "**/node_modules": true,
-    "**/target": true
-  },
   "git.allowForcePush": true,
   "git.autofetch": true,
-  "git.blame.editorDecoration.enabled": true,
-  "git.blame.statusBarItem.enabled": true,
   "git.confirmForcePush": false,
   "git.confirmSync": false,
   "git.detectWorktrees": true,
   "git.enableSmartCommit": true,
   "git.ignoreRebaseWarning": true,
-  "git.mergeEditor": true,
-  "github.copilot.nextEditSuggestions.enabled": true,
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "mergeEditor.diffAlgorithm": "advanced",
-  "playwright.reuseBrowser": true,
-  "playwright.showTrace": false,
-  "problems.defaultViewMode": "table",
-  "redhat.telemetry.enabled": false,
-  "rust-analyzer.check.command": "clippy",
-  "search.exclude": {
-    "**/.git": true,
-    "**/node_modules": true,
-    "**/target": true
-  },
-  "security.promptForLocalFileProtocolHandling": false,
-  "terminal.integrated.copyOnSelection": true,
   "terminal.integrated.cursorBlinking": true,
   "terminal.integrated.cursorStyle": "line",
-  "terminal.integrated.defaultProfile.osx": "zsh",
-  "terminal.integrated.enableMultiLinePasteWarning": "never",
   "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
   "terminal.integrated.scrollback": 100000,
   "terminal.integrated.smoothScrolling": true,
-  "terraform.languageServer.enable": true,
-  "typescript.preferences.importModuleSpecifier": "relative",
-  "typescript.updateImportsOnFileMove.enabled": "always",
   "vim.leader": "<space>",
   "vim.replaceWithRegister": true,
   "vim.useSystemClipboard": true,
-  "vue.server.hybridMode": false,
-  "window.autoDetectColorScheme": true,
-  "window.commandCenter": true,
-  "workbench.colorCustomizations": {
-    "tree.indentGuidesStroke": "#FFFFFF"
-  },
-  "workbench.editor.decorations.badges": true,
-  "workbench.editor.empty.hint": "hidden",
-  "workbench.editor.showTabs": "single",
-  "workbench.editor.tabSizing": "shrink",
-  "workbench.editor.wrapTabs": true,
-  "workbench.iconTheme": "material-icon-theme",
-  "workbench.list.smoothScrolling": true,
-  "workbench.preferredDarkColorTheme": "Nord",
-  "workbench.productIconTheme": "fluent-icons",
-  "workbench.secondarySideBar.defaultVisibility": "hidden",
-  "workbench.startupEditor": "none",
-  "workbench.tree.indent": 15,
-  "workbench.tree.renderIndentGuides": "always",
-  "yaml.customTags": [
-    "!include_dir_merge_list",
-    "!include_dir_merge_named",
-    "!secret"
-  ]
+  "workbench.colorTheme": "Nord",
+  "workbench.editor.showTabs": "single"
 }
