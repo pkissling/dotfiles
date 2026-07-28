@@ -1,10 +1,13 @@
 [tools]
+awscli = ["latest"]
+bun = ["latest"]
 deno = ["latest"]
 java = ["latest"]
 node = ["latest"]
 python = ["latest"]
 rust = ["latest"]
 terraform = ["latest"]
+uv = ["latest"]
 yarn = ["latest"]
 
 [settings]

@@ -1,7 +1,5 @@
 tap "artginzburg/tap", trusted: true
-tap "codecrafters-io/tap", trusted: true
 tap "mhaeuser/mhaeuser", trusted: true
-tap "oven-sh/bun", trusted: true
 tap "supabase/tap", trusted: true
 # Automate deployment, configuration, and upgrading
 brew "ansible"
@@ -9,8 +7,6 @@ brew "ansible"
 brew "artginzburg/tap/sudo-touchid", trusted: true
 # Improved shell history for zsh, bash, fish and nushell
 brew "atuin"
-# Official Amazon AWS command-line interface
-brew "awscli"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
 # Clone of cat(1) with syntax highlighting and Git integration
@@ -31,16 +27,12 @@ brew "gh"
 brew "git-delta"
 # Distributed revision control system
 brew "git"
-# Core application library for C
-brew "glib"
 # GNU Privacy Guard (OpenPGP)
 brew "gnupg"
 # GNU Transport Layer Security (TLS) Library
 brew "gnutls"
 # GNU grep, egrep and fgrep
 brew "grep"
-# OpenType text shaping engine
-brew "harfbuzz"
 # Improved top (interactive process viewer)
 brew "htop"
 # Interactive jq
@@ -49,8 +41,6 @@ brew "ijq"
 brew "jq"
 # Handy way to save and run project-specific commands
 brew "just"
-# Template-free customization of Kubernetes YAML manifests
-brew "kustomize"
 # Simple terminal UI for git commands
 brew "lazygit"
 # Bare libuv bindings for lua
@@ -65,8 +55,6 @@ brew "mole"
 brew "ncdu"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
-# Incredibly fast JavaScript runtime, bundler, transpiler and package manager - all in one.
-brew "oven-sh/bun/bun", trusted: true
 # Library to load and enumerate PKCS#11 modules
 brew "p11-kit"
 # PAM module for reattaching to the user's GUI (Aqua) session
@@ -83,18 +71,10 @@ brew "starship"
 brew "supabase/tap/supabase", trusted: true
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
-# Language for application scale JavaScript development
-brew "typescript"
-# Validating, recursive, caching DNS resolver
-brew "unbound"
-# Extremely fast Python package installer and resolver, written in Rust
-brew "uv"
 # Executes a program periodically, showing output fullscreen
 brew "watch"
 # Internet file retriever
 brew "wget"
-# JavaScript package manager
-brew "yarn"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
 # Next-generation plugin manager for zsh
@@ -153,7 +133,6 @@ mas "Monosnap", id: 540348655
 mas "The Unarchiver", id: 425424353
 mas "Todoist", id: 585829637
 mas "Xcode", id: 497799835
-npm "corepack"
 vscode "anthropic.claude-code"
 vscode "arcticicestudio.nord-visual-studio-code"
 vscode "ms-vscode.remote-explorer"
