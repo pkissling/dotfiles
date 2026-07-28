@@ -62,14 +62,6 @@ eval "$(zoxide init zsh)"
 export EDITOR="nvim" # vim
 export GPG_TTY=$(tty) # gpg
 
-# kubecontext
-function kx() {
-  if [ "$#" -ne 1 ]; then
-    kubectx
-  else
-    kubectx $(kubectx | grep -i "$@" | head -n1)
-  fi
-}
 
 # Aliases (must be one of the last commands to overwrite zsh aliases)
 alias vscode='code ~/dotfiles/vscode/workspaces/$(ls ~/dotfiles/vscode/workspaces | fzf)'
@@ -77,7 +69,6 @@ alias cat="bat"
 alias cd="z"
 alias g="git"
 alias json="pbpaste | jq '.'"
-alias k="kubectl"
 alias l="ls -la"
 alias ls="eza"
 alias up="cd ${HOME}/dotfiles && git pull --rebase origin master && make"

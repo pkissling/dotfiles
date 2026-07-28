@@ -30,8 +30,6 @@ $ tree dotfiles
 │   └── # https://git-scm.com/ - Version control system
 ├── gnupg
 │   └── # https://gnupg.org - Encryption and signing tools
-├── k9s
-│   └── # https://k9scli.io - Kubernetes management tool
 ├── mise
 │   └── # https://mise.jdx.dev - Runtime version manager
 ├── nvim
