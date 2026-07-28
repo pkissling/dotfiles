@@ -156,4 +156,6 @@ mas "Xcode", id: 497799835
 npm "corepack"
 vscode "anthropic.claude-code"
 vscode "arcticicestudio.nord-visual-studio-code"
+vscode "ms-vscode.remote-explorer"
+vscode "ms-vscode.remote-server"
 vscode "vscodevim.vim"
