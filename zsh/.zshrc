@@ -81,6 +81,7 @@ alias k="kubectl"
 alias l="ls -la"
 alias ls="eza"
 alias up="cd ${HOME}/dotfiles && git pull --rebase origin master && make"
+alias up-remote='cd ${${:-$HOME/dotfiles}:A:h}/home-network-utilities && just'
 
 # source usage specific configuration
 source ~/.zshrc_profile_specific
