@@ -33,6 +33,8 @@ brew "gnupg"
 brew "gnutls"
 # GNU grep, egrep and fgrep
 brew "grep"
+# Post-modern modal text editor
+brew "helix"
 # Improved top (interactive process viewer)
 brew "htop"
 # Interactive jq
