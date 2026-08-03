@@ -6,7 +6,7 @@ brew "git-crypt"
 # Image format providing lossless and lossy compression for web images
 brew "webp"
 # Wyoming STT + TTS server backed by Apple's Speech framework and Siri voices
-brew "fi-153/tap/wyoming-apple-speech"
+brew "fi-153/tap/wyoming-apple-speech", trusted: true
 # Tool to flash OS images to SD cards & USB drives
 cask "balenaetcher"
 # Voice and text chat software
