@@ -26,7 +26,7 @@ brew bundle --file "${DIR}/Brewfile"
 brew bundle --file "${DIR}/Brewfile.${PROFILE}"
 
 # snapshot everything currently installed (sorted, with descriptions)
-brew bundle dump --describe --force --file /tmp/Brewfile.dump
+brew bundle dump --force --file /tmp/Brewfile.dump
 
 # regenerate the profile file = installed packages not already tracked in base.
 # auto-captures newly installed packages and auto-prunes removed ones.
