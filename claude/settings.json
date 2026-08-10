@@ -85,7 +85,8 @@
     "cc-caffeine@samber": true,
     "code-review@claude-plugins-official": true,
     "frontend-design@claude-plugins-official": true,
-    "superpowers@claude-plugins-official": true
+    "superpowers@claude-plugins-official": true,
+    "revdiff@revdiff": true
   },
   "extraKnownMarketplaces": {
     "samber": {
@@ -98,6 +99,12 @@
       "source": {
         "source": "github",
         "repo": "obra/superpowers-marketplace"
+      }
+    },
+    "revdiff": {
+      "source": {
+        "source": "git",
+        "url": "https://github.com/umputun/revdiff.git"
       }
     }
   },
