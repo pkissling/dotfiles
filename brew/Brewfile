@@ -1,6 +1,7 @@
 tap "artginzburg/tap", trusted: true
 tap "mhaeuser/mhaeuser", trusted: true
 tap "supabase/tap", trusted: true
+tap "umputun/apps", trusted: true
 # Automate deployment, configuration, and upgrading
 brew "ansible"
 # Permanent TouchID support for sudo
@@ -73,6 +74,8 @@ brew "starship"
 brew "supabase/tap/supabase", trusted: true
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# TUI for reviewing diffs, files, and documents with inline annotations
+brew "umputun/apps/revdiff", trusted: true
 # Executes a program periodically, showing output fullscreen
 brew "watch"
 # Internet file retriever
