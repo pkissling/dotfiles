@@ -47,7 +47,7 @@
     gitlab-review = !bash -c 'source $HOME/.git_functions && git-gitlab-code-review \"$1\"'
 
 [core]
-    pager = delta --dark
+	pager = hunk pager
     excludesfile = ~/.gitignore_global
 
 [credential "https://dev.azure.com"]

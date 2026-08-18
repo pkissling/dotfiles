@@ -1,0 +1,4 @@
+theme = "nord"
+wrap_lines = true
+agent_notes = true
+sidebar = true

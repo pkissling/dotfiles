@@ -32,6 +32,8 @@ $ tree dotfiles
 │   └── # https://gnupg.org - Encryption and signing tools
 ├── helix
 │   └── # https://helix-editor.com - Post-modern modal text editor
+├── hunk
+│   └── # https://github.com/modem-dev/hunk - Terminal diff viewer for code review
 ├── mise
 │   └── # https://mise.jdx.dev - Runtime version manager
 ├── nvim
