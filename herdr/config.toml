@@ -1,0 +1,4 @@
+[[keys.command]]
+key = "prefix+shift+l"
+type = "shell"
+command = "~/dotfiles/herdr/agent-layout"

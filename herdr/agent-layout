@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Layout for the focused pane's workspace:
+#   right half        hunk diff --watch
+#   left top (20%)    the existing shell
+#   left bottom (80%) claude, focused
+#
+# Usage: agent-layout [repo-dir]
+# Invoked via the herdr keybinding in config.toml; repo-dir defaults to the
+# focused pane's cwd.
+
+pane_json=$(herdr pane current --current)
+pane=$(jq -r '.result.pane.pane_id' <<<"${pane_json}")
+repo=${1:-$(jq -r '.result.pane.foreground_cwd' <<<"${pane_json}")}
+
+right=$(herdr pane split "${pane}" --direction right --no-focus --cwd "${repo}" | jq -r '.result.pane.pane_id')
+herdr pane run "${right}" hunk diff --watch
+
+bottom=$(herdr pane split "${pane}" --direction down --ratio 0.2 --focus | jq -r '.result.pane.pane_id')
+herdr pane run "${bottom}" claude

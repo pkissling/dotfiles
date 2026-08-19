@@ -2,6 +2,7 @@
 awscli = ["latest"]
 bun = ["latest"]
 deno = ["latest"]
+herdr = ["latest"]
 hunk = ["latest"]
 java = ["latest"]
 node = ["latest"]
