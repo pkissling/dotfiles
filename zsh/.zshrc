@@ -71,5 +71,20 @@ alias up="cd ${HOME}/dotfiles && git pull --rebase origin master && make"
 alias up-remote='cd ${${:-$HOME/dotfiles}:A:h}/home-network-utilities && git pull --rebase && just'
 alias up-all="up && up-remote"
 
+# herdr: with no arguments, pick the target host first
+herdr() {
+  if (( $# )); then
+    command herdr "$@"
+    return
+  fi
+  local host
+  host=$(printf '%s\n' localhost home-server coding | fzf --prompt='herdr> ') || return
+  if [[ "${host}" == "localhost" ]]; then
+    command herdr
+  else
+    command herdr --remote "${host}"
+  fi
+}
+
 # source usage specific configuration
 source ~/.zshrc_profile_specific
