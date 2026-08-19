@@ -1,4 +1,5 @@
 {
+  "chat.viewSessions.enabled": false,
   "editor.cursorBlinking": "smooth",
   "editor.cursorSmoothCaretAnimation": "on",
   "editor.fontFamily": "JetBrainsMono Nerd Font",
