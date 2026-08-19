@@ -92,8 +92,6 @@ brew "zsh"
 cask "1password-cli"
 # Password manager that keeps all passwords secure behind one password
 cask "1password"
-# GPU-accelerated terminal emulator
-cask "alacritty"
 # Scriptable scratchpad for developers
 cask "boop"
 # Anthropic's official Claude AI desktop app

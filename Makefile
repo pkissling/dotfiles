@@ -1,4 +1,4 @@
-.PHONY: alacritty atuin brew claude eza ghostty git git-crypt gnupg helix herdr hunk mise nvim ssh starship vscode zed zsh
+.PHONY: atuin brew claude eza ghostty git git-crypt gnupg helix herdr hunk mise nvim ssh starship vscode zed zsh
 default: .PHONY
 
 bootstrap:
@@ -8,10 +8,6 @@ ifeq (,$(wildcard ${HOME}/dotfiles/.profile))
 	@echo "Usage (private/work)?"
 	@read line; echo $$line > ${HOME}/dotfiles/.profile
 endif
-
-alacritty: bootstrap brew
-	@chmod +x alacritty/install.sh
-	@./alacritty/install.sh
 
 atuin: bootstrap zsh
 	@chmod +x atuin/install.sh
