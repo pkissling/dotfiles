@@ -1,3 +1,6 @@
+[ui.toast]
+delivery = "terminal"
+
 [keys]
 split_vertical = 'prefix+%'
 split_horizontal = 'prefix+"'
