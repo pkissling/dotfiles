@@ -18,4 +18,4 @@ right=$(herdr pane split "${pane}" --direction right --no-focus --cwd "${repo}" 
 herdr pane run "${right}" hunk diff --watch
 
 bottom=$(herdr pane split "${pane}" --direction down --ratio 0.2 --focus | jq -r '.result.pane.pane_id')
-herdr pane run "${bottom}" claude
+herdr pane run "${bottom}" bash -c 'claude --continue || claude'
