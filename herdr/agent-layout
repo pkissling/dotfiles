@@ -1,21 +1,30 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Layout for the focused pane's workspace:
-#   right half        hunk diff --watch
-#   left top (20%)    the existing shell
-#   left bottom (80%) claude, focused
+# Layout for the focused pane's workspace, as three tabs:
+#   bash    the existing shell tab (renamed)
+#   claude  claude, focused
+#   hunk    hunk diff --watch
 #
 # Usage: agent-layout [repo-dir]
 # Invoked via the herdr keybinding in config.toml; repo-dir defaults to the
 # focused pane's cwd.
 
 pane_json=$(herdr pane current --current)
-pane=$(jq -r '.result.pane.pane_id' <<<"${pane_json}")
+workspace=$(jq -r '.result.pane.workspace_id' <<<"${pane_json}")
+tab=$(jq -r '.result.pane.tab_id' <<<"${pane_json}")
 repo=${1:-$(jq -r '.result.pane.foreground_cwd' <<<"${pane_json}")}
 
-right=$(herdr pane split "${pane}" --direction right --no-focus --cwd "${repo}" | jq -r '.result.pane.pane_id')
-herdr pane run "${right}" hunk diff --watch
+tab_pane() {
+  herdr pane list --workspace "${workspace}" |
+    jq -r --arg tab "$1" '.result.panes[] | select(.tab_id == $tab) | .pane_id' |
+    head -n1
+}
 
-bottom=$(herdr pane split "${pane}" --direction down --ratio 0.2 --focus | jq -r '.result.pane.pane_id')
-herdr pane run "${bottom}" bash -c 'claude --continue || claude'
+herdr tab rename "${tab}" bash
+
+claude_tab=$(herdr tab create --workspace "${workspace}" --cwd "${repo}" --label claude --focus | jq -r '.result.tab.tab_id')
+herdr pane run "$(tab_pane "${claude_tab}")" bash -c 'claude --continue || claude'
+
+hunk_tab=$(herdr tab create --workspace "${workspace}" --cwd "${repo}" --label hunk --no-focus | jq -r '.result.tab.tab_id')
+herdr pane run "$(tab_pane "${hunk_tab}")" hunk diff --watch
