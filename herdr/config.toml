@@ -1,3 +1,10 @@
+[ui]
+tab_bar_right = [
+  { type = "hostname" },
+  { type = "datetime", format = "%H:%M" },
+]
+tab_bar_right_separator = " · "
+
 [ui.toast]
 delivery = "terminal"
 
