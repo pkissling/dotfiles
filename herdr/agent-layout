@@ -10,6 +10,10 @@ set -euo pipefail
 # Invoked via the herdr keybinding in config.toml; repo-dir defaults to the
 # focused pane's cwd.
 
+# herdr runs this via `/bin/sh -lc` with the server's environment, which has no
+# mise activation; put the shims first so herdr/hunk/claude resolve.
+export PATH="${HOME}/.local/share/mise/shims:${PATH}"
+
 pane_json=$(herdr pane current --current)
 workspace=$(jq -r '.result.pane.workspace_id' <<<"${pane_json}")
 tab=$(jq -r '.result.pane.tab_id' <<<"${pane_json}")
