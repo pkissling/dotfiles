@@ -14,10 +14,6 @@
           {
             "type": "command",
             "command": "~/.claude/hooks/ha-cancel.py $PPID"
-          },
-          {
-            "type": "command",
-            "command": "tmx hook PreToolUse || true"
           }
         ]
       }
@@ -28,10 +24,6 @@
           {
             "type": "command",
             "command": "~/.claude/hooks/ha-cancel.py $PPID"
-          },
-          {
-            "type": "command",
-            "command": "tmx hook PostToolUse || true"
           }
         ]
       }
@@ -42,10 +34,6 @@
           {
             "type": "command",
             "command": "~/.claude/hooks/ha-cancel.py $PPID"
-          },
-          {
-            "type": "command",
-            "command": "tmx hook UserPromptSubmit || true"
           }
         ]
       }
@@ -66,10 +54,6 @@
           {
             "type": "command",
             "command": "~/.claude/hooks/ha-cancel.py $PPID"
-          },
-          {
-            "type": "command",
-            "command": "tmx hook Stop || true"
           }
         ]
       }
