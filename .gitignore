@@ -1,4 +1,3 @@
 brew/Brewfile.*.lock.json
 .profile
 nvim/lazy-lock.json
-.git-crypt-key

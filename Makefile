@@ -1,4 +1,4 @@
-.PHONY: atuin brew claude eza ghostty git git-crypt gnupg helix herdr hunk mise nvim ssh starship vscode zed zsh
+.PHONY: atuin brew claude eza ghostty git gnupg helix herdr hunk mise nvim ssh starship vscode zed zsh
 default: .PHONY
 
 bootstrap:
@@ -17,7 +17,7 @@ brew: bootstrap
 	@chmod +x brew/install.sh
 	@./brew/install.sh
 
-claude: bootstrap git-crypt
+claude: bootstrap
 	@chmod +x claude/install.sh
 	@./claude/install.sh
 
@@ -28,15 +28,6 @@ eza: bootstrap brew
 ghostty: bootstrap brew
 	@chmod +x ghostty/install.sh
 	@./ghostty/install.sh
-
-git-crypt: bootstrap brew
-	@stash_ref=$$(git -C ${HOME}/dotfiles stash create "git-crypt unlock auto-stash"); \
-	if [ -n "$$stash_ref" ]; then \
-		git -C ${HOME}/dotfiles stash store -m "git-crypt unlock auto-stash" "$$stash_ref" && \
-		git -C ${HOME}/dotfiles reset --hard HEAD; \
-	fi; \
-	git -C ${HOME}/dotfiles crypt unlock; \
-	if [ -n "$$stash_ref" ]; then git -C ${HOME}/dotfiles stash pop; fi
 
 git: bootstrap
 	@chmod +x git/install.sh
