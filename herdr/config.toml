@@ -7,6 +7,7 @@ subtext0 = "#a5afc0"
 overlay1 = "#a5afc0"
 
 [ui]
+window_title = "herdr {hostname}"
 tab_bar_right = [
   { type = "hostname" },
   { type = "datetime", format = "%H:%M" },
