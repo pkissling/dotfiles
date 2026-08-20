@@ -20,3 +20,6 @@ mise install
 
 # update tools
 mise up
+
+# remove versions no longer referenced by any config
+mise prune --yes
