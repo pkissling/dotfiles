@@ -82,7 +82,7 @@ herdr() {
   if [[ "${host}" == "localhost" ]]; then
     command herdr
   else
-    command herdr --remote "${host}"
+    command herdr --remote "${host}" --remote-keybindings server
   fi
 }
 

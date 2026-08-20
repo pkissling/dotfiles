@@ -12,10 +12,15 @@ set -euo pipefail
 # focused pane's cwd.
 
 # herdr runs this via `/bin/sh -lc` with the server's environment, which has no
-# mise activation; put the shims first so herdr/hunk/claude resolve.
+# mise activation; put the shims first so hunk/claude resolve.
 export PATH="${HOME}/.local/share/mise/shims:${PATH}"
 
-pane_json=$(herdr pane current --current)
+# Always talk to the server through the client binary it was started from
+# (herdr exports HERDR_BIN_PATH to custom commands). The `herdr` on PATH may
+# be an older mise-managed build whose protocol the server rejects.
+herdr=${HERDR_BIN_PATH:-herdr}
+
+pane_json=$("${herdr}" pane current --current)
 workspace=$(jq -r '.result.pane.workspace_id' <<<"${pane_json}")
 tab=$(jq -r '.result.pane.tab_id' <<<"${pane_json}")
 pane=$(jq -r '.result.pane.pane_id' <<<"${pane_json}")
@@ -26,16 +31,16 @@ tab_run() {
   local label=$1
   shift
   local tab_id
-  tab_id=$(herdr tab create --workspace "${workspace}" --cwd "${repo}" --label "${label}" --no-focus | jq -r '.result.tab.tab_id')
-  herdr pane list --workspace "${workspace}" |
+  tab_id=$("${herdr}" tab create --workspace "${workspace}" --cwd "${repo}" --label "${label}" --no-focus | jq -r '.result.tab.tab_id')
+  "${herdr}" pane list --workspace "${workspace}" |
     jq -r --arg tab "${tab_id}" '.result.panes[] | select(.tab_id == $tab) | .pane_id' |
     head -n1 |
-    xargs -I{} herdr pane run {} "$@"
+    xargs -I{} "${herdr}" pane run {} "$@"
 }
 
-herdr tab rename "${tab}" claude
-herdr pane run "${pane}" bash -c 'claude --continue || claude'
+"${herdr}" tab rename "${tab}" claude
+"${herdr}" pane run "${pane}" bash -c 'claude --continue || claude'
 
 tab_run hunk hunk diff --watch
 tab_run nvim nvim .
-herdr tab create --workspace "${workspace}" --cwd "${repo}" --label bash --no-focus >/dev/null
+"${herdr}" tab create --workspace "${workspace}" --cwd "${repo}" --label bash --no-focus >/dev/null

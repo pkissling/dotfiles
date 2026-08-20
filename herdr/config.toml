@@ -21,7 +21,7 @@ split_vertical = 'prefix+%'
 split_horizontal = 'prefix+"'
 
 [[keys.command]]
-key = "prefix+shift+l"
+key = "prefix+a"
 type = "shell"
 command = "~/dotfiles/herdr/agent-layout"
 
