@@ -60,5 +60,6 @@
   "agentPushNotifEnabled": true,
   "skipAutoPermissionPrompt": true,
   "voiceEnabled": true,
-  "outputStyle": "Concise"
+  "outputStyle": "Concise",
+  "crossSessionInbound": "accept"
 }
