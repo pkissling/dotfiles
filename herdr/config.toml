@@ -1,10 +1,16 @@
+[theme]
+name = "nord"
+
+[theme.custom]
+subtext0 = "#a5afc0"
+overlay1 = "#a5afc0"
+
 [ui]
 tab_bar_right = [
   { type = "hostname" },
   { type = "datetime", format = "%H:%M" },
 ]
 tab_bar_right_separator = " · "
-
 [ui.toast]
 delivery = "terminal"
 
