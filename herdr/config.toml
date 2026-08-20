@@ -13,6 +13,7 @@ tab_bar_right = [
   { type = "datetime", format = "%H:%M" },
 ]
 tab_bar_right_separator = " · "
+agent_panel_sort = "priority"
 [ui.toast]
 delivery = "terminal"
 
