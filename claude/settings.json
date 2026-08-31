@@ -16,66 +16,11 @@
             "type": "command",
             "command": "bash ~/dotfiles/claude/hooks/herdr-agent-state.sh session",
             "timeout": 10
-          }
-        ]
-      }
-    ],
-    "UserPromptSubmit": [
-      {
-        "hooks": [
+          },
           {
             "type": "command",
-            "command": "~/.claude/hooks/cc-caffeine.sh caffeinate"
-          }
-        ]
-      }
-    ],
-    "PreToolUse": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "~/.claude/hooks/cc-caffeine.sh caffeinate"
-          }
-        ]
-      }
-    ],
-    "PostToolUse": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "~/.claude/hooks/cc-caffeine.sh caffeinate"
-          }
-        ]
-      }
-    ],
-    "Notification": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "~/.claude/hooks/cc-caffeine.sh uncaffeinate"
-          }
-        ]
-      }
-    ],
-    "Stop": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "~/.claude/hooks/cc-caffeine.sh uncaffeinate"
-          }
-        ]
-      }
-    ],
-    "SessionEnd": [
-      {
-        "hooks": [
-          {
-            "type": "command",
-            "command": "~/.claude/hooks/cc-caffeine.sh uncaffeinate"
+            "command": "[ \"$(uname -s)\" = \"Darwin\" ] || exit 0; pgrep -qf \"caffeinate -is -w $PPID$\" || (caffeinate -is -w $PPID &)",
+            "timeout": 5
           }
         ]
       }
@@ -86,26 +31,14 @@
     "command": "~/.claude/statusline-command.sh",
     "padding": 0
   },
-  "enabledPlugins": {
-    "rust-analyzer-lsp@claude-plugins-official": true,
-    "cc-caffeine@samber": false,
-    "code-review@claude-plugins-official": true,
-    "frontend-design@claude-plugins-official": true
-  },
-  "extraKnownMarketplaces": {
-    "samber": {
-      "source": {
-        "source": "github",
-        "repo": "samber/cc"
-      }
-    }
-  },
+  "enabledPlugins": {},
+  "extraKnownMarketplaces": {},
+  "outputStyle": "Concise",
   "tui": "fullscreen",
   "skipDangerousModePermissionPrompt": true,
+  "crossSessionInbound": "accept",
   "inputNeededNotifEnabled": true,
   "agentPushNotifEnabled": true,
   "skipAutoPermissionPrompt": true,
-  "voiceEnabled": true,
-  "outputStyle": "Concise",
-  "crossSessionInbound": "accept"
+  "voiceEnabled": true
 }
