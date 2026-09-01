@@ -1,8 +1,6 @@
 tap "fi-153/tap", "https://github.com/FI-153/homebrew-tap", trusted: true
 # Play, record, convert, and stream select audio and video codecs
 brew "ffmpeg"
-# Enable transparent encryption/decryption of files in a git repo
-brew "git-crypt"
 # Image format providing lossless and lossy compression for web images
 brew "webp"
 # Wyoming STT + TTS server backed by Apple's Speech framework and Siri voices
@@ -28,3 +26,5 @@ cask "telegram"
 # Virtual machines UI using QEMU
 cask "utm"
 mas "Numbers", id: 409203825
+# Mesh VPN based on WireGuard
+cask "tailscale-app"

@@ -1,0 +1,2 @@
+# Container runtimes on MacOS (and Linux) with minimal setup
+brew "colima", restart_service: :changed

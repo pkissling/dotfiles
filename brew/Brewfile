@@ -117,8 +117,6 @@ cask "obsidian"
 cask "raycast"
 # Music streaming service
 cask "spotify"
-# Mesh VPN based on WireGuard
-cask "tailscale-app"
 # Menu bar manager
 cask "thaw"
 # To-do list
@@ -139,3 +137,5 @@ vscode "arcticicestudio.nord-visual-studio-code"
 vscode "ms-vscode.remote-explorer"
 vscode "ms-vscode.remote-server"
 vscode "vscodevim.vim"
+# Enable transparent encryption/decryption of files in a git repo
+brew "git-crypt"
