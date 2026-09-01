@@ -10,8 +10,8 @@ ln -sfv "${HOME}"/dotfiles/ssh/private.pub "${HOME}"/.ssh
 ln -sfv "${HOME}"/dotfiles/ssh/work.pub "${HOME}"/.ssh
 
 # create symlink for default private and public certificate
-ln -sfv "${HOME}"/dotfiles/ssh/"${USAGE}".pub "${HOME}"/.ssh/id_rsa.pub
-ln -sfv "${HOME}"/.ssh/"${USAGE}".priv "${HOME}"/.ssh/id_rsa
+ln -sfv "${HOME}"/dotfiles/ssh/"${USAGE}".pub "${HOME}"/.ssh/id_ed25519.pub
+ln -sfv "${HOME}"/.ssh/"${USAGE}".priv "${HOME}"/.ssh/id_ed25519
 
 # create symlinks for config file
 ln -sfv "${HOME}"/dotfiles/ssh/config "${HOME}"/.ssh
@@ -21,7 +21,7 @@ ln -sfv "${HOME}"/dotfiles/ssh/config_"${USAGE}" "${HOME}"/.ssh/config_profile_s
 # shellcheck disable=SC2140
 if [ ! -f "${HOME}"/.ssh/"${USAGE}.priv" ]; then
   if [ "${USAGE}" = "work" ]; then
-    ONE_PASSWORD_VAULT="Azena"
+    ONE_PASSWORD_VAULT="EBX"
   else
     ONE_PASSWORD_VAULT="Personal"
   fi

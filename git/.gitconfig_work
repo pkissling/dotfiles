@@ -2,6 +2,5 @@
     gpgsign = true
 
 [user]
-#     email = todo
-#     signingkey = todo
-# 
+   email = patrick.kissling@ebx.energy
+   signingkey = 55DEB2EB764D86DD

@@ -3,7 +3,7 @@ Include ~/.ssh/config_profile_specific
 Host *
   UseKeychain yes
   AddKeysToAgent yes
-  IdentityFile ~/.ssh/id_rsa
+  IdentityFile ~/.ssh/id_ed25519
   SetEnv TERM=xterm-256color
 
 Host diskstation
