@@ -16,11 +16,6 @@
             "type": "command",
             "command": "bash ~/dotfiles/claude/hooks/herdr-agent-state.sh session",
             "timeout": 10
-          },
-          {
-            "type": "command",
-            "command": "[ \"$(uname -s)\" = \"Darwin\" ] || exit 0; pgrep -qf \"caffeinate -is -w $PPID$\" || (caffeinate -is -w $PPID &)",
-            "timeout": 5
           }
         ]
       }
