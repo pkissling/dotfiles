@@ -1,1 +1,68 @@
 export DOCKER_HOST="unix://${HOME}/.colima/default/docker.sock"
+
+tunnelToTarget() {
+    local NETWORK_INPUT=$1
+    local TARGET_HOST=$2
+    local TARGET_PORT=$3
+    local HOST_PORT=$4
+
+    if [ -z "$NETWORK_INPUT" ] || [ -z "$TARGET_HOST" ] || [ -z "$TARGET_PORT" ] || [ -z "$HOST_PORT" ]; then
+        echo "Usage: tunnelToTarget <network> <target_host> <target_port> <host_port>"
+        return 1
+    fi
+
+    # Normalize NETWORK value
+    local NETWORK_INPUT_LC=$(echo "$NETWORK_INPUT" | tr '[:upper:]' '[:lower:]')
+    local NETWORK=""
+    if [[ "$NETWORK_INPUT_LC" =~ ^(process|processnetwork)$ ]]; then
+        NETWORK="ProcessNetwork"
+    elif [[ "$NETWORK_INPUT_LC" =~ ^(public|publicnetwork)$ ]]; then
+        NETWORK="PublicNetwork"
+    else
+        echo "Error: NETWORK must be 'Process' or 'Public' (or 'ProcessNetwork'/'PublicNetwork')"
+        return 2
+    fi
+
+    # Get the instance ID of the current EC2 instance
+    # Find instance ID with tag "Jump instance"
+    local INSTANCE_ID=$(aws ec2 describe-instances \
+        --filters "Name=instance-state-name,Values=running" "Name=tag:Purpose,Values=BastionHost" "Name=tag:Network,Values=$NETWORK" \
+        --query "Reservations[].Instances[].InstanceId" \
+        --output text
+    )
+
+    if [ -z "$INSTANCE_ID" ]; then
+        echo "No running jump instances found for network $NETWORK"
+        return 2
+    fi
+
+    # Start SSM port forwarding session
+    aws ssm start-session \
+    --target "$INSTANCE_ID" \
+    --document-name "AWS-StartPortForwardingSessionToRemoteHost" \
+    --parameters "host=$TARGET_HOST,portNumber=$TARGET_PORT,localPortNumber=$HOST_PORT"
+}
+
+refreshBalservCodeArtifactTokens() {
+    if [ -z "$BALSERV_DEPLOY_ACCOUNT_ID" ]; then
+        echo "BALSERV_DEPLOY_ACCOUNT_ID is not set (export it in ~/.zshrc_work_local)"
+        return 1
+    fi
+    local region="${AWS_REGION:-$AWS_DEFAULT_REGION}"
+    aws codeartifact login --tool pip --domain balserv --domain-owner "$BALSERV_DEPLOY_ACCOUNT_ID" --repository balserv --region "$region"
+    export UV_INDEX_INTERNAL_USERNAME=aws
+    export UV_INDEX_INTERNAL_PASSWORD=$(aws codeartifact get-authorization-token --domain balserv --domain-owner "$BALSERV_DEPLOY_ACCOUNT_ID" --region "$region" --query "authorizationToken" --output text --no-cli-pager)
+    export UV_INDEX=https://${UV_INDEX_INTERNAL_USERNAME}:${UV_INDEX_INTERNAL_PASSWORD}@balserv-${BALSERV_DEPLOY_ACCOUNT_ID}.d.codeartifact.${region}.amazonaws.com/pypi/balserv/simple/
+    export UV_PUBLISH_USERNAME=aws
+    export UV_PUBLISH_PASSWORD=$UV_INDEX_INTERNAL_PASSWORD
+    export UV_PUBLISH_URL=https://${UV_INDEX_INTERNAL_USERNAME}:${UV_INDEX_INTERNAL_PASSWORD}@balserv-${BALSERV_DEPLOY_ACCOUNT_ID}.d.codeartifact.${region}.amazonaws.com/pypi/balserv/
+}
+
+alias assume-dev='export AWS_PROFILE=ebx-dev && echo "AWS_PROFILE=$AWS_PROFILE"'
+alias assume-test='export AWS_PROFILE=ebx-test && echo "AWS_PROFILE=$AWS_PROFILE"'
+alias assume-deploy='export AWS_PROFILE=ebx-deploy && echo "AWS_PROFILE=$AWS_PROFILE"'
+alias assume-prod='export AWS_PROFILE=ebx-prod && echo "AWS_PROFILE=$AWS_PROFILE"'
+alias ebx-awslogin="aws sso login --sso-session ebx"
+
+# hosts and account ids live outside the public repo
+[ -f ~/.zshrc_work_local ] && source ~/.zshrc_work_local
