@@ -25,6 +25,8 @@ brew "fzf"
 # GitHub command-line tool
 brew "gh"
 # Enable transparent encryption/decryption of files in a git repo
+brew "git-crypt"
+# Enable transparent encryption/decryption of files in a git repo
 brew "git-delta"
 # Distributed revision control system
 brew "git"
@@ -137,5 +139,3 @@ vscode "arcticicestudio.nord-visual-studio-code"
 vscode "ms-vscode.remote-explorer"
 vscode "ms-vscode.remote-server"
 vscode "vscodevim.vim"
-# Enable transparent encryption/decryption of files in a git repo
-brew "git-crypt"

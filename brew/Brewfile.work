@@ -1,2 +1,8 @@
 # Container runtimes on MacOS (and Linux) with minimal setup
 brew "colima", restart_service: :changed
+# Pack, ship and run any application as a lightweight container
+brew "docker"
+# AI-powered notepad for meetings
+cask "granola"
+# Team communication and collaboration software
+cask "slack"
