@@ -4,5 +4,7 @@ brew "colima", restart_service: :changed
 brew "docker"
 # AI-powered notepad for meetings
 cask "granola"
+# Plugin for AWS CLI to start and end sessions that connect to managed instances
+cask "session-manager-plugin"
 # Team communication and collaboration software
 cask "slack"
