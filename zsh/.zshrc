@@ -68,8 +68,6 @@ alias json="pbpaste | jq '.'"
 alias l="ls -la"
 alias ls="eza"
 alias up="cd ${HOME}/dotfiles && git pull --rebase origin master && make"
-alias up-remote='cd ${${:-$HOME/dotfiles}:A:h}/home-network-utilities && git pull --rebase && just'
-alias up-all="up && up-remote"
 
 # herdr: with no arguments, pick the target host first
 herdr() {

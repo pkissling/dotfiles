@@ -1,2 +1,3 @@
-# empty
-
+# Aliases
+alias up-remote='cd ${${:-$HOME/dotfiles}:A:h}/home-network-utilities && git pull --rebase && just'
+alias up-all="up && up-remote"
