@@ -64,5 +64,7 @@ alias assume-deploy='export AWS_PROFILE=ebx-deploy && echo "AWS_PROFILE=$AWS_PRO
 alias assume-prod='export AWS_PROFILE=ebx-prod && echo "AWS_PROFILE=$AWS_PROFILE"'
 alias ebx-awslogin="aws sso login --sso-session ebx"
 
+alias goodmorning="ebx-awslogin && up"
+
 # hosts and account ids live outside the public repo
 [ -f ~/.zshrc_work_local ] && source ~/.zshrc_work_local
