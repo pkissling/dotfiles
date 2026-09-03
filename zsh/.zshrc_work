@@ -1,4 +1,6 @@
 export DOCKER_HOST="unix://${HOME}/.colima/default/docker.sock"
+export JSII_SILENCE_WARNING_UNTESTED_NODE_VERSION=1
+export AWS_DEFAULT_REGION="eu-central-1"
 
 tunnelToTarget() {
     local NETWORK_INPUT=$1
