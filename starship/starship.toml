@@ -111,3 +111,8 @@ format = """\
   format = "[$output]($style)[@](bold #88C0D0)"
   style = "bold #E5E9F0"
 
+
+[custom.aws_sso_expired]
+  command = "echo 🔒"
+  when = """ source $HOME/.starship/helper/aws_sso_expired_check.sh """
+  format = "[»](bold #81A1C1) [$output]($style) "
