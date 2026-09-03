@@ -1,5 +1,6 @@
 [tools]
-awscli = ["latest"]
+aws-cli = ["latest"]
+aws-cdk = ["2.1135"]
 bun = ["latest"]
 deno = ["latest"]
 herdr = ["latest"]

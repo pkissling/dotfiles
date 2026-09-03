@@ -1,5 +1,3 @@
-# AWS Cloud Development Kit - framework for defining AWS infra as code
-brew "aws-cdk"
 # Container runtimes on MacOS (and Linux) with minimal setup
 brew "colima", restart_service: :changed
 # Pack, ship and run any application as a lightweight container
@@ -10,3 +8,4 @@ cask "granola"
 cask "session-manager-plugin"
 # Team communication and collaboration software
 cask "slack"
+mas "ExcalidrawZ", id: 6636493997
