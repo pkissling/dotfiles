@@ -1,7 +1,10 @@
+tap "bufbuild/buf"
 # Container runtimes on MacOS (and Linux) with minimal setup
 brew "colima", restart_service: :changed
 # Pack, ship and run any application as a lightweight container
 brew "docker"
+# The best way of working with Protocol Buffers.
+brew "bufbuild/buf/buf", trusted: true
 # AI-powered notepad for meetings
 cask "granola"
 # Plugin for AWS CLI to start and end sessions that connect to managed instances
