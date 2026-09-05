@@ -69,20 +69,5 @@ alias l="ls -la"
 alias ls="eza"
 alias up="cd ${HOME}/dotfiles && git pull --rebase origin master && make"
 
-# herdr: with no arguments, pick the target host first
-herdr() {
-  if (( $# )); then
-    command herdr "$@"
-    return
-  fi
-  local host
-  host=$(printf '%s\n' localhost home-server coding | fzf --prompt='herdr> ') || return
-  if [[ "${host}" == "localhost" ]]; then
-    command herdr
-  else
-    command herdr --remote "${host}" --remote-keybindings server
-  fi
-}
-
 # source usage specific configuration
 source ~/.zshrc_profile_specific
