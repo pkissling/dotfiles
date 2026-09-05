@@ -20,9 +20,3 @@ Host patricks-mac-mini
 
 Host coding
   User patrick
-
-Host github.com
-    HostName github.com
-    Port 22
-    User git
-    IdentityFile ~/.ssh/private.priv
