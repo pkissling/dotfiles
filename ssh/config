@@ -15,8 +15,5 @@ Host home-server
 Host patricks-mac-mini
   User patrick
 
-Host patricks-mac-mini
-  User patrick
-
 Host coding
   User patrick
