@@ -2,6 +2,9 @@
 name: Lint
 on: push
 
+permissions:
+  contents: read
+
 jobs:
   linter:
     name: Lint
@@ -9,12 +12,22 @@ jobs:
 
     steps:
       - name: Checkout Code
-        uses: actions/checkout@v7
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
         with:
           fetch-depth: 0
+          persist-credentials: false
       - name: Lint Code Base
-        uses: super-linter/super-linter/slim@v8
+        uses: super-linter/super-linter/slim@4ce20838b8ab83717e78138c5b3a1407148e0918 # v8
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # vscode json settings comments break linting
           VALIDATE_JSON: false
+          # formatters only; the repo is not prettier/shfmt formatted
+          VALIDATE_BIOME_FORMAT: false
+          VALIDATE_JSON_PRETTIER: false
+          VALIDATE_MARKDOWN_PRETTIER: false
+          VALIDATE_YAML_PRETTIER: false
+          VALIDATE_SHELL_SHFMT: false
+          # complains about "git" and "zsh" not being capitalized
+          VALIDATE_NATURAL_LANGUAGE: false
+          VALIDATE_SPELL_CODESPELL: false
