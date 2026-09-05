@@ -57,7 +57,7 @@ nvim: bootstrap brew
 	@chmod +x nvim/install.sh
 	@./nvim/install.sh
 
-ssh: bootstrap
+ssh: bootstrap brew
 	@chmod +x ssh/install.sh
 	@./ssh/install.sh
 
