@@ -105,8 +105,6 @@ cask "font-jetbrains-mono-nerd-font"
 cask "ghostty"
 # Web browser
 cask "google-chrome"
-# Tools to protect your emails and files
-cask "gpg-suite"
 # App to manage software development and track bugs
 cask "linear"
 # Software for Logitech devices
