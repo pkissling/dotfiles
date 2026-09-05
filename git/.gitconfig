@@ -70,8 +70,6 @@
 
 [pull]
     rebase = true
-    default = simple
-    followTags = true
 
 [push]
     autoSetupRemote = true
@@ -80,8 +78,6 @@
 
 [rebase]
     autoStash = true
-    default = simple
-    followTags = true
 
 [user]
     # default user config, unless overwritten via [include]
