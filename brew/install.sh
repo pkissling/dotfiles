@@ -26,7 +26,8 @@ brew bundle --file "${DIR}/Brewfile"
 brew bundle --file "${DIR}/Brewfile.${PROFILE}"
 
 # snapshot everything currently installed (sorted, with descriptions)
-brew bundle dump --force --file /tmp/Brewfile.dump
+DUMP=$(mktemp)
+brew bundle dump --force --file "${DUMP}"
 
 # regenerate the profile file = installed packages not already tracked in base.
 # auto-captures newly installed packages and auto-prunes removed ones.
@@ -38,7 +39,7 @@ awk '
     { key=$0; sub(/, trusted: true/, "", key)
       if (!(key in base)) { if (comment) print comment; print }
       comment="" }
-' "${DIR}/Brewfile" /tmp/Brewfile.dump > "${DIR}/Brewfile.${PROFILE}"
+' "${DIR}/Brewfile" "${DUMP}" > "${DIR}/Brewfile.${PROFILE}"
 
 # keep the hand-curated base tidy (taps on top; comments attached to entries)
 sort_brewfile() {
