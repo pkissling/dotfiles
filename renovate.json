@@ -7,10 +7,6 @@
     {
       "matchManagers": ["mise"],
       "extractVersion": "^(?<version>\\d+\\.\\d+)"
-    },
-    {
-      "matchPackageNames": ["ruby"],
-      "extractVersion": "^(?<version>\\d+\\.\\d+)"
     }
   ]
 }
