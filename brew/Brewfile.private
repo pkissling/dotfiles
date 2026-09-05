@@ -21,10 +21,10 @@ cask "lulu"
 cask "orbstack"
 # VPN client focusing on security
 cask "protonvpn"
+# Mesh VPN based on WireGuard
+cask "tailscale-app"
 # Messaging app with a focus on speed and security
 cask "telegram"
 # Virtual machines UI using QEMU
 cask "utm"
 mas "Numbers", id: 409203825
-# Mesh VPN based on WireGuard
-cask "tailscale-app"
