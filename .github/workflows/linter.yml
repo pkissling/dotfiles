@@ -10,9 +10,11 @@ jobs:
     steps:
       - name: Checkout Code
         uses: actions/checkout@v7
+        with:
+          fetch-depth: 0
       - name: Lint Code Base
-        uses: docker://github/super-linter:v5
+        uses: super-linter/super-linter/slim@v7
         env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # vscode json settings comments break linting
           VALIDATE_JSON: false
-          FILTER_REGEX_EXCLUDE: 'nvim\/kickstart.nvim'
