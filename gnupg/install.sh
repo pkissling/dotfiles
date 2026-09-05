@@ -18,7 +18,7 @@ done
 # add private gnupg key from 1password, if not exist
 if [ -z "$(gpg --list-secret-keys)" ]; then
   if [ "${USAGE}" = "work" ]; then
-    ONE_PASSWORD_VAULT="Azena"
+    ONE_PASSWORD_VAULT="EBX"
   else
     ONE_PASSWORD_VAULT="Personal"
   fi
