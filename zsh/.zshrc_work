@@ -45,6 +45,24 @@ tunnelToTarget() {
     --parameters "host=$TARGET_HOST,portNumber=$TARGET_PORT,localPortNumber=$HOST_PORT"
 }
 
+tunnelDevice() {
+    local device="$1"
+    local network="$2"
+    local local_port="$3"
+
+    if [[ -z "$device" || -z "$network" || -z "$local_port" ]]; then
+        echo "Usage: tunnelDevice <device> <network> <local_port>"
+        return 1
+    fi
+
+    if ! [[ "$local_port" =~ ^[0-9]+$ ]] || (( local_port < 1 || local_port > 65535 )); then
+        echo "Invalid local_port: $local_port"
+        return 1
+    fi
+
+    tunnelToTarget Process "${device}.${network}.ebx.asset" 80 "$local_port"
+}
+
 refreshBalservCodeArtifactTokens() {
     if [ -z "$BALSERV_DEPLOY_ACCOUNT_ID" ]; then
         echo "BALSERV_DEPLOY_ACCOUNT_ID is not set (export it in ~/.zshrc_work_local)"
