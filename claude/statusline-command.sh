@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Claude Code status line
-# Format: 🌐 [ssh://][session@]user@host | 📂 dir [branch] | 🤖 model | 📊 ctx% | Actions: [⌛🔄|✅❌]
+# Format: 🌐 [ssh://][session@]user@host | 📂 dir [branch] | 🤖 model [effort] | 📊 ctx% | Actions: [⌛🔄|✅❌]
 
 # Read JSON from stdin (provided by Claude Code)
 if [ -t 0 ]; then input=""; else input=$(cat 2>/dev/null) || true; fi
@@ -53,15 +53,19 @@ if [ -n "$git_branch" ]; then
 fi
 
 # ---------------------------------------------------------------------------
-# Section 3 - Model
+# Section 3 - Model & Effort
 # ---------------------------------------------------------------------------
+model="unknown"
+effort=""
 if [ -n "$input" ]; then
   model=$(echo "$input" | jq -r '.model.display_name // "unknown"')
-else
-  model="unknown"
+  effort=$(echo "$input" | jq -r '.effort.level // ""')
 fi
 
 model_segment="🤖 ${model}"
+if [ -n "$effort" ]; then
+  model_segment="${model_segment} [${effort}]"
+fi
 
 # ---------------------------------------------------------------------------
 # Section 4 - Context Window
