@@ -6,6 +6,7 @@ format = """\
   $git_commit\
   $git_status\
   $git_state\
+  ${custom.aws_profile}${custom.aws_profile_unset}\
   $custom\
   $jobs\
   $cmd_duration\
@@ -111,6 +112,18 @@ format = """\
   format = "[$output]($style)[@](bold #88C0D0)"
   style = "bold #E5E9F0"
 
+
+[custom.aws_profile]
+  command = 'echo "$AWS_PROFILE"'
+  when = '[ "$(cat "$HOME"/dotfiles/.profile 2>/dev/null)" = "work" ] && [ -n "$AWS_PROFILE" ]'
+  format = "[»](bold #81A1C1) [aws:$output]($style) "
+  style = "bold #E5E9F0"
+
+[custom.aws_profile_unset]
+  command = 'echo "aws:none"'
+  when = '[ "$(cat "$HOME"/dotfiles/.profile 2>/dev/null)" = "work" ] && [ -z "$AWS_PROFILE" ]'
+  format = "[»](bold #81A1C1) [$output]($style) "
+  style = "bold #E5E9F0"
 
 [custom.aws_sso_expired]
   command = "echo 🔒"
