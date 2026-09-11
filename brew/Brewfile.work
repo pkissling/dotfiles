@@ -3,8 +3,6 @@ tap "bufbuild/buf"
 brew "colima", restart_service: :changed
 # Pack, ship and run any application as a lightweight container
 brew "docker"
-# Tools for the WireGuard secure network tunnel
-brew "wireguard-tools"
 # The best way of working with Protocol Buffers.
 brew "bufbuild/buf/buf", trusted: true
 # AI-powered notepad for meetings
