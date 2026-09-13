@@ -39,7 +39,7 @@ tab_run() {
 }
 
 "${herdr}" tab rename "${tab}" claude
-"${herdr}" pane run "${pane}" bash -c 'claude --continue || claude'
+"${herdr}" pane run "${pane}" claude
 
 tab_run hunk hunk diff --watch
 tab_run nvim nvim .
