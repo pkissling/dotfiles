@@ -119,6 +119,8 @@ cask "obsidian"
 cask "raycast"
 # Music streaming service
 cask "spotify"
+# Mesh VPN based on WireGuard
+cask "tailscale-app"
 # Menu bar manager
 cask "thaw"
 # To-do list
