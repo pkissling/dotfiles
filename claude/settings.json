@@ -30,6 +30,8 @@
   "outputStyle": "Concise",
   "tui": "fullscreen",
   "skipDangerousModePermissionPrompt": true,
+  "editorMode": "vim",
+  "autoContinueAtUsageLimit": false,
   "crossSessionInbound": "accept",
   "inputNeededNotifEnabled": true,
   "agentPushNotifEnabled": true,
