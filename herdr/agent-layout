@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Layout for the focused pane's workspace, as four tabs:
-#   claude  the existing tab (renamed), runs claude, stays focused
-#   hunk    hunk diff --watch
-#   nvim    nvim .
-#   bash    plain shell
+# Layout for the focused pane's workspace, as five tabs, each labelled with its
+# switch shortcut number:
+#   claude   the existing tab (renamed), runs claude, stays focused
+#   hunk     hunk diff --watch
+#   nvim     nvim .
+#   lazygit  lazygit
+#   bash     plain shell
 #
 # Usage: agent-layout [repo-dir]
 # Invoked via the herdr keybinding in config.toml; repo-dir defaults to the
@@ -26,21 +28,38 @@ tab=$(jq -r '.result.pane.tab_id' <<<"${pane_json}")
 pane=$(jq -r '.result.pane.pane_id' <<<"${pane_json}")
 repo=${1:-$(jq -r '.result.pane.foreground_cwd' <<<"${pane_json}")}
 
+# Label a tab "<name> (<n>)", where n is the tab's own switch shortcut.
+tab_label() {
+  local tab_id=$1 name=$2 number
+  number=$("${herdr}" tab list --workspace "${workspace}" |
+    jq -r --arg tab "${tab_id}" '.result.tabs[] | select(.tab_id == $tab) | .number')
+  "${herdr}" tab rename "${tab_id}" "${name} (${number})"
+}
+
+# Create an unfocused, labelled tab and print its id.
+tab_new() {
+  local tab_id
+  tab_id=$("${herdr}" tab create --workspace "${workspace}" --cwd "${repo}" --no-focus | jq -r '.result.tab.tab_id')
+  tab_label "${tab_id}" "$1" >/dev/null
+  printf '%s\n' "${tab_id}"
+}
+
 # Create an unfocused tab and run a command in its pane.
 tab_run() {
   local label=$1
   shift
   local tab_id
-  tab_id=$("${herdr}" tab create --workspace "${workspace}" --cwd "${repo}" --label "${label}" --no-focus | jq -r '.result.tab.tab_id')
+  tab_id=$(tab_new "${label}")
   "${herdr}" pane list --workspace "${workspace}" |
     jq -r --arg tab "${tab_id}" '.result.panes[] | select(.tab_id == $tab) | .pane_id' |
     head -n1 |
     xargs -I{} "${herdr}" pane run {} "$@"
 }
 
-"${herdr}" tab rename "${tab}" claude
+tab_label "${tab}" claude
 "${herdr}" pane run "${pane}" claude
 
 tab_run hunk hunk diff --watch
 tab_run nvim nvim .
-"${herdr}" tab create --workspace "${workspace}" --cwd "${repo}" --label bash --no-focus >/dev/null
+tab_run lazygit lazygit
+tab_new bash >/dev/null
