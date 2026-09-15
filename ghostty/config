@@ -1,6 +1,7 @@
 background-opacity = 0.95
 confirm-close-surface = false
 copy-on-select = true
+cursor-opacity = 0
 cursor-style = bar
 cursor-style-blink = false
 font-family = JetBrainsMono Nerd Font
@@ -27,6 +28,5 @@ keybind = shift+enter=text:\n
 
 # shaders
 custom-shader = shaders/sonic_boom_cursor.glsl
-custom-shader = shaders/cursor_warp.glsl
-
-
+# custom-shader = shaders/cusor_warp.glsl
+custom-shader = shaders/cursor_glide.glsl
