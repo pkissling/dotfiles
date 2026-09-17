@@ -1,4 +1,7 @@
 {
+  "cursor_animation": {
+    "enabled": true
+  },
   "ssh_connections": [
     {
       "host": "coding",
