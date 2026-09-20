@@ -9,7 +9,7 @@ herdr() {
     return
   fi
   local host
-  host=$(printf '%s\n' localhost home-server coding | fzf --prompt='herdr> ') || return
+  host=$(printf '%s\n' localhost home-server | fzf --prompt='herdr> ') || return
   if [[ "${host}" == "localhost" ]]; then
     command herdr
   else

@@ -1,10 +1,7 @@
-tap "fi-153/tap", "https://github.com/FI-153/homebrew-tap", trusted: true
 # Play, record, convert, and stream select audio and video codecs
 brew "ffmpeg"
 # Image format providing lossless and lossy compression for web images
 brew "webp"
-# Wyoming STT + TTS server backed by Apple's Speech framework and Siri voices
-brew "fi-153/tap/wyoming-apple-speech", trusted: true
 # Tool to flash OS images to SD cards & USB drives
 cask "balenaetcher"
 # Voice and text chat software

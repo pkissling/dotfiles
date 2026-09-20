@@ -11,9 +11,3 @@ Host diskstation
 
 Host home-server
   User patrick
-
-Host patricks-mac-mini
-  User patrick
-
-Host coding
-  User patrick

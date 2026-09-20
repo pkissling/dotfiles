@@ -2,24 +2,6 @@
   "cursor_animation": {
     "enabled": true
   },
-  "ssh_connections": [
-    {
-      "host": "coding",
-      "args": [],
-      "projects": [
-        {
-          "paths": [
-            "/home/patrick"
-          ]
-        },
-        {
-          "paths": [
-            "/home/patrick/clock-weather-card/./"
-          ]
-        }
-      ]
-    }
-  ],
   "edit_predictions": {
     "provider": "copilot"
   },
