@@ -3,6 +3,8 @@ tap "bufbuild/buf"
 brew "colima", restart_service: :changed
 # Pack, ship and run any application as a lightweight container
 brew "docker"
+# Docker CLI plugin for extended build capabilities with BuildKit
+brew "docker-buildx"
 # Generic command-line non-JVM Apache Kafka producer and consumer
 brew "kcat"
 # The best way of working with Protocol Buffers.
