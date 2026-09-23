@@ -9,6 +9,10 @@ brew "docker-buildx"
 brew "kcat"
 # The best way of working with Protocol Buffers.
 brew "bufbuild/buf/buf", trusted: true
+# Managed client-based VPN service to securely access AWS resources
+cask "aws-vpn-client"
+# OpenAI's coding agent that runs in your terminal
+cask "codex"
 # AI-powered notepad for meetings
 cask "granola"
 # Plugin for AWS CLI to start and end sessions that connect to managed instances
