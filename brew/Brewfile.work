@@ -5,6 +5,8 @@ brew "colima", restart_service: :changed
 brew "docker"
 # Docker CLI plugin for extended build capabilities with BuildKit
 brew "docker-buildx"
+# Isolated development environments using Docker
+brew "docker-compose"
 # Generic command-line non-JVM Apache Kafka producer and consumer
 brew "kcat"
 # The best way of working with Protocol Buffers.
