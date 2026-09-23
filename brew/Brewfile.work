@@ -20,3 +20,4 @@ cask "session-manager-plugin"
 # Team communication and collaboration software
 cask "slack"
 mas "ExcalidrawZ", id: 6636493997
+uv "ebx"
