@@ -1,0 +1,14 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cat \"$HOME/.claude/CLAUDE.local.md\" 2>/dev/null || true"
+          }
+        ]
+      }
+    ]
+  }
+}

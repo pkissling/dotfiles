@@ -20,6 +20,8 @@ $ tree dotfiles
 │   └── # https://brew.sh/ - macOS package manager
 ├── claude
 │   └── # https://claude.ai - AI-powered coding agent by Anthropic
+├── codex
+│   └── # https://openai.com/codex - AI-powered coding agent by OpenAI
 ├── eza
 │   └── # https://github.com/ogham/exa - Modern replacement for ls
 ├── ghostty
