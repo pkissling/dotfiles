@@ -125,8 +125,6 @@ cask "thaw"
 cask "todoist-app"
 # Open-source code editor
 cask "visual-studio-code"
-# Native desktop client for WhatsApp
-cask "whatsapp"
 cask "zed"
 mas "1Password for Safari", id: 1569813296
 mas "Flow", id: 1423210932

@@ -23,3 +23,5 @@ cask "telegram"
 # Virtual machines UI using QEMU
 cask "utm"
 mas "Numbers", id: 409203825
+# Native desktop client for WhatsApp
+cask "whatsapp"
