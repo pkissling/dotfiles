@@ -52,6 +52,7 @@ export BAT_THEME="Nord"
 eval "$(atuin init zsh)"
 
 # zoxide
+export _ZO_EXCLUDE_DIRS="${HOME}:${HOME}/.herdr:${HOME}/.herdr/*"
 eval "$(zoxide init zsh)"
 
 # tools
