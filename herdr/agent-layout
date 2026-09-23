@@ -1,9 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Layout for the focused pane's workspace, as five tabs, each labelled with its
-# switch shortcut number:
-#   claude   the existing tab (renamed), runs claude, stays focused
+# Layout for the focused pane's workspace, as five tabs:
+#   claude   the existing tab, runs claude, stays focused
 #   hunk     hunk diff --watch
 #   nvim     nvim .
 #   lazygit  lazygit
@@ -24,42 +23,25 @@ herdr=${HERDR_BIN_PATH:-herdr}
 
 pane_json=$("${herdr}" pane current --current)
 workspace=$(jq -r '.result.pane.workspace_id' <<<"${pane_json}")
-tab=$(jq -r '.result.pane.tab_id' <<<"${pane_json}")
 pane=$(jq -r '.result.pane.pane_id' <<<"${pane_json}")
 repo=${1:-$(jq -r '.result.pane.foreground_cwd' <<<"${pane_json}")}
 
-# Label a tab "<name> (<n>)", where n is the tab's own switch shortcut.
-tab_label() {
-  local tab_id=$1 name=$2 number
-  number=$("${herdr}" tab list --workspace "${workspace}" |
-    jq -r --arg tab "${tab_id}" '.result.tabs[] | select(.tab_id == $tab) | .number')
-  "${herdr}" tab rename "${tab_id}" "${name} (${number})"
-}
-
-# Create an unfocused, labelled tab and print its id.
 tab_new() {
-  local tab_id
-  tab_id=$("${herdr}" tab create --workspace "${workspace}" --cwd "${repo}" --no-focus | jq -r '.result.tab.tab_id')
-  tab_label "${tab_id}" "$1" >/dev/null
-  printf '%s\n' "${tab_id}"
+  "${herdr}" tab create --workspace "${workspace}" --cwd "${repo}" --no-focus | jq -r '.result.tab.tab_id'
 }
 
-# Create an unfocused tab and run a command in its pane.
 tab_run() {
-  local label=$1
-  shift
   local tab_id
-  tab_id=$(tab_new "${label}")
+  tab_id=$(tab_new)
   "${herdr}" pane list --workspace "${workspace}" |
     jq -r --arg tab "${tab_id}" '.result.panes[] | select(.tab_id == $tab) | .pane_id' |
     head -n1 |
     xargs -I{} "${herdr}" pane run {} "$@"
 }
 
-tab_label "${tab}" claude
 "${herdr}" pane run "${pane}" claude
 
-tab_run hunk hunk diff --watch
-tab_run nvim nvim .
-tab_run lazygit lazygit
-tab_new bash >/dev/null
+tab_run hunk diff --watch
+tab_run nvim .
+tab_run lazygit
+tab_new >/dev/null
