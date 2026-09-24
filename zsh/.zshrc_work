@@ -79,11 +79,17 @@ refreshBalservCodeArtifactTokens() {
     export UV_PUBLISH_URL=https://${UV_INDEX_INTERNAL_USERNAME}:${UV_INDEX_INTERNAL_PASSWORD}@balserv-${BALSERV_DEPLOY_ACCOUNT_ID}.d.codeartifact.${region}.amazonaws.com/pypi/balserv/
 }
 
-alias assume-dev='export AWS_PROFILE=ebx-dev && echo "AWS_PROFILE=$AWS_PROFILE"'
-alias assume-test='export AWS_PROFILE=ebx-test && echo "AWS_PROFILE=$AWS_PROFILE"'
-alias assume-deploy='export AWS_PROFILE=ebx-deploy && echo "AWS_PROFILE=$AWS_PROFILE"'
-alias assume-prod='export AWS_PROFILE=ebx-prod && echo "AWS_PROFILE=$AWS_PROFILE"'
 alias awslogin="aws sso login --sso-session ebx"
+
+assumeProfile() {
+    "${HOME}"/dotfiles/starship/helper/aws_sso_expired_check.sh && awslogin
+    export AWS_PROFILE="$1" && echo "AWS_PROFILE=$AWS_PROFILE"
+}
+
+alias assume-dev='assumeProfile ebx-dev'
+alias assume-test='assumeProfile ebx-test'
+alias assume-deploy='assumeProfile ebx-deploy'
+alias assume-prod='assumeProfile ebx-prod'
 
 alias goodmorning="awslogin && up"
 
