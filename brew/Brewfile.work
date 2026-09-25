@@ -1,4 +1,5 @@
 tap "bufbuild/buf"
+tap "keidarcy/tap"
 # Container runtimes on MacOS (and Linux) with minimal setup
 brew "colima", restart_service: :changed
 # Pack, ship and run any application as a lightweight container
@@ -11,15 +12,20 @@ brew "docker-compose"
 brew "kcat"
 # The best way of working with Protocol Buffers.
 brew "bufbuild/buf/buf", trusted: true
+# e1s is a terminal application to simply browsing and manage AWS ECS resources, with a focus on Fargate. Inspired by k9s.
+brew "keidarcy/tap/e1s", trusted: true
 # Managed client-based VPN service to securely access AWS resources
 cask "aws-vpn-client"
 # OpenAI's coding agent that runs in your terminal
 cask "codex"
 # AI-powered notepad for meetings
 cask "granola"
+# GUI client for PostgreSQL databases
+cask "postico"
 # Plugin for AWS CLI to start and end sessions that connect to managed instances
 cask "session-manager-plugin"
 # Team communication and collaboration software
 cask "slack"
 mas "ExcalidrawZ", id: 6636493997
+mas "Numbers", id: 361304891
 uv "ebx"
