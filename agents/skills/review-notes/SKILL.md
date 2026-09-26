@@ -18,7 +18,7 @@ For every point:
    it implies (file and symbol). If the fix is obvious, say what you will do; do not list options.
 3. Ask a question only when two readings lead to materially different changes. One question,
    then stop. Otherwise state your assumption and move on.
-4. If the point conflicts with a repo rule (CLAUDE.md, an ADR, a synth test) or with an earlier
+4. If the point conflicts with a repo rule (AGENTS.md/CLAUDE.md, an ADR, a synth test) or with an earlier
    point, say so now in one sentence. Do not relitigate it later.
 5. End with a short prompt for the next point ("Point N+1?"). Nothing else.
 

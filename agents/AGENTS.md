@@ -1,4 +1,4 @@
-# Claude.md
+# AGENTS.md
 
 ## Workflow
 
