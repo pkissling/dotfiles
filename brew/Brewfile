@@ -98,6 +98,8 @@ cask "1password"
 cask "boop"
 # Anthropic's official Claude AI desktop app
 cask "claude"
+# OpenAI's coding agent that runs in your terminal
+cask "codex"
 # Web browser
 cask "firefox"
 cask "font-jetbrains-mono-nerd-font"
