@@ -12,7 +12,7 @@ ln -sfv "${HOME}"/dotfiles/herdr/auto-title.env "${HOME}"/.config/herdr-auto-tit
 while read -r repo; do
   ref=$(git ls-remote "https://github.com/${repo}.git" HEAD | cut -f1)
   if ! herdr plugin list | grep -q "github:${repo}@${ref}"; then
-    herdr plugin install --yes --ref "${ref}" "${repo}"
+    herdr plugin install "${repo}" --yes --ref "${ref}"
   fi
 done <"${HOME}"/dotfiles/herdr/plugins.list
 
