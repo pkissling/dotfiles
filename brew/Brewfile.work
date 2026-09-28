@@ -16,8 +16,6 @@ brew "bufbuild/buf/buf", trusted: true
 brew "keidarcy/tap/e1s", trusted: true
 # Managed client-based VPN service to securely access AWS resources
 cask "aws-vpn-client"
-# OpenAI's coding agent that runs in your terminal
-cask "codex"
 # AI-powered notepad for meetings
 cask "granola"
 # GUI client for PostgreSQL databases
