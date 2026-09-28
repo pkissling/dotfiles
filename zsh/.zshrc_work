@@ -91,6 +91,12 @@ alias assume-test='assumeProfile ebx-test'
 alias assume-deploy='assumeProfile ebx-deploy'
 alias assume-prod='assumeProfile ebx-prod'
 
+e1s() {
+    local env
+    env=$(printf "dev\nprod\n" | fzf --prompt="e1s env> " --height=~10) || return 1
+    assumeProfile "ebx-${env}" && command e1s "$@"
+}
+
 alias goodmorning="awslogin && up"
 
 # hosts and account ids live outside the public repo
