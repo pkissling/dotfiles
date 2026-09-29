@@ -24,24 +24,27 @@ herdr=${HERDR_BIN_PATH:-herdr}
 pane_json=$("${herdr}" pane current --current)
 workspace=$(jq -r '.result.pane.workspace_id' <<<"${pane_json}")
 pane=$(jq -r '.result.pane.pane_id' <<<"${pane_json}")
+tab=$(jq -r '.result.pane.tab_id' <<<"${pane_json}")
 repo=${1:-$(jq -r '.result.pane.foreground_cwd' <<<"${pane_json}")}
 
 tab_new() {
-  "${herdr}" tab create --workspace "${workspace}" --cwd "${repo}" --no-focus | jq -r '.result.tab.tab_id'
+  "${herdr}" tab create --workspace "${workspace}" --cwd "${repo}" --label "$1" --no-focus | jq -r '.result.tab.tab_id'
 }
 
 tab_run() {
   local tab_id
-  tab_id=$(tab_new)
+  tab_id=$(tab_new "$1")
+  shift
   "${herdr}" pane list --workspace "${workspace}" |
     jq -r --arg tab "${tab_id}" '.result.panes[] | select(.tab_id == $tab) | .pane_id' |
     head -n1 |
     xargs -I{} "${herdr}" pane run {} "$@"
 }
 
+"${herdr}" tab rename "${tab}" "1 · claude" >/dev/null
 "${herdr}" pane run "${pane}" claude
 
-tab_run hunk diff --watch
-tab_run nvim .
-tab_run lazygit
-tab_new >/dev/null
+tab_run "2 · hunk" hunk diff --watch
+tab_run "3 · nvim" nvim .
+tab_run "4 · lazygit" lazygit
+tab_new "5 · bash" >/dev/null

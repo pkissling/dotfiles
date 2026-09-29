@@ -2,11 +2,10 @@
 set -ex
 
 # ensure config directory exists
-mkdir -p "${HOME}"/.config/herdr "${HOME}"/.config/herdr-auto-title
+mkdir -p "${HOME}"/.config/herdr
 
 # create symlinks
 ln -sfv "${HOME}"/dotfiles/herdr/config.toml "${HOME}"/.config/herdr/config.toml
-ln -sfv "${HOME}"/dotfiles/herdr/auto-title.env "${HOME}"/.config/herdr-auto-title/config.env
 
 # herdr has no plugin update, so reinstalling at upstream HEAD is how a plugin moves forward
 while read -r repo; do
@@ -16,8 +15,7 @@ while read -r repo; do
   fi
 done <"${HOME}"/dotfiles/herdr/plugins.list
 
-# a running server only picks up config changes on explicit reload, and auto-title reads its config only at startup
+# a running server only picks up config changes on explicit reload
 if command -v herdr >/dev/null && herdr status server >/dev/null 2>&1; then
   herdr server reload-config || true
-  herdr plugin action invoke herdr.auto-title.restart || true
 fi
