@@ -131,7 +131,6 @@ cask "zed"
 go "cmd/go"
 go "cmd/gofmt"
 mas "1Password for Safari", id: 1569813296
-mas "Flow", id: 1423210932
 mas "Monosnap", id: 540348655
 mas "The Unarchiver", id: 425424353
 mas "Todoist", id: 585829637
