@@ -26,7 +26,9 @@
     "command": "~/.claude/statusline-command.sh",
     "padding": 0
   },
-  "enabledPlugins": {},
+  "enabledPlugins": {
+    "datadog@claude-plugins-official": true
+  },
   "extraKnownMarketplaces": {},
   "outputStyle": "Concise",
   "tui": "fullscreen",
