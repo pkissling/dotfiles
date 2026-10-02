@@ -3,7 +3,7 @@ set -euo pipefail
 
 # Layout for the focused pane's workspace, as five tabs:
 #   claude   the existing tab, runs claude, stays focused
-#   hunk     hunk diff --watch
+#   hunk     hunk diff HEAD --watch
 #   nvim     nvim .
 #   lazygit  lazygit
 #   bash     plain shell
@@ -44,7 +44,7 @@ tab_run() {
 "${herdr}" tab rename "${tab}" "1 · claude" >/dev/null
 "${herdr}" pane run "${pane}" claude
 
-tab_run "2 · hunk" hunk diff --watch
+tab_run "2 · hunk" "hunk diff HEAD --watch || echo 'No git repo available'"
 tab_run "3 · nvim" nvim .
 tab_run "4 · lazygit" lazygit
 tab_new "5 · bash" >/dev/null
