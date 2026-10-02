@@ -86,10 +86,10 @@ assumeProfile() {
     export AWS_PROFILE="$1" && echo "AWS_PROFILE=$AWS_PROFILE"
 }
 
-alias assume-dev='assumeProfile ebx-dev'
-alias assume-test='assumeProfile ebx-test'
-alias assume-deploy='assumeProfile ebx-deploy'
-alias assume-prod='assumeProfile ebx-prod'
+for profile in ${(f)"$(sed -n 's/^\[profile \(ebx-.*\)\]$/\1/p' ~/.aws/config 2>/dev/null)"}; do
+    alias "assume-${profile#ebx-}=assumeProfile ${profile}"
+done
+unset profile
 
 e1s() {
     local env
