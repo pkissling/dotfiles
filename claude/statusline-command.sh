@@ -1,221 +1,122 @@
 #!/usr/bin/env bash
-# Claude Code status line
-# Format: 🌐 [ssh://][session@]user@host | 📂 dir [branch] | 🤖 model [effort] | 📊 ctx% | Actions: [⌛🔄|✅❌]
 
-# Read JSON from stdin (provided by Claude Code)
-if [ -t 0 ]; then input=""; else input=$(cat 2>/dev/null) || true; fi
+if [ -t 0 ]; then input='{}'; else input=$(cat 2>/dev/null) || input='{}'; fi
 
-# ---------------------------------------------------------------------------
-# Section 1 - Connection: ssh://<tmux-session>@<host>
-# ---------------------------------------------------------------------------
-conn_segment=""
-host_name=$(hostname -s 2>/dev/null || echo "$HOSTNAME")
-user_name=$(whoami 2>/dev/null || echo "$USER")
-is_ssh=""
-tmux_session=""
+# Unit separator instead of tab: bash `read` collapses consecutive tabs, dropping empty fields.
+IFS=$'\x1f' read -r cwd model effort context added removed < <(jq -r '[
+  (.cwd // ""),
+  (.model.display_name // "unknown"),
+  (.effort.level // ""),
+  (.context_window.used_percentage // 0 | floor | tostring),
+  (.cost.total_lines_added // 0 | tostring),
+  (.cost.total_lines_removed // 0 | tostring)
+] | join("\u001f")' <<<"$input" 2>/dev/null)
+cwd=${cwd:-$PWD}
+context=${context:-0}
 
-if [ -n "$SSH_CONNECTION" ] || [ -n "$SSH_TTY" ] || [ -n "$SSH_CLIENT" ]; then
-  is_ssh=1
+# Nord palette, bold like the starship prompt.
+style() { printf '\033[1;38;2;%sm' "$1"; }
+reset=$'\033[0m'
+text=$(style '229;233;240')
+muted=$'\033[38;2;216;222;233m'
+blue=$(style '129;161;193')
+green=$(style '163;190;140')
+yellow=$(style '235;203;139')
+red=$(style '191;97;106')
+sep="${blue}»${reset}"
+
+segments=()
+
+segments+=("${text}${cwd##*/}${reset}")
+
+branch="" root="" ahead=0 behind=0 status=""
+while IFS= read -r line; do
+  case "$line" in
+    "# branch.head "*) branch=${line#\# branch.head } ;;
+    "# branch.ab "*) read -r _ _ ahead behind <<<"$line"; ahead=${ahead#+}; behind=${behind#-} ;;
+    "? "*) [[ $status == *\?* ]] || status="${status}?" ;;
+    [12u]" "*)
+      [[ ${line:2:1} != . && $status != *+* ]] && status="${status}+"
+      [[ ${line:3:1} != . && $status != *!* ]] && status="${status}!"
+      ;;
+  esac
+done < <(git -C "$cwd" --no-optional-locks status --porcelain=v2 --branch 2>/dev/null)
+if [ -n "$branch" ]; then
+  root=$(git -C "$cwd" --no-optional-locks rev-parse --show-toplevel 2>/dev/null)
+  [ "$ahead" -gt 0 ] && status="${status}⇡${ahead}"
+  [ "$behind" -gt 0 ] && status="${status}⇣${behind}"
+  git_segment="${text}${branch}${reset}"
+  [ -n "$status" ] && git_segment="${git_segment} ${red}[${status}]${reset}"
+  segments+=("$git_segment")
 fi
 
-if [ -n "$TMUX" ]; then
-  tmux_session=$(tmux display-message -p '#S' 2>/dev/null) || true
+if [ -n "$AWS_PROFILE" ] && [ "$(cat "${HOME}"/dotfiles/.profile 2>/dev/null)" = "work" ]; then
+  case "$AWS_PROFILE" in
+    *prod*) aws_segment="${red}aws:${AWS_PROFILE}${reset}" ;;
+    *) aws_segment="${text}aws:${AWS_PROFILE}${reset}" ;;
+  esac
+  account=$(awk -v section="[profile ${AWS_PROFILE}]" '$0 == section { found = 1; next } /^\[/ { found = 0 } found && $1 == "sso_account_id" { print $3; exit }' ~/.aws/config 2>/dev/null)
+  [ -n "$account" ] && aws_segment="${aws_segment} ${blue}${account}${reset}"
+  "${HOME}"/dotfiles/starship/helper/aws_sso_expired_check.sh && aws_segment="${aws_segment} 🔒"
+  segments+=("$aws_segment")
 fi
 
-# Format: ssh://session@user@host (components omitted when not applicable)
-conn_segment=""
-if [ -n "$is_ssh" ]; then
-  conn_segment="ssh://"
-fi
-if [ -n "$tmux_session" ]; then
-  conn_segment="${conn_segment}${tmux_session}@"
-fi
-conn_segment="🌐 ${conn_segment}${user_name}@${host_name}"
+model_segment="${text}${model}${reset}"
+[ -n "$effort" ] && model_segment="${model_segment} ${muted}${effort}${reset}"
+segments+=("$model_segment")
 
-# ---------------------------------------------------------------------------
-# Section 2 - Working Directory & Branch
-# ---------------------------------------------------------------------------
-if [ -n "$input" ]; then
-  cwd=$(echo "$input" | jq -r '.cwd // ""')
-else
-  cwd="$(pwd)"
+if [ "$context" -ge 80 ]; then ctx_color=$red
+elif [ "$context" -ge 50 ]; then ctx_color=$yellow
+else ctx_color=$green
+fi
+filled=$(( (context + 5) / 10 ))
+printf -v on '%*s' "$filled" ''
+printf -v off '%*s' $((10 - filled)) ''
+segments+=("${ctx_color}${on// /▰}${off// /▱}${reset} ${text}${context}%${reset}")
+
+if [ "${added:-0}" -gt 0 ] || [ "${removed:-0}" -gt 0 ]; then
+  segments+=("${green}+${added}${reset} ${red}-${removed}${reset}")
 fi
 
-dir_name="${cwd##*/}"
-git_branch=""
-if [ -n "$cwd" ]; then
-  git_branch=$(git -C "$cwd" --no-optional-locks rev-parse --abbrev-ref HEAD 2>/dev/null) || true
-fi
+actions_fetch() {
+  local slug cache now runs icons
+  [ -d "${root}/.github/workflows" ] || return 1
+  slug=$(git -C "$cwd" --no-optional-locks remote get-url origin 2>/dev/null | sed -E 's|.*github\.com[:/]||; s|\.git$||')
+  [ -n "$slug" ] || return 1
 
-dir_segment="📂 ${dir_name}"
-if [ -n "$git_branch" ]; then
-  dir_segment="${dir_segment} [${git_branch}]"
-fi
-
-# ---------------------------------------------------------------------------
-# Section 3 - Model & Effort
-# ---------------------------------------------------------------------------
-model="unknown"
-effort=""
-if [ -n "$input" ]; then
-  model=$(echo "$input" | jq -r '.model.display_name // "unknown"')
-  effort=$(echo "$input" | jq -r '.effort.level // ""')
-fi
-
-model_segment="🤖 ${model}"
-if [ -n "$effort" ]; then
-  model_segment="${model_segment} [${effort}]"
-fi
-
-# ---------------------------------------------------------------------------
-# Section 4 - Context Window
-# ---------------------------------------------------------------------------
-if [ -n "$input" ]; then
-  context_raw=$(echo "$input" | jq -r '.context_window.used_percentage // empty')
-  if [ -n "$context_raw" ]; then
-    context=$(printf '%.0f' "$context_raw")
-  else
-    context="0"
-  fi
-else
-  context="0"
-fi
-
-context_segment="📊 ${context}%"
-
-# ---------------------------------------------------------------------------
-# Section 5 - GitHub Actions: per-commit status for recent commits
-# Only shown when inside a git repo that has .github/workflows
-# Shows: [⌛queued 🔄running | ✅pass ❌fail] — always 5 completed results
-# ---------------------------------------------------------------------------
-_actions_fetch() {
-  local cwd="$1"
-  local branch="$2"
-
-  # Only proceed if .github/workflows exists in this repo
-  local repo_root
-  repo_root=$(git -C "$cwd" --no-optional-locks rev-parse --show-toplevel 2>/dev/null) || return 1
-  [ -d "${repo_root}/.github/workflows" ] || return 1
-
-  # Resolve owner/repo slug from the origin remote
-  local remote_url
-  remote_url=$(git -C "$cwd" --no-optional-locks remote get-url origin 2>/dev/null) || return 1
-  local repo_slug
-  repo_slug=$(echo "$remote_url" \
-    | sed -E 's|.*github\.com[:/]||; s|\.git$||')
-  [ -n "$repo_slug" ] || return 1
-
-  # Cache per repo+branch; refresh every 60 seconds
-  local cache_file
-  cache_file="/tmp/.statusline_actions_$(echo "${repo_slug}__${branch}" | tr '/' '_' | tr ':' '_').cache"
-  local cache_ttl=60
-  local now
+  cache="${TMPDIR:-/tmp}/.statusline_actions_$(tr '/:' '__' <<<"${slug}__${branch}").cache"
   now=$(date +%s)
-
-  if [ -f "$cache_file" ]; then
-    local cached_at
-    cached_at=$(head -1 "$cache_file" 2>/dev/null) || cached_at=0
-    if [ $((now - cached_at)) -lt $cache_ttl ]; then
-      tail -n +2 "$cache_file"
-      return 0
-    fi
+  if [ -f "$cache" ] && [ $((now - $(head -1 "$cache"))) -lt 60 ]; then
+    tail -n +2 "$cache"
+    return 0
   fi
 
-  # Single API call: fetch recent workflow runs for this branch
-  local response
-  response=$(gh api "repos/${repo_slug}/actions/runs?branch=${branch}&per_page=50" \
-    --jq '[.workflow_runs[] | {sha: .head_sha, status: .status, conclusion: .conclusion}]' \
-    2>/dev/null) || return 1
+  runs=$(gh api "repos/${slug}/actions/runs?branch=${branch}&per_page=50" \
+    --jq '[.workflow_runs[] | {sha: .head_sha, status, conclusion}]' 2>/dev/null) || return 1
 
-  [ -n "$response" ] && [ "$response" != "[]" ] || return 1
+  icons=$(jq -r --arg green "$green" --arg red "$red" --arg yellow "$yellow" --arg reset "$reset" '
+    (map(.sha) | reduce .[] as $s ([]; if index([$s]) then . else . + [$s] end)) as $order
+    | group_by(.sha) | map({key: .[0].sha, value: (
+        if any(.status != "completed") then "pending"
+        elif any(.conclusion == "failure" or .conclusion == "cancelled" or .conclusion == "timed_out") then "fail"
+        else "pass" end)}) | from_entries as $state
+    | [$order[] | $state[.]] as $all
+    | ([$all[] | select(. == "pending")] | length) as $pending
+    | ([$all[] | select(. != "pending")][:5] | map(if . == "pass" then $green + "●" else $red + "●" end) | join("")) as $done
+    | (if $pending > 0 then $yellow + "◌" * $pending + " " else "" end) + $done + $reset
+  ' <<<"$runs" 2>/dev/null) || return 1
+  [ -n "$icons" ] || return 1
 
-  # Classify each commit: group runs by sha, determine per-commit status
-  # Output one line per unique commit in order: "queued", "running", "pass", or "fail"
-  local statuses
-  statuses=$(echo "$response" | jq -r '
-    . as $runs |
-
-    # Preserve commit order by first appearance
-    [foreach $runs[] as $r (
-      {seen: {}, order: []};
-      if .seen[$r.sha] then . else .seen[$r.sha] = true | .order += [$r.sha] end;
-      .
-    )] | last | .order as $order |
-
-    # Group all runs by sha
-    [$runs | group_by(.sha)[] | {
-      sha: .[0].sha,
-      has_queued: ([.[] | select(.status == "queued" or .status == "waiting")] | length > 0),
-      has_running: ([.[] | select(.status == "in_progress")] | length > 0),
-      has_pending: ([.[] | select(.status != "completed")] | length > 0),
-      has_failed: ([.[] | select(.conclusion == "failure" or .conclusion == "cancelled" or .conclusion == "timed_out")] | length > 0)
-    }] as $grouped |
-
-    # Emit in original order
-    $order[] as $sha |
-    ($grouped[] | select(.sha == $sha)) |
-    if .has_queued then "queued"
-    elif .has_running then "running"
-    elif .has_pending then "pending"
-    elif .has_failed then "fail"
-    else "pass"
-    end
-  ' 2>/dev/null) || return 1
-
-  [ -n "$statuses" ] || return 1
-
-  # Build icons: queued/running before |, completed after |
-  local queued_icons=""
-  local running_icons=""
-  local completed_icons=""
-  local completed_count=0
-
-  while IFS= read -r status; do
-    case "$status" in
-      queued)  queued_icons="${queued_icons}⌛" ;;
-      running) running_icons="${running_icons}🔄" ;;
-      pending) running_icons="${running_icons}🔄" ;;
-      pass)
-        if [ $completed_count -lt 5 ]; then
-          completed_icons="${completed_icons}✅"
-          completed_count=$((completed_count + 1))
-        fi
-        ;;
-      fail)
-        if [ $completed_count -lt 5 ]; then
-          completed_icons="${completed_icons}❌"
-          completed_count=$((completed_count + 1))
-        fi
-        ;;
-    esac
-  done <<< "$statuses"
-
-  [ -n "$queued_icons" ] || [ -n "$running_icons" ] || [ -n "$completed_icons" ] || return 1
-
-  local in_progress="${queued_icons}${running_icons}"
-  local result
-  if [ -n "$in_progress" ]; then
-    result="${in_progress}|${completed_icons}"
-  else
-    result="${completed_icons}"
-  fi
-  { echo "$now"; echo "$result"; } > "$cache_file" 2>/dev/null
-  echo "$result"
+  printf '%s\n%s\n' "$now" "$icons" >"$cache" 2>/dev/null
+  echo "$icons"
 }
 
-actions_segment=""
-if [ -n "$cwd" ] && [ -n "$git_branch" ]; then
-  if commit_icons=$(_actions_fetch "$cwd" "$git_branch") && [ -n "$commit_icons" ]; then
-    actions_segment=" | Actions: [${commit_icons}]"
-  fi
+if [ -n "$branch" ] && actions=$(actions_fetch) && [ -n "$actions" ]; then
+  segments+=("${text}ci${reset} ${actions}")
 fi
 
-# ---------------------------------------------------------------------------
-# Assemble final output
-# ---------------------------------------------------------------------------
-output=""
-if [ -n "$conn_segment" ]; then
-  output="${conn_segment} | "
-fi
-output="${output}${dir_segment} | ${model_segment} | ${context_segment}${actions_segment}"
-echo "$output"
+out=${segments[0]}
+for s in "${segments[@]:1}"; do
+  out="${out} ${sep} ${s}"
+done
+printf '%s\n' "$out"
