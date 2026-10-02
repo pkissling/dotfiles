@@ -17,4 +17,4 @@
 
 ## Machine-local
 
-@~/.claude/CLAUDE.local.md
+@~/.agents/AGENTS.local.md

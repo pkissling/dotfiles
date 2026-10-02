@@ -1,4 +1,4 @@
-default: atuin brew claude codex eza ghostty git gnupg helix herdr hunk mise nvim ssh starship vscode zed zsh
+default: agents atuin brew claude codex eza ghostty git gnupg helix herdr hunk mise nvim ssh starship vscode zed zsh
 
 bootstrap:
 	# ln will fail if repo was already checked out in ~/dotfiles
@@ -7,6 +7,11 @@ ifeq (,$(wildcard ${HOME}/dotfiles/.profile))
 	@echo "Usage (private/work)?"
 	@read line; echo $$line > ${HOME}/dotfiles/.profile
 endif
+.PHONY: agents
+agents: bootstrap
+	@chmod +x agents/install.sh
+	@./agents/install.sh
+
 
 .PHONY: atuin
 atuin: bootstrap zsh
@@ -19,12 +24,12 @@ brew: bootstrap
 	@./brew/install.sh
 
 .PHONY: claude
-claude: bootstrap
+claude: bootstrap agents
 	@chmod +x claude/install.sh
 	@./claude/install.sh
 
 .PHONY: codex
-codex: bootstrap brew
+codex: bootstrap brew agents
 	@chmod +x codex/install.sh
 	@./codex/install.sh
 
