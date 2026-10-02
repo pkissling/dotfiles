@@ -4,8 +4,17 @@
       {
         "hooks": [
           {
-            "type": "command",
-            "command": "cat \"$HOME/.claude/CLAUDE.local.md\" 2>/dev/null || true"
+            "command": "cat \"$HOME/.agents/AGENTS.local.md\" 2>/dev/null || true",
+            "type": "command"
+          }
+        ]
+      },
+      {
+        "hooks": [
+          {
+            "command": "bash \"$HOME/.codex/herdr-agent-state.sh\" session",
+            "timeout": 10,
+            "type": "command"
           }
         ]
       }
