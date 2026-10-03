@@ -1,7 +1,5 @@
 # Play, record, convert, and stream select audio and video codecs
 brew "ffmpeg"
-# Image format providing lossless and lossy compression for web images
-brew "webp"
 # Tool to flash OS images to SD cards & USB drives
 cask "balenaetcher"
 # Voice and text chat software
@@ -18,10 +16,6 @@ cask "lulu"
 cask "orbstack"
 # VPN client focusing on security
 cask "protonvpn"
-# Messaging app with a focus on speed and security
-cask "telegram"
-# Virtual machines UI using QEMU
-cask "utm"
 # Native desktop client for WhatsApp
 cask "whatsapp"
 mas "Numbers", id: 409203825
