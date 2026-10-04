@@ -72,7 +72,7 @@ fi
 filled=$(( (context + 5) / 10 ))
 printf -v on '%*s' "$filled" ''
 printf -v off '%*s' $((10 - filled)) ''
-segments+=("${ctx_color}${on// /▰}${off// /▱}${reset} ${text}${context}%${reset}")
+segments+=("${ctx_color}${on// /▰}${off// /▱}${reset}  ${text}${context}%${reset}")
 
 if [ "${added:-0}" -gt 0 ] || [ "${removed:-0}" -gt 0 ]; then
   segments+=("${green}+${added}${reset} ${red}-${removed}${reset}")
