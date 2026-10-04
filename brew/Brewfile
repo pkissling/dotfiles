@@ -111,8 +111,6 @@ cask "google-chrome"
 cask "gpg-suite"
 # App to manage software development and track bugs
 cask "linear"
-# Software for Logitech devices
-cask "logi-options+"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
 # Control your tools with a few keystrokes
