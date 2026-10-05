@@ -27,9 +27,15 @@ sep="${blue}»${reset}"
 
 segments=()
 
-segments+=("${text}${cwd##*/}${reset}")
+dir_segment="${text}${cwd##*/}${reset}"
+{ read -r root; read -r common; } < <(git -C "$cwd" --no-optional-locks rev-parse --path-format=absolute --show-toplevel --git-common-dir 2>/dev/null)
+if [ -n "$common" ] && [ "${common%/.git}" != "$root" ]; then
+  repo=${common%/.git}
+  dir_segment="${text}${repo##*/}${reset} ${muted}${cwd#"${root%/*}"/}${reset}"
+fi
+segments+=("$dir_segment")
 
-branch="" root="" ahead=0 behind=0 status=""
+branch="" ahead=0 behind=0 status=""
 while IFS= read -r line; do
   case "$line" in
     "# branch.head "*) branch=${line#\# branch.head } ;;
@@ -42,7 +48,6 @@ while IFS= read -r line; do
   esac
 done < <(git -C "$cwd" --no-optional-locks status --porcelain=v2 --branch 2>/dev/null)
 if [ -n "$branch" ]; then
-  root=$(git -C "$cwd" --no-optional-locks rev-parse --show-toplevel 2>/dev/null)
   [ "$ahead" -gt 0 ] && status="${status}⇡${ahead}"
   [ "$behind" -gt 0 ] && status="${status}⇣${behind}"
   git_segment="${text}${branch}${reset}"
