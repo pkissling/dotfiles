@@ -10,6 +10,8 @@ brew "docker-buildx"
 brew "docker-compose"
 # Generic command-line non-JVM Apache Kafka producer and consumer
 brew "kcat"
+# Cloud native development platform
+brew "pulumi"
 # The best way of working with Protocol Buffers.
 brew "bufbuild/buf/buf", trusted: true
 # e1s is a terminal application to simply browsing and manage AWS ECS resources, with a focus on Fargate. Inspired by k9s.
