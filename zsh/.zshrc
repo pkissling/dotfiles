@@ -22,9 +22,6 @@ skip_global_compinit=1
 
 source $ZSH/oh-my-zsh.sh
 
-# zsh-autosuggestions
-source "${HOMEBREW_PREFIX}"/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
 # zsh-syntax-highlighting
 source "${HOMEBREW_PREFIX}"/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
@@ -72,3 +69,5 @@ alias up="cd ${HOME}/dotfiles && git pull --rebase origin master && make"
 
 # source usage specific configuration
 source ~/.zshrc_profile_specific
+export DEJA_EMPTY=off
+if [[ -r "$HOME/.local/share/deja/init.zsh" ]]; then source "$HOME/.local/share/deja/init.zsh"; else eval "$(deja init zsh)"; fi
