@@ -111,6 +111,8 @@ cask "google-chrome"
 cask "gpg-suite"
 # App to manage software development and track bugs
 cask "linear"
+# Screenshot and screen recording tool
+cask "macshot"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
 # Control your tools with a few keystrokes
@@ -129,7 +131,6 @@ cask "zed"
 go "cmd/go"
 go "cmd/gofmt"
 mas "1Password for Safari", id: 1569813296
-mas "Monosnap", id: 540348655
 mas "The Unarchiver", id: 425424353
 mas "Todoist 2", id: 585829637
 mas "Xcode", id: 497799835
