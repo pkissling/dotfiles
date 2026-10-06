@@ -18,7 +18,8 @@
 
 ## Testing
 
-* When a change is observable through an API, test it through that API: real requests against the full stack (routing, auth, validation, error mapping, real database), mocking only external services and auth. Prefer this over service- or repository-level tests, which skip the layers where bugs actually surface and are clumsier to set up. Drop to a lower-level test only for logic the API cannot reach or to cover edge cases that would be impractical over HTTP.
+* When a change is observable through an API, test it through that API: real requests against the full stack (routing, auth, validation, error mapping, real database), mocking only external services and auth.
+  Prefer this over service- or repository-level tests, which skip the layers where bugs actually surface and are clumsier to set up. Drop to a lower-level test only for logic the API cannot reach or to cover edge cases that would be impractical over HTTP.
 
 ## Machine-local
 
