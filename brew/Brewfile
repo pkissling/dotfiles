@@ -16,8 +16,6 @@ brew "bat"
 brew "choose-rust"
 # Cross-platform make
 brew "cmake"
-# Predictive ghost-text autosuggestions for zsh
-brew "deja"
 # Modern, maintained replacement for ls
 brew "eza"
 # Simple, fast and user-friendly alternative to find
@@ -86,6 +84,8 @@ brew "watch"
 brew "wget"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
+# Fish-like fast/unobtrusive autosuggestions for zsh
+brew "zsh-autosuggestions"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
 # UNIX shell (command interpreter)
