@@ -16,6 +16,7 @@ tab_bar_right_separator = " · "
 agent_panel_sort = "priority"
 status_indicators = "symbols"
 show_agent_labels_on_pane_borders = true
+prompt_new_workspace_name = true
 [ui.toast]
 delivery = "terminal"
 
