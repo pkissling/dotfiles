@@ -23,11 +23,18 @@ delivery = "terminal"
 [keys]
 split_vertical = 'prefix+%'
 split_horizontal = 'prefix+"'
+close_workspace = 'prefix+alt+d'
 
 [[keys.command]]
 key = "prefix+a"
 type = "shell"
 command = "~/dotfiles/herdr/agent-layout"
+
+[[keys.command]]
+key = "prefix+shift+d"
+type = "shell"
+command = "~/dotfiles/herdr/close-workspace"
+description = "delete worktree or close workspace"
 
 [ui.sidebar.agents.rows_by_agent]
 claude = [

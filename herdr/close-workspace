@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+set -uo pipefail
+
+# Deletes the active workspace's worktree checkout (and its workspace) if it is
+# a linked worktree, otherwise just closes the workspace.
+# Invoked via the herdr keybinding in config.toml.
+
+herdr=${HERDR_BIN_PATH:-herdr}
+workspace=${HERDR_ACTIVE_WORKSPACE_ID:?}
+
+is_worktree=$("${herdr}" workspace get "${workspace}" | jq -r '.result.workspace.worktree.is_linked_worktree // false')
+
+if [[ "${is_worktree}" == "true" ]]; then
+  # No --force: git refuses dirty checkouts, so uncommitted work is never lost.
+  if ! out=$("${herdr}" worktree remove --workspace "${workspace}" 2>&1); then
+    "${herdr}" notification show "Worktree not deleted" --body "${out}"
+  fi
+else
+  "${herdr}" workspace close "${workspace}"
+fi
