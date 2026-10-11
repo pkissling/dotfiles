@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+set -uo pipefail
+
+# Creates a worktree from the active workspace; from a linked worktree it uses
+# the parent repo, which herdr's built-in new_worktree silently ignores.
+# Invoked as a popup via the herdr keybinding in config.toml.
+
+herdr=${HERDR_BIN_PATH:-herdr}
+workspace=${HERDR_ACTIVE_WORKSPACE_ID:?}
+
+info=$("${herdr}" workspace get "${workspace}")
+if [[ $(jq -r '.result.workspace.worktree.is_linked_worktree // false' <<<"${info}") == "true" ]]; then
+  root=$(jq -r '.result.workspace.worktree.repo_root' <<<"${info}")
+  parent=$("${herdr}" workspace list | jq -r --arg root "${root}" \
+    'first(.result.workspaces[] | select(.worktree.checkout_path == $root) | .workspace_id) // empty')
+  if [[ -n "${parent}" ]]; then
+    source=(--workspace "${parent}")
+  else
+    source=(--cwd "${root}")
+  fi
+else
+  source=(--workspace "${workspace}")
+fi
+
+read -r -p "New worktree branch: " branch
+[[ -n "${branch}" ]] || exit 0
+
+if ! out=$("${herdr}" worktree create "${source[@]}" --branch "${branch}" --focus 2>&1); then
+  echo "${out}"
+  read -r -p "Press enter to close"
+fi

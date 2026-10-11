@@ -23,11 +23,19 @@ delivery = "terminal"
 [keys]
 split_vertical = 'prefix+%'
 split_horizontal = 'prefix+"'
+new_worktree = 'prefix+alt+g'
 
 [[keys.command]]
 key = "prefix+a"
 type = "shell"
 command = "~/dotfiles/herdr/agent-layout"
+
+[[keys.command]]
+key = "prefix+shift+g"
+type = "popup"
+command = "~/dotfiles/herdr/new-worktree"
+description = "new worktree (from parent repo in a worktree)"
+height = 8
 
 [ui.sidebar.agents.rows_by_agent]
 claude = [
