@@ -58,5 +58,8 @@
   "inputNeededNotifEnabled": true,
   "agentPushNotifEnabled": true,
   "skipAutoPermissionPrompt": true,
-  "voiceEnabled": true
+  "voiceEnabled": true,
+  "env": {
+    "CLAUDE_CODE_PLUGIN_DIRS": "~/dotfiles/claude/mods/caffeinate"
+  }
 }

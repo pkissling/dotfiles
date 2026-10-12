@@ -2,3 +2,4 @@ brew/Brewfile.*.lock.json
 .profile
 nvim/lazy-lock.json
 agents/AGENTS.local.md
+claude/mods/*/.claude-plugin/types/
