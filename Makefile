@@ -1,4 +1,4 @@
-default: agents atuin brew claude codex eza ghostty git gnupg helix herdr hunk mise nvim ssh starship vscode zed zsh
+default: agents atuin brew claude codex eza ghostty git gnupg herdr hunk mise nvim ssh starship vscode zed zsh
 
 bootstrap:
 	# ln will fail if repo was already checked out in ~/dotfiles
@@ -52,11 +52,6 @@ git: bootstrap
 gnupg: bootstrap brew zsh
 	@chmod +x gnupg/install.sh
 	@./gnupg/install.sh
-
-.PHONY: helix
-helix: bootstrap brew
-	@chmod +x helix/install.sh
-	@./helix/install.sh
 
 .PHONY: herdr
 herdr: bootstrap mise

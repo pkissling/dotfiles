@@ -30,8 +30,6 @@ $ tree dotfiles
 │   └── # https://git-scm.com/ - Version control system
 ├── gnupg
 │   └── # https://gnupg.org - Encryption and signing tools
-├── helix
-│   └── # https://helix-editor.com - Post-modern modal text editor
 ├── hunk
 │   └── # https://github.com/modem-dev/hunk - Terminal diff viewer for code review
 ├── mise
