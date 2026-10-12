@@ -116,6 +116,8 @@ cask "macshot"
 cask "obsidian"
 # Control your tools with a few keystrokes
 cask "raycast"
+# Team communication and collaboration software
+cask "slack"
 # Music streaming service
 cask "spotify"
 # Mesh VPN based on WireGuard
