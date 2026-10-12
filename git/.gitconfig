@@ -33,7 +33,7 @@
     ss = status --short --branch
 
     # aliases
-    cleanup = "!git fetch --prune --tags --force > /dev/null && for BRANCH in `git branch -vv | grep --invert-match '^*' | grep ': gone' | awk '{print $1}'`; do git branch -D ${BRANCH}; done"
+    cleanup = "!git fetch --prune --tags --force > /dev/null && git for-each-ref --format='%(upstream:track)|%(worktreepath)|%(refname:short)' refs/heads | awk -F'|' '$1 ~ /gone/' | while IFS='|' read -r _ wt b; do { [ -z \"$wt\" ] || git worktree remove \"$wt\"; } && git branch -D \"$b\"; done"
     pull-rebase = "!git fetch --prune --tags --force && git pull origin $(git symbolic-ref --short HEAD) --rebase --autostash"
     rebase-master = "!git fetch origin --prune --tags --force && git rebase --autostash origin/$(git remote show origin | grep HEAD | sed 's/.* //')"
     rebase-interactive = "!git rebase --autostash --interactive $(git log -n 1 origin/$(git remote show origin | grep HEAD | sed 's/.* //') --pretty=format:'%h')"
