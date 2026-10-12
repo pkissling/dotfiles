@@ -1,0 +1,67 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Usage: worktree-action new|discard — popup replacement for herdr's new_worktree/close_workspace keys
+
+herdr=${HERDR_BIN_PATH:-herdr}
+ws_id=${HERDR_ACTIVE_WORKSPACE_ID}
+ws=$("${herdr}" workspace get "${ws_id}" | jq '.result.workspace')
+label=$(jq -r '.label' <<<"${ws}")
+linked=$(jq -r '.worktree.is_linked_worktree // false' <<<"${ws}")
+
+fail() {
+  printf '%s\n' "$1"
+  read -rsn1 -p "Press any key to close"
+  exit 1
+}
+
+confirm() {
+  local answer
+  read -rn1 -p "$1 [y/N] " answer
+  echo
+  [[ ${answer} == [yY] ]]
+}
+
+run() {
+  local msg=$1 out pid i=0 frames='|/-\'
+  shift
+  out=$(mktemp)
+  "$@" >"${out}" 2>&1 &
+  pid=$!
+  while kill -0 "${pid}" 2>/dev/null; do
+    printf '\r%s %s' "${frames:i++%4:1}" "${msg}"
+    sleep 0.1
+  done
+  wait "${pid}" || { echo; fail "$(cat "${out}")"; }
+}
+
+new() {
+  local source=(--workspace "${ws_id}") branch
+  if [[ ${linked} == true ]]; then
+    # herdr resolves (or reopens) the parent workspace from the repo root
+    source=(--cwd "$(jq -r '.worktree.repo_root' <<<"${ws}")")
+  fi
+  read -rep "New worktree branch: " branch
+  [[ -n ${branch} ]] || exit 0
+  run "Creating ${branch}..." "${herdr}" worktree create "${source[@]}" --branch "${branch}" --focus
+}
+
+discard() {
+  if [[ ${linked} != true ]]; then
+    confirm "Close workspace '${label}'?" || exit 0
+    "${herdr}" workspace close "${ws_id}" --group >/dev/null
+    return
+  fi
+  local path force=
+  path=$(jq -r '.worktree.checkout_path' <<<"${ws}")
+  if [[ -n $(git -C "${path}" status --porcelain) ]]; then
+    git -C "${path}" status --short
+    confirm "'${label}' has uncommitted changes. Discard them?" || exit 0
+    force=--force
+  fi
+  # the popup's cwd is inside the checkout being removed
+  cd /
+  run "Removing ${label}..." "${herdr}" worktree remove --workspace "${ws_id}" ${force}
+}
+
+"$1"

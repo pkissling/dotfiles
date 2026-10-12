@@ -23,6 +23,22 @@ delivery = "terminal"
 [keys]
 split_vertical = 'prefix+%'
 split_horizontal = 'prefix+"'
+new_worktree = ""
+close_workspace = ""
+
+[[keys.command]]
+key = "prefix+shift+g"
+type = "popup"
+command = "~/dotfiles/herdr/worktree-action new"
+description = "new worktree (from parent if in a worktree)"
+height = 8
+
+[[keys.command]]
+key = "prefix+shift+d"
+type = "popup"
+command = "~/dotfiles/herdr/worktree-action discard"
+description = "close workspace / discard worktree"
+height = "50%"
 
 [[keys.command]]
 key = "prefix+a"
