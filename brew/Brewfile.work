@@ -22,6 +22,8 @@ cask "aws-vpn-client"
 cask "granola"
 # GUI client for PostgreSQL databases
 cask "postico"
+# IDE for professional Python development
+cask "pycharm"
 # Plugin for AWS CLI to start and end sessions that connect to managed instances
 cask "session-manager-plugin"
 mas "ExcalidrawZ", id: 6636493997
