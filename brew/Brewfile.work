@@ -10,6 +10,8 @@ brew "docker-buildx"
 brew "docker-compose"
 # Generic command-line non-JVM Apache Kafka producer and consumer
 brew "kcat"
+# Postgres C API library
+brew "libpq", link: true
 # Cloud native development platform
 brew "pulumi"
 # The best way of working with Protocol Buffers.
