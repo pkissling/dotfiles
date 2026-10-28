@@ -12,6 +12,8 @@ brew "docker-compose"
 brew "kcat"
 # Postgres C API library
 brew "libpq", link: true
+# Message broker implementing the MQTT protocol
+brew "mosquitto"
 # Cloud native development platform
 brew "pulumi"
 # The best way of working with Protocol Buffers.
