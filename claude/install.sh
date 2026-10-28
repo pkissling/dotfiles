@@ -12,6 +12,11 @@ ln -sfvn "${HOME}"/dotfiles/claude/hooks "${HOME}"/.claude/hooks
 mkdir -p "${HOME}"/.claude/skills
 ln -sfvn "${HOME}"/dotfiles/agents/skills/review-notes "${HOME}"/.claude/skills/review-notes
 
+# sort settings.json
+TMP=$(mktemp)
+jq --sort-keys < "${HOME}"/dotfiles/claude/settings.json > "${TMP}"
+mv "${TMP}" "${HOME}"/dotfiles/claude/settings.json
+
 # install or update claude code
 if command -v claude &>/dev/null; then
   claude update

@@ -1,56 +1,56 @@
 {
+  "agentPushNotifEnabled": true,
   "attribution": {
     "commit": "",
     "pr": ""
   },
-  "permissions": {
-    "defaultMode": "auto"
-  },
-  "model": "opus",
-  "statusLine": {
-    "type": "command",
-    "command": "~/.claude/statusline-command.sh",
-    "padding": 0
-  },
+  "autoContinueAtUsageLimit": false,
+  "crossSessionInbound": "accept",
+  "editorMode": "normal",
   "enabledPlugins": {
-    "datadog@claude-plugins-official": true,
     "cc-plugin-you-should-know@builtin": true,
+    "datadog@claude-plugins-official": true,
     "ponytail@ponytail": true
+  },
+  "env": {
+    "CLAUDE_CODE_PLUGIN_DIRS": "~/dotfiles/claude/mods/caffeinate"
   },
   "extraKnownMarketplaces": {
     "ponytail": {
       "source": {
-        "source": "github",
-        "repo": "DietrichGebert/ponytail"
+        "repo": "DietrichGebert/ponytail",
+        "source": "github"
       }
     }
-  },
-  "outputStyle": "Concise",
-  "tui": "fullscreen",
-  "skipDangerousModePermissionPrompt": true,
-  "editorMode": "normal",
-  "autoContinueAtUsageLimit": false,
-  "crossSessionInbound": "accept",
-  "inputNeededNotifEnabled": true,
-  "agentPushNotifEnabled": true,
-  "skipAutoPermissionPrompt": true,
-  "idleCompaction": false,
-  "voiceEnabled": true,
-  "env": {
-    "CLAUDE_CODE_PLUGIN_DIRS": "~/dotfiles/claude/mods/caffeinate"
   },
   "hooks": {
     "SessionStart": [
       {
-        "matcher": "^(startup|resume|clear|compact|fork)$",
         "hooks": [
           {
-            "type": "command",
             "command": "bash ~/.claude/hooks/herdr-agent-state.sh session",
-            "timeout": 10
+            "timeout": 10,
+            "type": "command"
           }
-        ]
+        ],
+        "matcher": "^(startup|resume|clear|compact|fork)$"
       }
     ]
-  }
+  },
+  "idleCompaction": false,
+  "inputNeededNotifEnabled": true,
+  "model": "opus",
+  "outputStyle": "Concise",
+  "permissions": {
+    "defaultMode": "auto"
+  },
+  "skipAutoPermissionPrompt": true,
+  "skipDangerousModePermissionPrompt": true,
+  "statusLine": {
+    "command": "~/.claude/statusline-command.sh",
+    "padding": 0,
+    "type": "command"
+  },
+  "tui": "fullscreen",
+  "voiceEnabled": true
 }
