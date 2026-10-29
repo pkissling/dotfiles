@@ -23,7 +23,7 @@ confirm() {
 }
 
 run() {
-  local msg=$1 out pid i=0 frames='|/-\'
+  local msg=$1 out pid i=0 frames="|/-\\"
   shift
   out=$(mktemp)
   "$@" >"${out}" 2>&1 &

@@ -16,6 +16,12 @@ jobs:
         with:
           fetch-depth: 0
           persist-credentials: false
+      # mods' tsconfig extends a gitignored, harness-generated file
+      - name: Stub mod type configs
+        run: |
+          for d in claude/mods/*/.claude-plugin; do
+            mkdir -p "$d/types" && echo '{}' > "$d/types/tsconfig.json"
+          done
       - name: Lint Code Base
         uses: super-linter/super-linter/slim@2da136927bd4a73596db63044b504547c62cb854 # v9
         env:
@@ -31,3 +37,5 @@ jobs:
           # complains about "git" and "zsh" not being capitalized
           VALIDATE_NATURAL_LANGUAGE: false
           VALIDATE_SPELL_CODESPELL: false
+          # eslint can't resolve the harness's "claude-code" module; biome covers TS
+          VALIDATE_TYPESCRIPT_ES: false
