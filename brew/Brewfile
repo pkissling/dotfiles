@@ -1,3 +1,5 @@
+# To-do list
+cask "todoist-app"
 tap "artginzburg/tap", trusted: true
 tap "mhaeuser/mhaeuser", trusted: true
 tap "supabase/tap", trusted: true
@@ -131,7 +133,6 @@ go "cmd/go"
 go "cmd/gofmt"
 mas "1Password for Safari", id: 1569813296
 mas "The Unarchiver", id: 425424353
-mas "Todoist", id: 585829637
 mas "Xcode", id: 497799835
 vscode "anthropic.claude-code"
 vscode "arcticicestudio.nord-visual-studio-code"
