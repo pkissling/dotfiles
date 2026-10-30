@@ -30,6 +30,5 @@ cask "postico"
 cask "pycharm"
 # Plugin for AWS CLI to start and end sessions that connect to managed instances
 cask "session-manager-plugin"
-mas "ExcalidrawZ", id: 6636493997
 mas "Numbers", id: 361304891
 uv "ebx"
