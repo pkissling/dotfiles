@@ -16,8 +16,6 @@ $ tree dotfiles
 .
 ├── atuin
 │   └── # https://atuin.sh - Powerful shell history manager
-├── brew
-│   └── # https://brew.sh/ - macOS package manager
 ├── claude
 │   └── # https://claude.ai - AI-powered coding agent by Anthropic
 ├── codex
@@ -34,6 +32,8 @@ $ tree dotfiles
 │   └── # https://github.com/modem-dev/hunk - Terminal diff viewer for code review
 ├── mise
 │   └── # https://mise.jdx.dev - Runtime version manager
+├── nix
+│   └── # https://github.com/nix-darwin/nix-darwin - Declarative macOS packages, apps and settings
 ├── nvim
 │   └── # https://neovim.io - Modern Vim editor
 ├── ssh
@@ -48,7 +48,7 @@ $ tree dotfiles
     └── # https://ohmyz.sh - Shell environment
 ```
 
-Each tool in this collection comes with its own `install.sh` script, allowing for modular installation and configuration. This modular approach enables you to pick and choose which components you'd like to integrate into your environment.
+Packages, Homebrew casks, Mac App Store apps, macOS defaults and all config symlinks are declared in [`flake.nix`](flake.nix) and [`nix/`](nix), with one configuration per profile (`private`, `work`). Steps that can't be declarative (fetching keys from 1Password, updating plugins and runtimes) live in the remaining `install.sh` scripts.
 
 ## 🖼️ Visual Tour
 
@@ -64,10 +64,10 @@ A terminal setup featuring Ghostty, zsh, and Starship prompt,
 
 ## 🚀 Quick Start
 
-To install all configurations, simply run:
+Install [Determinate Nix](https://docs.determinate.systems/), then run:
 
 ```bash
 make
 ```
 
-For individual tool installations, navigate to the respective directory and run its `install.sh` script.
+`make switch` only applies the Nix configuration; `make <tool>` runs a single tool's `install.sh` after it.

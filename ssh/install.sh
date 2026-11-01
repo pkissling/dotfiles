@@ -2,21 +2,6 @@
 set -ex
 USAGE=$(cat "${HOME}"/dotfiles/.profile)
 
-# create .ssh folder, if not exist
-mkdir -p "${HOME}"/.ssh
-
-# create symlinks for public certificates
-ln -sfv "${HOME}"/dotfiles/ssh/private.pub "${HOME}"/.ssh
-ln -sfv "${HOME}"/dotfiles/ssh/work.pub "${HOME}"/.ssh
-
-# create symlink for default private and public certificate
-ln -sfv "${HOME}"/dotfiles/ssh/"${USAGE}".pub "${HOME}"/.ssh/id_ed25519.pub
-ln -sfv "${HOME}"/.ssh/"${USAGE}".priv "${HOME}"/.ssh/id_ed25519
-
-# create symlinks for config file
-ln -sfv "${HOME}"/dotfiles/ssh/config "${HOME}"/.ssh
-ln -sfv "${HOME}"/dotfiles/ssh/config_"${USAGE}" "${HOME}"/.ssh/config_profile_specific
-
 # add private ssh key from 1password, if not exist
 # shellcheck disable=SC2140
 if [ ! -f "${HOME}"/.ssh/"${USAGE}.priv" ]; then

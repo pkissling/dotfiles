@@ -1,4 +1,7 @@
-default: agents atuin brew claude codex eza ghostty git gnupg herdr hunk mise nvim ssh starship vscode zed zsh
+default: switch claude gnupg herdr hunk mise nvim ssh vscode
+
+# the first switch installs tools the calling shell has no PATH entry for yet
+export PATH := /etc/profiles/per-user/$(USER)/bin:/run/current-system/sw/bin:/opt/homebrew/bin:$(PATH)
 
 bootstrap:
 	# ln will fail if repo was already checked out in ~/dotfiles
@@ -7,93 +10,44 @@ ifeq (,$(wildcard ${HOME}/dotfiles/.profile))
 	@echo "Usage (private/work)?"
 	@read line; echo $$line > ${HOME}/dotfiles/.profile
 endif
-.PHONY: agents
-agents: bootstrap
-	@chmod +x agents/install.sh
-	@./agents/install.sh
 
-
-.PHONY: atuin
-atuin: bootstrap zsh
-	@chmod +x atuin/install.sh
-	@./atuin/install.sh
-
-.PHONY: brew
-brew: bootstrap
-	@chmod +x brew/install.sh
-	@./brew/install.sh
+.PHONY: switch
+switch: bootstrap
+	@PROFILE=$$(cat ${HOME}/dotfiles/.profile); \
+	if command -v darwin-rebuild >/dev/null; then \
+		sudo "$$(command -v darwin-rebuild)" switch --flake .#$$PROFILE; \
+	else \
+		sudo "$$(command -v nix)" run --inputs-from . nix-darwin#darwin-rebuild -- switch --flake .#$$PROFILE; \
+	fi
 
 .PHONY: claude
-claude: bootstrap agents
-	@chmod +x claude/install.sh
+claude: switch
 	@./claude/install.sh
 
-.PHONY: codex
-codex: bootstrap brew agents
-	@chmod +x codex/install.sh
-	@./codex/install.sh
-
-.PHONY: eza
-eza: bootstrap brew
-	@chmod +x eza/install.sh
-	@./eza/install.sh
-
-.PHONY: ghostty
-ghostty: bootstrap brew
-	@chmod +x ghostty/install.sh
-	@./ghostty/install.sh
-
-.PHONY: git
-git: bootstrap
-	@chmod +x git/install.sh
-	@./git/install.sh
-
 .PHONY: gnupg
-gnupg: bootstrap brew zsh
-	@chmod +x gnupg/install.sh
+gnupg: switch
 	@./gnupg/install.sh
 
 .PHONY: herdr
-herdr: bootstrap mise
-	@chmod +x herdr/install.sh
+herdr: mise
 	@./herdr/install.sh
 
 .PHONY: hunk
-hunk: bootstrap mise
-	@chmod +x hunk/install.sh
+hunk: mise
 	@./hunk/install.sh
 
 .PHONY: mise
-mise: bootstrap brew zsh
-	@chmod +x mise/install.sh
+mise: switch
 	@./mise/install.sh
 
 .PHONY: nvim
-nvim: bootstrap brew
-	@chmod +x nvim/install.sh
+nvim: switch
 	@./nvim/install.sh
 
 .PHONY: ssh
-ssh: bootstrap brew
-	@chmod +x ssh/install.sh
+ssh: switch
 	@./ssh/install.sh
 
-.PHONY: starship
-starship: bootstrap brew
-	@chmod +x starship/install.sh
-	@./starship/install.sh
-
 .PHONY: vscode
-vscode: bootstrap brew
-	@chmod +x vscode/install.sh
+vscode: switch
 	@./vscode/install.sh
-
-.PHONY: zed
-zed: bootstrap brew
-	@chmod +x zed/install.sh
-	@./zed/install.sh
-
-.PHONY: zsh
-zsh: bootstrap brew
-	@chmod +x zsh/install.sh
-	@./zsh/install.sh

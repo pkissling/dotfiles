@@ -1,12 +1,6 @@
 #!/bin/bash
 set -ex
 
-# ensure config directory exists
-mkdir -p "${HOME}"/.config/herdr
-
-# create symlinks
-ln -sfv "${HOME}"/dotfiles/herdr/config.toml "${HOME}"/.config/herdr/config.toml
-
 # herdr has no plugin update, so reinstalling at upstream HEAD is how a plugin moves forward
 while read -r repo; do
   ref=$(git ls-remote "https://github.com/${repo}.git" HEAD | cut -f1)
