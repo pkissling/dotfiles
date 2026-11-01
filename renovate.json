@@ -9,5 +9,11 @@
       "matchManagers": ["mise"],
       "extractVersion": "^(?<version>\\d+\\.\\d+)"
     }
-  ]
+  ],
+  "nix": {
+    "enabled": true
+  },
+  "lockFileMaintenance": {
+    "enabled": true
+  }
 }

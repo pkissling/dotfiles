@@ -2,12 +2,6 @@
 set -ex
 USAGE=$(cat "${HOME}"/dotfiles/.profile)
 
-# create .gnupg folder, if not exist
-mkdir -p "${HOME}"/.gnupg
-
-# create symlink
-ln -sfv "${HOME}"/dotfiles/gnupg/gpg-agent.conf "${HOME}"/.gnupg/gpg-agent.conf
-
 # import public gnupg keys (only if present; a file may be empty when the key isn't set up)
 for key in private work; do
   if [ -s ~/dotfiles/gnupg/"${key}".asc ]; then
