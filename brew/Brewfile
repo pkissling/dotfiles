@@ -1,5 +1,3 @@
-# To-do list
-cask "todoist-app"
 tap "artginzburg/tap", trusted: true
 tap "mhaeuser/mhaeuser", trusted: true
 tap "supabase/tap", trusted: true
@@ -126,6 +124,8 @@ cask "spotify"
 cask "tailscale-app"
 # Menu bar manager
 cask "thaw"
+# To-do list
+cask "todoist-app"
 # Open-source code editor
 cask "visual-studio-code"
 cask "zed"
