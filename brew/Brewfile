@@ -129,8 +129,6 @@ cask "todoist-app"
 # Open-source code editor
 cask "visual-studio-code"
 cask "zed"
-go "cmd/go"
-go "cmd/gofmt"
 mas "1Password for Safari", id: 1569813296
 mas "The Unarchiver", id: 425424353
 mas "Xcode", id: 497799835
