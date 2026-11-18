@@ -1,56 +1,57 @@
 {
-  "agentPushNotifEnabled": true,
+  "env": {
+    "CLAUDE_CODE_PLUGIN_DIRS": "~/dotfiles/claude/mods/caffeinate"
+  },
   "attribution": {
     "commit": "",
     "pr": ""
   },
-  "autoContinueAtUsageLimit": false,
-  "crossSessionInbound": "accept",
-  "editorMode": "normal",
+  "permissions": {
+    "defaultMode": "auto"
+  },
+  "model": "opus",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "^(startup|resume|clear|compact|fork)$",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash ~/.claude/hooks/herdr-agent-state.sh session",
+            "timeout": 10
+          }
+        ]
+      }
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/statusline-command.sh",
+    "padding": 0
+  },
   "enabledPlugins": {
     "cc-plugin-you-should-know@builtin": true,
     "datadog@claude-plugins-official": true,
-    "ponytail@ponytail": true
-  },
-  "env": {
-    "CLAUDE_CODE_PLUGIN_DIRS": "~/dotfiles/claude/mods/caffeinate"
+    "ponytail@ponytail": true,
+    "modern-web-guidance@claude-plugins-official": true
   },
   "extraKnownMarketplaces": {
     "ponytail": {
       "source": {
-        "repo": "DietrichGebert/ponytail",
-        "source": "github"
+        "source": "github",
+        "repo": "DietrichGebert/ponytail"
       }
     }
   },
-  "hooks": {
-    "SessionStart": [
-      {
-        "hooks": [
-          {
-            "command": "bash ~/.claude/hooks/herdr-agent-state.sh session",
-            "timeout": 10,
-            "type": "command"
-          }
-        ],
-        "matcher": "^(startup|resume|clear|compact|fork)$"
-      }
-    ]
-  },
-  "idleCompaction": false,
-  "inputNeededNotifEnabled": true,
-  "model": "opus",
   "outputStyle": "Concise",
-  "permissions": {
-    "defaultMode": "auto"
-  },
-  "skipAutoPermissionPrompt": true,
-  "skipDangerousModePermissionPrompt": true,
-  "statusLine": {
-    "command": "~/.claude/statusline-command.sh",
-    "padding": 0,
-    "type": "command"
-  },
   "tui": "fullscreen",
+  "skipDangerousModePermissionPrompt": true,
+  "editorMode": "normal",
+  "idleCompaction": false,
+  "autoContinueAtUsageLimit": false,
+  "crossSessionInbound": "accept",
+  "inputNeededNotifEnabled": true,
+  "agentPushNotifEnabled": true,
+  "skipAutoPermissionPrompt": true,
   "voiceEnabled": true
 }
