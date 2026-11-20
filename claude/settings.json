@@ -1,57 +1,57 @@
 {
-  "env": {
-    "CLAUDE_CODE_PLUGIN_DIRS": "~/dotfiles/claude/mods/caffeinate"
-  },
+  "agentPushNotifEnabled": true,
   "attribution": {
     "commit": "",
     "pr": ""
   },
-  "permissions": {
-    "defaultMode": "auto"
-  },
-  "model": "opus",
-  "hooks": {
-    "SessionStart": [
-      {
-        "matcher": "^(startup|resume|clear|compact|fork)$",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "bash ~/.claude/hooks/herdr-agent-state.sh session",
-            "timeout": 10
-          }
-        ]
-      }
-    ]
-  },
-  "statusLine": {
-    "type": "command",
-    "command": "~/.claude/statusline-command.sh",
-    "padding": 0
-  },
+  "autoContinueAtUsageLimit": false,
+  "crossSessionInbound": "accept",
+  "editorMode": "normal",
   "enabledPlugins": {
     "cc-plugin-you-should-know@builtin": true,
     "datadog@claude-plugins-official": true,
-    "ponytail@ponytail": true,
-    "modern-web-guidance@claude-plugins-official": true
+    "modern-web-guidance@claude-plugins-official": true,
+    "ponytail@ponytail": true
+  },
+  "env": {
+    "CLAUDE_CODE_PLUGIN_DIRS": "~/dotfiles/claude/mods/caffeinate"
   },
   "extraKnownMarketplaces": {
     "ponytail": {
       "source": {
-        "source": "github",
-        "repo": "DietrichGebert/ponytail"
+        "repo": "DietrichGebert/ponytail",
+        "source": "github"
       }
     }
   },
-  "outputStyle": "Concise",
-  "tui": "fullscreen",
-  "skipDangerousModePermissionPrompt": true,
-  "editorMode": "normal",
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "command": "bash ~/.claude/hooks/herdr-agent-state.sh session",
+            "timeout": 10,
+            "type": "command"
+          }
+        ],
+        "matcher": "^(startup|resume|clear|compact|fork)$"
+      }
+    ]
+  },
   "idleCompaction": false,
-  "autoContinueAtUsageLimit": false,
-  "crossSessionInbound": "accept",
   "inputNeededNotifEnabled": true,
-  "agentPushNotifEnabled": true,
+  "model": "fable",
+  "outputStyle": "Concise",
+  "permissions": {
+    "defaultMode": "auto"
+  },
   "skipAutoPermissionPrompt": true,
+  "skipDangerousModePermissionPrompt": true,
+  "statusLine": {
+    "command": "~/.claude/statusline-command.sh",
+    "padding": 0,
+    "type": "command"
+  },
+  "tui": "fullscreen",
   "voiceEnabled": true
 }
