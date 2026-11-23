@@ -9,7 +9,6 @@
   "editorMode": "normal",
   "enabledPlugins": {
     "cc-plugin-you-should-know@builtin": true,
-    "datadog@claude-plugins-official": true,
     "modern-web-guidance@claude-plugins-official": true,
     "ponytail@ponytail": true
   },
