@@ -82,7 +82,9 @@ refreshBalservCodeArtifactTokens() {
 alias awslogin="aws sso login --sso-session ebx"
 
 assumeProfile() {
-    "${HOME}"/dotfiles/starship/helper/aws_sso_expired_check.sh && awslogin
+    # The AWS CLI names the token cache file after the SHA1 of the sso-session name.
+    local cache="${HOME}/.aws/sso/cache/$(printf ebx | shasum | cut -d' ' -f1).json"
+    [[ "$(jq -r '.expiresAt // empty' "$cache" 2>/dev/null)" > "$(date -u +%Y-%m-%dT%H:%M:%SZ)" ]] || awslogin
     export AWS_PROFILE="$1" && echo "AWS_PROFILE=$AWS_PROFILE"
 }
 

@@ -1,13 +1,12 @@
 format = """\
-  ${custom.ssh}${custom.tmux}$username${custom.host}\
+  $username$hostname\
   $kubernetes\
   $directory\
   $git_branch\
   $git_commit\
   $git_status\
   $git_state\
-  ${custom.aws_profile}${custom.aws_profile_unset}\
-  $custom\
+  ${env_var.AWS_PROFILE}\
   $jobs\
   $cmd_duration\
   $line_break\
@@ -88,44 +87,19 @@ format = """\
   format = "[$time]($style) "
   style = "bold #81A1C1"
 
-# custom
-[custom.ssh]
-  command = 'echo "ssh://"'
-  when = '[ -n "$SSH_CONNECTION" ]'
-  format = "[$output]($style)"
-  style = "bold #EBCB8B"
-
 [username]
   show_always = true
   format = "[$user](bold #E5E9F0)[@](bold #88C0D0)"
   style_root = "bold #BF616A"
 
-[custom.host]
-  command = "hostname"
-  when = "true"
-  format = "[$output]($style) "
+[hostname]
+  ssh_only = false
+  ssh_symbol = "ssh://"
+  trim_at = ""
+  format = "[$ssh_symbol](bold #EBCB8B)[$hostname]($style) "
   style = "bold #E5E9F0"
 
-[custom.tmux]
-  command = 'tmux display-message -p "#S"'
-  when = '[ -n "$TMUX" ]'
-  format = "[$output]($style)[@](bold #88C0D0)"
+[env_var.AWS_PROFILE]
+  default = "none"
+  format = "[»](bold #81A1C1) [aws:$env_value]($style) "
   style = "bold #E5E9F0"
-
-
-[custom.aws_profile]
-  command = 'echo "$AWS_PROFILE"'
-  when = '[ "$(cat "$HOME"/dotfiles/.profile 2>/dev/null)" = "work" ] && [ -n "$AWS_PROFILE" ]'
-  format = "[»](bold #81A1C1) [aws:$output]($style) "
-  style = "bold #E5E9F0"
-
-[custom.aws_profile_unset]
-  command = 'echo "aws:none"'
-  when = '[ "$(cat "$HOME"/dotfiles/.profile 2>/dev/null)" = "work" ] && [ -z "$AWS_PROFILE" ]'
-  format = "[»](bold #81A1C1) [$output]($style) "
-  style = "bold #E5E9F0"
-
-[custom.aws_sso_expired]
-  command = "echo 🔒"
-  when = """ source $HOME/.starship/helper/aws_sso_expired_check.sh """
-  format = "[»](bold #81A1C1) [$output]($style) "

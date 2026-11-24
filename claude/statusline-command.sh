@@ -62,7 +62,6 @@ if [ -n "$AWS_PROFILE" ] && [ "$(cat "${HOME}"/dotfiles/.profile 2>/dev/null)" =
   esac
   account=$(awk -v section="[profile ${AWS_PROFILE}]" '$0 == section { found = 1; next } /^\[/ { found = 0 } found && $1 == "sso_account_id" { print $3; exit }' ~/.aws/config 2>/dev/null)
   [ -n "$account" ] && aws_segment="${aws_segment} ${blue}${account}${reset}"
-  "${HOME}"/dotfiles/starship/helper/aws_sso_expired_check.sh && aws_segment="${aws_segment} 🔒"
   segments+=("$aws_segment")
 fi
 
