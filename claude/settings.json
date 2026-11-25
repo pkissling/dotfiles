@@ -39,7 +39,6 @@
   },
   "idleCompaction": false,
   "inputNeededNotifEnabled": true,
-  "model": "fable",
   "outputStyle": "Concise",
   "permissions": {
     "defaultMode": "auto"
