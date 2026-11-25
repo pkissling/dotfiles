@@ -54,6 +54,10 @@ discard() {
   fi
   local path force=
   path=$(jq -r '.worktree.checkout_path' <<<"${ws}")
+  if [[ ! -d ${path} ]]; then
+    "${herdr}" workspace close "${ws_id}" >/dev/null
+    return
+  fi
   if [[ -n $(git -C "${path}" status --porcelain) ]]; then
     git -C "${path}" status --short
     confirm "'${label}' has uncommitted changes. Discard them?" || exit 0
