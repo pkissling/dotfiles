@@ -1,10 +1,13 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:recommended",
-    "helpers:pinGitHubActionDigests"
+    "config:recommended"
   ],
   "packageRules": [
+    {
+      "matchManagers": ["github-actions"],
+      "minimumReleaseAge": "7 days"
+    },
     {
       "matchManagers": ["mise"],
       "extractVersion": "^(?<version>\\d+\\.\\d+)"
