@@ -1,0 +1,19 @@
+---
+name: Lint
+on: push
+
+permissions:
+  contents: read
+
+jobs:
+  lockfile:
+    name: Verify actions.lock
+    runs-on: ubuntu-slim
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false
+      - name: Verify actions.lock
+        uses: github/gh-actions-lock@verify/v0.5.1
